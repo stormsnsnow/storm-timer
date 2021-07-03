@@ -1112,9 +1112,9 @@ Partial Class MainForm
         Me.SetOrNotSetLabel.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.SetOrNotSetLabel.Location = New System.Drawing.Point(251, 91)
         Me.SetOrNotSetLabel.Name = "SetOrNotSetLabel"
-        Me.SetOrNotSetLabel.Size = New System.Drawing.Size(48, 11)
+        Me.SetOrNotSetLabel.Size = New System.Drawing.Size(97, 11)
         Me.SetOrNotSetLabel.TabIndex = 10
-        Me.SetOrNotSetLabel.Text = "Not Set"
+        Me.SetOrNotSetLabel.Text = "Please set Alarm"
         '
         'TimerTab
         '
