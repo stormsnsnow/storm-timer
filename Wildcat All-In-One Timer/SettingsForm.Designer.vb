@@ -106,8 +106,6 @@ Partial Class SettingsForm
         Me.StartupTabPage = New System.Windows.Forms.TabPage()
         Me.WDLCTSUCbSUGen = New System.Windows.Forms.ComboBox()
         Me.WhenIStartupLabelSUGen = New System.Windows.Forms.Label()
-        Me.UpdatesTabPage = New System.Windows.Forms.TabPage()
-        Me.UpdatePromptLabelUpGen = New System.Windows.Forms.Label()
         Me.ResetTabPage = New System.Windows.Forms.TabPage()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.ResetButtonReGen = New System.Windows.Forms.Button()
@@ -172,7 +170,6 @@ Partial Class SettingsForm
         Me.GeneralTabControl.SuspendLayout()
         Me.DateTimeTabPage.SuspendLayout()
         Me.StartupTabPage.SuspendLayout()
-        Me.UpdatesTabPage.SuspendLayout()
         Me.ResetTabPage.SuspendLayout()
         Me.SettingsTC.SuspendLayout()
         Me.Personalization.SuspendLayout()
@@ -249,9 +246,9 @@ Partial Class SettingsForm
         Me.lblVersion.AutoSize = True
         Me.lblVersion.Location = New System.Drawing.Point(182, 35)
         Me.lblVersion.Name = "lblVersion"
-        Me.lblVersion.Size = New System.Drawing.Size(152, 26)
+        Me.lblVersion.Size = New System.Drawing.Size(113, 26)
         Me.lblVersion.TabIndex = 29
-        Me.lblVersion.Text = "v20.2FMP" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Released September 13, 2020"
+        Me.lblVersion.Text = "v21H2 Public Beta" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Released July 4, 2021"
         Me.lblVersion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'lblName
@@ -260,9 +257,9 @@ Partial Class SettingsForm
         Me.lblName.Font = New System.Drawing.Font("Tahoma", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblName.Location = New System.Drawing.Point(181, 12)
         Me.lblName.Name = "lblName"
-        Me.lblName.Size = New System.Drawing.Size(153, 23)
+        Me.lblName.Size = New System.Drawing.Size(111, 23)
         Me.lblName.TabIndex = 28
-        Me.lblName.Text = "Ultimate Timer"
+        Me.lblName.Text = "BreakTime"
         '
         'Sounds
         '
@@ -873,7 +870,6 @@ Partial Class SettingsForm
         '
         Me.GeneralTabControl.Controls.Add(Me.DateTimeTabPage)
         Me.GeneralTabControl.Controls.Add(Me.StartupTabPage)
-        Me.GeneralTabControl.Controls.Add(Me.UpdatesTabPage)
         Me.GeneralTabControl.Controls.Add(Me.ResetTabPage)
         Me.GeneralTabControl.Dock = System.Windows.Forms.DockStyle.Fill
         Me.GeneralTabControl.Location = New System.Drawing.Point(3, 3)
@@ -946,7 +942,7 @@ Partial Class SettingsForm
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(150, 13)
         Me.Label1.TabIndex = 28
-        Me.Label1.Text = "Wednesday, January 1, 2021"
+        Me.Label1.Text = "Wednesday, January 1, 2022"
         '
         'DTLabelDTGen2
         '
@@ -964,7 +960,7 @@ Partial Class SettingsForm
         Me.DTLabelDTGen.Name = "DTLabelDTGen"
         Me.DTLabelDTGen.Size = New System.Drawing.Size(150, 13)
         Me.DTLabelDTGen.TabIndex = 25
-        Me.DTLabelDTGen.Text = "Wednesday, January 1, 2021"
+        Me.DTLabelDTGen.Text = "Wednesday, January 1, 2022"
         '
         'TimeFormatLabelDTGen
         '
@@ -1031,27 +1027,6 @@ Partial Class SettingsForm
         Me.WhenIStartupLabelSUGen.Size = New System.Drawing.Size(151, 13)
         Me.WhenIStartupLabelSUGen.TabIndex = 7
         Me.WhenIStartupLabelSUGen.Text = "When I start Ultimate Timer..."
-        '
-        'UpdatesTabPage
-        '
-        Me.UpdatesTabPage.Controls.Add(Me.UpdatePromptLabelUpGen)
-        Me.UpdatesTabPage.Location = New System.Drawing.Point(4, 22)
-        Me.UpdatesTabPage.Name = "UpdatesTabPage"
-        Me.UpdatesTabPage.Padding = New System.Windows.Forms.Padding(3)
-        Me.UpdatesTabPage.Size = New System.Drawing.Size(482, 259)
-        Me.UpdatesTabPage.TabIndex = 1
-        Me.UpdatesTabPage.Text = "Updates"
-        Me.UpdatesTabPage.UseVisualStyleBackColor = True
-        '
-        'UpdatePromptLabelUpGen
-        '
-        Me.UpdatePromptLabelUpGen.AutoSize = True
-        Me.UpdatePromptLabelUpGen.Location = New System.Drawing.Point(126, 67)
-        Me.UpdatePromptLabelUpGen.Name = "UpdatePromptLabelUpGen"
-        Me.UpdatePromptLabelUpGen.Size = New System.Drawing.Size(234, 39)
-        Me.UpdatePromptLabelUpGen.TabIndex = 11
-        Me.UpdatePromptLabelUpGen.Text = "This version will no longer be updated because" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "of the severing of GitHub. We are" &
-    " sorry for the" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "inconvience."
         '
         'ResetTabPage
         '
@@ -1423,8 +1398,6 @@ Partial Class SettingsForm
         Me.DateTimeTabPage.PerformLayout()
         Me.StartupTabPage.ResumeLayout(False)
         Me.StartupTabPage.PerformLayout()
-        Me.UpdatesTabPage.ResumeLayout(False)
-        Me.UpdatesTabPage.PerformLayout()
         Me.ResetTabPage.ResumeLayout(False)
         Me.ResetTabPage.PerformLayout()
         Me.SettingsTC.ResumeLayout(False)
@@ -1516,8 +1489,6 @@ Partial Class SettingsForm
     Friend WithEvents StartupTabPage As TabPage
     Friend WithEvents WDLCTSUCbSUGen As ComboBox
     Friend WithEvents WhenIStartupLabelSUGen As Label
-    Friend WithEvents UpdatesTabPage As TabPage
-    Friend WithEvents UpdatePromptLabelUpGen As Label
     Friend WithEvents ResetTabPage As TabPage
     Friend WithEvents Label3 As Label
     Friend WithEvents ResetButtonReGen As Button

@@ -4,7 +4,7 @@ Imports System.IO
 Imports System.Text
 Imports System.Net
 
-Imports UTimer.Org.Mentalis.Utilities
+Imports BreakTime.Org.Mentalis.Utilities
 
 Public Class MainForm '
     Private WithEvents Tmras As New Timer With {.Interval = 30}

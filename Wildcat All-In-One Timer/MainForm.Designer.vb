@@ -2104,7 +2104,7 @@ Partial Class MainForm
         Me.MaximizeBox = False
         Me.Name = "MainForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "BreakTime - v21H2 - Released on July 4 2021"
+        Me.Text = "BreakTime - v21H2PB- Released on July 4 2021"
         Me.TimerControl.ResumeLayout(False)
         Me.BreakTimerTab.ResumeLayout(False)
         Me.BreakTimerTab.PerformLayout()

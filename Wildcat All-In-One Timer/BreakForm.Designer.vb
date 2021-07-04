@@ -145,11 +145,11 @@ Partial Class BreakForm
         Me.Label1.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.Label1.Font = New System.Drawing.Font("Tahoma", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Black
-        Me.Label1.Location = New System.Drawing.Point(125, 4)
+        Me.Label1.Location = New System.Drawing.Point(176, 4)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(253, 23)
+        Me.Label1.Size = New System.Drawing.Size(156, 23)
         Me.Label1.TabIndex = 76
-        Me.Label1.Text = "It is time to take a break."
+        Me.Label1.Text = "Time for break!"
         '
         'lbltime
         '

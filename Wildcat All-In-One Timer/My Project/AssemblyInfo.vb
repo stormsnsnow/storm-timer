@@ -9,11 +9,11 @@ Imports System.Runtime.InteropServices
 
 ' Review the values of the assembly attributes
 
-<Assembly: AssemblyTitle("Ultimate Timer")>
-<Assembly: AssemblyDescription("Now you can set even more with the new Ultimate Timer!")>
-<Assembly: AssemblyCompany("Empoint")>
-<Assembly: AssemblyProduct("Ultimate Timer")>
-<Assembly: AssemblyCopyright("Copyright © 2021 Empoint")>
+<Assembly: AssemblyTitle("BreakTime")>
+<Assembly: AssemblyDescription("Now you can set even more with the new BreakTime!")>
+<Assembly: AssemblyCompany("EPT")>
+<Assembly: AssemblyProduct("BreakTime")>
+<Assembly: AssemblyCopyright("Copyright © 2021 EPT")>
 <Assembly: AssemblyTrademark("")>
 
 <Assembly: ComVisible(False)>
@@ -32,6 +32,6 @@ Imports System.Runtime.InteropServices
 ' by using the '*' as shown below:
 ' <Assembly: AssemblyVersion("1.0.*")>
 
-<Assembly: AssemblyVersion("21.1.0.0")>
-<Assembly: AssemblyFileVersion("21.1.0.0")>
+<Assembly: AssemblyVersion("21.2.0.1")>
+<Assembly: AssemblyFileVersion("21.2.0.1")>
 <Assembly: NeutralResourcesLanguage("en-US")>
