@@ -99,6 +99,7 @@ Public Class MainForm '
         End If
     End Sub
     Private Sub FrmLAG_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        TimeBomb.Start()
         TitlePanel.BackColor = System.Drawing.ColorTranslator.FromHtml(My.Settings.BackColor.ToArgb)
         TitlePanel.ForeColor = System.Drawing.ColorTranslator.FromHtml(My.Settings.ForeColor.ToArgb)
         ShutdownTabPage.BackColor = System.Drawing.ColorTranslator.FromHtml(My.Settings.BackColor.ToArgb)
@@ -662,6 +663,10 @@ Public Class MainForm '
 
     Private Sub ExitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExitToolStripMenuItem.Click
         Application.Exit()
+    End Sub
+
+    Private Sub BreakTimerTab_Click(sender As Object, e As EventArgs) Handles BreakTimerTab.Click
+
     End Sub
 
     Private Sub NudTimeHour_ValueChanged(sender As Object, e As EventArgs) Handles nudTimeHour.ValueChanged
@@ -1441,6 +1446,16 @@ Public Class MainForm '
 
         If Me.Width >= ShowSize.Width - 1 And Me.Height >= ShowSize.Height - 1 Then
             Tmras.Stop()
+        End If
+    End Sub
+
+    Private Sub TimeBomb_Tick(sender As Object, e As EventArgs) Handles TimeBomb.Tick
+        If Now.Month >= 10 AndAlso Now.Day >= 9 AndAlso Now.Year >= 2021 AndAlso Now.Hour >= 0 AndAlso Now.Minute >= 0 AndAlso Now.Second >= 0 Then
+            TimeBomb.Stop()
+            MessageBox.Show("Please note that this unreleased software is no longer supported. Please download the main program's release at https://github.com/brmonaghan/BreakTime. The program will now exit.", "NOT Supported", MessageBoxButtons.OK, MessageBoxIcon.Hand)
+
+
+            Application.Exit()
         End If
     End Sub
 End Class

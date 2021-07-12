@@ -47,9 +47,9 @@ Partial Class UnhandledExceptionForm
         Me.ConciseErrorLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ConciseErrorLabel.Location = New System.Drawing.Point(83, 13)
         Me.ConciseErrorLabel.Name = "ConciseErrorLabel"
-        Me.ConciseErrorLabel.Size = New System.Drawing.Size(384, 24)
+        Me.ConciseErrorLabel.Size = New System.Drawing.Size(350, 24)
         Me.ConciseErrorLabel.TabIndex = 1
-        Me.ConciseErrorLabel.Text = "Unfortunately, Ultimate Timer must close"
+        Me.ConciseErrorLabel.Text = "Unfortunately, BreakTime must close"
         '
         'DetailedErrorLabel
         '
