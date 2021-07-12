@@ -70,7 +70,7 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>utimerlogo_256px.ico</ApplicationIcon>
+    <ApplicationIcon>btimep1_eZZ_icon.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationManifest>app.manifest</ApplicationManifest>
@@ -225,6 +225,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="btimep1_eZZ_icon.ico" />
     <Content Include="favicon %281%29.ico" />
     <Content Include="favicon.ico" />
     <Content Include="utimerlogo_256px.ico" />
