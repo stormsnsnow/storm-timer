@@ -70,7 +70,7 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>btimep1_eZZ_icon.ico</ApplicationIcon>
+    <ApplicationIcon>btimep2.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationManifest>app.manifest</ApplicationManifest>
@@ -137,6 +137,12 @@
     <Compile Include="BreakPausedForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ReminderForm.Designer.vb">
+      <DependentUpon>ReminderForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReminderForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="SplashScreenForm.Designer.vb">
       <DependentUpon>SplashScreenForm.vb</DependentUpon>
     </Compile>
@@ -189,6 +195,9 @@
     <EmbeddedResource Include="BreakPausedForm.resx">
       <DependentUpon>BreakPausedForm.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ReminderForm.resx">
+      <DependentUpon>ReminderForm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SplashScreenForm.resx">
       <DependentUpon>SplashScreenForm.vb</DependentUpon>
     </EmbeddedResource>
@@ -226,6 +235,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="btimep1_eZZ_icon.ico" />
+    <Content Include="btimep2.ico" />
     <Content Include="favicon %281%29.ico" />
     <Content Include="favicon.ico" />
     <Content Include="utimerlogo_256px.ico" />

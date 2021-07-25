@@ -59,7 +59,6 @@ Partial Class BreakForm
         Me.lbldate.AutoSize = True
         Me.lbldate.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.lbldate.Font = New System.Drawing.Font("Helvetica", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbldate.ForeColor = System.Drawing.Color.DarkRed
         Me.lbldate.Location = New System.Drawing.Point(34, 73)
         Me.lbldate.Name = "lbldate"
         Me.lbldate.Size = New System.Drawing.Size(221, 19)
@@ -73,7 +72,6 @@ Partial Class BreakForm
         Me.lblbackon.AutoSize = True
         Me.lblbackon.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.lblbackon.Font = New System.Drawing.Font("Helvetica", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblbackon.ForeColor = System.Drawing.Color.DarkRed
         Me.lblbackon.Location = New System.Drawing.Point(218, 50)
         Me.lblbackon.Name = "lblbackon"
         Me.lblbackon.Size = New System.Drawing.Size(49, 19)
@@ -86,7 +84,6 @@ Partial Class BreakForm
         Me.lblhour.AutoSize = True
         Me.lblhour.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.lblhour.Font = New System.Drawing.Font("Helvetica", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblhour.ForeColor = System.Drawing.Color.DarkRed
         Me.lblhour.Location = New System.Drawing.Point(75, 27)
         Me.lblhour.Name = "lblhour"
         Me.lblhour.Size = New System.Drawing.Size(21, 19)
@@ -99,7 +96,6 @@ Partial Class BreakForm
         Me.lblwait.AutoSize = True
         Me.lblwait.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.lblwait.Font = New System.Drawing.Font("Helvetica", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblwait.ForeColor = System.Drawing.Color.DarkRed
         Me.lblwait.Location = New System.Drawing.Point(14, 27)
         Me.lblwait.Name = "lblwait"
         Me.lblwait.Size = New System.Drawing.Size(52, 19)
@@ -116,7 +112,7 @@ Partial Class BreakForm
         'BreakPanel
         '
         Me.BreakPanel.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.BreakPanel.BackColor = System.Drawing.Color.Red
+        Me.BreakPanel.BackColor = System.Drawing.Color.Yellow
         Me.BreakPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.BreakPanel.Controls.Add(Me.Label1)
         Me.BreakPanel.Controls.Add(Me.lbltime)
@@ -132,7 +128,7 @@ Partial Class BreakForm
         Me.BreakPanel.Controls.Add(Me.lbldate)
         Me.BreakPanel.Controls.Add(Me.lblhourandbreak)
         Me.BreakPanel.Controls.Add(Me.lblminuteandbreak)
-        Me.BreakPanel.ForeColor = System.Drawing.Color.DarkRed
+        Me.BreakPanel.ForeColor = System.Drawing.Color.Gold
         Me.BreakPanel.Location = New System.Drawing.Point(177, 238)
         Me.BreakPanel.Name = "BreakPanel"
         Me.BreakPanel.Size = New System.Drawing.Size(524, 101)
@@ -144,7 +140,6 @@ Partial Class BreakForm
         Me.Label1.AutoSize = True
         Me.Label1.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.Label1.Font = New System.Drawing.Font("Helvetica", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.DarkRed
         Me.Label1.Location = New System.Drawing.Point(176, 4)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(165, 19)
@@ -157,7 +152,6 @@ Partial Class BreakForm
         Me.lbltime.AutoSize = True
         Me.lbltime.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.lbltime.Font = New System.Drawing.Font("Helvetica", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbltime.ForeColor = System.Drawing.Color.DarkRed
         Me.lbltime.Location = New System.Drawing.Point(278, 73)
         Me.lbltime.Name = "lbltime"
         Me.lbltime.Size = New System.Drawing.Size(140, 19)
@@ -171,7 +165,6 @@ Partial Class BreakForm
         Me.lblsecondsbreak.AutoSize = True
         Me.lblsecondsbreak.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.lblsecondsbreak.Font = New System.Drawing.Font("Helvetica", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblsecondsbreak.ForeColor = System.Drawing.Color.DarkRed
         Me.lblsecondsbreak.Location = New System.Drawing.Point(415, 27)
         Me.lblsecondsbreak.Name = "lblsecondsbreak"
         Me.lblsecondsbreak.Size = New System.Drawing.Size(89, 19)
@@ -184,7 +177,6 @@ Partial Class BreakForm
         Me.lblsecondbreak.AutoSize = True
         Me.lblsecondbreak.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.lblsecondbreak.Font = New System.Drawing.Font("Tahoma", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblsecondbreak.ForeColor = System.Drawing.Color.DarkRed
         Me.lblsecondbreak.Location = New System.Drawing.Point(415, 27)
         Me.lblsecondbreak.Name = "lblsecondbreak"
         Me.lblsecondbreak.Size = New System.Drawing.Size(77, 23)
@@ -197,7 +189,6 @@ Partial Class BreakForm
         Me.lblminutesandbreak.AutoSize = True
         Me.lblminutesandbreak.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.lblminutesandbreak.Font = New System.Drawing.Font("Helvetica", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblminutesandbreak.ForeColor = System.Drawing.Color.DarkRed
         Me.lblminutesandbreak.Location = New System.Drawing.Point(250, 27)
         Me.lblminutesandbreak.Name = "lblminutesandbreak"
         Me.lblminutesandbreak.Size = New System.Drawing.Size(123, 19)
@@ -210,7 +201,6 @@ Partial Class BreakForm
         Me.lblhoursandbreak.AutoSize = True
         Me.lblhoursandbreak.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.lblhoursandbreak.Font = New System.Drawing.Font("Helvetica", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblhoursandbreak.ForeColor = System.Drawing.Color.DarkRed
         Me.lblhoursandbreak.Location = New System.Drawing.Point(107, 27)
         Me.lblhoursandbreak.Name = "lblhoursandbreak"
         Me.lblhoursandbreak.Size = New System.Drawing.Size(100, 19)
@@ -223,7 +213,6 @@ Partial Class BreakForm
         Me.lblsec.AutoSize = True
         Me.lblsec.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.lblsec.Font = New System.Drawing.Font("Helvetica", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblsec.ForeColor = System.Drawing.Color.DarkRed
         Me.lblsec.Location = New System.Drawing.Point(384, 27)
         Me.lblsec.Name = "lblsec"
         Me.lblsec.Size = New System.Drawing.Size(21, 19)
@@ -236,7 +225,6 @@ Partial Class BreakForm
         Me.lblminute.AutoSize = True
         Me.lblminute.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.lblminute.Font = New System.Drawing.Font("Helvetica", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblminute.ForeColor = System.Drawing.Color.DarkRed
         Me.lblminute.Location = New System.Drawing.Point(218, 27)
         Me.lblminute.Name = "lblminute"
         Me.lblminute.Size = New System.Drawing.Size(21, 19)
@@ -249,7 +237,6 @@ Partial Class BreakForm
         Me.lblhourandbreak.AutoSize = True
         Me.lblhourandbreak.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.lblhourandbreak.Font = New System.Drawing.Font("Tahoma", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblhourandbreak.ForeColor = System.Drawing.Color.DarkRed
         Me.lblhourandbreak.Location = New System.Drawing.Point(107, 27)
         Me.lblhourandbreak.Name = "lblhourandbreak"
         Me.lblhourandbreak.Size = New System.Drawing.Size(95, 23)
@@ -262,7 +249,6 @@ Partial Class BreakForm
         Me.lblminuteandbreak.AutoSize = True
         Me.lblminuteandbreak.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.lblminuteandbreak.Font = New System.Drawing.Font("Tahoma", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblminuteandbreak.ForeColor = System.Drawing.Color.DarkRed
         Me.lblminuteandbreak.Location = New System.Drawing.Point(250, 27)
         Me.lblminuteandbreak.Name = "lblminuteandbreak"
         Me.lblminuteandbreak.Size = New System.Drawing.Size(118, 23)
@@ -272,7 +258,7 @@ Partial Class BreakForm
         'Panel1
         '
         Me.Panel1.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Panel1.BackColor = System.Drawing.Color.Red
+        Me.Panel1.BackColor = System.Drawing.Color.Yellow
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.UnlockButton)
@@ -288,10 +274,9 @@ Partial Class BreakForm
         '
         Me.Label2.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label2.AutoSize = True
-        Me.Label2.BackColor = System.Drawing.Color.Red
         Me.Label2.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.Label2.Font = New System.Drawing.Font("Helvetica", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.DarkRed
+        Me.Label2.ForeColor = System.Drawing.Color.Gold
         Me.Label2.Location = New System.Drawing.Point(176, 5)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(142, 19)
@@ -303,7 +288,7 @@ Partial Class BreakForm
         Me.UnlockButton.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.UnlockButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.UnlockButton.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.UnlockButton.ForeColor = System.Drawing.Color.DarkRed
+        Me.UnlockButton.ForeColor = System.Drawing.Color.Gold
         Me.UnlockButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.UnlockButton.ImageKey = "23F9.png"
         Me.UnlockButton.ImageList = Me.ImageList1
@@ -321,7 +306,7 @@ Partial Class BreakForm
         Me.PauseButton.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.PauseButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.PauseButton.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.PauseButton.ForeColor = System.Drawing.Color.DarkRed
+        Me.PauseButton.ForeColor = System.Drawing.Color.Gold
         Me.PauseButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.PauseButton.ImageKey = "23F8.png"
         Me.PauseButton.ImageList = Me.ImageList1

@@ -246,18 +246,18 @@ Partial Class SettingsForm
         Me.lblVersion.AutoSize = True
         Me.lblVersion.Location = New System.Drawing.Point(182, 35)
         Me.lblVersion.Name = "lblVersion"
-        Me.lblVersion.Size = New System.Drawing.Size(113, 26)
+        Me.lblVersion.Size = New System.Drawing.Size(119, 26)
         Me.lblVersion.TabIndex = 29
-        Me.lblVersion.Text = "v21H2 Public Beta" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Released July 4, 2021"
+        Me.lblVersion.Text = "v21H2 Preview Two " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Released July 25, 2021"
         Me.lblVersion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'lblName
         '
         Me.lblName.AutoSize = True
-        Me.lblName.Font = New System.Drawing.Font("Tahoma", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblName.Font = New System.Drawing.Font("Helvetica", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblName.Location = New System.Drawing.Point(181, 12)
         Me.lblName.Name = "lblName"
-        Me.lblName.Size = New System.Drawing.Size(111, 23)
+        Me.lblName.Size = New System.Drawing.Size(109, 19)
         Me.lblName.TabIndex = 28
         Me.lblName.Text = "BreakTime"
         '
@@ -1057,7 +1057,7 @@ Partial Class SettingsForm
         Me.ResetButtonReGen.Name = "ResetButtonReGen"
         Me.ResetButtonReGen.Size = New System.Drawing.Size(186, 52)
         Me.ResetButtonReGen.TabIndex = 14
-        Me.ResetButtonReGen.Text = "Reset Ultimate Timer" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "DO NOT PRESS UNLESS DOING ON PURPOSE!!"
+        Me.ResetButtonReGen.Text = "Reset BreakTime " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "DO NOT PRESS UNLESS DOING ON PURPOSE!!"
         Me.ResetButtonReGen.UseVisualStyleBackColor = True
         '
         'ResetPromptLabelReGen

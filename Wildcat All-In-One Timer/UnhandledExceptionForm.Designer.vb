@@ -44,20 +44,22 @@ Partial Class UnhandledExceptionForm
         'ConciseErrorLabel
         '
         Me.ConciseErrorLabel.AutoSize = True
-        Me.ConciseErrorLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ConciseErrorLabel.Font = New System.Drawing.Font("Helvetica", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ConciseErrorLabel.ForeColor = System.Drawing.Color.Gold
         Me.ConciseErrorLabel.Location = New System.Drawing.Point(83, 13)
         Me.ConciseErrorLabel.Name = "ConciseErrorLabel"
-        Me.ConciseErrorLabel.Size = New System.Drawing.Size(350, 24)
+        Me.ConciseErrorLabel.Size = New System.Drawing.Size(356, 19)
         Me.ConciseErrorLabel.TabIndex = 1
         Me.ConciseErrorLabel.Text = "Unfortunately, BreakTime must close"
         '
         'DetailedErrorLabel
         '
         Me.DetailedErrorLabel.AutoSize = True
-        Me.DetailedErrorLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DetailedErrorLabel.Location = New System.Drawing.Point(84, 37)
+        Me.DetailedErrorLabel.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DetailedErrorLabel.ForeColor = System.Drawing.Color.Gold
+        Me.DetailedErrorLabel.Location = New System.Drawing.Point(82, 39)
         Me.DetailedErrorLabel.Name = "DetailedErrorLabel"
-        Me.DetailedErrorLabel.Size = New System.Drawing.Size(456, 26)
+        Me.DetailedErrorLabel.Size = New System.Drawing.Size(465, 24)
         Me.DetailedErrorLabel.TabIndex = 2
         Me.DetailedErrorLabel.Text = "An unhandled exception has occured that causes the application to close. We are s" &
     "orry for the " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "inconvience."
@@ -65,17 +67,20 @@ Partial Class UnhandledExceptionForm
         'ExceptionLabel
         '
         Me.ExceptionLabel.AutoSize = True
-        Me.ExceptionLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ExceptionLabel.Location = New System.Drawing.Point(84, 63)
+        Me.ExceptionLabel.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ExceptionLabel.ForeColor = System.Drawing.Color.Gold
+        Me.ExceptionLabel.Location = New System.Drawing.Point(81, 63)
         Me.ExceptionLabel.Name = "ExceptionLabel"
-        Me.ExceptionLabel.Size = New System.Drawing.Size(181, 13)
+        Me.ExceptionLabel.Size = New System.Drawing.Size(183, 12)
         Me.ExceptionLabel.TabIndex = 4
         Me.ExceptionLabel.Text = "Please click to see exception details."
         '
         'ExitButton
         '
         Me.ExitButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.ExitButton.Location = New System.Drawing.Point(457, 70)
+        Me.ExitButton.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ExitButton.ForeColor = System.Drawing.Color.Gold
+        Me.ExitButton.Location = New System.Drawing.Point(480, 70)
         Me.ExitButton.Name = "ExitButton"
         Me.ExitButton.Size = New System.Drawing.Size(75, 23)
         Me.ExitButton.TabIndex = 5
@@ -87,7 +92,7 @@ Partial Class UnhandledExceptionForm
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(544, 105)
+        Me.ClientSize = New System.Drawing.Size(567, 105)
         Me.Controls.Add(Me.ExitButton)
         Me.Controls.Add(Me.ExceptionLabel)
         Me.Controls.Add(Me.DetailedErrorLabel)

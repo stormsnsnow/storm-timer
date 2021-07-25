@@ -145,6 +145,11 @@ Partial Class MainForm
         Me.StopButtonSW = New System.Windows.Forms.Button()
         Me.ResumeButtonSW = New System.Windows.Forms.Button()
         Me.ShutdownTabPage = New System.Windows.Forms.TabPage()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.StatusGroupBoxSH = New System.Windows.Forms.GroupBox()
         Me.MinuteAndLabelSh = New System.Windows.Forms.Label()
         Me.DateTimeTillShutdownLabelSh = New System.Windows.Forms.Label()
@@ -176,6 +181,9 @@ Partial Class MainForm
         Me.TimeAtLabelSh = New System.Windows.Forms.Label()
         Me.AtRadioButtonSh = New System.Windows.Forms.RadioButton()
         Me.InRadioButtonSh = New System.Windows.Forms.RadioButton()
+        Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Button3 = New System.Windows.Forms.Button()
         Me.TimerTimer = New System.Windows.Forms.Timer(Me.components)
         Me.tBeep = New System.Windows.Forms.Timer(Me.components)
         Me.DTPErhAc = New System.Windows.Forms.ErrorProvider(Me.components)
@@ -196,11 +204,7 @@ Partial Class MainForm
         Me.ChangeSettingsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TimeBomb = New System.Windows.Forms.Timer(Me.components)
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
+        Me.tmrrmd = New System.Windows.Forms.Timer(Me.components)
         Me.TimerControl.SuspendLayout()
         Me.BreakTimerTab.SuspendLayout()
         Me.BSTGroupBoxBT.SuspendLayout()
@@ -235,6 +239,8 @@ Partial Class MainForm
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ShutdownTabPage.SuspendLayout()
+        Me.Panel2.SuspendLayout()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.StatusGroupBoxSH.SuspendLayout()
         Me.InSettingsGBSH.SuspendLayout()
         CType(Me.HourNudSh, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -244,12 +250,11 @@ Partial Class MainForm
         Me.AtSettingsGBSH.SuspendLayout()
         CType(Me.HourAtNudSh, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MinuteAtNudSh, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPage1.SuspendLayout()
         CType(Me.DTPErhAc, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TitlePanel.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ContextMenuStrip1.SuspendLayout()
-        Me.Panel2.SuspendLayout()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'BreakTimer
@@ -263,19 +268,20 @@ Partial Class MainForm
         Me.TimerControl.Controls.Add(Me.TimerTab)
         Me.TimerControl.Controls.Add(Me.StopWatchTab)
         Me.TimerControl.Controls.Add(Me.ShutdownTabPage)
+        Me.TimerControl.Controls.Add(Me.TabPage1)
         Me.TimerControl.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.TimerControl.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TimerControl.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TimerControl.ImageList = Me.IconsIL
-        Me.TimerControl.Location = New System.Drawing.Point(0, 115)
+        Me.TimerControl.Location = New System.Drawing.Point(0, 124)
         Me.TimerControl.Multiline = True
         Me.TimerControl.Name = "TimerControl"
         Me.TimerControl.SelectedIndex = 0
-        Me.TimerControl.Size = New System.Drawing.Size(544, 282)
+        Me.TimerControl.Size = New System.Drawing.Size(635, 304)
         Me.TimerControl.TabIndex = 24
         '
         'BreakTimerTab
         '
-        Me.BreakTimerTab.BackColor = System.Drawing.Color.Red
+        Me.BreakTimerTab.BackColor = System.Drawing.Color.Yellow
         Me.BreakTimerTab.Controls.Add(Me.BSTGroupBoxBT)
         Me.BreakTimerTab.Controls.Add(Me.TSFGroupBoxBT)
         Me.BreakTimerTab.Controls.Add(Me.ControlsGroupBoxBT)
@@ -284,13 +290,13 @@ Partial Class MainForm
         Me.BreakTimerTab.Controls.Add(Me.TimeRBBt)
         Me.BreakTimerTab.Controls.Add(Me.BreakRBBt)
         Me.BreakTimerTab.Controls.Add(Me.StatusGroupBoxBT)
-        Me.BreakTimerTab.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BreakTimerTab.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BreakTimerTab.ForeColor = System.Drawing.Color.DarkRed
         Me.BreakTimerTab.ImageKey = "1F512.png"
         Me.BreakTimerTab.Location = New System.Drawing.Point(4, 23)
         Me.BreakTimerTab.Name = "BreakTimerTab"
         Me.BreakTimerTab.Padding = New System.Windows.Forms.Padding(3)
-        Me.BreakTimerTab.Size = New System.Drawing.Size(536, 255)
+        Me.BreakTimerTab.Size = New System.Drawing.Size(627, 277)
         Me.BreakTimerTab.TabIndex = 0
         Me.BreakTimerTab.Text = "Break Timer"
         '
@@ -305,11 +311,11 @@ Partial Class MainForm
         Me.BSTGroupBoxBT.Controls.Add(Me.BSTHourIndicatorLabelBT)
         Me.BSTGroupBoxBT.Controls.Add(Me.BSTHourAndLabelBT)
         Me.BSTGroupBoxBT.Controls.Add(Me.BSTHoursAndLabelBT)
-        Me.BSTGroupBoxBT.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BSTGroupBoxBT.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BSTGroupBoxBT.ForeColor = System.Drawing.Color.Black
-        Me.BSTGroupBoxBT.Location = New System.Drawing.Point(130, 166)
+        Me.BSTGroupBoxBT.Location = New System.Drawing.Point(152, 179)
         Me.BSTGroupBoxBT.Name = "BSTGroupBoxBT"
-        Me.BSTGroupBoxBT.Size = New System.Drawing.Size(120, 62)
+        Me.BSTGroupBoxBT.Size = New System.Drawing.Size(140, 67)
         Me.BSTGroupBoxBT.TabIndex = 94
         Me.BSTGroupBoxBT.TabStop = False
         Me.BSTGroupBoxBT.Text = "Breaktime Set For"
@@ -317,30 +323,30 @@ Partial Class MainForm
         'BSTSecondsLabelBT
         '
         Me.BSTSecondsLabelBT.AutoSize = True
-        Me.BSTSecondsLabelBT.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BSTSecondsLabelBT.Location = New System.Drawing.Point(22, 43)
+        Me.BSTSecondsLabelBT.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BSTSecondsLabelBT.Location = New System.Drawing.Point(26, 46)
         Me.BSTSecondsLabelBT.Name = "BSTSecondsLabelBT"
-        Me.BSTSecondsLabelBT.Size = New System.Drawing.Size(47, 12)
+        Me.BSTSecondsLabelBT.Size = New System.Drawing.Size(49, 14)
         Me.BSTSecondsLabelBT.TabIndex = 91
         Me.BSTSecondsLabelBT.Text = "seconds"
         '
         'BSTSecondLabelBT
         '
         Me.BSTSecondLabelBT.AutoSize = True
-        Me.BSTSecondLabelBT.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BSTSecondLabelBT.Location = New System.Drawing.Point(22, 43)
+        Me.BSTSecondLabelBT.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BSTSecondLabelBT.Location = New System.Drawing.Point(26, 46)
         Me.BSTSecondLabelBT.Name = "BSTSecondLabelBT"
-        Me.BSTSecondLabelBT.Size = New System.Drawing.Size(41, 12)
+        Me.BSTSecondLabelBT.Size = New System.Drawing.Size(43, 14)
         Me.BSTSecondLabelBT.TabIndex = 90
         Me.BSTSecondLabelBT.Text = "second"
         '
         'BSTMinAndLabelBT
         '
         Me.BSTMinAndLabelBT.AutoSize = True
-        Me.BSTMinAndLabelBT.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BSTMinAndLabelBT.Location = New System.Drawing.Point(22, 30)
+        Me.BSTMinAndLabelBT.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BSTMinAndLabelBT.Location = New System.Drawing.Point(26, 32)
         Me.BSTMinAndLabelBT.Name = "BSTMinAndLabelBT"
-        Me.BSTMinAndLabelBT.Size = New System.Drawing.Size(58, 12)
+        Me.BSTMinAndLabelBT.Size = New System.Drawing.Size(59, 14)
         Me.BSTMinAndLabelBT.TabIndex = 89
         Me.BSTMinAndLabelBT.Text = "minute and"
         Me.BSTMinAndLabelBT.Visible = False
@@ -348,50 +354,50 @@ Partial Class MainForm
         'BSTMinsAndLabelBT
         '
         Me.BSTMinsAndLabelBT.AutoSize = True
-        Me.BSTMinsAndLabelBT.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BSTMinsAndLabelBT.Location = New System.Drawing.Point(22, 30)
+        Me.BSTMinsAndLabelBT.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BSTMinsAndLabelBT.Location = New System.Drawing.Point(26, 32)
         Me.BSTMinsAndLabelBT.Name = "BSTMinsAndLabelBT"
-        Me.BSTMinsAndLabelBT.Size = New System.Drawing.Size(64, 12)
+        Me.BSTMinsAndLabelBT.Size = New System.Drawing.Size(65, 14)
         Me.BSTMinsAndLabelBT.TabIndex = 88
         Me.BSTMinsAndLabelBT.Text = "minutes and"
         '
         'BSTSecondIndicatorLabelBT
         '
         Me.BSTSecondIndicatorLabelBT.AutoSize = True
-        Me.BSTSecondIndicatorLabelBT.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BSTSecondIndicatorLabelBT.Location = New System.Drawing.Point(3, 43)
+        Me.BSTSecondIndicatorLabelBT.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BSTSecondIndicatorLabelBT.Location = New System.Drawing.Point(3, 46)
         Me.BSTSecondIndicatorLabelBT.Name = "BSTSecondIndicatorLabelBT"
-        Me.BSTSecondIndicatorLabelBT.Size = New System.Drawing.Size(13, 12)
+        Me.BSTSecondIndicatorLabelBT.Size = New System.Drawing.Size(15, 14)
         Me.BSTSecondIndicatorLabelBT.TabIndex = 85
         Me.BSTSecondIndicatorLabelBT.Text = "--"
         '
         'BSTMinIndicatorLabelBT
         '
         Me.BSTMinIndicatorLabelBT.AutoSize = True
-        Me.BSTMinIndicatorLabelBT.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BSTMinIndicatorLabelBT.Location = New System.Drawing.Point(3, 31)
+        Me.BSTMinIndicatorLabelBT.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BSTMinIndicatorLabelBT.Location = New System.Drawing.Point(3, 33)
         Me.BSTMinIndicatorLabelBT.Name = "BSTMinIndicatorLabelBT"
-        Me.BSTMinIndicatorLabelBT.Size = New System.Drawing.Size(13, 12)
+        Me.BSTMinIndicatorLabelBT.Size = New System.Drawing.Size(15, 14)
         Me.BSTMinIndicatorLabelBT.TabIndex = 84
         Me.BSTMinIndicatorLabelBT.Text = "--"
         '
         'BSTHourIndicatorLabelBT
         '
         Me.BSTHourIndicatorLabelBT.AutoSize = True
-        Me.BSTHourIndicatorLabelBT.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BSTHourIndicatorLabelBT.Location = New System.Drawing.Point(3, 17)
+        Me.BSTHourIndicatorLabelBT.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BSTHourIndicatorLabelBT.Location = New System.Drawing.Point(3, 18)
         Me.BSTHourIndicatorLabelBT.Name = "BSTHourIndicatorLabelBT"
-        Me.BSTHourIndicatorLabelBT.Size = New System.Drawing.Size(13, 12)
+        Me.BSTHourIndicatorLabelBT.Size = New System.Drawing.Size(15, 14)
         Me.BSTHourIndicatorLabelBT.TabIndex = 83
         Me.BSTHourIndicatorLabelBT.Text = "--"
         '
         'BSTHourAndLabelBT
         '
         Me.BSTHourAndLabelBT.AutoSize = True
-        Me.BSTHourAndLabelBT.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BSTHourAndLabelBT.Location = New System.Drawing.Point(22, 17)
+        Me.BSTHourAndLabelBT.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BSTHourAndLabelBT.Location = New System.Drawing.Point(26, 18)
         Me.BSTHourAndLabelBT.Name = "BSTHourAndLabelBT"
-        Me.BSTHourAndLabelBT.Size = New System.Drawing.Size(48, 12)
+        Me.BSTHourAndLabelBT.Size = New System.Drawing.Size(50, 14)
         Me.BSTHourAndLabelBT.TabIndex = 87
         Me.BSTHourAndLabelBT.Text = "hour and"
         Me.BSTHourAndLabelBT.Visible = False
@@ -399,10 +405,10 @@ Partial Class MainForm
         'BSTHoursAndLabelBT
         '
         Me.BSTHoursAndLabelBT.AutoSize = True
-        Me.BSTHoursAndLabelBT.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BSTHoursAndLabelBT.Location = New System.Drawing.Point(22, 17)
+        Me.BSTHoursAndLabelBT.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BSTHoursAndLabelBT.Location = New System.Drawing.Point(26, 18)
         Me.BSTHoursAndLabelBT.Name = "BSTHoursAndLabelBT"
-        Me.BSTHoursAndLabelBT.Size = New System.Drawing.Size(54, 12)
+        Me.BSTHoursAndLabelBT.Size = New System.Drawing.Size(56, 14)
         Me.BSTHoursAndLabelBT.TabIndex = 86
         Me.BSTHoursAndLabelBT.Text = "hours and"
         '
@@ -417,11 +423,11 @@ Partial Class MainForm
         Me.TSFGroupBoxBT.Controls.Add(Me.TSFHourIndicatorLabelBT)
         Me.TSFGroupBoxBT.Controls.Add(Me.TSFHourAndLabelBT)
         Me.TSFGroupBoxBT.Controls.Add(Me.TSFHoursAndLabelBT)
-        Me.TSFGroupBoxBT.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TSFGroupBoxBT.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TSFGroupBoxBT.ForeColor = System.Drawing.Color.Black
-        Me.TSFGroupBoxBT.Location = New System.Drawing.Point(34, 166)
+        Me.TSFGroupBoxBT.Location = New System.Drawing.Point(40, 179)
         Me.TSFGroupBoxBT.Name = "TSFGroupBoxBT"
-        Me.TSFGroupBoxBT.Size = New System.Drawing.Size(90, 61)
+        Me.TSFGroupBoxBT.Size = New System.Drawing.Size(105, 66)
         Me.TSFGroupBoxBT.TabIndex = 93
         Me.TSFGroupBoxBT.TabStop = False
         Me.TSFGroupBoxBT.Text = "Timer Set For"
@@ -429,30 +435,30 @@ Partial Class MainForm
         'TSFSecondsLabelBT
         '
         Me.TSFSecondsLabelBT.AutoSize = True
-        Me.TSFSecondsLabelBT.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TSFSecondsLabelBT.Location = New System.Drawing.Point(21, 42)
+        Me.TSFSecondsLabelBT.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TSFSecondsLabelBT.Location = New System.Drawing.Point(24, 45)
         Me.TSFSecondsLabelBT.Name = "TSFSecondsLabelBT"
-        Me.TSFSecondsLabelBT.Size = New System.Drawing.Size(47, 12)
+        Me.TSFSecondsLabelBT.Size = New System.Drawing.Size(49, 14)
         Me.TSFSecondsLabelBT.TabIndex = 91
         Me.TSFSecondsLabelBT.Text = "seconds"
         '
         'TSFSecondLabelBT
         '
         Me.TSFSecondLabelBT.AutoSize = True
-        Me.TSFSecondLabelBT.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TSFSecondLabelBT.Location = New System.Drawing.Point(30, 42)
+        Me.TSFSecondLabelBT.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TSFSecondLabelBT.Location = New System.Drawing.Point(35, 45)
         Me.TSFSecondLabelBT.Name = "TSFSecondLabelBT"
-        Me.TSFSecondLabelBT.Size = New System.Drawing.Size(41, 12)
+        Me.TSFSecondLabelBT.Size = New System.Drawing.Size(43, 14)
         Me.TSFSecondLabelBT.TabIndex = 90
         Me.TSFSecondLabelBT.Text = "second"
         '
         'TSFMinAndLabelBT
         '
         Me.TSFMinAndLabelBT.AutoSize = True
-        Me.TSFMinAndLabelBT.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TSFMinAndLabelBT.Location = New System.Drawing.Point(21, 29)
+        Me.TSFMinAndLabelBT.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TSFMinAndLabelBT.Location = New System.Drawing.Point(24, 31)
         Me.TSFMinAndLabelBT.Name = "TSFMinAndLabelBT"
-        Me.TSFMinAndLabelBT.Size = New System.Drawing.Size(58, 12)
+        Me.TSFMinAndLabelBT.Size = New System.Drawing.Size(59, 14)
         Me.TSFMinAndLabelBT.TabIndex = 89
         Me.TSFMinAndLabelBT.Text = "minute and"
         Me.TSFMinAndLabelBT.Visible = False
@@ -460,50 +466,50 @@ Partial Class MainForm
         'TSFMinsAndLabelBT
         '
         Me.TSFMinsAndLabelBT.AutoSize = True
-        Me.TSFMinsAndLabelBT.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TSFMinsAndLabelBT.Location = New System.Drawing.Point(21, 29)
+        Me.TSFMinsAndLabelBT.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TSFMinsAndLabelBT.Location = New System.Drawing.Point(24, 31)
         Me.TSFMinsAndLabelBT.Name = "TSFMinsAndLabelBT"
-        Me.TSFMinsAndLabelBT.Size = New System.Drawing.Size(64, 12)
+        Me.TSFMinsAndLabelBT.Size = New System.Drawing.Size(65, 14)
         Me.TSFMinsAndLabelBT.TabIndex = 88
         Me.TSFMinsAndLabelBT.Text = "minutes and"
         '
         'TSFSecondIndicatorLabelBT
         '
         Me.TSFSecondIndicatorLabelBT.AutoSize = True
-        Me.TSFSecondIndicatorLabelBT.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TSFSecondIndicatorLabelBT.Location = New System.Drawing.Point(2, 42)
+        Me.TSFSecondIndicatorLabelBT.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TSFSecondIndicatorLabelBT.Location = New System.Drawing.Point(2, 45)
         Me.TSFSecondIndicatorLabelBT.Name = "TSFSecondIndicatorLabelBT"
-        Me.TSFSecondIndicatorLabelBT.Size = New System.Drawing.Size(13, 12)
+        Me.TSFSecondIndicatorLabelBT.Size = New System.Drawing.Size(15, 14)
         Me.TSFSecondIndicatorLabelBT.TabIndex = 85
         Me.TSFSecondIndicatorLabelBT.Text = "--"
         '
         'TSFMinIndicatorLabelBT
         '
         Me.TSFMinIndicatorLabelBT.AutoSize = True
-        Me.TSFMinIndicatorLabelBT.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TSFMinIndicatorLabelBT.Location = New System.Drawing.Point(2, 30)
+        Me.TSFMinIndicatorLabelBT.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TSFMinIndicatorLabelBT.Location = New System.Drawing.Point(2, 32)
         Me.TSFMinIndicatorLabelBT.Name = "TSFMinIndicatorLabelBT"
-        Me.TSFMinIndicatorLabelBT.Size = New System.Drawing.Size(13, 12)
+        Me.TSFMinIndicatorLabelBT.Size = New System.Drawing.Size(15, 14)
         Me.TSFMinIndicatorLabelBT.TabIndex = 84
         Me.TSFMinIndicatorLabelBT.Text = "--"
         '
         'TSFHourIndicatorLabelBT
         '
         Me.TSFHourIndicatorLabelBT.AutoSize = True
-        Me.TSFHourIndicatorLabelBT.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TSFHourIndicatorLabelBT.Location = New System.Drawing.Point(1, 17)
+        Me.TSFHourIndicatorLabelBT.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TSFHourIndicatorLabelBT.Location = New System.Drawing.Point(1, 18)
         Me.TSFHourIndicatorLabelBT.Name = "TSFHourIndicatorLabelBT"
-        Me.TSFHourIndicatorLabelBT.Size = New System.Drawing.Size(13, 12)
+        Me.TSFHourIndicatorLabelBT.Size = New System.Drawing.Size(15, 14)
         Me.TSFHourIndicatorLabelBT.TabIndex = 83
         Me.TSFHourIndicatorLabelBT.Text = "--"
         '
         'TSFHourAndLabelBT
         '
         Me.TSFHourAndLabelBT.AutoSize = True
-        Me.TSFHourAndLabelBT.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TSFHourAndLabelBT.Location = New System.Drawing.Point(20, 16)
+        Me.TSFHourAndLabelBT.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TSFHourAndLabelBT.Location = New System.Drawing.Point(23, 17)
         Me.TSFHourAndLabelBT.Name = "TSFHourAndLabelBT"
-        Me.TSFHourAndLabelBT.Size = New System.Drawing.Size(48, 12)
+        Me.TSFHourAndLabelBT.Size = New System.Drawing.Size(50, 14)
         Me.TSFHourAndLabelBT.TabIndex = 87
         Me.TSFHourAndLabelBT.Text = "hour and"
         Me.TSFHourAndLabelBT.Visible = False
@@ -511,10 +517,10 @@ Partial Class MainForm
         'TSFHoursAndLabelBT
         '
         Me.TSFHoursAndLabelBT.AutoSize = True
-        Me.TSFHoursAndLabelBT.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TSFHoursAndLabelBT.Location = New System.Drawing.Point(20, 17)
+        Me.TSFHoursAndLabelBT.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TSFHoursAndLabelBT.Location = New System.Drawing.Point(23, 18)
         Me.TSFHoursAndLabelBT.Name = "TSFHoursAndLabelBT"
-        Me.TSFHoursAndLabelBT.Size = New System.Drawing.Size(54, 12)
+        Me.TSFHoursAndLabelBT.Size = New System.Drawing.Size(56, 14)
         Me.TSFHoursAndLabelBT.TabIndex = 86
         Me.TSFHoursAndLabelBT.Text = "hours and"
         '
@@ -525,11 +531,11 @@ Partial Class MainForm
         Me.ControlsGroupBoxBT.Controls.Add(Me.btnResume)
         Me.ControlsGroupBoxBT.Controls.Add(Me.btnStop)
         Me.ControlsGroupBoxBT.Controls.Add(Me.PauseButtonBT)
-        Me.ControlsGroupBoxBT.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ControlsGroupBoxBT.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ControlsGroupBoxBT.ForeColor = System.Drawing.Color.Black
-        Me.ControlsGroupBoxBT.Location = New System.Drawing.Point(32, 92)
+        Me.ControlsGroupBoxBT.Location = New System.Drawing.Point(37, 99)
         Me.ControlsGroupBoxBT.Name = "ControlsGroupBoxBT"
-        Me.ControlsGroupBoxBT.Size = New System.Drawing.Size(218, 68)
+        Me.ControlsGroupBoxBT.Size = New System.Drawing.Size(254, 73)
         Me.ControlsGroupBoxBT.TabIndex = 53
         Me.ControlsGroupBoxBT.TabStop = False
         Me.ControlsGroupBoxBT.Text = "Controls"
@@ -538,13 +544,13 @@ Partial Class MainForm
         '
         Me.BreakNowButtonBt.BackColor = System.Drawing.Color.Transparent
         Me.BreakNowButtonBt.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BreakNowButtonBt.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BreakNowButtonBt.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BreakNowButtonBt.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.BreakNowButtonBt.ImageKey = "1F512.png"
         Me.BreakNowButtonBt.ImageList = Me.IconsIL
-        Me.BreakNowButtonBt.Location = New System.Drawing.Point(77, 16)
+        Me.BreakNowButtonBt.Location = New System.Drawing.Point(90, 17)
         Me.BreakNowButtonBt.Name = "BreakNowButtonBt"
-        Me.BreakNowButtonBt.Size = New System.Drawing.Size(99, 23)
+        Me.BreakNowButtonBt.Size = New System.Drawing.Size(101, 25)
         Me.BreakNowButtonBt.TabIndex = 83
         Me.BreakNowButtonBt.Text = "BreakNow"
         Me.BreakNowButtonBt.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -570,13 +576,13 @@ Partial Class MainForm
         '
         Me.StartButtonBT.BackColor = System.Drawing.Color.Transparent
         Me.StartButtonBT.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.StartButtonBT.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.StartButtonBT.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.StartButtonBT.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.StartButtonBT.ImageKey = "25B6.png"
         Me.StartButtonBT.ImageList = Me.IconsIL
-        Me.StartButtonBT.Location = New System.Drawing.Point(6, 16)
+        Me.StartButtonBT.Location = New System.Drawing.Point(7, 17)
         Me.StartButtonBT.Name = "StartButtonBT"
-        Me.StartButtonBT.Size = New System.Drawing.Size(71, 23)
+        Me.StartButtonBT.Size = New System.Drawing.Size(83, 25)
         Me.StartButtonBT.TabIndex = 55
         Me.StartButtonBT.Text = "Start"
         Me.StartButtonBT.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -586,13 +592,13 @@ Partial Class MainForm
         '
         Me.btnResume.BackColor = System.Drawing.Color.Transparent
         Me.btnResume.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnResume.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnResume.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnResume.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnResume.ImageIndex = 7
         Me.btnResume.ImageList = Me.IconsIL
-        Me.btnResume.Location = New System.Drawing.Point(77, 39)
+        Me.btnResume.Location = New System.Drawing.Point(90, 42)
         Me.btnResume.Name = "btnResume"
-        Me.btnResume.Size = New System.Drawing.Size(68, 23)
+        Me.btnResume.Size = New System.Drawing.Size(79, 25)
         Me.btnResume.TabIndex = 57
         Me.btnResume.Text = "Resume"
         Me.btnResume.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -603,13 +609,13 @@ Partial Class MainForm
         '
         Me.btnStop.BackColor = System.Drawing.Color.Transparent
         Me.btnStop.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnStop.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnStop.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnStop.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnStop.ImageIndex = 5
         Me.btnStop.ImageList = Me.IconsIL
-        Me.btnStop.Location = New System.Drawing.Point(6, 39)
+        Me.btnStop.Location = New System.Drawing.Point(7, 42)
         Me.btnStop.Name = "btnStop"
-        Me.btnStop.Size = New System.Drawing.Size(71, 23)
+        Me.btnStop.Size = New System.Drawing.Size(83, 25)
         Me.btnStop.TabIndex = 58
         Me.btnStop.Text = "Stop"
         Me.btnStop.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -620,13 +626,13 @@ Partial Class MainForm
         '
         Me.PauseButtonBT.BackColor = System.Drawing.Color.Transparent
         Me.PauseButtonBT.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.PauseButtonBT.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PauseButtonBT.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.PauseButtonBT.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.PauseButtonBT.ImageIndex = 6
         Me.PauseButtonBT.ImageList = Me.IconsIL
-        Me.PauseButtonBT.Location = New System.Drawing.Point(151, 39)
+        Me.PauseButtonBT.Location = New System.Drawing.Point(176, 42)
         Me.PauseButtonBT.Name = "PauseButtonBT"
-        Me.PauseButtonBT.Size = New System.Drawing.Size(61, 23)
+        Me.PauseButtonBT.Size = New System.Drawing.Size(71, 25)
         Me.PauseButtonBT.TabIndex = 56
         Me.PauseButtonBT.Text = "Pause"
         Me.PauseButtonBT.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -651,11 +657,11 @@ Partial Class MainForm
         Me.TimerGBBt.Controls.Add(Me.nudTimeSec)
         Me.TimerGBBt.Controls.Add(Me.nudTimeBreakMin)
         Me.TimerGBBt.Controls.Add(Me.nudTimeBreakHour)
-        Me.TimerGBBt.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TimerGBBt.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TimerGBBt.ForeColor = System.Drawing.Color.Black
-        Me.TimerGBBt.Location = New System.Drawing.Point(256, 16)
+        Me.TimerGBBt.Location = New System.Drawing.Point(299, 17)
         Me.TimerGBBt.Name = "TimerGBBt"
-        Me.TimerGBBt.Size = New System.Drawing.Size(223, 144)
+        Me.TimerGBBt.Size = New System.Drawing.Size(260, 155)
         Me.TimerGBBt.TabIndex = 49
         Me.TimerGBBt.TabStop = False
         Me.TimerGBBt.Text = "Timer Settings"
@@ -663,44 +669,44 @@ Partial Class MainForm
         'TimeSelectIndicatorLabelBT
         '
         Me.TimeSelectIndicatorLabelBT.AutoSize = True
-        Me.TimeSelectIndicatorLabelBT.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TimeSelectIndicatorLabelBT.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TimeSelectIndicatorLabelBT.ForeColor = System.Drawing.Color.Black
-        Me.TimeSelectIndicatorLabelBT.Location = New System.Drawing.Point(111, 110)
+        Me.TimeSelectIndicatorLabelBT.Location = New System.Drawing.Point(129, 118)
         Me.TimeSelectIndicatorLabelBT.Name = "TimeSelectIndicatorLabelBT"
-        Me.TimeSelectIndicatorLabelBT.Size = New System.Drawing.Size(47, 12)
+        Me.TimeSelectIndicatorLabelBT.Size = New System.Drawing.Size(49, 14)
         Me.TimeSelectIndicatorLabelBT.TabIndex = 64
         Me.TimeSelectIndicatorLabelBT.Text = "00:00:00"
         '
         'TimeSelectLabelBT
         '
         Me.TimeSelectLabelBT.AutoSize = True
-        Me.TimeSelectLabelBT.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TimeSelectLabelBT.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TimeSelectLabelBT.ForeColor = System.Drawing.Color.Black
-        Me.TimeSelectLabelBT.Location = New System.Drawing.Point(69, 110)
+        Me.TimeSelectLabelBT.Location = New System.Drawing.Point(80, 118)
         Me.TimeSelectLabelBT.Name = "TimeSelectLabelBT"
-        Me.TimeSelectLabelBT.Size = New System.Drawing.Size(32, 12)
+        Me.TimeSelectLabelBT.Size = New System.Drawing.Size(32, 14)
         Me.TimeSelectLabelBT.TabIndex = 63
         Me.TimeSelectLabelBT.Text = "Time:"
         '
         'BreakTimeIndicatorALabelBT
         '
         Me.BreakTimeIndicatorALabelBT.AutoSize = True
-        Me.BreakTimeIndicatorALabelBT.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BreakTimeIndicatorALabelBT.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BreakTimeIndicatorALabelBT.ForeColor = System.Drawing.Color.Black
-        Me.BreakTimeIndicatorALabelBT.Location = New System.Drawing.Point(111, 124)
+        Me.BreakTimeIndicatorALabelBT.Location = New System.Drawing.Point(129, 134)
         Me.BreakTimeIndicatorALabelBT.Name = "BreakTimeIndicatorALabelBT"
-        Me.BreakTimeIndicatorALabelBT.Size = New System.Drawing.Size(47, 12)
+        Me.BreakTimeIndicatorALabelBT.Size = New System.Drawing.Size(49, 14)
         Me.BreakTimeIndicatorALabelBT.TabIndex = 46
         Me.BreakTimeIndicatorALabelBT.Text = "00:00:00"
         '
         'VisualRbBt
         '
         Me.VisualRbBt.AutoSize = True
-        Me.VisualRbBt.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.VisualRbBt.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.VisualRbBt.ForeColor = System.Drawing.Color.Black
-        Me.VisualRbBt.Location = New System.Drawing.Point(118, 86)
+        Me.VisualRbBt.Location = New System.Drawing.Point(138, 93)
         Me.VisualRbBt.Name = "VisualRbBt"
-        Me.VisualRbBt.Size = New System.Drawing.Size(52, 16)
+        Me.VisualRbBt.Size = New System.Drawing.Size(55, 18)
         Me.VisualRbBt.TabIndex = 62
         Me.VisualRbBt.TabStop = True
         Me.VisualRbBt.Text = "Visual"
@@ -709,31 +715,31 @@ Partial Class MainForm
         'BreakTimeSelectALabelBT
         '
         Me.BreakTimeSelectALabelBT.AutoSize = True
-        Me.BreakTimeSelectALabelBT.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BreakTimeSelectALabelBT.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BreakTimeSelectALabelBT.ForeColor = System.Drawing.Color.Black
-        Me.BreakTimeSelectALabelBT.Location = New System.Drawing.Point(37, 124)
+        Me.BreakTimeSelectALabelBT.Location = New System.Drawing.Point(43, 134)
         Me.BreakTimeSelectALabelBT.Name = "BreakTimeSelectALabelBT"
-        Me.BreakTimeSelectALabelBT.Size = New System.Drawing.Size(64, 12)
+        Me.BreakTimeSelectALabelBT.Size = New System.Drawing.Size(63, 14)
         Me.BreakTimeSelectALabelBT.TabIndex = 45
         Me.BreakTimeSelectALabelBT.Text = "Break Time:"
         '
         'nudTimeHour
         '
-        Me.nudTimeHour.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.nudTimeHour.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.nudTimeHour.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.nudTimeHour.Location = New System.Drawing.Point(72, 19)
+        Me.nudTimeHour.Location = New System.Drawing.Point(84, 20)
         Me.nudTimeHour.Maximum = New Decimal(New Integer() {99, 0, 0, 0})
         Me.nudTimeHour.Name = "nudTimeHour"
-        Me.nudTimeHour.Size = New System.Drawing.Size(42, 20)
+        Me.nudTimeHour.Size = New System.Drawing.Size(49, 20)
         Me.nudTimeHour.TabIndex = 34
         '
         'AudioRbBt
         '
         Me.AudioRbBt.AutoSize = True
-        Me.AudioRbBt.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.AudioRbBt.Location = New System.Drawing.Point(118, 71)
+        Me.AudioRbBt.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.AudioRbBt.Location = New System.Drawing.Point(138, 76)
         Me.AudioRbBt.Name = "AudioRbBt"
-        Me.AudioRbBt.Size = New System.Drawing.Size(50, 16)
+        Me.AudioRbBt.Size = New System.Drawing.Size(53, 18)
         Me.AudioRbBt.TabIndex = 61
         Me.AudioRbBt.TabStop = True
         Me.AudioRbBt.Text = "Audio"
@@ -742,91 +748,91 @@ Partial Class MainForm
         'TimeLabelBt
         '
         Me.TimeLabelBt.AutoSize = True
-        Me.TimeLabelBt.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TimeLabelBt.Location = New System.Drawing.Point(24, 19)
+        Me.TimeLabelBt.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TimeLabelBt.Location = New System.Drawing.Point(28, 20)
         Me.TimeLabelBt.Name = "TimeLabelBt"
-        Me.TimeLabelBt.Size = New System.Drawing.Size(32, 12)
+        Me.TimeLabelBt.Size = New System.Drawing.Size(32, 14)
         Me.TimeLabelBt.TabIndex = 29
         Me.TimeLabelBt.Text = "Time:"
         '
         'MWLabelBt
         '
         Me.MWLabelBt.AutoSize = True
-        Me.MWLabelBt.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.MWLabelBt.Location = New System.Drawing.Point(6, 76)
+        Me.MWLabelBt.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.MWLabelBt.Location = New System.Drawing.Point(7, 82)
         Me.MWLabelBt.Name = "MWLabelBt"
-        Me.MWLabelBt.Size = New System.Drawing.Size(51, 12)
+        Me.MWLabelBt.Size = New System.Drawing.Size(52, 14)
         Me.MWLabelBt.TabIndex = 43
         Me.MWLabelBt.Text = "MinWarn:"
         '
         'MinWarnNudBt
         '
-        Me.MinWarnNudBt.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.MinWarnNudBt.Location = New System.Drawing.Point(72, 76)
+        Me.MinWarnNudBt.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.MinWarnNudBt.Location = New System.Drawing.Point(84, 82)
         Me.MinWarnNudBt.Maximum = New Decimal(New Integer() {5, 0, 0, 0})
         Me.MinWarnNudBt.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.MinWarnNudBt.Name = "MinWarnNudBt"
-        Me.MinWarnNudBt.Size = New System.Drawing.Size(40, 20)
+        Me.MinWarnNudBt.Size = New System.Drawing.Size(47, 20)
         Me.MinWarnNudBt.TabIndex = 60
         Me.MinWarnNudBt.Value = New Decimal(New Integer() {1, 0, 0, 0})
         '
         'BreakTimerALabelBT
         '
         Me.BreakTimerALabelBT.AutoSize = True
-        Me.BreakTimerALabelBT.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BreakTimerALabelBT.Location = New System.Drawing.Point(19, 50)
+        Me.BreakTimerALabelBT.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BreakTimerALabelBT.Location = New System.Drawing.Point(22, 54)
         Me.BreakTimerALabelBT.Name = "BreakTimerALabelBT"
-        Me.BreakTimerALabelBT.Size = New System.Drawing.Size(37, 12)
+        Me.BreakTimerALabelBT.Size = New System.Drawing.Size(38, 14)
         Me.BreakTimerALabelBT.TabIndex = 31
         Me.BreakTimerALabelBT.Text = "Break:"
         '
         'nudTimeMin
         '
-        Me.nudTimeMin.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.nudTimeMin.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.nudTimeMin.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.nudTimeMin.Location = New System.Drawing.Point(120, 19)
+        Me.nudTimeMin.Location = New System.Drawing.Point(140, 20)
         Me.nudTimeMin.Maximum = New Decimal(New Integer() {59, 0, 0, 0})
         Me.nudTimeMin.Name = "nudTimeMin"
-        Me.nudTimeMin.Size = New System.Drawing.Size(41, 20)
+        Me.nudTimeMin.Size = New System.Drawing.Size(48, 20)
         Me.nudTimeMin.TabIndex = 35
         '
         'nudTimeBreakSec
         '
-        Me.nudTimeBreakSec.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.nudTimeBreakSec.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.nudTimeBreakSec.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.nudTimeBreakSec.Location = New System.Drawing.Point(167, 48)
+        Me.nudTimeBreakSec.Location = New System.Drawing.Point(195, 52)
         Me.nudTimeBreakSec.Name = "nudTimeBreakSec"
-        Me.nudTimeBreakSec.Size = New System.Drawing.Size(40, 20)
+        Me.nudTimeBreakSec.Size = New System.Drawing.Size(47, 20)
         Me.nudTimeBreakSec.TabIndex = 39
         '
         'nudTimeSec
         '
-        Me.nudTimeSec.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.nudTimeSec.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.nudTimeSec.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.nudTimeSec.Location = New System.Drawing.Point(167, 19)
+        Me.nudTimeSec.Location = New System.Drawing.Point(195, 20)
         Me.nudTimeSec.Maximum = New Decimal(New Integer() {59, 0, 0, 0})
         Me.nudTimeSec.Name = "nudTimeSec"
-        Me.nudTimeSec.Size = New System.Drawing.Size(40, 20)
+        Me.nudTimeSec.Size = New System.Drawing.Size(47, 20)
         Me.nudTimeSec.TabIndex = 36
         '
         'nudTimeBreakMin
         '
-        Me.nudTimeBreakMin.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.nudTimeBreakMin.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.nudTimeBreakMin.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.nudTimeBreakMin.Location = New System.Drawing.Point(120, 48)
+        Me.nudTimeBreakMin.Location = New System.Drawing.Point(140, 52)
         Me.nudTimeBreakMin.Maximum = New Decimal(New Integer() {59, 0, 0, 0})
         Me.nudTimeBreakMin.Name = "nudTimeBreakMin"
-        Me.nudTimeBreakMin.Size = New System.Drawing.Size(41, 20)
+        Me.nudTimeBreakMin.Size = New System.Drawing.Size(48, 20)
         Me.nudTimeBreakMin.TabIndex = 38
         '
         'nudTimeBreakHour
         '
-        Me.nudTimeBreakHour.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.nudTimeBreakHour.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.nudTimeBreakHour.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.nudTimeBreakHour.Location = New System.Drawing.Point(72, 48)
+        Me.nudTimeBreakHour.Location = New System.Drawing.Point(84, 52)
         Me.nudTimeBreakHour.Maximum = New Decimal(New Integer() {99, 0, 0, 0})
         Me.nudTimeBreakHour.Name = "nudTimeBreakHour"
-        Me.nudTimeBreakHour.Size = New System.Drawing.Size(42, 20)
+        Me.nudTimeBreakHour.Size = New System.Drawing.Size(49, 20)
         Me.nudTimeBreakHour.TabIndex = 37
         '
         'BreakGBBt
@@ -837,10 +843,11 @@ Partial Class MainForm
         Me.BreakGBBt.Controls.Add(Me.B1HourNudBT)
         Me.BreakGBBt.Controls.Add(Me.nudb1sec)
         Me.BreakGBBt.Controls.Add(Me.nudb1min)
-        Me.BreakGBBt.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BreakGBBt.Location = New System.Drawing.Point(34, 25)
+        Me.BreakGBBt.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BreakGBBt.ForeColor = System.Drawing.Color.Black
+        Me.BreakGBBt.Location = New System.Drawing.Point(40, 27)
         Me.BreakGBBt.Name = "BreakGBBt"
-        Me.BreakGBBt.Size = New System.Drawing.Size(218, 66)
+        Me.BreakGBBt.Size = New System.Drawing.Size(254, 71)
         Me.BreakGBBt.TabIndex = 52
         Me.BreakGBBt.TabStop = False
         Me.BreakGBBt.Text = "Break Settings"
@@ -848,59 +855,62 @@ Partial Class MainForm
         'BreakTimeLabelBT
         '
         Me.BreakTimeLabelBT.AutoSize = True
-        Me.BreakTimeLabelBT.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BreakTimeLabelBT.Location = New System.Drawing.Point(79, 45)
+        Me.BreakTimeLabelBT.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BreakTimeLabelBT.ForeColor = System.Drawing.Color.Gold
+        Me.BreakTimeLabelBT.Location = New System.Drawing.Point(92, 48)
         Me.BreakTimeLabelBT.Name = "BreakTimeLabelBT"
-        Me.BreakTimeLabelBT.Size = New System.Drawing.Size(47, 12)
+        Me.BreakTimeLabelBT.Size = New System.Drawing.Size(49, 14)
         Me.BreakTimeLabelBT.TabIndex = 44
         Me.BreakTimeLabelBT.Text = "00:00:00"
         '
         'BreakTimeSelectLabelBT
         '
         Me.BreakTimeSelectLabelBT.AutoSize = True
-        Me.BreakTimeSelectLabelBT.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BreakTimeSelectLabelBT.Location = New System.Drawing.Point(11, 45)
+        Me.BreakTimeSelectLabelBT.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BreakTimeSelectLabelBT.ForeColor = System.Drawing.Color.Gold
+        Me.BreakTimeSelectLabelBT.Location = New System.Drawing.Point(13, 48)
         Me.BreakTimeSelectLabelBT.Name = "BreakTimeSelectLabelBT"
-        Me.BreakTimeSelectLabelBT.Size = New System.Drawing.Size(64, 12)
+        Me.BreakTimeSelectLabelBT.Size = New System.Drawing.Size(63, 14)
         Me.BreakTimeSelectLabelBT.TabIndex = 43
         Me.BreakTimeSelectLabelBT.Text = "Break Time:"
         '
         'BreakLabelBT
         '
         Me.BreakLabelBT.AutoSize = True
-        Me.BreakLabelBT.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BreakLabelBT.Location = New System.Drawing.Point(11, 16)
+        Me.BreakLabelBT.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BreakLabelBT.ForeColor = System.Drawing.Color.Gold
+        Me.BreakLabelBT.Location = New System.Drawing.Point(13, 17)
         Me.BreakLabelBT.Name = "BreakLabelBT"
-        Me.BreakLabelBT.Size = New System.Drawing.Size(37, 12)
+        Me.BreakLabelBT.Size = New System.Drawing.Size(38, 14)
         Me.BreakLabelBT.TabIndex = 33
         Me.BreakLabelBT.Text = "Break:"
         '
         'B1HourNudBT
         '
-        Me.B1HourNudBT.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.B1HourNudBT.Location = New System.Drawing.Point(61, 14)
+        Me.B1HourNudBT.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.B1HourNudBT.Location = New System.Drawing.Point(71, 15)
         Me.B1HourNudBT.Maximum = New Decimal(New Integer() {99, 0, 0, 0})
         Me.B1HourNudBT.Name = "B1HourNudBT"
-        Me.B1HourNudBT.Size = New System.Drawing.Size(37, 20)
+        Me.B1HourNudBT.Size = New System.Drawing.Size(43, 20)
         Me.B1HourNudBT.TabIndex = 40
         '
         'nudb1sec
         '
-        Me.nudb1sec.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.nudb1sec.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.nudb1sec.ForeColor = System.Drawing.Color.Black
-        Me.nudb1sec.Location = New System.Drawing.Point(149, 14)
+        Me.nudb1sec.Location = New System.Drawing.Point(174, 15)
         Me.nudb1sec.Maximum = New Decimal(New Integer() {59, 0, 0, 0})
         Me.nudb1sec.Name = "nudb1sec"
-        Me.nudb1sec.Size = New System.Drawing.Size(42, 20)
+        Me.nudb1sec.Size = New System.Drawing.Size(49, 20)
         Me.nudb1sec.TabIndex = 42
         '
         'nudb1min
         '
-        Me.nudb1min.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.nudb1min.Location = New System.Drawing.Point(104, 14)
+        Me.nudb1min.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.nudb1min.Location = New System.Drawing.Point(121, 15)
         Me.nudb1min.Maximum = New Decimal(New Integer() {59, 0, 0, 0})
         Me.nudb1min.Name = "nudb1min"
-        Me.nudb1min.Size = New System.Drawing.Size(39, 20)
+        Me.nudb1min.Size = New System.Drawing.Size(45, 20)
         Me.nudb1min.TabIndex = 41
         '
         'TimeRBBt
@@ -908,14 +918,14 @@ Partial Class MainForm
         Me.TimeRBBt.AutoSize = True
         Me.TimeRBBt.FlatAppearance.BorderSize = 0
         Me.TimeRBBt.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.TimeRBBt.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TimeRBBt.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TimeRBBt.ForeColor = System.Drawing.Color.Black
         Me.TimeRBBt.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.TimeRBBt.ImageIndex = 1
         Me.TimeRBBt.ImageList = Me.IconsIL
-        Me.TimeRBBt.Location = New System.Drawing.Point(39, 6)
+        Me.TimeRBBt.Location = New System.Drawing.Point(45, 6)
         Me.TimeRBBt.Name = "TimeRBBt"
-        Me.TimeRBBt.Size = New System.Drawing.Size(81, 16)
+        Me.TimeRBBt.Size = New System.Drawing.Size(81, 18)
         Me.TimeRBBt.TabIndex = 45
         Me.TimeRBBt.Text = "Set Time"
         Me.TimeRBBt.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -926,14 +936,14 @@ Partial Class MainForm
         '
         Me.BreakRBBt.AutoSize = True
         Me.BreakRBBt.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BreakRBBt.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BreakRBBt.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BreakRBBt.ForeColor = System.Drawing.Color.Black
         Me.BreakRBBt.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.BreakRBBt.ImageIndex = 0
         Me.BreakRBBt.ImageList = Me.IconsIL
-        Me.BreakRBBt.Location = New System.Drawing.Point(131, 6)
+        Me.BreakRBBt.Location = New System.Drawing.Point(153, 6)
         Me.BreakRBBt.Name = "BreakRBBt"
-        Me.BreakRBBt.Size = New System.Drawing.Size(86, 16)
+        Me.BreakRBBt.Size = New System.Drawing.Size(87, 18)
         Me.BreakRBBt.TabIndex = 48
         Me.BreakRBBt.Text = "Set Break"
         Me.BreakRBBt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
@@ -950,11 +960,11 @@ Partial Class MainForm
         Me.StatusGroupBoxBT.Controls.Add(Me.HourLabelBT)
         Me.StatusGroupBoxBT.Controls.Add(Me.HourAndBreakLabelBT)
         Me.StatusGroupBoxBT.Controls.Add(Me.lblhoursandbreak)
-        Me.StatusGroupBoxBT.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.StatusGroupBoxBT.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.StatusGroupBoxBT.ForeColor = System.Drawing.Color.Black
-        Me.StatusGroupBoxBT.Location = New System.Drawing.Point(258, 166)
+        Me.StatusGroupBoxBT.Location = New System.Drawing.Point(301, 179)
         Me.StatusGroupBoxBT.Name = "StatusGroupBoxBT"
-        Me.StatusGroupBoxBT.Size = New System.Drawing.Size(112, 62)
+        Me.StatusGroupBoxBT.Size = New System.Drawing.Size(131, 67)
         Me.StatusGroupBoxBT.TabIndex = 84
         Me.StatusGroupBoxBT.TabStop = False
         Me.StatusGroupBoxBT.Text = "Status"
@@ -962,30 +972,30 @@ Partial Class MainForm
         'lblsecondsbreak
         '
         Me.lblsecondsbreak.AutoSize = True
-        Me.lblsecondsbreak.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblsecondsbreak.Location = New System.Drawing.Point(31, 43)
+        Me.lblsecondsbreak.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblsecondsbreak.Location = New System.Drawing.Point(36, 46)
         Me.lblsecondsbreak.Name = "lblsecondsbreak"
-        Me.lblsecondsbreak.Size = New System.Drawing.Size(47, 12)
+        Me.lblsecondsbreak.Size = New System.Drawing.Size(49, 14)
         Me.lblsecondsbreak.TabIndex = 91
         Me.lblsecondsbreak.Text = "seconds"
         '
         'lblsecondbreak
         '
         Me.lblsecondbreak.AutoSize = True
-        Me.lblsecondbreak.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblsecondbreak.Location = New System.Drawing.Point(40, 43)
+        Me.lblsecondbreak.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblsecondbreak.Location = New System.Drawing.Point(47, 46)
         Me.lblsecondbreak.Name = "lblsecondbreak"
-        Me.lblsecondbreak.Size = New System.Drawing.Size(41, 12)
+        Me.lblsecondbreak.Size = New System.Drawing.Size(43, 14)
         Me.lblsecondbreak.TabIndex = 90
         Me.lblsecondbreak.Text = "second"
         '
         'lblminuteandbreak
         '
         Me.lblminuteandbreak.AutoSize = True
-        Me.lblminuteandbreak.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblminuteandbreak.Location = New System.Drawing.Point(31, 29)
+        Me.lblminuteandbreak.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblminuteandbreak.Location = New System.Drawing.Point(36, 31)
         Me.lblminuteandbreak.Name = "lblminuteandbreak"
-        Me.lblminuteandbreak.Size = New System.Drawing.Size(58, 12)
+        Me.lblminuteandbreak.Size = New System.Drawing.Size(59, 14)
         Me.lblminuteandbreak.TabIndex = 89
         Me.lblminuteandbreak.Text = "minute and"
         Me.lblminuteandbreak.Visible = False
@@ -993,50 +1003,50 @@ Partial Class MainForm
         'lblminutesandbreak
         '
         Me.lblminutesandbreak.AutoSize = True
-        Me.lblminutesandbreak.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblminutesandbreak.Location = New System.Drawing.Point(31, 29)
+        Me.lblminutesandbreak.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblminutesandbreak.Location = New System.Drawing.Point(36, 31)
         Me.lblminutesandbreak.Name = "lblminutesandbreak"
-        Me.lblminutesandbreak.Size = New System.Drawing.Size(64, 12)
+        Me.lblminutesandbreak.Size = New System.Drawing.Size(65, 14)
         Me.lblminutesandbreak.TabIndex = 88
         Me.lblminutesandbreak.Text = "minutes and"
         '
         'lblsec
         '
         Me.lblsec.AutoSize = True
-        Me.lblsec.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblsec.Location = New System.Drawing.Point(12, 43)
+        Me.lblsec.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblsec.Location = New System.Drawing.Point(14, 46)
         Me.lblsec.Name = "lblsec"
-        Me.lblsec.Size = New System.Drawing.Size(13, 12)
+        Me.lblsec.Size = New System.Drawing.Size(15, 14)
         Me.lblsec.TabIndex = 85
         Me.lblsec.Text = "--"
         '
         'lblminute
         '
         Me.lblminute.AutoSize = True
-        Me.lblminute.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblminute.Location = New System.Drawing.Point(12, 30)
+        Me.lblminute.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblminute.Location = New System.Drawing.Point(14, 32)
         Me.lblminute.Name = "lblminute"
-        Me.lblminute.Size = New System.Drawing.Size(13, 12)
+        Me.lblminute.Size = New System.Drawing.Size(15, 14)
         Me.lblminute.TabIndex = 84
         Me.lblminute.Text = "--"
         '
         'HourLabelBT
         '
         Me.HourLabelBT.AutoSize = True
-        Me.HourLabelBT.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.HourLabelBT.Location = New System.Drawing.Point(12, 16)
+        Me.HourLabelBT.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.HourLabelBT.Location = New System.Drawing.Point(14, 17)
         Me.HourLabelBT.Name = "HourLabelBT"
-        Me.HourLabelBT.Size = New System.Drawing.Size(13, 12)
+        Me.HourLabelBT.Size = New System.Drawing.Size(15, 14)
         Me.HourLabelBT.TabIndex = 83
         Me.HourLabelBT.Text = "--"
         '
         'HourAndBreakLabelBT
         '
         Me.HourAndBreakLabelBT.AutoSize = True
-        Me.HourAndBreakLabelBT.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.HourAndBreakLabelBT.Location = New System.Drawing.Point(31, 16)
+        Me.HourAndBreakLabelBT.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.HourAndBreakLabelBT.Location = New System.Drawing.Point(36, 17)
         Me.HourAndBreakLabelBT.Name = "HourAndBreakLabelBT"
-        Me.HourAndBreakLabelBT.Size = New System.Drawing.Size(48, 12)
+        Me.HourAndBreakLabelBT.Size = New System.Drawing.Size(50, 14)
         Me.HourAndBreakLabelBT.TabIndex = 87
         Me.HourAndBreakLabelBT.Text = "hour and"
         Me.HourAndBreakLabelBT.Visible = False
@@ -1044,16 +1054,16 @@ Partial Class MainForm
         'lblhoursandbreak
         '
         Me.lblhoursandbreak.AutoSize = True
-        Me.lblhoursandbreak.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblhoursandbreak.Location = New System.Drawing.Point(31, 16)
+        Me.lblhoursandbreak.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblhoursandbreak.Location = New System.Drawing.Point(36, 17)
         Me.lblhoursandbreak.Name = "lblhoursandbreak"
-        Me.lblhoursandbreak.Size = New System.Drawing.Size(54, 12)
+        Me.lblhoursandbreak.Size = New System.Drawing.Size(56, 14)
         Me.lblhoursandbreak.TabIndex = 86
         Me.lblhoursandbreak.Text = "hours and"
         '
         'AlarmClockTab
         '
-        Me.AlarmClockTab.BackColor = System.Drawing.Color.Red
+        Me.AlarmClockTab.BackColor = System.Drawing.Color.Yellow
         Me.AlarmClockTab.Controls.Add(Me.panelalert)
         Me.AlarmClockTab.Controls.Add(Me.HourNudAC)
         Me.AlarmClockTab.Controls.Add(Me.MinNudAC)
@@ -1062,17 +1072,17 @@ Partial Class MainForm
         Me.AlarmClockTab.Controls.Add(Me.CancelAlarmButton)
         Me.AlarmClockTab.Controls.Add(Me.SetAlarmButton)
         Me.AlarmClockTab.Controls.Add(Me.SetOrNotSetLabel)
-        Me.AlarmClockTab.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.AlarmClockTab.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.AlarmClockTab.ImageIndex = 2
         Me.AlarmClockTab.Location = New System.Drawing.Point(4, 23)
         Me.AlarmClockTab.Name = "AlarmClockTab"
-        Me.AlarmClockTab.Size = New System.Drawing.Size(536, 255)
+        Me.AlarmClockTab.Size = New System.Drawing.Size(627, 277)
         Me.AlarmClockTab.TabIndex = 2
         Me.AlarmClockTab.Text = "Alarm Clock"
         '
         'panelalert
         '
-        Me.panelalert.BackColor = System.Drawing.Color.Yellow
+        Me.panelalert.BackColor = System.Drawing.Color.Red
         Me.panelalert.Controls.Add(Me.btnLM)
         Me.panelalert.Controls.Add(Me.Label2)
         Me.panelalert.Controls.Add(Me.Label1)
@@ -1081,15 +1091,15 @@ Partial Class MainForm
         Me.panelalert.ForeColor = System.Drawing.Color.DarkRed
         Me.panelalert.Location = New System.Drawing.Point(0, 0)
         Me.panelalert.Name = "panelalert"
-        Me.panelalert.Size = New System.Drawing.Size(536, 85)
+        Me.panelalert.Size = New System.Drawing.Size(627, 92)
         Me.panelalert.TabIndex = 40
         '
         'btnLM
         '
         Me.btnLM.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnLM.Location = New System.Drawing.Point(415, 4)
+        Me.btnLM.Location = New System.Drawing.Point(484, 4)
         Me.btnLM.Name = "btnLM"
-        Me.btnLM.Size = New System.Drawing.Size(113, 69)
+        Me.btnLM.Size = New System.Drawing.Size(132, 74)
         Me.btnLM.TabIndex = 88
         Me.btnLM.Text = "Click me to learn more"
         Me.btnLM.UseVisualStyleBackColor = True
@@ -1097,9 +1107,9 @@ Partial Class MainForm
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(69, 29)
+        Me.Label2.Location = New System.Drawing.Point(80, 31)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(228, 33)
+        Me.Label2.Size = New System.Drawing.Size(234, 42)
         Me.Label2.TabIndex = 87
         Me.Label2.Text = "This feature will be discontinued" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "in late 2021. Please click on the button for" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) &
     "more information."
@@ -1107,61 +1117,61 @@ Partial Class MainForm
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Helvetica", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(65, 4)
+        Me.Label1.Font = New System.Drawing.Font("Arial", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(76, 4)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(189, 21)
+        Me.Label1.Size = New System.Drawing.Size(183, 24)
         Me.Label1.TabIndex = 86
         Me.Label1.Text = "Important Notice!"
         '
         'PictureBox2
         '
         Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(9, 4)
+        Me.PictureBox2.Location = New System.Drawing.Point(10, 4)
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(50, 50)
+        Me.PictureBox2.Size = New System.Drawing.Size(58, 54)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox2.TabIndex = 0
         Me.PictureBox2.TabStop = False
         '
         'HourNudAC
         '
-        Me.HourNudAC.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.HourNudAC.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.HourNudAC.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.HourNudAC.Location = New System.Drawing.Point(195, 91)
+        Me.HourNudAC.Location = New System.Drawing.Point(227, 98)
         Me.HourNudAC.Maximum = New Decimal(New Integer() {99, 0, 0, 0})
         Me.HourNudAC.Name = "HourNudAC"
-        Me.HourNudAC.Size = New System.Drawing.Size(42, 18)
+        Me.HourNudAC.Size = New System.Drawing.Size(49, 20)
         Me.HourNudAC.TabIndex = 37
         '
         'MinNudAC
         '
-        Me.MinNudAC.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.MinNudAC.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.MinNudAC.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.MinNudAC.Location = New System.Drawing.Point(243, 91)
+        Me.MinNudAC.Location = New System.Drawing.Point(283, 98)
         Me.MinNudAC.Maximum = New Decimal(New Integer() {59, 0, 0, 0})
         Me.MinNudAC.Name = "MinNudAC"
-        Me.MinNudAC.Size = New System.Drawing.Size(41, 18)
+        Me.MinNudAC.Size = New System.Drawing.Size(48, 20)
         Me.MinNudAC.TabIndex = 38
         '
         'SecNudAC
         '
-        Me.SecNudAC.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SecNudAC.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.SecNudAC.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.SecNudAC.Location = New System.Drawing.Point(290, 91)
+        Me.SecNudAC.Location = New System.Drawing.Point(338, 98)
         Me.SecNudAC.Maximum = New Decimal(New Integer() {59, 0, 0, 0})
         Me.SecNudAC.Name = "SecNudAC"
-        Me.SecNudAC.Size = New System.Drawing.Size(40, 18)
+        Me.SecNudAC.Size = New System.Drawing.Size(47, 20)
         Me.SecNudAC.TabIndex = 39
         '
         'AlarmStatusLabel
         '
         Me.AlarmStatusLabel.AutoSize = True
         Me.AlarmStatusLabel.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.AlarmStatusLabel.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.AlarmStatusLabel.Location = New System.Drawing.Point(181, 144)
+        Me.AlarmStatusLabel.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.AlarmStatusLabel.Location = New System.Drawing.Point(211, 155)
         Me.AlarmStatusLabel.Name = "AlarmStatusLabel"
-        Me.AlarmStatusLabel.Size = New System.Drawing.Size(79, 11)
+        Me.AlarmStatusLabel.Size = New System.Drawing.Size(81, 14)
         Me.AlarmStatusLabel.TabIndex = 15
         Me.AlarmStatusLabel.Text = "Alarm Status:"
         '
@@ -1169,10 +1179,10 @@ Partial Class MainForm
         '
         Me.CancelAlarmButton.BackColor = System.Drawing.Color.Transparent
         Me.CancelAlarmButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.CancelAlarmButton.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CancelAlarmButton.Location = New System.Drawing.Point(266, 118)
+        Me.CancelAlarmButton.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CancelAlarmButton.Location = New System.Drawing.Point(310, 127)
         Me.CancelAlarmButton.Name = "CancelAlarmButton"
-        Me.CancelAlarmButton.Size = New System.Drawing.Size(75, 23)
+        Me.CancelAlarmButton.Size = New System.Drawing.Size(87, 25)
         Me.CancelAlarmButton.TabIndex = 12
         Me.CancelAlarmButton.Text = "Cancel"
         Me.CancelAlarmButton.UseVisualStyleBackColor = False
@@ -1182,10 +1192,10 @@ Partial Class MainForm
         '
         Me.SetAlarmButton.BackColor = System.Drawing.Color.Transparent
         Me.SetAlarmButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.SetAlarmButton.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.SetAlarmButton.Location = New System.Drawing.Point(185, 118)
+        Me.SetAlarmButton.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SetAlarmButton.Location = New System.Drawing.Point(216, 127)
         Me.SetAlarmButton.Name = "SetAlarmButton"
-        Me.SetAlarmButton.Size = New System.Drawing.Size(75, 23)
+        Me.SetAlarmButton.Size = New System.Drawing.Size(87, 25)
         Me.SetAlarmButton.TabIndex = 11
         Me.SetAlarmButton.Text = "Set"
         Me.SetAlarmButton.UseVisualStyleBackColor = False
@@ -1194,16 +1204,16 @@ Partial Class MainForm
         '
         Me.SetOrNotSetLabel.AutoSize = True
         Me.SetOrNotSetLabel.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.SetOrNotSetLabel.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.SetOrNotSetLabel.Location = New System.Drawing.Point(266, 144)
+        Me.SetOrNotSetLabel.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SetOrNotSetLabel.Location = New System.Drawing.Point(310, 155)
         Me.SetOrNotSetLabel.Name = "SetOrNotSetLabel"
-        Me.SetOrNotSetLabel.Size = New System.Drawing.Size(97, 11)
+        Me.SetOrNotSetLabel.Size = New System.Drawing.Size(101, 14)
         Me.SetOrNotSetLabel.TabIndex = 10
         Me.SetOrNotSetLabel.Text = "Please set Alarm"
         '
         'TimerTab
         '
-        Me.TimerTab.BackColor = System.Drawing.Color.Red
+        Me.TimerTab.BackColor = System.Drawing.Color.Yellow
         Me.TimerTab.Controls.Add(Me.TSFGroupBoxT)
         Me.TimerTab.Controls.Add(Me.StatusGroupBoxT)
         Me.TimerTab.Controls.Add(Me.StartTimeButton)
@@ -1213,13 +1223,12 @@ Partial Class MainForm
         Me.TimerTab.Controls.Add(Me.nudMin)
         Me.TimerTab.Controls.Add(Me.nudHour)
         Me.TimerTab.Controls.Add(Me.ResumeTimeButton)
-        Me.TimerTab.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TimerTab.ForeColor = System.Drawing.Color.DarkRed
+        Me.TimerTab.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TimerTab.ImageIndex = 1
         Me.TimerTab.Location = New System.Drawing.Point(4, 23)
         Me.TimerTab.Name = "TimerTab"
         Me.TimerTab.Padding = New System.Windows.Forms.Padding(3)
-        Me.TimerTab.Size = New System.Drawing.Size(536, 255)
+        Me.TimerTab.Size = New System.Drawing.Size(627, 277)
         Me.TimerTab.TabIndex = 1
         Me.TimerTab.Text = "Timer"
         '
@@ -1234,11 +1243,10 @@ Partial Class MainForm
         Me.TSFGroupBoxT.Controls.Add(Me.TSFHourIndicatorLabelT)
         Me.TSFGroupBoxT.Controls.Add(Me.lblsfhoursandtime)
         Me.TSFGroupBoxT.Controls.Add(Me.TSFHoursAndLabelT)
-        Me.TSFGroupBoxT.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TSFGroupBoxT.ForeColor = System.Drawing.Color.DarkRed
-        Me.TSFGroupBoxT.Location = New System.Drawing.Point(272, 104)
+        Me.TSFGroupBoxT.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TSFGroupBoxT.Location = New System.Drawing.Point(317, 112)
         Me.TSFGroupBoxT.Name = "TSFGroupBoxT"
-        Me.TSFGroupBoxT.Size = New System.Drawing.Size(112, 62)
+        Me.TSFGroupBoxT.Size = New System.Drawing.Size(131, 67)
         Me.TSFGroupBoxT.TabIndex = 92
         Me.TSFGroupBoxT.TabStop = False
         Me.TSFGroupBoxT.Text = "Set For"
@@ -1246,30 +1254,30 @@ Partial Class MainForm
         'lblsfsecondstime
         '
         Me.lblsfsecondstime.AutoSize = True
-        Me.lblsfsecondstime.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblsfsecondstime.Location = New System.Drawing.Point(31, 43)
+        Me.lblsfsecondstime.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblsfsecondstime.Location = New System.Drawing.Point(36, 46)
         Me.lblsfsecondstime.Name = "lblsfsecondstime"
-        Me.lblsfsecondstime.Size = New System.Drawing.Size(50, 11)
+        Me.lblsfsecondstime.Size = New System.Drawing.Size(55, 14)
         Me.lblsfsecondstime.TabIndex = 91
         Me.lblsfsecondstime.Text = "seconds"
         '
         'TSFSecondLabelT
         '
         Me.TSFSecondLabelT.AutoSize = True
-        Me.TSFSecondLabelT.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TSFSecondLabelT.Location = New System.Drawing.Point(40, 43)
+        Me.TSFSecondLabelT.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TSFSecondLabelT.Location = New System.Drawing.Point(47, 46)
         Me.TSFSecondLabelT.Name = "TSFSecondLabelT"
-        Me.TSFSecondLabelT.Size = New System.Drawing.Size(44, 11)
+        Me.TSFSecondLabelT.Size = New System.Drawing.Size(48, 14)
         Me.TSFSecondLabelT.TabIndex = 90
         Me.TSFSecondLabelT.Text = "second"
         '
         'SFMinAndLabelT
         '
         Me.SFMinAndLabelT.AutoSize = True
-        Me.SFMinAndLabelT.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.SFMinAndLabelT.Location = New System.Drawing.Point(31, 29)
+        Me.SFMinAndLabelT.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SFMinAndLabelT.Location = New System.Drawing.Point(36, 31)
         Me.SFMinAndLabelT.Name = "SFMinAndLabelT"
-        Me.SFMinAndLabelT.Size = New System.Drawing.Size(63, 11)
+        Me.SFMinAndLabelT.Size = New System.Drawing.Size(69, 14)
         Me.SFMinAndLabelT.TabIndex = 89
         Me.SFMinAndLabelT.Text = "minute and"
         Me.SFMinAndLabelT.Visible = False
@@ -1277,50 +1285,50 @@ Partial Class MainForm
         'TSFMinsAndLabelT
         '
         Me.TSFMinsAndLabelT.AutoSize = True
-        Me.TSFMinsAndLabelT.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TSFMinsAndLabelT.Location = New System.Drawing.Point(31, 29)
+        Me.TSFMinsAndLabelT.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TSFMinsAndLabelT.Location = New System.Drawing.Point(36, 31)
         Me.TSFMinsAndLabelT.Name = "TSFMinsAndLabelT"
-        Me.TSFMinsAndLabelT.Size = New System.Drawing.Size(69, 11)
+        Me.TSFMinsAndLabelT.Size = New System.Drawing.Size(76, 14)
         Me.TSFMinsAndLabelT.TabIndex = 88
         Me.TSFMinsAndLabelT.Text = "minutes and"
         '
         'TSFSecondIndicatorLabelT
         '
         Me.TSFSecondIndicatorLabelT.AutoSize = True
-        Me.TSFSecondIndicatorLabelT.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TSFSecondIndicatorLabelT.Location = New System.Drawing.Point(12, 43)
+        Me.TSFSecondIndicatorLabelT.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TSFSecondIndicatorLabelT.Location = New System.Drawing.Point(14, 46)
         Me.TSFSecondIndicatorLabelT.Name = "TSFSecondIndicatorLabelT"
-        Me.TSFSecondIndicatorLabelT.Size = New System.Drawing.Size(13, 11)
+        Me.TSFSecondIndicatorLabelT.Size = New System.Drawing.Size(15, 14)
         Me.TSFSecondIndicatorLabelT.TabIndex = 85
         Me.TSFSecondIndicatorLabelT.Text = "--"
         '
         'TSFMinIndicatorLabelT
         '
         Me.TSFMinIndicatorLabelT.AutoSize = True
-        Me.TSFMinIndicatorLabelT.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TSFMinIndicatorLabelT.Location = New System.Drawing.Point(12, 30)
+        Me.TSFMinIndicatorLabelT.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TSFMinIndicatorLabelT.Location = New System.Drawing.Point(14, 32)
         Me.TSFMinIndicatorLabelT.Name = "TSFMinIndicatorLabelT"
-        Me.TSFMinIndicatorLabelT.Size = New System.Drawing.Size(13, 11)
+        Me.TSFMinIndicatorLabelT.Size = New System.Drawing.Size(15, 14)
         Me.TSFMinIndicatorLabelT.TabIndex = 84
         Me.TSFMinIndicatorLabelT.Text = "--"
         '
         'TSFHourIndicatorLabelT
         '
         Me.TSFHourIndicatorLabelT.AutoSize = True
-        Me.TSFHourIndicatorLabelT.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TSFHourIndicatorLabelT.Location = New System.Drawing.Point(12, 16)
+        Me.TSFHourIndicatorLabelT.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TSFHourIndicatorLabelT.Location = New System.Drawing.Point(14, 17)
         Me.TSFHourIndicatorLabelT.Name = "TSFHourIndicatorLabelT"
-        Me.TSFHourIndicatorLabelT.Size = New System.Drawing.Size(13, 11)
+        Me.TSFHourIndicatorLabelT.Size = New System.Drawing.Size(15, 14)
         Me.TSFHourIndicatorLabelT.TabIndex = 83
         Me.TSFHourIndicatorLabelT.Text = "--"
         '
         'lblsfhoursandtime
         '
         Me.lblsfhoursandtime.AutoSize = True
-        Me.lblsfhoursandtime.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblsfhoursandtime.Location = New System.Drawing.Point(31, 16)
+        Me.lblsfhoursandtime.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblsfhoursandtime.Location = New System.Drawing.Point(36, 17)
         Me.lblsfhoursandtime.Name = "lblsfhoursandtime"
-        Me.lblsfhoursandtime.Size = New System.Drawing.Size(50, 11)
+        Me.lblsfhoursandtime.Size = New System.Drawing.Size(56, 14)
         Me.lblsfhoursandtime.TabIndex = 87
         Me.lblsfhoursandtime.Text = "hour and"
         Me.lblsfhoursandtime.Visible = False
@@ -1328,10 +1336,10 @@ Partial Class MainForm
         'TSFHoursAndLabelT
         '
         Me.TSFHoursAndLabelT.AutoSize = True
-        Me.TSFHoursAndLabelT.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TSFHoursAndLabelT.Location = New System.Drawing.Point(31, 16)
+        Me.TSFHoursAndLabelT.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TSFHoursAndLabelT.Location = New System.Drawing.Point(36, 17)
         Me.TSFHoursAndLabelT.Name = "TSFHoursAndLabelT"
-        Me.TSFHoursAndLabelT.Size = New System.Drawing.Size(56, 11)
+        Me.TSFHoursAndLabelT.Size = New System.Drawing.Size(63, 14)
         Me.TSFHoursAndLabelT.TabIndex = 86
         Me.TSFHoursAndLabelT.Text = "hours and"
         '
@@ -1346,11 +1354,10 @@ Partial Class MainForm
         Me.StatusGroupBoxT.Controls.Add(Me.lblhourtime)
         Me.StatusGroupBoxT.Controls.Add(Me.lblhourandtime)
         Me.StatusGroupBoxT.Controls.Add(Me.lblhoursandtime)
-        Me.StatusGroupBoxT.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.StatusGroupBoxT.ForeColor = System.Drawing.Color.DarkRed
-        Me.StatusGroupBoxT.Location = New System.Drawing.Point(114, 104)
+        Me.StatusGroupBoxT.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.StatusGroupBoxT.Location = New System.Drawing.Point(133, 112)
         Me.StatusGroupBoxT.Name = "StatusGroupBoxT"
-        Me.StatusGroupBoxT.Size = New System.Drawing.Size(112, 62)
+        Me.StatusGroupBoxT.Size = New System.Drawing.Size(131, 67)
         Me.StatusGroupBoxT.TabIndex = 85
         Me.StatusGroupBoxT.TabStop = False
         Me.StatusGroupBoxT.Text = "Status"
@@ -1358,30 +1365,30 @@ Partial Class MainForm
         'SecondsLabelT
         '
         Me.SecondsLabelT.AutoSize = True
-        Me.SecondsLabelT.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.SecondsLabelT.Location = New System.Drawing.Point(31, 43)
+        Me.SecondsLabelT.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SecondsLabelT.Location = New System.Drawing.Point(36, 46)
         Me.SecondsLabelT.Name = "SecondsLabelT"
-        Me.SecondsLabelT.Size = New System.Drawing.Size(50, 11)
+        Me.SecondsLabelT.Size = New System.Drawing.Size(55, 14)
         Me.SecondsLabelT.TabIndex = 91
         Me.SecondsLabelT.Text = "seconds"
         '
         'lblsecondtime
         '
         Me.lblsecondtime.AutoSize = True
-        Me.lblsecondtime.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblsecondtime.Location = New System.Drawing.Point(40, 43)
+        Me.lblsecondtime.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblsecondtime.Location = New System.Drawing.Point(47, 46)
         Me.lblsecondtime.Name = "lblsecondtime"
-        Me.lblsecondtime.Size = New System.Drawing.Size(44, 11)
+        Me.lblsecondtime.Size = New System.Drawing.Size(48, 14)
         Me.lblsecondtime.TabIndex = 90
         Me.lblsecondtime.Text = "second"
         '
         'lblminuteandtime
         '
         Me.lblminuteandtime.AutoSize = True
-        Me.lblminuteandtime.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblminuteandtime.Location = New System.Drawing.Point(31, 29)
+        Me.lblminuteandtime.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblminuteandtime.Location = New System.Drawing.Point(36, 31)
         Me.lblminuteandtime.Name = "lblminuteandtime"
-        Me.lblminuteandtime.Size = New System.Drawing.Size(63, 11)
+        Me.lblminuteandtime.Size = New System.Drawing.Size(69, 14)
         Me.lblminuteandtime.TabIndex = 89
         Me.lblminuteandtime.Text = "minute and"
         Me.lblminuteandtime.Visible = False
@@ -1389,50 +1396,50 @@ Partial Class MainForm
         'lblminutesandtime
         '
         Me.lblminutesandtime.AutoSize = True
-        Me.lblminutesandtime.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblminutesandtime.Location = New System.Drawing.Point(31, 29)
+        Me.lblminutesandtime.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblminutesandtime.Location = New System.Drawing.Point(36, 31)
         Me.lblminutesandtime.Name = "lblminutesandtime"
-        Me.lblminutesandtime.Size = New System.Drawing.Size(69, 11)
+        Me.lblminutesandtime.Size = New System.Drawing.Size(76, 14)
         Me.lblminutesandtime.TabIndex = 88
         Me.lblminutesandtime.Text = "minutes and"
         '
         'lblsectime
         '
         Me.lblsectime.AutoSize = True
-        Me.lblsectime.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblsectime.Location = New System.Drawing.Point(12, 43)
+        Me.lblsectime.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblsectime.Location = New System.Drawing.Point(14, 46)
         Me.lblsectime.Name = "lblsectime"
-        Me.lblsectime.Size = New System.Drawing.Size(13, 11)
+        Me.lblsectime.Size = New System.Drawing.Size(15, 14)
         Me.lblsectime.TabIndex = 85
         Me.lblsectime.Text = "--"
         '
         'lblmintime
         '
         Me.lblmintime.AutoSize = True
-        Me.lblmintime.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblmintime.Location = New System.Drawing.Point(12, 30)
+        Me.lblmintime.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblmintime.Location = New System.Drawing.Point(14, 32)
         Me.lblmintime.Name = "lblmintime"
-        Me.lblmintime.Size = New System.Drawing.Size(13, 11)
+        Me.lblmintime.Size = New System.Drawing.Size(15, 14)
         Me.lblmintime.TabIndex = 84
         Me.lblmintime.Text = "--"
         '
         'lblhourtime
         '
         Me.lblhourtime.AutoSize = True
-        Me.lblhourtime.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblhourtime.Location = New System.Drawing.Point(12, 16)
+        Me.lblhourtime.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblhourtime.Location = New System.Drawing.Point(14, 17)
         Me.lblhourtime.Name = "lblhourtime"
-        Me.lblhourtime.Size = New System.Drawing.Size(13, 11)
+        Me.lblhourtime.Size = New System.Drawing.Size(15, 14)
         Me.lblhourtime.TabIndex = 83
         Me.lblhourtime.Text = "--"
         '
         'lblhourandtime
         '
         Me.lblhourandtime.AutoSize = True
-        Me.lblhourandtime.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblhourandtime.Location = New System.Drawing.Point(31, 16)
+        Me.lblhourandtime.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblhourandtime.Location = New System.Drawing.Point(36, 17)
         Me.lblhourandtime.Name = "lblhourandtime"
-        Me.lblhourandtime.Size = New System.Drawing.Size(50, 11)
+        Me.lblhourandtime.Size = New System.Drawing.Size(56, 14)
         Me.lblhourandtime.TabIndex = 87
         Me.lblhourandtime.Text = "hour and"
         Me.lblhourandtime.Visible = False
@@ -1440,10 +1447,10 @@ Partial Class MainForm
         'lblhoursandtime
         '
         Me.lblhoursandtime.AutoSize = True
-        Me.lblhoursandtime.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblhoursandtime.Location = New System.Drawing.Point(31, 16)
+        Me.lblhoursandtime.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblhoursandtime.Location = New System.Drawing.Point(36, 17)
         Me.lblhoursandtime.Name = "lblhoursandtime"
-        Me.lblhoursandtime.Size = New System.Drawing.Size(56, 11)
+        Me.lblhoursandtime.Size = New System.Drawing.Size(63, 14)
         Me.lblhoursandtime.TabIndex = 86
         Me.lblhoursandtime.Text = "hours and"
         '
@@ -1451,10 +1458,10 @@ Partial Class MainForm
         '
         Me.StartTimeButton.BackColor = System.Drawing.Color.Transparent
         Me.StartTimeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.StartTimeButton.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.StartTimeButton.Location = New System.Drawing.Point(116, 75)
+        Me.StartTimeButton.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.StartTimeButton.Location = New System.Drawing.Point(135, 81)
         Me.StartTimeButton.Name = "StartTimeButton"
-        Me.StartTimeButton.Size = New System.Drawing.Size(62, 23)
+        Me.StartTimeButton.Size = New System.Drawing.Size(72, 25)
         Me.StartTimeButton.TabIndex = 60
         Me.StartTimeButton.Text = "Start"
         Me.StartTimeButton.UseVisualStyleBackColor = False
@@ -1463,10 +1470,10 @@ Partial Class MainForm
         '
         Me.StopTimeButton.BackColor = System.Drawing.Color.Transparent
         Me.StopTimeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.StopTimeButton.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.StopTimeButton.Location = New System.Drawing.Point(180, 75)
+        Me.StopTimeButton.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.StopTimeButton.Location = New System.Drawing.Point(210, 81)
         Me.StopTimeButton.Name = "StopTimeButton"
-        Me.StopTimeButton.Size = New System.Drawing.Size(62, 23)
+        Me.StopTimeButton.Size = New System.Drawing.Size(72, 25)
         Me.StopTimeButton.TabIndex = 63
         Me.StopTimeButton.Text = "Stop"
         Me.StopTimeButton.UseVisualStyleBackColor = False
@@ -1476,10 +1483,10 @@ Partial Class MainForm
         '
         Me.PauseButtonT.BackColor = System.Drawing.Color.Transparent
         Me.PauseButtonT.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.PauseButtonT.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.PauseButtonT.Location = New System.Drawing.Point(319, 75)
+        Me.PauseButtonT.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PauseButtonT.Location = New System.Drawing.Point(372, 81)
         Me.PauseButtonT.Name = "PauseButtonT"
-        Me.PauseButtonT.Size = New System.Drawing.Size(65, 23)
+        Me.PauseButtonT.Size = New System.Drawing.Size(76, 25)
         Me.PauseButtonT.TabIndex = 61
         Me.PauseButtonT.Text = "Pause"
         Me.PauseButtonT.UseVisualStyleBackColor = False
@@ -1487,42 +1494,42 @@ Partial Class MainForm
         '
         'nudSec
         '
-        Me.nudSec.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.nudSec.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.nudSec.ForeColor = System.Drawing.Color.DarkRed
-        Me.nudSec.Location = New System.Drawing.Point(281, 29)
+        Me.nudSec.Location = New System.Drawing.Point(328, 31)
         Me.nudSec.Maximum = New Decimal(New Integer() {59, 0, 0, 0})
         Me.nudSec.Name = "nudSec"
-        Me.nudSec.Size = New System.Drawing.Size(50, 18)
+        Me.nudSec.Size = New System.Drawing.Size(58, 20)
         Me.nudSec.TabIndex = 10
         '
         'nudMin
         '
-        Me.nudMin.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.nudMin.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.nudMin.ForeColor = System.Drawing.Color.DarkRed
-        Me.nudMin.Location = New System.Drawing.Point(225, 29)
+        Me.nudMin.Location = New System.Drawing.Point(262, 31)
         Me.nudMin.Maximum = New Decimal(New Integer() {59, 0, 0, 0})
         Me.nudMin.Name = "nudMin"
-        Me.nudMin.Size = New System.Drawing.Size(50, 18)
+        Me.nudMin.Size = New System.Drawing.Size(58, 20)
         Me.nudMin.TabIndex = 9
         '
         'nudHour
         '
-        Me.nudHour.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.nudHour.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.nudHour.ForeColor = System.Drawing.Color.DarkRed
-        Me.nudHour.Location = New System.Drawing.Point(169, 29)
+        Me.nudHour.Location = New System.Drawing.Point(197, 31)
         Me.nudHour.Maximum = New Decimal(New Integer() {99, 0, 0, 0})
         Me.nudHour.Name = "nudHour"
-        Me.nudHour.Size = New System.Drawing.Size(50, 18)
+        Me.nudHour.Size = New System.Drawing.Size(58, 20)
         Me.nudHour.TabIndex = 8
         '
         'ResumeTimeButton
         '
         Me.ResumeTimeButton.BackColor = System.Drawing.Color.Transparent
         Me.ResumeTimeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ResumeTimeButton.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ResumeTimeButton.Location = New System.Drawing.Point(248, 75)
+        Me.ResumeTimeButton.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ResumeTimeButton.Location = New System.Drawing.Point(289, 81)
         Me.ResumeTimeButton.Name = "ResumeTimeButton"
-        Me.ResumeTimeButton.Size = New System.Drawing.Size(65, 23)
+        Me.ResumeTimeButton.Size = New System.Drawing.Size(76, 25)
         Me.ResumeTimeButton.TabIndex = 62
         Me.ResumeTimeButton.Text = "Resume"
         Me.ResumeTimeButton.UseVisualStyleBackColor = False
@@ -1530,7 +1537,7 @@ Partial Class MainForm
         '
         'StopWatchTab
         '
-        Me.StopWatchTab.BackColor = System.Drawing.Color.Red
+        Me.StopWatchTab.BackColor = System.Drawing.Color.Yellow
         Me.StopWatchTab.Controls.Add(Me.Panel1)
         Me.StopWatchTab.Controls.Add(Me.LapListBoxSw)
         Me.StopWatchTab.Controls.Add(Me.LapButtonSW)
@@ -1539,18 +1546,17 @@ Partial Class MainForm
         Me.StopWatchTab.Controls.Add(Me.StartButtonSW)
         Me.StopWatchTab.Controls.Add(Me.StopButtonSW)
         Me.StopWatchTab.Controls.Add(Me.ResumeButtonSW)
-        Me.StopWatchTab.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.StopWatchTab.ForeColor = System.Drawing.Color.DarkRed
+        Me.StopWatchTab.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.StopWatchTab.ImageIndex = 4
         Me.StopWatchTab.Location = New System.Drawing.Point(4, 23)
         Me.StopWatchTab.Name = "StopWatchTab"
-        Me.StopWatchTab.Size = New System.Drawing.Size(536, 255)
+        Me.StopWatchTab.Size = New System.Drawing.Size(627, 277)
         Me.StopWatchTab.TabIndex = 3
         Me.StopWatchTab.Text = "Stopwatch"
         '
         'Panel1
         '
-        Me.Panel1.BackColor = System.Drawing.Color.Yellow
+        Me.Panel1.BackColor = System.Drawing.Color.Red
         Me.Panel1.Controls.Add(Me.Button1)
         Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Controls.Add(Me.Label4)
@@ -1559,15 +1565,15 @@ Partial Class MainForm
         Me.Panel1.ForeColor = System.Drawing.Color.DarkRed
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(536, 79)
+        Me.Panel1.Size = New System.Drawing.Size(627, 85)
         Me.Panel1.TabIndex = 68
         '
         'Button1
         '
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Location = New System.Drawing.Point(415, 4)
+        Me.Button1.Location = New System.Drawing.Point(484, 4)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(113, 69)
+        Me.Button1.Size = New System.Drawing.Size(132, 74)
         Me.Button1.TabIndex = 88
         Me.Button1.Text = "Click me to learn more"
         Me.Button1.UseVisualStyleBackColor = True
@@ -1575,9 +1581,9 @@ Partial Class MainForm
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(69, 29)
+        Me.Label3.Location = New System.Drawing.Point(80, 31)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(228, 33)
+        Me.Label3.Size = New System.Drawing.Size(234, 42)
         Me.Label3.TabIndex = 87
         Me.Label3.Text = "This feature will be discontinued" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "in late 2021. Please click on the button for" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) &
     "more information."
@@ -1585,31 +1591,31 @@ Partial Class MainForm
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Helvetica", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(65, 4)
+        Me.Label4.Font = New System.Drawing.Font("Arial", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(76, 4)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(189, 21)
+        Me.Label4.Size = New System.Drawing.Size(183, 24)
         Me.Label4.TabIndex = 86
         Me.Label4.Text = "Important Notice!"
         '
         'PictureBox3
         '
         Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
-        Me.PictureBox3.Location = New System.Drawing.Point(9, 4)
+        Me.PictureBox3.Location = New System.Drawing.Point(10, 4)
         Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(50, 50)
+        Me.PictureBox3.Size = New System.Drawing.Size(58, 54)
         Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox3.TabIndex = 0
         Me.PictureBox3.TabStop = False
         '
         'LapListBoxSw
         '
-        Me.LapListBoxSw.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LapListBoxSw.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LapListBoxSw.FormattingEnabled = True
-        Me.LapListBoxSw.ItemHeight = 11
-        Me.LapListBoxSw.Location = New System.Drawing.Point(161, 136)
+        Me.LapListBoxSw.ItemHeight = 14
+        Me.LapListBoxSw.Location = New System.Drawing.Point(188, 146)
         Me.LapListBoxSw.Name = "LapListBoxSw"
-        Me.LapListBoxSw.Size = New System.Drawing.Size(207, 81)
+        Me.LapListBoxSw.Size = New System.Drawing.Size(241, 74)
         Me.LapListBoxSw.TabIndex = 65
         Me.LapListBoxSw.Visible = False
         '
@@ -1617,10 +1623,10 @@ Partial Class MainForm
         '
         Me.LapButtonSW.BackColor = System.Drawing.Color.Transparent
         Me.LapButtonSW.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.LapButtonSW.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LapButtonSW.Location = New System.Drawing.Point(374, 107)
+        Me.LapButtonSW.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LapButtonSW.Location = New System.Drawing.Point(436, 115)
         Me.LapButtonSW.Name = "LapButtonSW"
-        Me.LapButtonSW.Size = New System.Drawing.Size(75, 23)
+        Me.LapButtonSW.Size = New System.Drawing.Size(87, 25)
         Me.LapButtonSW.TabIndex = 64
         Me.LapButtonSW.Text = "Lap"
         Me.LapButtonSW.UseVisualStyleBackColor = False
@@ -1629,10 +1635,10 @@ Partial Class MainForm
         '
         Me.PauseButtonSW.BackColor = System.Drawing.Color.Transparent
         Me.PauseButtonSW.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.PauseButtonSW.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.PauseButtonSW.Location = New System.Drawing.Point(232, 107)
+        Me.PauseButtonSW.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PauseButtonSW.Location = New System.Drawing.Point(271, 115)
         Me.PauseButtonSW.Name = "PauseButtonSW"
-        Me.PauseButtonSW.Size = New System.Drawing.Size(65, 23)
+        Me.PauseButtonSW.Size = New System.Drawing.Size(76, 25)
         Me.PauseButtonSW.TabIndex = 61
         Me.PauseButtonSW.Text = "Pause"
         Me.PauseButtonSW.UseVisualStyleBackColor = False
@@ -1641,11 +1647,11 @@ Partial Class MainForm
         'StopwatchLabelSW
         '
         Me.StopwatchLabelSW.AutoSize = True
-        Me.StopwatchLabelSW.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.StopwatchLabelSW.Location = New System.Drawing.Point(242, 93)
+        Me.StopwatchLabelSW.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.StopwatchLabelSW.Location = New System.Drawing.Point(282, 100)
         Me.StopwatchLabelSW.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.StopwatchLabelSW.Name = "StopwatchLabelSW"
-        Me.StopwatchLabelSW.Size = New System.Drawing.Size(37, 11)
+        Me.StopwatchLabelSW.Size = New System.Drawing.Size(37, 14)
         Me.StopwatchLabelSW.TabIndex = 59
         Me.StopwatchLabelSW.Text = "--:--:--"
         Me.StopwatchLabelSW.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1654,10 +1660,10 @@ Partial Class MainForm
         '
         Me.StartButtonSW.BackColor = System.Drawing.Color.Transparent
         Me.StartButtonSW.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.StartButtonSW.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.StartButtonSW.Location = New System.Drawing.Point(90, 107)
+        Me.StartButtonSW.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.StartButtonSW.Location = New System.Drawing.Point(105, 115)
         Me.StartButtonSW.Name = "StartButtonSW"
-        Me.StartButtonSW.Size = New System.Drawing.Size(65, 23)
+        Me.StartButtonSW.Size = New System.Drawing.Size(76, 25)
         Me.StartButtonSW.TabIndex = 60
         Me.StartButtonSW.Text = "Start"
         Me.StartButtonSW.UseVisualStyleBackColor = False
@@ -1666,10 +1672,10 @@ Partial Class MainForm
         '
         Me.StopButtonSW.BackColor = System.Drawing.Color.Transparent
         Me.StopButtonSW.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.StopButtonSW.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.StopButtonSW.Location = New System.Drawing.Point(161, 107)
+        Me.StopButtonSW.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.StopButtonSW.Location = New System.Drawing.Point(188, 115)
         Me.StopButtonSW.Name = "StopButtonSW"
-        Me.StopButtonSW.Size = New System.Drawing.Size(65, 23)
+        Me.StopButtonSW.Size = New System.Drawing.Size(76, 25)
         Me.StopButtonSW.TabIndex = 67
         Me.StopButtonSW.Text = "Stop"
         Me.StopButtonSW.UseVisualStyleBackColor = False
@@ -1679,10 +1685,10 @@ Partial Class MainForm
         '
         Me.ResumeButtonSW.BackColor = System.Drawing.Color.Transparent
         Me.ResumeButtonSW.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ResumeButtonSW.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ResumeButtonSW.Location = New System.Drawing.Point(303, 107)
+        Me.ResumeButtonSW.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ResumeButtonSW.Location = New System.Drawing.Point(353, 115)
         Me.ResumeButtonSW.Name = "ResumeButtonSW"
-        Me.ResumeButtonSW.Size = New System.Drawing.Size(65, 23)
+        Me.ResumeButtonSW.Size = New System.Drawing.Size(76, 25)
         Me.ResumeButtonSW.TabIndex = 66
         Me.ResumeButtonSW.Text = "Resume"
         Me.ResumeButtonSW.UseVisualStyleBackColor = False
@@ -1690,7 +1696,7 @@ Partial Class MainForm
         '
         'ShutdownTabPage
         '
-        Me.ShutdownTabPage.BackColor = System.Drawing.Color.Red
+        Me.ShutdownTabPage.BackColor = System.Drawing.Color.Yellow
         Me.ShutdownTabPage.Controls.Add(Me.Panel2)
         Me.ShutdownTabPage.Controls.Add(Me.StatusGroupBoxSH)
         Me.ShutdownTabPage.Controls.Add(Me.ShutdownCbSh)
@@ -1702,15 +1708,68 @@ Partial Class MainForm
         Me.ShutdownTabPage.Controls.Add(Me.AtSettingsGBSH)
         Me.ShutdownTabPage.Controls.Add(Me.AtRadioButtonSh)
         Me.ShutdownTabPage.Controls.Add(Me.InRadioButtonSh)
-        Me.ShutdownTabPage.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ShutdownTabPage.ForeColor = System.Drawing.Color.DarkRed
+        Me.ShutdownTabPage.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ShutdownTabPage.ImageIndex = 3
         Me.ShutdownTabPage.Location = New System.Drawing.Point(4, 23)
         Me.ShutdownTabPage.Name = "ShutdownTabPage"
         Me.ShutdownTabPage.Padding = New System.Windows.Forms.Padding(3)
-        Me.ShutdownTabPage.Size = New System.Drawing.Size(536, 255)
+        Me.ShutdownTabPage.Size = New System.Drawing.Size(627, 277)
         Me.ShutdownTabPage.TabIndex = 4
         Me.ShutdownTabPage.Text = "Shutdown"
+        '
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.Color.Red
+        Me.Panel2.Controls.Add(Me.Button2)
+        Me.Panel2.Controls.Add(Me.Label5)
+        Me.Panel2.Controls.Add(Me.Label6)
+        Me.Panel2.Controls.Add(Me.PictureBox4)
+        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel2.ForeColor = System.Drawing.Color.DarkRed
+        Me.Panel2.Location = New System.Drawing.Point(3, 3)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(621, 71)
+        Me.Panel2.TabIndex = 103
+        '
+        'Button2
+        '
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.Location = New System.Drawing.Point(484, 4)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(132, 74)
+        Me.Button2.TabIndex = 88
+        Me.Button2.Text = "Click me to learn more"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(80, 31)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(207, 42)
+        Me.Label5.TabIndex = 87
+        Me.Label5.Text = "This feature will be discontinued" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "in late 2021. Please click on the button for" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) &
+    "more information."
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Arial", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(76, 4)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(183, 24)
+        Me.Label6.TabIndex = 86
+        Me.Label6.Text = "Important Notice!"
+        '
+        'PictureBox4
+        '
+        Me.PictureBox4.Image = CType(resources.GetObject("PictureBox4.Image"), System.Drawing.Image)
+        Me.PictureBox4.Location = New System.Drawing.Point(10, 4)
+        Me.PictureBox4.Name = "PictureBox4"
+        Me.PictureBox4.Size = New System.Drawing.Size(58, 54)
+        Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox4.TabIndex = 0
+        Me.PictureBox4.TabStop = False
         '
         'StatusGroupBoxSH
         '
@@ -1724,11 +1783,11 @@ Partial Class MainForm
         Me.StatusGroupBoxSH.Controls.Add(Me.MinuteIndicatorLabelSh)
         Me.StatusGroupBoxSH.Controls.Add(Me.MinutesAndLabelSh)
         Me.StatusGroupBoxSH.Controls.Add(Me.SecondsIndicatorLabelSh)
-        Me.StatusGroupBoxSH.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.StatusGroupBoxSH.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.StatusGroupBoxSH.ForeColor = System.Drawing.Color.Black
-        Me.StatusGroupBoxSH.Location = New System.Drawing.Point(234, 181)
+        Me.StatusGroupBoxSH.Location = New System.Drawing.Point(273, 195)
         Me.StatusGroupBoxSH.Name = "StatusGroupBoxSH"
-        Me.StatusGroupBoxSH.Size = New System.Drawing.Size(184, 63)
+        Me.StatusGroupBoxSH.Size = New System.Drawing.Size(215, 68)
         Me.StatusGroupBoxSH.TabIndex = 102
         Me.StatusGroupBoxSH.TabStop = False
         Me.StatusGroupBoxSH.Text = "Status"
@@ -1736,10 +1795,10 @@ Partial Class MainForm
         'MinuteAndLabelSh
         '
         Me.MinuteAndLabelSh.AutoSize = True
-        Me.MinuteAndLabelSh.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.MinuteAndLabelSh.Location = New System.Drawing.Point(44, 31)
+        Me.MinuteAndLabelSh.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.MinuteAndLabelSh.Location = New System.Drawing.Point(51, 33)
         Me.MinuteAndLabelSh.Name = "MinuteAndLabelSh"
-        Me.MinuteAndLabelSh.Size = New System.Drawing.Size(63, 11)
+        Me.MinuteAndLabelSh.Size = New System.Drawing.Size(69, 14)
         Me.MinuteAndLabelSh.TabIndex = 97
         Me.MinuteAndLabelSh.Text = "minute and"
         Me.MinuteAndLabelSh.Visible = False
@@ -1747,30 +1806,30 @@ Partial Class MainForm
         'DateTimeTillShutdownLabelSh
         '
         Me.DateTimeTillShutdownLabelSh.AutoSize = True
-        Me.DateTimeTillShutdownLabelSh.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DateTimeTillShutdownLabelSh.Location = New System.Drawing.Point(127, 19)
+        Me.DateTimeTillShutdownLabelSh.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DateTimeTillShutdownLabelSh.Location = New System.Drawing.Point(148, 20)
         Me.DateTimeTillShutdownLabelSh.Name = "DateTimeTillShutdownLabelSh"
-        Me.DateTimeTillShutdownLabelSh.Size = New System.Drawing.Size(49, 11)
+        Me.DateTimeTillShutdownLabelSh.Size = New System.Drawing.Size(49, 14)
         Me.DateTimeTillShutdownLabelSh.TabIndex = 101
         Me.DateTimeTillShutdownLabelSh.Text = "12:00:00"
         '
         'HoursAndLabelSh
         '
         Me.HoursAndLabelSh.AutoSize = True
-        Me.HoursAndLabelSh.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.HoursAndLabelSh.Location = New System.Drawing.Point(44, 19)
+        Me.HoursAndLabelSh.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.HoursAndLabelSh.Location = New System.Drawing.Point(51, 20)
         Me.HoursAndLabelSh.Name = "HoursAndLabelSh"
-        Me.HoursAndLabelSh.Size = New System.Drawing.Size(56, 11)
+        Me.HoursAndLabelSh.Size = New System.Drawing.Size(63, 14)
         Me.HoursAndLabelSh.TabIndex = 94
         Me.HoursAndLabelSh.Text = "hours and"
         '
         'HourAndLabelSh
         '
         Me.HourAndLabelSh.AutoSize = True
-        Me.HourAndLabelSh.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.HourAndLabelSh.Location = New System.Drawing.Point(44, 19)
+        Me.HourAndLabelSh.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.HourAndLabelSh.Location = New System.Drawing.Point(51, 20)
         Me.HourAndLabelSh.Name = "HourAndLabelSh"
-        Me.HourAndLabelSh.Size = New System.Drawing.Size(50, 11)
+        Me.HourAndLabelSh.Size = New System.Drawing.Size(56, 14)
         Me.HourAndLabelSh.TabIndex = 95
         Me.HourAndLabelSh.Text = "hour and"
         Me.HourAndLabelSh.Visible = False
@@ -1778,84 +1837,84 @@ Partial Class MainForm
         'SecondsLabelSh
         '
         Me.SecondsLabelSh.AutoSize = True
-        Me.SecondsLabelSh.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.SecondsLabelSh.Location = New System.Drawing.Point(44, 45)
+        Me.SecondsLabelSh.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SecondsLabelSh.Location = New System.Drawing.Point(51, 48)
         Me.SecondsLabelSh.Name = "SecondsLabelSh"
-        Me.SecondsLabelSh.Size = New System.Drawing.Size(50, 11)
+        Me.SecondsLabelSh.Size = New System.Drawing.Size(55, 14)
         Me.SecondsLabelSh.TabIndex = 99
         Me.SecondsLabelSh.Text = "seconds"
         '
         'HourIndicatorLabelSh
         '
         Me.HourIndicatorLabelSh.AutoSize = True
-        Me.HourIndicatorLabelSh.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.HourIndicatorLabelSh.Location = New System.Drawing.Point(25, 19)
+        Me.HourIndicatorLabelSh.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.HourIndicatorLabelSh.Location = New System.Drawing.Point(29, 20)
         Me.HourIndicatorLabelSh.Name = "HourIndicatorLabelSh"
-        Me.HourIndicatorLabelSh.Size = New System.Drawing.Size(13, 11)
+        Me.HourIndicatorLabelSh.Size = New System.Drawing.Size(15, 14)
         Me.HourIndicatorLabelSh.TabIndex = 91
         Me.HourIndicatorLabelSh.Text = "--"
         '
         'SecondLabelSh
         '
         Me.SecondLabelSh.AutoSize = True
-        Me.SecondLabelSh.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.SecondLabelSh.Location = New System.Drawing.Point(49, 45)
+        Me.SecondLabelSh.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SecondLabelSh.Location = New System.Drawing.Point(57, 48)
         Me.SecondLabelSh.Name = "SecondLabelSh"
-        Me.SecondLabelSh.Size = New System.Drawing.Size(44, 11)
+        Me.SecondLabelSh.Size = New System.Drawing.Size(48, 14)
         Me.SecondLabelSh.TabIndex = 98
         Me.SecondLabelSh.Text = "second"
         '
         'MinuteIndicatorLabelSh
         '
         Me.MinuteIndicatorLabelSh.AutoSize = True
-        Me.MinuteIndicatorLabelSh.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.MinuteIndicatorLabelSh.Location = New System.Drawing.Point(25, 31)
+        Me.MinuteIndicatorLabelSh.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.MinuteIndicatorLabelSh.Location = New System.Drawing.Point(29, 33)
         Me.MinuteIndicatorLabelSh.Name = "MinuteIndicatorLabelSh"
-        Me.MinuteIndicatorLabelSh.Size = New System.Drawing.Size(13, 11)
+        Me.MinuteIndicatorLabelSh.Size = New System.Drawing.Size(15, 14)
         Me.MinuteIndicatorLabelSh.TabIndex = 92
         Me.MinuteIndicatorLabelSh.Text = "--"
         '
         'MinutesAndLabelSh
         '
         Me.MinutesAndLabelSh.AutoSize = True
-        Me.MinutesAndLabelSh.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.MinutesAndLabelSh.Location = New System.Drawing.Point(44, 31)
+        Me.MinutesAndLabelSh.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.MinutesAndLabelSh.Location = New System.Drawing.Point(51, 33)
         Me.MinutesAndLabelSh.Name = "MinutesAndLabelSh"
-        Me.MinutesAndLabelSh.Size = New System.Drawing.Size(69, 11)
+        Me.MinutesAndLabelSh.Size = New System.Drawing.Size(76, 14)
         Me.MinutesAndLabelSh.TabIndex = 96
         Me.MinutesAndLabelSh.Text = "minutes and"
         '
         'SecondsIndicatorLabelSh
         '
         Me.SecondsIndicatorLabelSh.AutoSize = True
-        Me.SecondsIndicatorLabelSh.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.SecondsIndicatorLabelSh.Location = New System.Drawing.Point(25, 45)
+        Me.SecondsIndicatorLabelSh.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SecondsIndicatorLabelSh.Location = New System.Drawing.Point(29, 48)
         Me.SecondsIndicatorLabelSh.Name = "SecondsIndicatorLabelSh"
-        Me.SecondsIndicatorLabelSh.Size = New System.Drawing.Size(13, 11)
+        Me.SecondsIndicatorLabelSh.Size = New System.Drawing.Size(15, 14)
         Me.SecondsIndicatorLabelSh.TabIndex = 93
         Me.SecondsIndicatorLabelSh.Text = "--"
         '
         'ShutdownCbSh
         '
-        Me.ShutdownCbSh.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ShutdownCbSh.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ShutdownCbSh.FormattingEnabled = True
         Me.ShutdownCbSh.Items.AddRange(New Object() {"Log off", "Power Off", "Reboot", "Shutdown", "Suspend", "Hibernate"})
-        Me.ShutdownCbSh.Location = New System.Drawing.Point(13, 71)
+        Me.ShutdownCbSh.Location = New System.Drawing.Point(15, 76)
         Me.ShutdownCbSh.Name = "ShutdownCbSh"
-        Me.ShutdownCbSh.Size = New System.Drawing.Size(213, 19)
+        Me.ShutdownCbSh.Size = New System.Drawing.Size(248, 22)
         Me.ShutdownCbSh.TabIndex = 100
         '
         'PauseButtonSh
         '
         Me.PauseButtonSh.BackColor = System.Drawing.Color.Transparent
         Me.PauseButtonSh.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.PauseButtonSh.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PauseButtonSh.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.PauseButtonSh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.PauseButtonSh.ImageIndex = 6
         Me.PauseButtonSh.ImageList = Me.IconsIL
-        Me.PauseButtonSh.Location = New System.Drawing.Point(62, 181)
+        Me.PauseButtonSh.Location = New System.Drawing.Point(72, 195)
         Me.PauseButtonSh.Name = "PauseButtonSh"
-        Me.PauseButtonSh.Size = New System.Drawing.Size(74, 23)
+        Me.PauseButtonSh.Size = New System.Drawing.Size(86, 25)
         Me.PauseButtonSh.TabIndex = 88
         Me.PauseButtonSh.Text = "Pause"
         Me.PauseButtonSh.UseVisualStyleBackColor = False
@@ -1865,13 +1924,13 @@ Partial Class MainForm
         '
         Me.StartButtonSh.BackColor = System.Drawing.Color.Transparent
         Me.StartButtonSh.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.StartButtonSh.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.StartButtonSh.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.StartButtonSh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.StartButtonSh.ImageKey = "25B6.png"
         Me.StartButtonSh.ImageList = Me.IconsIL
-        Me.StartButtonSh.Location = New System.Drawing.Point(62, 155)
+        Me.StartButtonSh.Location = New System.Drawing.Point(72, 167)
         Me.StartButtonSh.Name = "StartButtonSh"
-        Me.StartButtonSh.Size = New System.Drawing.Size(74, 23)
+        Me.StartButtonSh.Size = New System.Drawing.Size(86, 25)
         Me.StartButtonSh.TabIndex = 87
         Me.StartButtonSh.Text = "Start"
         Me.StartButtonSh.UseVisualStyleBackColor = False
@@ -1880,13 +1939,13 @@ Partial Class MainForm
         '
         Me.StopButtonSh.BackColor = System.Drawing.Color.Transparent
         Me.StopButtonSh.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.StopButtonSh.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.StopButtonSh.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.StopButtonSh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.StopButtonSh.ImageKey = "23F9.png"
         Me.StopButtonSh.ImageList = Me.IconsIL
-        Me.StopButtonSh.Location = New System.Drawing.Point(142, 155)
+        Me.StopButtonSh.Location = New System.Drawing.Point(166, 167)
         Me.StopButtonSh.Name = "StopButtonSh"
-        Me.StopButtonSh.Size = New System.Drawing.Size(62, 23)
+        Me.StopButtonSh.Size = New System.Drawing.Size(72, 25)
         Me.StopButtonSh.TabIndex = 90
         Me.StopButtonSh.Text = "Stop"
         Me.StopButtonSh.UseVisualStyleBackColor = False
@@ -1896,13 +1955,13 @@ Partial Class MainForm
         '
         Me.ResumeButtonSh.BackColor = System.Drawing.Color.Transparent
         Me.ResumeButtonSh.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ResumeButtonSh.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ResumeButtonSh.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ResumeButtonSh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.ResumeButtonSh.ImageKey = "black-right-pointing-triangle_25b6.png"
         Me.ResumeButtonSh.ImageList = Me.IconsIL
-        Me.ResumeButtonSh.Location = New System.Drawing.Point(142, 181)
+        Me.ResumeButtonSh.Location = New System.Drawing.Point(166, 195)
         Me.ResumeButtonSh.Name = "ResumeButtonSh"
-        Me.ResumeButtonSh.Size = New System.Drawing.Size(62, 23)
+        Me.ResumeButtonSh.Size = New System.Drawing.Size(72, 25)
         Me.ResumeButtonSh.TabIndex = 89
         Me.ResumeButtonSh.Text = "Resume"
         Me.ResumeButtonSh.UseVisualStyleBackColor = False
@@ -1918,11 +1977,11 @@ Partial Class MainForm
         Me.InSettingsGBSH.Controls.Add(Me.MinWarnNudSh)
         Me.InSettingsGBSH.Controls.Add(Me.MinuteNudSh)
         Me.InSettingsGBSH.Controls.Add(Me.SecondNudSh)
-        Me.InSettingsGBSH.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.InSettingsGBSH.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.InSettingsGBSH.ForeColor = System.Drawing.Color.Black
-        Me.InSettingsGBSH.Location = New System.Drawing.Point(225, 93)
+        Me.InSettingsGBSH.Location = New System.Drawing.Point(262, 100)
         Me.InSettingsGBSH.Name = "InSettingsGBSH"
-        Me.InSettingsGBSH.Size = New System.Drawing.Size(218, 86)
+        Me.InSettingsGBSH.Size = New System.Drawing.Size(254, 93)
         Me.InSettingsGBSH.TabIndex = 85
         Me.InSettingsGBSH.TabStop = False
         Me.InSettingsGBSH.Text = "In Settings"
@@ -1930,10 +1989,10 @@ Partial Class MainForm
         'VisualRadioButtonSh
         '
         Me.VisualRadioButtonSh.AutoSize = True
-        Me.VisualRadioButtonSh.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.VisualRadioButtonSh.Location = New System.Drawing.Point(159, 58)
+        Me.VisualRadioButtonSh.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.VisualRadioButtonSh.Location = New System.Drawing.Point(185, 62)
         Me.VisualRadioButtonSh.Name = "VisualRadioButtonSh"
-        Me.VisualRadioButtonSh.Size = New System.Drawing.Size(54, 15)
+        Me.VisualRadioButtonSh.Size = New System.Drawing.Size(59, 18)
         Me.VisualRadioButtonSh.TabIndex = 62
         Me.VisualRadioButtonSh.TabStop = True
         Me.VisualRadioButtonSh.Text = "Visual"
@@ -1941,21 +2000,21 @@ Partial Class MainForm
         '
         'HourNudSh
         '
-        Me.HourNudSh.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.HourNudSh.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.HourNudSh.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.HourNudSh.Location = New System.Drawing.Point(72, 19)
+        Me.HourNudSh.Location = New System.Drawing.Point(84, 20)
         Me.HourNudSh.Maximum = New Decimal(New Integer() {99, 0, 0, 0})
         Me.HourNudSh.Name = "HourNudSh"
-        Me.HourNudSh.Size = New System.Drawing.Size(42, 18)
+        Me.HourNudSh.Size = New System.Drawing.Size(49, 20)
         Me.HourNudSh.TabIndex = 34
         '
         'AudioRadioButtonSh
         '
         Me.AudioRadioButtonSh.AutoSize = True
-        Me.AudioRadioButtonSh.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.AudioRadioButtonSh.Location = New System.Drawing.Point(109, 58)
+        Me.AudioRadioButtonSh.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.AudioRadioButtonSh.Location = New System.Drawing.Point(127, 62)
         Me.AudioRadioButtonSh.Name = "AudioRadioButtonSh"
-        Me.AudioRadioButtonSh.Size = New System.Drawing.Size(55, 15)
+        Me.AudioRadioButtonSh.Size = New System.Drawing.Size(57, 18)
         Me.AudioRadioButtonSh.TabIndex = 61
         Me.AudioRadioButtonSh.TabStop = True
         Me.AudioRadioButtonSh.Text = "Audio"
@@ -1964,52 +2023,52 @@ Partial Class MainForm
         'TimeLabelSh
         '
         Me.TimeLabelSh.AutoSize = True
-        Me.TimeLabelSh.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TimeLabelSh.Location = New System.Drawing.Point(24, 19)
+        Me.TimeLabelSh.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TimeLabelSh.Location = New System.Drawing.Point(28, 20)
         Me.TimeLabelSh.Name = "TimeLabelSh"
-        Me.TimeLabelSh.Size = New System.Drawing.Size(34, 11)
+        Me.TimeLabelSh.Size = New System.Drawing.Size(38, 14)
         Me.TimeLabelSh.TabIndex = 29
         Me.TimeLabelSh.Text = "Time:"
         '
         'MinWarnLabelSh
         '
         Me.MinWarnLabelSh.AutoSize = True
-        Me.MinWarnLabelSh.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.MinWarnLabelSh.Location = New System.Drawing.Point(6, 57)
+        Me.MinWarnLabelSh.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.MinWarnLabelSh.Location = New System.Drawing.Point(7, 61)
         Me.MinWarnLabelSh.Name = "MinWarnLabelSh"
-        Me.MinWarnLabelSh.Size = New System.Drawing.Size(54, 11)
+        Me.MinWarnLabelSh.Size = New System.Drawing.Size(58, 14)
         Me.MinWarnLabelSh.TabIndex = 43
         Me.MinWarnLabelSh.Text = "MinWarn:"
         '
         'MinWarnNudSh
         '
-        Me.MinWarnNudSh.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.MinWarnNudSh.Location = New System.Drawing.Point(65, 55)
+        Me.MinWarnNudSh.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.MinWarnNudSh.Location = New System.Drawing.Point(76, 59)
         Me.MinWarnNudSh.Maximum = New Decimal(New Integer() {5, 0, 0, 0})
         Me.MinWarnNudSh.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.MinWarnNudSh.Name = "MinWarnNudSh"
-        Me.MinWarnNudSh.Size = New System.Drawing.Size(40, 18)
+        Me.MinWarnNudSh.Size = New System.Drawing.Size(47, 20)
         Me.MinWarnNudSh.TabIndex = 60
         Me.MinWarnNudSh.Value = New Decimal(New Integer() {1, 0, 0, 0})
         '
         'MinuteNudSh
         '
-        Me.MinuteNudSh.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.MinuteNudSh.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.MinuteNudSh.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.MinuteNudSh.Location = New System.Drawing.Point(120, 19)
+        Me.MinuteNudSh.Location = New System.Drawing.Point(140, 20)
         Me.MinuteNudSh.Maximum = New Decimal(New Integer() {59, 0, 0, 0})
         Me.MinuteNudSh.Name = "MinuteNudSh"
-        Me.MinuteNudSh.Size = New System.Drawing.Size(41, 18)
+        Me.MinuteNudSh.Size = New System.Drawing.Size(48, 20)
         Me.MinuteNudSh.TabIndex = 35
         '
         'SecondNudSh
         '
-        Me.SecondNudSh.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SecondNudSh.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.SecondNudSh.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.SecondNudSh.Location = New System.Drawing.Point(167, 19)
+        Me.SecondNudSh.Location = New System.Drawing.Point(195, 20)
         Me.SecondNudSh.Maximum = New Decimal(New Integer() {59, 0, 0, 0})
         Me.SecondNudSh.Name = "SecondNudSh"
-        Me.SecondNudSh.Size = New System.Drawing.Size(40, 18)
+        Me.SecondNudSh.Size = New System.Drawing.Size(47, 20)
         Me.SecondNudSh.TabIndex = 36
         '
         'AtSettingsGBSH
@@ -2017,53 +2076,53 @@ Partial Class MainForm
         Me.AtSettingsGBSH.Controls.Add(Me.HourAtNudSh)
         Me.AtSettingsGBSH.Controls.Add(Me.MinuteAtNudSh)
         Me.AtSettingsGBSH.Controls.Add(Me.TimeAtLabelSh)
-        Me.AtSettingsGBSH.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.AtSettingsGBSH.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.AtSettingsGBSH.ForeColor = System.Drawing.Color.Black
-        Me.AtSettingsGBSH.Location = New System.Drawing.Point(74, 93)
+        Me.AtSettingsGBSH.Location = New System.Drawing.Point(86, 100)
         Me.AtSettingsGBSH.Name = "AtSettingsGBSH"
-        Me.AtSettingsGBSH.Size = New System.Drawing.Size(145, 50)
+        Me.AtSettingsGBSH.Size = New System.Drawing.Size(169, 54)
         Me.AtSettingsGBSH.TabIndex = 86
         Me.AtSettingsGBSH.TabStop = False
         Me.AtSettingsGBSH.Text = "At Settings"
         '
         'HourAtNudSh
         '
-        Me.HourAtNudSh.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.HourAtNudSh.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.HourAtNudSh.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.HourAtNudSh.Location = New System.Drawing.Point(45, 15)
+        Me.HourAtNudSh.Location = New System.Drawing.Point(52, 16)
         Me.HourAtNudSh.Maximum = New Decimal(New Integer() {23, 0, 0, 0})
         Me.HourAtNudSh.Name = "HourAtNudSh"
-        Me.HourAtNudSh.Size = New System.Drawing.Size(42, 18)
+        Me.HourAtNudSh.Size = New System.Drawing.Size(49, 20)
         Me.HourAtNudSh.TabIndex = 37
         '
         'MinuteAtNudSh
         '
-        Me.MinuteAtNudSh.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.MinuteAtNudSh.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.MinuteAtNudSh.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.MinuteAtNudSh.Location = New System.Drawing.Point(93, 15)
+        Me.MinuteAtNudSh.Location = New System.Drawing.Point(108, 16)
         Me.MinuteAtNudSh.Maximum = New Decimal(New Integer() {59, 0, 0, 0})
         Me.MinuteAtNudSh.Name = "MinuteAtNudSh"
-        Me.MinuteAtNudSh.Size = New System.Drawing.Size(41, 18)
+        Me.MinuteAtNudSh.Size = New System.Drawing.Size(48, 20)
         Me.MinuteAtNudSh.TabIndex = 38
         '
         'TimeAtLabelSh
         '
         Me.TimeAtLabelSh.AutoSize = True
-        Me.TimeAtLabelSh.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TimeAtLabelSh.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TimeAtLabelSh.ForeColor = System.Drawing.Color.Black
-        Me.TimeAtLabelSh.Location = New System.Drawing.Point(8, 19)
+        Me.TimeAtLabelSh.Location = New System.Drawing.Point(9, 20)
         Me.TimeAtLabelSh.Name = "TimeAtLabelSh"
-        Me.TimeAtLabelSh.Size = New System.Drawing.Size(34, 11)
+        Me.TimeAtLabelSh.Size = New System.Drawing.Size(38, 14)
         Me.TimeAtLabelSh.TabIndex = 33
         Me.TimeAtLabelSh.Text = "Time:"
         '
         'AtRadioButtonSh
         '
         Me.AtRadioButtonSh.AutoSize = True
-        Me.AtRadioButtonSh.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.AtRadioButtonSh.Location = New System.Drawing.Point(302, 75)
+        Me.AtRadioButtonSh.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.AtRadioButtonSh.Location = New System.Drawing.Point(352, 81)
         Me.AtRadioButtonSh.Name = "AtRadioButtonSh"
-        Me.AtRadioButtonSh.Size = New System.Drawing.Size(37, 15)
+        Me.AtRadioButtonSh.Size = New System.Drawing.Size(37, 18)
         Me.AtRadioButtonSh.TabIndex = 83
         Me.AtRadioButtonSh.Text = "At"
         Me.AtRadioButtonSh.UseVisualStyleBackColor = False
@@ -2071,13 +2130,43 @@ Partial Class MainForm
         'InRadioButtonSh
         '
         Me.InRadioButtonSh.AutoSize = True
-        Me.InRadioButtonSh.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.InRadioButtonSh.Location = New System.Drawing.Point(345, 71)
+        Me.InRadioButtonSh.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.InRadioButtonSh.Location = New System.Drawing.Point(402, 76)
         Me.InRadioButtonSh.Name = "InRadioButtonSh"
-        Me.InRadioButtonSh.Size = New System.Drawing.Size(33, 15)
+        Me.InRadioButtonSh.Size = New System.Drawing.Size(35, 18)
         Me.InRadioButtonSh.TabIndex = 84
         Me.InRadioButtonSh.Text = "In"
         Me.InRadioButtonSh.UseVisualStyleBackColor = False
+        '
+        'TabPage1
+        '
+        Me.TabPage1.BackColor = System.Drawing.Color.Yellow
+        Me.TabPage1.Controls.Add(Me.TextBox1)
+        Me.TabPage1.Controls.Add(Me.Button3)
+        Me.TabPage1.Location = New System.Drawing.Point(4, 23)
+        Me.TabPage1.Name = "TabPage1"
+        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage1.Size = New System.Drawing.Size(627, 277)
+        Me.TabPage1.TabIndex = 5
+        Me.TabPage1.Text = "Reminder"
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(7, 68)
+        Me.TextBox1.Multiline = True
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(465, 201)
+        Me.TextBox1.TabIndex = 3
+        '
+        'Button3
+        '
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button3.Location = New System.Drawing.Point(478, 81)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(128, 51)
+        Me.Button3.TabIndex = 1
+        Me.Button3.Text = "How do I add reminders?"
+        Me.Button3.UseVisualStyleBackColor = True
         '
         'TimerTimer
         '
@@ -2092,7 +2181,7 @@ Partial Class MainForm
         '
         'TitlePanel
         '
-        Me.TitlePanel.BackColor = System.Drawing.Color.Red
+        Me.TitlePanel.BackColor = System.Drawing.Color.Yellow
         Me.TitlePanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.TitlePanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TitlePanel.Controls.Add(Me.PictureBox1)
@@ -2103,19 +2192,19 @@ Partial Class MainForm
         Me.TitlePanel.Controls.Add(Me.lblVersion)
         Me.TitlePanel.Controls.Add(Me.lblName)
         Me.TitlePanel.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TitlePanel.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TitlePanel.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TitlePanel.ForeColor = System.Drawing.Color.DarkRed
         Me.TitlePanel.Location = New System.Drawing.Point(0, 0)
         Me.TitlePanel.Name = "TitlePanel"
-        Me.TitlePanel.Size = New System.Drawing.Size(544, 115)
+        Me.TitlePanel.Size = New System.Drawing.Size(635, 124)
         Me.TitlePanel.TabIndex = 25
         '
         'PictureBox1
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(330, 3)
+        Me.PictureBox1.Location = New System.Drawing.Point(385, 3)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(76, 73)
+        Me.PictureBox1.Size = New System.Drawing.Size(89, 79)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 85
         Me.PictureBox1.TabStop = False
@@ -2123,22 +2212,23 @@ Partial Class MainForm
         'TimeLabelYD
         '
         Me.TimeLabelYD.AutoSize = True
-        Me.TimeLabelYD.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TimeLabelYD.Location = New System.Drawing.Point(250, 97)
+        Me.TimeLabelYD.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TimeLabelYD.ForeColor = System.Drawing.Color.Gold
+        Me.TimeLabelYD.Location = New System.Drawing.Point(292, 104)
         Me.TimeLabelYD.Name = "TimeLabelYD"
-        Me.TimeLabelYD.Size = New System.Drawing.Size(130, 11)
+        Me.TimeLabelYD.Size = New System.Drawing.Size(132, 14)
         Me.TimeLabelYD.TabIndex = 84
         Me.TimeLabelYD.Text = "the time is 12:00:00 AM"
         '
         'SettingsButton
         '
-        Me.SettingsButton.BackColor = System.Drawing.Color.Transparent
+        Me.SettingsButton.BackColor = System.Drawing.Color.Yellow
         Me.SettingsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.SettingsButton.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.SettingsButton.ForeColor = System.Drawing.Color.Black
-        Me.SettingsButton.Location = New System.Drawing.Point(477, 87)
+        Me.SettingsButton.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SettingsButton.ForeColor = System.Drawing.Color.Gold
+        Me.SettingsButton.Location = New System.Drawing.Point(556, 94)
         Me.SettingsButton.Name = "SettingsButton"
-        Me.SettingsButton.Size = New System.Drawing.Size(62, 23)
+        Me.SettingsButton.Size = New System.Drawing.Size(72, 25)
         Me.SettingsButton.TabIndex = 83
         Me.SettingsButton.Text = "Settings"
         Me.SettingsButton.UseVisualStyleBackColor = False
@@ -2146,20 +2236,22 @@ Partial Class MainForm
         'DateLabelYD
         '
         Me.DateLabelYD.AutoSize = True
-        Me.DateLabelYD.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DateLabelYD.Location = New System.Drawing.Point(86, 97)
+        Me.DateLabelYD.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DateLabelYD.ForeColor = System.Drawing.Color.Gold
+        Me.DateLabelYD.Location = New System.Drawing.Point(100, 104)
         Me.DateLabelYD.Name = "DateLabelYD"
-        Me.DateLabelYD.Size = New System.Drawing.Size(143, 11)
+        Me.DateLabelYD.Size = New System.Drawing.Size(147, 14)
         Me.DateLabelYD.TabIndex = 28
         Me.DateLabelYD.Text = "the date is january 1, 2022"
         '
         'lblwelcome
         '
         Me.lblwelcome.AutoSize = True
-        Me.lblwelcome.Font = New System.Drawing.Font("Helvetica", 15.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblwelcome.Location = New System.Drawing.Point(129, 72)
+        Me.lblwelcome.Font = New System.Drawing.Font("Arial", 15.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblwelcome.ForeColor = System.Drawing.Color.Gold
+        Me.lblwelcome.Location = New System.Drawing.Point(150, 78)
         Me.lblwelcome.Name = "lblwelcome"
-        Me.lblwelcome.Size = New System.Drawing.Size(159, 25)
+        Me.lblwelcome.Size = New System.Drawing.Size(158, 24)
         Me.lblwelcome.TabIndex = 27
         Me.lblwelcome.Text = "welcome, user"
         Me.lblwelcome.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -2167,21 +2259,23 @@ Partial Class MainForm
         'lblVersion
         '
         Me.lblVersion.AutoSize = True
-        Me.lblVersion.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblVersion.Location = New System.Drawing.Point(155, 33)
+        Me.lblVersion.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblVersion.ForeColor = System.Drawing.Color.Gold
+        Me.lblVersion.Location = New System.Drawing.Point(181, 36)
         Me.lblVersion.Name = "lblVersion"
-        Me.lblVersion.Size = New System.Drawing.Size(127, 33)
+        Me.lblVersion.Size = New System.Drawing.Size(128, 42)
         Me.lblVersion.TabIndex = 26
-        Me.lblVersion.Text = "v21H2" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Preview Release" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Released July 12, 2021"
+        Me.lblVersion.Text = "v21H2" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Preview Release" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Released July 25, 2021"
         Me.lblVersion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'lblName
         '
         Me.lblName.AutoSize = True
-        Me.lblName.Font = New System.Drawing.Font("Helvetica", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblName.Location = New System.Drawing.Point(168, 12)
+        Me.lblName.Font = New System.Drawing.Font("Arial", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblName.ForeColor = System.Drawing.Color.Gold
+        Me.lblName.Location = New System.Drawing.Point(196, 13)
         Me.lblName.Name = "lblName"
-        Me.lblName.Size = New System.Drawing.Size(120, 21)
+        Me.lblName.Size = New System.Drawing.Size(118, 24)
         Me.lblName.TabIndex = 25
         Me.lblName.Text = "BreakTime"
         '
@@ -2201,110 +2295,62 @@ Partial Class MainForm
         '
         Me.NotifyIconWDLCT.ContextMenuStrip = Me.ContextMenuStrip1
         Me.NotifyIconWDLCT.Icon = CType(resources.GetObject("NotifyIconWDLCT.Icon"), System.Drawing.Icon)
-        Me.NotifyIconWDLCT.Text = "WCT Timer is running."
+        Me.NotifyIconWDLCT.Text = "BreakTime is running"
         Me.NotifyIconWDLCT.Visible = True
         '
         'ContextMenuStrip1
         '
         Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OpenToolStripMenuItem, Me.ChangeSettingsToolStripMenuItem, Me.ExitToolStripMenuItem})
         Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(163, 70)
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(166, 70)
         '
         'OpenToolStripMenuItem
         '
-        Me.OpenToolStripMenuItem.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.OpenToolStripMenuItem.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.OpenToolStripMenuItem.Name = "OpenToolStripMenuItem"
-        Me.OpenToolStripMenuItem.Size = New System.Drawing.Size(162, 22)
+        Me.OpenToolStripMenuItem.Size = New System.Drawing.Size(165, 22)
         Me.OpenToolStripMenuItem.Text = "Open"
         '
         'ChangeSettingsToolStripMenuItem
         '
-        Me.ChangeSettingsToolStripMenuItem.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ChangeSettingsToolStripMenuItem.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ChangeSettingsToolStripMenuItem.Name = "ChangeSettingsToolStripMenuItem"
-        Me.ChangeSettingsToolStripMenuItem.Size = New System.Drawing.Size(162, 22)
+        Me.ChangeSettingsToolStripMenuItem.Size = New System.Drawing.Size(165, 22)
         Me.ChangeSettingsToolStripMenuItem.Text = "Change Settings"
         '
         'ExitToolStripMenuItem
         '
-        Me.ExitToolStripMenuItem.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ExitToolStripMenuItem.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(162, 22)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(165, 22)
         Me.ExitToolStripMenuItem.Text = "Exit"
         '
         'TimeBomb
         '
         Me.TimeBomb.Interval = 1000
         '
-        'Panel2
+        'tmrrmd
         '
-        Me.Panel2.BackColor = System.Drawing.Color.Yellow
-        Me.Panel2.Controls.Add(Me.Button2)
-        Me.Panel2.Controls.Add(Me.Label5)
-        Me.Panel2.Controls.Add(Me.Label6)
-        Me.Panel2.Controls.Add(Me.PictureBox4)
-        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel2.ForeColor = System.Drawing.Color.DarkRed
-        Me.Panel2.Location = New System.Drawing.Point(3, 3)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(530, 66)
-        Me.Panel2.TabIndex = 103
-        '
-        'Button2
-        '
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Location = New System.Drawing.Point(415, 4)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(113, 69)
-        Me.Button2.TabIndex = 88
-        Me.Button2.Text = "Click me to learn more"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(69, 29)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(206, 36)
-        Me.Label5.TabIndex = 87
-        Me.Label5.Text = "This feature will be discontinued" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "in late 2021. Please click on the button for" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) &
-    "more information."
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Helvetica", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(65, 4)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(189, 21)
-        Me.Label6.TabIndex = 86
-        Me.Label6.Text = "Important Notice!"
-        '
-        'PictureBox4
-        '
-        Me.PictureBox4.Image = CType(resources.GetObject("PictureBox4.Image"), System.Drawing.Image)
-        Me.PictureBox4.Location = New System.Drawing.Point(9, 4)
-        Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(50, 50)
-        Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox4.TabIndex = 0
-        Me.PictureBox4.TabStop = False
+        Me.tmrrmd.Enabled = True
+        Me.tmrrmd.Interval = 1000
         '
         'MainForm
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 14.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(544, 397)
+        Me.BackColor = System.Drawing.Color.Yellow
+        Me.ClientSize = New System.Drawing.Size(635, 428)
         Me.Controls.Add(Me.TitlePanel)
         Me.Controls.Add(Me.TimerControl)
-        Me.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ForeColor = System.Drawing.Color.Gold
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.MaximizeBox = False
         Me.Name = "MainForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "BreakTime - v21H2P1- Released on July 12 2021"
+        Me.Text = "BreakTime - v21H2P2- Released on July 25 2021"
         Me.TimerControl.ResumeLayout(False)
         Me.BreakTimerTab.ResumeLayout(False)
         Me.BreakTimerTab.PerformLayout()
@@ -2352,6 +2398,9 @@ Partial Class MainForm
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ShutdownTabPage.ResumeLayout(False)
         Me.ShutdownTabPage.PerformLayout()
+        Me.Panel2.ResumeLayout(False)
+        Me.Panel2.PerformLayout()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.StatusGroupBoxSH.ResumeLayout(False)
         Me.StatusGroupBoxSH.PerformLayout()
         Me.InSettingsGBSH.ResumeLayout(False)
@@ -2364,14 +2413,13 @@ Partial Class MainForm
         Me.AtSettingsGBSH.PerformLayout()
         CType(Me.HourAtNudSh, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MinuteAtNudSh, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage1.ResumeLayout(False)
+        Me.TabPage1.PerformLayout()
         CType(Me.DTPErhAc, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TitlePanel.ResumeLayout(False)
         Me.TitlePanel.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ContextMenuStrip1.ResumeLayout(False)
-        Me.Panel2.ResumeLayout(False)
-        Me.Panel2.PerformLayout()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -2553,4 +2601,8 @@ Partial Class MainForm
     Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents PictureBox4 As PictureBox
+    Friend WithEvents TabPage1 As TabPage
+    Friend WithEvents Button3 As Button
+    Friend WithEvents TextBox1 As TextBox
+    Public WithEvents tmrrmd As Timer
 End Class

@@ -5,8 +5,9 @@ Imports System.Text
 Imports System.Net
 
 Imports BreakTime.Org.Mentalis.Utilities
+Imports System.Data.OleDb
 
-Public Class MainForm '
+Public Class MainForm
     Private WithEvents Tmras As New Timer With {.Interval = 30}
     Private ShowSize As Size
     Private wstep, hstep As Double
@@ -99,6 +100,9 @@ Public Class MainForm '
         End If
     End Sub
     Private Sub FrmLAG_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+
+        tmrrmd.Start()
         TimeBomb.Start()
         TitlePanel.BackColor = System.Drawing.ColorTranslator.FromHtml(My.Settings.BackColor.ToArgb)
         TitlePanel.ForeColor = System.Drawing.ColorTranslator.FromHtml(My.Settings.ForeColor.ToArgb)
@@ -112,8 +116,7 @@ Public Class MainForm '
         StopWatchTab.ForeColor = System.Drawing.ColorTranslator.FromHtml(My.Settings.ForeColor.ToArgb)
         AlarmClockTab.BackColor = System.Drawing.ColorTranslator.FromHtml(My.Settings.BackColor.ToArgb)
         AlarmClockTab.ForeColor = System.Drawing.ColorTranslator.FromHtml(My.Settings.ForeColor.ToArgb)
-        Me.Opacity = 0.0 'Set to 0.0 so the form cant be seen
-        ShowSize = Me.Size 'Save the current size in a class scoped variable
+
         Me.ForeColor = System.Drawing.ColorTranslator.FromHtml(My.Settings.ForeColor.ToArgb)
         Me.BackColor = System.Drawing.ColorTranslator.FromHtml(My.Settings.BackColor.ToArgb)
         TimerControl.ForeColor = System.Drawing.ColorTranslator.FromHtml(My.Settings.ForeColor.ToArgb)
@@ -190,9 +193,6 @@ Public Class MainForm '
             My.Settings.AudOrVis = False
         End If
         lblwelcome.Text = "welcome, " & SystemInformation.UserName
-
-
-
     End Sub
 
     Private Sub StartButton_Click(sender As Object, e As EventArgs) Handles StartButtonSW.Click
@@ -672,6 +672,170 @@ Public Class MainForm '
     Private Sub NudTimeHour_ValueChanged(sender As Object, e As EventArgs) Handles nudTimeHour.ValueChanged
 
         TimeSelectIndicatorLabelBT.Text = nudTimeHour.Value.ToString("0#") & ":" & nudTimeMin.Value.ToString("0#") & ":" & nudTimeSec.Value.ToString("0#")
+    End Sub
+    Private Sub tmrrmd_Tick(sender As Object, e As EventArgs) Handles tmrrmd.Tick
+        Using connection As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & Application.StartupPath & "\rmd.mdb")
+
+            Dim command As New OleDbCommand("select * from rmd1", connection)
+
+            Dim recurr As Boolean
+            Dim recurrweek As String
+            Dim recurrdow As String
+            Dim recurrby As String
+            Dim reccurrmonth As String
+            Dim active As Boolean
+            Dim recurrmonthly As Boolean
+            Dim recurrweekly As Boolean
+            Dim recurrdaily As Boolean
+            Dim monthofday As Integer
+
+
+            connection.Open()
+
+            Dim reader As OleDbDataReader = command.ExecuteReader()
+            While reader.Read()
+                recurr = reader(3)
+
+            reccurrmonth = reader(2).ToString
+
+                recurrby = reader(4).ToString
+                recurrweek = reader(5).ToString
+                active = reader(6)
+                Select Case reccurrmonth
+                    Case 0
+                        monthofday = 1
+                    Case 1
+                        monthofday = 2
+                    Case 2
+                        monthofday = 3
+                    Case 3
+                        monthofday = 4
+                    Case 4
+                        monthofday = 5
+                    Case 5
+                        monthofday = 6
+                    Case 6
+                        monthofday = 7
+                    Case 7
+                        monthofday = 8
+                    Case 8
+                        monthofday = 9
+                    Case 9
+                        monthofday = 10
+                    Case 10
+                        monthofday = 11
+                    Case 11
+                        monthofday = 12
+                End Select
+                Select Case recurrweek
+                    Case 0
+                        recurrdow = DayOfWeek.Sunday
+                    Case 1
+                        recurrdow = DayOfWeek.Monday
+                    Case 2
+                        recurrdow = DayOfWeek.Tuesday
+                    Case 3
+                        recurrdow = DayOfWeek.Wednesday
+                    Case 4
+                        recurrdow = DayOfWeek.Thursday
+                    Case 5
+                        recurrdow = DayOfWeek.Friday
+                    Case 6
+                        recurrdow = DayOfWeek.Saturday
+                    Case 7
+                        recurrdow = Nothing
+
+
+                End Select
+                Select Case recurrby
+                    Case 0
+                        recurrdaily = True
+                        recurrmonthly = False
+                        recurrweekly = False
+                    Case 1
+                        recurrweekly = True
+                        recurrdaily = False
+                        recurrmonthly = False
+                    Case 2
+                        recurrmonthly = True
+                        recurrdaily = False
+                        recurrweekly = False
+                End Select
+
+
+                Dim currentTime As TimeSpan = Date.Now.TimeOfDay
+
+
+                Dim reminderTime As TimeSpan = reader.GetDateTime(reader.GetOrdinal("time")).TimeOfDay
+
+                If reminderTime.Hours = currentTime.Hours AndAlso reminderTime.Minutes = currentTime.Minutes AndAlso reminderTime.Seconds = currentTime.Seconds Then
+                    If recurr = True Then
+
+                        If active = True Then
+                        Else
+                            Exit Sub
+                        End If
+
+                        If recurrdaily = True Then
+
+                        ElseIf recurrweekly = True Then
+                            If Now.DayOfWeek = recurrdow Then
+
+                            End If
+                        ElseIf recurrmonthly = True Then
+                            If Now.Month = monthofday Then
+
+                            End If
+                        Else
+                            Exit Sub
+                        End If
+
+                    ElseIf recurr = False Then
+                        Exit Sub
+                    End If
+
+                    Me.TextBox1.Text += "Task:" + reader(1).ToString() + "Date:" + reminderTime.ToString + vbNewLine
+
+                    ReminderForm.PictureBox1.Image = Image.FromFile(reader(8).ToString)
+                    ReminderForm.lbltime.Text = reminderTime.ToString
+                    ReminderForm.Label1.Text = reader(1).ToString
+                    ReminderForm.Show()
+                    tmrrmd.Stop()
+                End If
+
+
+
+
+            End While
+
+        End Using
+
+
+
+
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Try
+            If MessageBox.Show("You will need to add the data into an Access Database named rmd.mdb. We have created one for you. Click OK to open the file and edit", "Need Edits?", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation) = DialogResult.OK Then
+                Shell(My.Computer.FileSystem.SpecialDirectories.ProgramFiles & "\Microsoft Office\root\Office16\MSACCESS.exe")
+            ElseIf DialogResult.Cancel Then
+                Exit Sub
+            End If
+        Catch ex As Exception
+            MessageBox.Show("Do you have Access installed? You NEED access in order to make this work!", "Error finding Access", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Exit Sub
+        End Try
+
+    End Sub
+
+    Private Sub Button4_Click(sender As Object, e As EventArgs)
+
+
+    End Sub
+    Public Sub ReadData(connectionString As String,
+    queryString As String)
+       
     End Sub
     Private Sub ShutdownTimer_Tick(sender As Object, e As EventArgs) Handles ShutdownTimer.Tick
         If InRadioButtonSh.Checked = True Then
@@ -1422,31 +1586,6 @@ Public Class MainForm '
         ShutdownTimer.Stop()
         Application.Restart()
 
-    End Sub
-
-    Private Sub MainFormLAG_Shown(sender As Object, e As EventArgs) Handles Me.Shown
-        'Calculate the amount the width and height will grow at each timer tick
-        wstep = ShowSize.Width / 14
-        hstep = ShowSize.Height / 14
-
-        'Reset the location to the center of where the form is now
-        Me.Location = New Point(Me.Left + CInt(Me.Width / 2), Me.Top + CInt(Me.Height / 2))
-        Me.Size = New Size(0, 0) ' Set the forms size to 0,0
-
-        Me.Opacity = 1.0 'Now that the form is 0,0 in size set the opacity back to 1.0
-
-        Tmras.Start() 'Start the timer to relocate and resize the form a step at a time
-    End Sub
-
-    Private Sub Tmras_Tick(sender As Object, e As EventArgs) Handles Tmras.Tick
-        Me.Width += CInt(wstep)
-        Me.Height += CInt(hstep)
-        Me.Left -= CInt(wstep / 2)
-        Me.Top -= CInt(hstep / 2)
-
-        If Me.Width >= ShowSize.Width - 1 And Me.Height >= ShowSize.Height - 1 Then
-            Tmras.Stop()
-        End If
     End Sub
 
     Private Sub TimeBomb_Tick(sender As Object, e As EventArgs) Handles TimeBomb.Tick
