@@ -37,7 +37,7 @@ Partial Class ReminderForm
         Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Top
         Me.PictureBox1.Location = New System.Drawing.Point(0, 0)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(370, 177)
+        Me.PictureBox1.Size = New System.Drawing.Size(350, 190)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
@@ -49,18 +49,18 @@ Partial Class ReminderForm
         Me.Panel1.Controls.Add(Me.lbltime)
         Me.Panel1.Controls.Add(Me.lblPrompt)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel1.Location = New System.Drawing.Point(0, 130)
+        Me.Panel1.Location = New System.Drawing.Point(0, 175)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(370, 320)
+        Me.Panel1.Size = New System.Drawing.Size(350, 250)
         Me.Panel1.TabIndex = 1
         '
         'Button1
         '
         Me.Button1.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Location = New System.Drawing.Point(0, 213)
+        Me.Button1.Location = New System.Drawing.Point(0, 143)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(370, 107)
+        Me.Button1.Size = New System.Drawing.Size(350, 107)
         Me.Button1.TabIndex = 3
         Me.Button1.Text = "Dismiss"
         Me.Button1.UseVisualStyleBackColor = True
@@ -99,7 +99,7 @@ Partial Class ReminderForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(370, 450)
+        Me.ClientSize = New System.Drawing.Size(350, 425)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.PictureBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None

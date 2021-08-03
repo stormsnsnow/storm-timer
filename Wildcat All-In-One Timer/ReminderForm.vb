@@ -1,4 +1,5 @@
-﻿Public Class ReminderForm
+﻿Option Strict On
+Public Class ReminderForm
     Private Sub ReminderForm_Load(sender As Object, e As EventArgs) Handles Me.Load
         Me.Visible = True
         Dim x As Integer
@@ -31,7 +32,7 @@
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Me.Close()
-        MainForm.ReadData("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & Application.StartupPath & "\rmd.mdb", "UPDATE `rmd1` SET `isActive` = FALSE")
+        ' MainForm.OPCode("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & Application.StartupPath & "\rmd.mdb", "UPDATE `rmd1` SET `isActive` = FALSE")
         MainForm.tmrrmd.Start()
 
     End Sub
@@ -43,4 +44,6 @@
             Threading.Thread.Sleep(0)
         Next
     End Sub
+
+
 End Class

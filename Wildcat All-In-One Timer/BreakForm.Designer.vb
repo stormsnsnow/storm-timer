@@ -112,7 +112,7 @@ Partial Class BreakForm
         'BreakPanel
         '
         Me.BreakPanel.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.BreakPanel.BackColor = System.Drawing.Color.Yellow
+        Me.BreakPanel.BackColor = System.Drawing.Color.GreenYellow
         Me.BreakPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.BreakPanel.Controls.Add(Me.Label1)
         Me.BreakPanel.Controls.Add(Me.lbltime)
@@ -128,7 +128,7 @@ Partial Class BreakForm
         Me.BreakPanel.Controls.Add(Me.lbldate)
         Me.BreakPanel.Controls.Add(Me.lblhourandbreak)
         Me.BreakPanel.Controls.Add(Me.lblminuteandbreak)
-        Me.BreakPanel.ForeColor = System.Drawing.Color.Gold
+        Me.BreakPanel.ForeColor = System.Drawing.Color.LimeGreen
         Me.BreakPanel.Location = New System.Drawing.Point(177, 238)
         Me.BreakPanel.Name = "BreakPanel"
         Me.BreakPanel.Size = New System.Drawing.Size(524, 101)
@@ -258,13 +258,13 @@ Partial Class BreakForm
         'Panel1
         '
         Me.Panel1.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Panel1.BackColor = System.Drawing.Color.Yellow
+        Me.Panel1.BackColor = System.Drawing.Color.GreenYellow
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.UnlockButton)
         Me.Panel1.Controls.Add(Me.PauseButton)
         Me.Panel1.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Panel1.ForeColor = System.Drawing.Color.DarkRed
+        Me.Panel1.ForeColor = System.Drawing.Color.LimeGreen
         Me.Panel1.Location = New System.Drawing.Point(177, 345)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(524, 69)
@@ -276,7 +276,6 @@ Partial Class BreakForm
         Me.Label2.AutoSize = True
         Me.Label2.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.Label2.Font = New System.Drawing.Font("Helvetica", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.Gold
         Me.Label2.Location = New System.Drawing.Point(176, 5)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(142, 19)
@@ -288,7 +287,6 @@ Partial Class BreakForm
         Me.UnlockButton.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.UnlockButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.UnlockButton.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.UnlockButton.ForeColor = System.Drawing.Color.Gold
         Me.UnlockButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.UnlockButton.ImageKey = "23F9.png"
         Me.UnlockButton.ImageList = Me.ImageList1
@@ -306,7 +304,6 @@ Partial Class BreakForm
         Me.PauseButton.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.PauseButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.PauseButton.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.PauseButton.ForeColor = System.Drawing.Color.Gold
         Me.PauseButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.PauseButton.ImageKey = "23F8.png"
         Me.PauseButton.ImageList = Me.ImageList1

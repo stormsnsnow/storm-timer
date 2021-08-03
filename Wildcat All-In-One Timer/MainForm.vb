@@ -1,4 +1,5 @@
-﻿Imports System.Globalization
+﻿Option Strict On
+Imports System.Globalization
 Imports System
 Imports System.IO
 Imports System.Text
@@ -27,7 +28,7 @@ Public Class MainForm
 
     Private ReadOnly SW As New Stopwatch
     Private WithEvents Tmr As New System.Windows.Forms.Timer
-    Private ReadOnly timeList = New List(Of Integer)
+    Private ReadOnly timeList As New List(Of Integer)
     Private Declare Auto Function PlaySound Lib "winmm.dll" (ByVal SoundName As String,
             ByVal hModule As Integer, ByVal dwFlags As Integer) As Integer
 
@@ -104,30 +105,30 @@ Public Class MainForm
 
         tmrrmd.Start()
         TimeBomb.Start()
-        TitlePanel.BackColor = System.Drawing.ColorTranslator.FromHtml(My.Settings.BackColor.ToArgb)
-        TitlePanel.ForeColor = System.Drawing.ColorTranslator.FromHtml(My.Settings.ForeColor.ToArgb)
-        ShutdownTabPage.BackColor = System.Drawing.ColorTranslator.FromHtml(My.Settings.BackColor.ToArgb)
-        ShutdownTabPage.ForeColor = System.Drawing.ColorTranslator.FromHtml(My.Settings.ForeColor.ToArgb)
-        TimerTab.BackColor = System.Drawing.ColorTranslator.FromHtml(My.Settings.BackColor.ToArgb)
-        TimerTab.ForeColor = System.Drawing.ColorTranslator.FromHtml(My.Settings.ForeColor.ToArgb)
-        BreakTimerTab.BackColor = System.Drawing.ColorTranslator.FromHtml(My.Settings.BackColor.ToArgb)
-        BreakTimerTab.ForeColor = System.Drawing.ColorTranslator.FromHtml(My.Settings.ForeColor.ToArgb)
-        StopWatchTab.BackColor = System.Drawing.ColorTranslator.FromHtml(My.Settings.BackColor.ToArgb)
-        StopWatchTab.ForeColor = System.Drawing.ColorTranslator.FromHtml(My.Settings.ForeColor.ToArgb)
-        AlarmClockTab.BackColor = System.Drawing.ColorTranslator.FromHtml(My.Settings.BackColor.ToArgb)
-        AlarmClockTab.ForeColor = System.Drawing.ColorTranslator.FromHtml(My.Settings.ForeColor.ToArgb)
+        TitlePanel.BackColor = System.Drawing.ColorTranslator.FromHtml(CStr(CStr(My.Settings.BackColor.ToArgb)))
+        TitlePanel.ForeColor = System.Drawing.ColorTranslator.FromHtml(CStr(My.Settings.ForeColor.ToArgb))
+        ShutdownTabPage.BackColor = System.Drawing.ColorTranslator.FromHtml(CStr(My.Settings.BackColor.ToArgb))
+        ShutdownTabPage.ForeColor = System.Drawing.ColorTranslator.FromHtml(CStr(My.Settings.ForeColor.ToArgb))
+        TimerTab.BackColor = System.Drawing.ColorTranslator.FromHtml(CStr(My.Settings.BackColor.ToArgb))
+        TimerTab.ForeColor = System.Drawing.ColorTranslator.FromHtml(CStr(My.Settings.ForeColor.ToArgb))
+        BreakTimerTab.BackColor = System.Drawing.ColorTranslator.FromHtml(CStr(My.Settings.BackColor.ToArgb))
+        BreakTimerTab.ForeColor = System.Drawing.ColorTranslator.FromHtml(CStr(My.Settings.ForeColor.ToArgb))
+        StopWatchTab.BackColor = System.Drawing.ColorTranslator.FromHtml(CStr(My.Settings.BackColor.ToArgb))
+        StopWatchTab.ForeColor = System.Drawing.ColorTranslator.FromHtml(CStr(My.Settings.ForeColor.ToArgb))
+        AlarmClockTab.BackColor = System.Drawing.ColorTranslator.FromHtml(CStr(My.Settings.BackColor.ToArgb))
+        AlarmClockTab.ForeColor = System.Drawing.ColorTranslator.FromHtml(CStr(My.Settings.ForeColor.ToArgb))
 
-        Me.ForeColor = System.Drawing.ColorTranslator.FromHtml(My.Settings.ForeColor.ToArgb)
-        Me.BackColor = System.Drawing.ColorTranslator.FromHtml(My.Settings.BackColor.ToArgb)
-        TimerControl.ForeColor = System.Drawing.ColorTranslator.FromHtml(My.Settings.ForeColor.ToArgb)
-        TimerControl.BackColor = System.Drawing.ColorTranslator.FromHtml(My.Settings.BackColor.ToArgb)
+        Me.ForeColor = System.Drawing.ColorTranslator.FromHtml(CStr(My.Settings.ForeColor.ToArgb))
+        Me.BackColor = System.Drawing.ColorTranslator.FromHtml(CStr(My.Settings.BackColor.ToArgb))
+        TimerControl.ForeColor = System.Drawing.ColorTranslator.FromHtml(CStr(My.Settings.ForeColor.ToArgb))
+        TimerControl.BackColor = System.Drawing.ColorTranslator.FromHtml(CStr(My.Settings.BackColor.ToArgb))
 
-        If ShutdownCbSh.SelectedItem = Nothing Then
+        If ShutdownCbSh.SelectedItem Is Nothing Then
             AtRadioButtonSh.Hide()
             InRadioButtonSh.Hide()
             InSettingsGBSH.Hide()
             AtSettingsGBSH.Hide()
-        ElseIf ShutdownCbSh.SelectedItem <> Nothing Then
+        ElseIf Not ShutdownCbSh.SelectedItem Is Nothing Then
             AtRadioButtonSh.Show()
             InRadioButtonSh.Show()
             InSettingsGBSH.Show()
@@ -150,22 +151,22 @@ Public Class MainForm
                 ShutdownTabPage.Show()
 
         End Select
-        ShutdownCbSh.SelectedIndex = My.Settings.AutoTimeSh
+        ShutdownCbSh.SelectedIndex = CInt(My.Settings.AutoTimeSh)
         Tmr.Interval = 100
         BreakGBBt.Hide()
         TimerGBBt.Hide()
         LapListBoxSw.Items.Clear()
         YDTimer.Start()
-        nudTimeBreakHour.Value = My.Settings.AutoTimeBTBHour
-        nudTimeBreakMin.Value = My.Settings.AutoTimeBTBMin
-        nudTimeBreakSec.Value = My.Settings.AutoTimeBTBSec
-        nudTimeHour.Value = My.Settings.AutoTimeBTTHour
-        nudTimeMin.Value = My.Settings.AutoTimeBTTMin
-        nudTimeSec.Value = My.Settings.AutoTimeBTTSec
-        B1HourNudBT.Value = My.Settings.AutoTimeBTB1Hour
-        nudb1min.Value = My.Settings.AutoTimeBTB1Min
-        nudb1sec.Value = My.Settings.AutoTimeBTB1Sec
-        MinWarnNudBt.Value = My.Settings.MWAutoTime
+        nudTimeBreakHour.Value = CDec(My.Settings.AutoTimeBTBHour)
+        nudTimeBreakMin.Value = CDec(My.Settings.AutoTimeBTBMin)
+        nudTimeBreakSec.Value = CDec(My.Settings.AutoTimeBTBSec)
+        nudTimeHour.Value = CDec(My.Settings.AutoTimeBTTHour)
+        nudTimeMin.Value = CDec(My.Settings.AutoTimeBTTMin)
+        nudTimeSec.Value = CDec(My.Settings.AutoTimeBTTSec)
+        B1HourNudBT.Value = CDec(My.Settings.AutoTimeBTB1Hour)
+        nudb1min.Value = CDec(My.Settings.AutoTimeBTB1Min)
+        nudb1sec.Value = CDec(My.Settings.AutoTimeBTB1Sec)
+        MinWarnNudBt.Value = CDec(My.Settings.MWAutoTime)
         If My.Settings.AudioOrVisual = True Then
             AudioRbBt.Checked = True
             VisualRbBt.Checked = False
@@ -180,13 +181,13 @@ Public Class MainForm
             TimeRBBt.Checked = False
             BreakRBBt.Checked = True
         End If
-        nudHour.Value = My.Settings.AutoTimeTTHour
-        nudMin.Value = My.Settings.AutoTimeTTMin
-        nudSec.Value = My.Settings.AutoTimeTTSec
-        HourNudSh.Value = My.Settings.AutoTimeShHour
-        MinuteNudSh.Value = My.Settings.AutoTimeShMin
-        SecondNudSh.Value = My.Settings.AutoTimeShSec
-        ShutdownCbSh.SelectedIndex = My.Settings.AutoTimeSh
+        nudHour.Value = CDec(My.Settings.AutoTimeTTHour)
+        nudMin.Value = CDec(My.Settings.AutoTimeTTMin)
+        nudSec.Value = CDec(My.Settings.AutoTimeTTSec)
+        HourNudSh.Value = CDec(My.Settings.AutoTimeShHour)
+        MinuteNudSh.Value = CDec(My.Settings.AutoTimeShMin)
+        SecondNudSh.Value = CDec(My.Settings.AutoTimeShSec)
+        ShutdownCbSh.SelectedIndex = CInt(My.Settings.AutoTimeSh)
         If AudioRadioButtonSh.Checked = True AndAlso VisualRadioButtonSh.Checked = False Then
             My.Settings.AudOrVis = True
         ElseIf AudioRadioButtonSh.Checked = False AndAlso VisualRadioButtonSh.Checked = True Then
@@ -212,7 +213,7 @@ Public Class MainForm
     End Sub
     Private Sub LapButton_Click(sender As Object, e As EventArgs) Handles LapButtonSW.Click
 
-        timeList.Add(SW.ElapsedMilliseconds)
+        timeList.Add(CInt(SW.ElapsedMilliseconds))
         LapListBoxSw.Show()
         Dim tim As TimeSpan = New TimeSpan(SW.ElapsedMilliseconds)
         LapListBoxSw.Items.Add(tim.ToString("T"))
@@ -341,11 +342,11 @@ Public Class MainForm
         AlarmClockTab.Enabled = False
         StopWatchTab.Enabled = False
         ShutdownTabPage.Enabled = False
-        sethours1 = nudHour.Value
+        sethours1 = CInt(nudHour.Value)
         hours = sethours1
-        setmins1 = nudMin.Value
+        setmins1 = CInt(nudMin.Value)
         min1 = setmins1
-        setsecs1 = nudSec.Value
+        setsecs1 = CInt(nudSec.Value)
         sec1 = setsecs1
         TimerTimer.Enabled = True
         PauseButtonT.Show()
@@ -365,8 +366,8 @@ Public Class MainForm
 
         End If
 
-        If String.Compare(Now.ToString("HH"), HourAtNudSh.Value) > 0 Then
-            If String.Compare(Now.ToString("mm"), HourAtNudSh.Value) > 0 Then
+        If String.Compare(Now.ToString("HH"), CStr(HourAtNudSh.Value)) > 0 Then
+            If String.Compare(Now.ToString("mm"), CStr(HourAtNudSh.Value)) > 0 Then
 
                 MessageBox.Show("The time right now is past the time you have selected.", "Past Time", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 ShutdownTimer.Stop()
@@ -386,9 +387,9 @@ Public Class MainForm
         Me.WindowState = FormWindowState.Minimized
         ShutdownTimer.Enabled = True
         ShutdownTimer.Start()
-        sethoursh = HourNudSh.Value
-        setminsh = MinuteNudSh.Value
-        setsecsh = SecondNudSh.Value
+        sethoursh = CInt(HourNudSh.Value)
+        setminsh = CInt(MinuteNudSh.Value)
+        setsecsh = CInt(SecondNudSh.Value)
         hoursh = sethoursh
         minsh = setminsh
         secsh = setsecsh
@@ -425,13 +426,13 @@ Public Class MainForm
 
     Private Sub ShutdownAt()
         DateTimeTillShutdownLabelSh.Show()
-        DateTimeTillShutdownLabelSh.Text = FormatTo2Digits(HourAtNudSh.Value) + ":" + FormatTo2Digits(MinuteAtNudSh.Value) + ":" + FormatTo2Digits(0)
+        DateTimeTillShutdownLabelSh.Text = FormatTo2Digits(CInt(HourAtNudSh.Value)) + ":" + FormatTo2Digits(CInt(MinuteAtNudSh.Value)) + ":" + FormatTo2Digits(0)
         'special case of set min = 0 and one less is 59
         Dim warningTime As Integer
         If MinuteAtNudSh.Value = 0 Then
             warningTime = 59
         Else
-            warningTime = MinuteAtNudSh.Value - 1
+            warningTime = CInt(MinuteAtNudSh.Value - 1)
         End If
 
 
@@ -444,7 +445,7 @@ Public Class MainForm
                     If PopHide = False Then
                         ShutdownTimer.Stop()
 
-                        If MessageBox.Show(ShutdownCbSh.SelectedItem & " in " & remain & " seconds. Do you want to " & ShutdownCbSh.SelectedItem & " now?", "Minwarn", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) = DialogResult.Yes Then
+                        If MessageBox.Show(CStr(CDbl(ShutdownCbSh.SelectedItem) + CDbl(" in ") + remain + CDbl(" seconds. Do you want to ") + CDbl(ShutdownCbSh.SelectedItem) + CDbl(" now?")), CStr("Minwarn"), MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) = DialogResult.Yes Then
                             Me.Show()
                             ShutdownTimer.Stop()
 
@@ -468,7 +469,7 @@ Public Class MainForm
                                     Me.Close()
                                     WindowsController.ExitWindows(RestartOptions.Hibernate, True)
                             End Select
-                        ElseIf DialogResult.No Then
+                        ElseIf CBool(DialogResult.No) Then
                             ShutdownTimer.Start()
                         End If
                         If Notify = False Then
@@ -516,8 +517,10 @@ Public Class MainForm
 
     Private Sub YDTimer_Tick(sender As Object, e As EventArgs) Handles YDTimer.Tick
         Select Case My.Settings.TimeFormat
+
             Case 0
-                Dim hourtime As DateTime = Now.ToString("HH:mm:ss tt", CultureInfo.InvariantCulture)
+
+                Dim hourtime As DateTime = CDate(Now.ToString("HH:mm:ss tt", CultureInfo.InvariantCulture))
                 TimeLabelYD.Text = "the time is " & hourtime
 
             Case 1
@@ -564,20 +567,26 @@ Public Class MainForm
     End Sub
 
     Private Sub BreakNowButtonBt_Click(sender As Object, e As EventArgs) Handles BreakNowButtonBt.Click
-        If Notify = True Then
-            MessageBox.Show("You cannot start a break with less than " & MinWarnNudBt.Value & " minutes left.", "Error 1244", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        If MessageBox.Show(CStr("After 2 years of maintaining, this feature has been less popular and also a duplicate, and will be permanently removed beginning October 3, 2021, the date of when 
+when BreakTime will be released. You can still use this feature, but be wary of broken or outdated components. You can learn more on our GitHub issue. Are You Sure you want to continue?! NOT RECOMMENDED!"), CStr("Do You Wish to Continue?"), MessageBoxButtons.YesNo, MessageBoxIcon.Warning) = DialogResult.Yes Then
+            If Notify = True Then
+                MessageBox.Show("You cannot start a break with less than " & MinWarnNudBt.Value & " minutes left.", "Error 1244", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Exit Sub
+            ElseIf Notify = False Then
+                BreakTimer.Stop()
+                BreakForm.sethours = CInt(nudTimeBreakHour.Value)
+                BreakForm.hours = BreakForm.sethours
+                BreakForm.setminutes = CInt(nudTimeBreakMin.Value)
+                BreakForm.minutes = BreakForm.setminutes
+                BreakForm.setsecs = CInt(nudTimeBreakSec.Value)
+                BreakForm.seconds = BreakForm.setsecs
+                BreakForm.Show()
+                Me.Hide()
+            End If
+        ElseIf CBool(DialogResult.No) Then
             Exit Sub
-        ElseIf Notify = False Then
-            BreakTimer.Stop()
-            BreakForm.sethours = nudTimeBreakHour.Value
-            BreakForm.hours = BreakForm.sethours
-            BreakForm.setminutes = nudTimeBreakMin.Value
-            BreakForm.minutes = BreakForm.setminutes
-            BreakForm.setsecs = nudTimeBreakSec.Value
-            BreakForm.seconds = BreakForm.setsecs
-            BreakForm.Show()
-            Me.Hide()
         End If
+
     End Sub
 
     Private Sub AtRadioButtonSh_CheckedChanged(sender As Object, e As EventArgs) Handles AtRadioButtonSh.CheckedChanged
@@ -601,10 +610,10 @@ Public Class MainForm
     End Sub
 
     Private Sub ShutdownCbSh_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ShutdownCbSh.SelectedIndexChanged
-        If ShutdownCbSh.SelectedItem = Nothing Then
+        If ShutdownCbSh.SelectedItem Is Nothing Then
             AtRadioButtonSh.Hide()
             InRadioButtonSh.Hide()
-        ElseIf ShutdownCbSh.SelectedItem <> Nothing Then
+        ElseIf Not ShutdownCbSh.SelectedItem Is Nothing Then
             AtRadioButtonSh.Show()
             InRadioButtonSh.Show()
 
@@ -673,153 +682,142 @@ Public Class MainForm
 
         TimeSelectIndicatorLabelBT.Text = nudTimeHour.Value.ToString("0#") & ":" & nudTimeMin.Value.ToString("0#") & ":" & nudTimeSec.Value.ToString("0#")
     End Sub
-    Private Sub tmrrmd_Tick(sender As Object, e As EventArgs) Handles tmrrmd.Tick
-        Using connection As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & Application.StartupPath & "\rmd.mdb")
-
-            Dim command As New OleDbCommand("select * from rmd1", connection)
-
-            Dim recurr As Boolean
-            Dim recurrweek As String
-            Dim recurrdow As String
-            Dim recurrby As String
-            Dim reccurrmonth As String
-            Dim active As Boolean
-            Dim recurrmonthly As Boolean
-            Dim recurrweekly As Boolean
-            Dim recurrdaily As Boolean
-            Dim monthofday As Integer
-
-
+    Private Function GetData() As DataTable
+        Dim dt As New DataTable
+        Using connection As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & Application.StartupPath & "\rmd.mdb"),
+            command As New OleDbCommand("select * from rmd1", connection)
             connection.Open()
+            Using reader = command.ExecuteReader()
+                dt.Load(reader)
+            End Using
+        End Using
+        Return dt
+    End Function
 
-            Dim reader As OleDbDataReader = command.ExecuteReader()
-            While reader.Read()
-                recurr = reader(3)
-
-            reccurrmonth = reader(2).ToString
-
-                recurrby = reader(4).ToString
-                recurrweek = reader(5).ToString
-                active = reader(6)
-                Select Case reccurrmonth
-                    Case 0
-                        monthofday = 1
-                    Case 1
-                        monthofday = 2
-                    Case 2
-                        monthofday = 3
-                    Case 3
-                        monthofday = 4
-                    Case 4
-                        monthofday = 5
-                    Case 5
-                        monthofday = 6
-                    Case 6
-                        monthofday = 7
-                    Case 7
-                        monthofday = 8
-                    Case 8
-                        monthofday = 9
-                    Case 9
-                        monthofday = 10
-                    Case 10
-                        monthofday = 11
-                    Case 11
-                        monthofday = 12
-                End Select
-                Select Case recurrweek
-                    Case 0
-                        recurrdow = DayOfWeek.Sunday
-                    Case 1
-                        recurrdow = DayOfWeek.Monday
-                    Case 2
-                        recurrdow = DayOfWeek.Tuesday
-                    Case 3
-                        recurrdow = DayOfWeek.Wednesday
-                    Case 4
-                        recurrdow = DayOfWeek.Thursday
-                    Case 5
-                        recurrdow = DayOfWeek.Friday
-                    Case 6
-                        recurrdow = DayOfWeek.Saturday
-                    Case 7
-                        recurrdow = Nothing
-
-
-                End Select
-                Select Case recurrby
-                    Case 0
-                        recurrdaily = True
-                        recurrmonthly = False
-                        recurrweekly = False
-                    Case 1
-                        recurrweekly = True
-                        recurrdaily = False
-                        recurrmonthly = False
-                    Case 2
-                        recurrmonthly = True
-                        recurrdaily = False
-                        recurrweekly = False
-                End Select
-
-
-                Dim currentTime As TimeSpan = Date.Now.TimeOfDay
-
-
-                Dim reminderTime As TimeSpan = reader.GetDateTime(reader.GetOrdinal("time")).TimeOfDay
-
-                If reminderTime.Hours = currentTime.Hours AndAlso reminderTime.Minutes = currentTime.Minutes AndAlso reminderTime.Seconds = currentTime.Seconds Then
-                    If recurr = True Then
-
-                        If active = True Then
-                        Else
-                            Exit Sub
-                        End If
-
-                        If recurrdaily = True Then
-
-                        ElseIf recurrweekly = True Then
-                            If Now.DayOfWeek = recurrdow Then
-
-                            End If
-                        ElseIf recurrmonthly = True Then
-                            If Now.Month = monthofday Then
-
-                            End If
-                        Else
-                            Exit Sub
-                        End If
-
-                    ElseIf recurr = False Then
+    Private Sub OPCode()
+        Dim dt = GetData()
+        Dim recurr As Boolean
+        Dim recurrweek As Integer
+        Dim recurrdow As Integer
+        Dim recurrby As Integer
+        Dim reccurrmonth As Integer
+        Dim active As Boolean
+        Dim recurrmonthly As Boolean
+        Dim recurrweekly As Boolean
+        Dim recurrdaily As Boolean
+        Dim monthofday As Integer
+        Dim sb As New StringBuilder
+        For Each row As DataRow In dt.Rows
+            recurr = CBool(row(3))
+            reccurrmonth = CInt(row(2))
+            recurrby = CInt(row(4))
+            recurrweek = CInt(row(5))
+            active = CBool(row(6))
+            Select Case reccurrmonth
+                Case 0
+                    monthofday = 1
+                Case 1
+                    monthofday = 2
+                Case 2
+                    monthofday = 3
+                Case 3
+                    monthofday = 4
+                Case 4
+                    monthofday = 5
+                Case 5
+                    monthofday = 6
+                Case 6
+                    monthofday = 7
+                Case 7
+                    monthofday = 8
+                Case 8
+                    monthofday = 9
+                Case 9
+                    monthofday = 10
+                Case 10
+                    monthofday = 11
+                Case 11
+                    monthofday = 12
+            End Select
+            Select Case recurrweek
+                Case 0
+                    recurrdow = DayOfWeek.Sunday
+                Case 1
+                    recurrdow = DayOfWeek.Monday
+                Case 2
+                    recurrdow = DayOfWeek.Tuesday
+                Case 3
+                    recurrdow = DayOfWeek.Wednesday
+                Case 4
+                    recurrdow = DayOfWeek.Thursday
+                Case 5
+                    recurrdow = DayOfWeek.Friday
+                Case 6
+                    recurrdow = DayOfWeek.Saturday
+                Case 7
+                    recurrdow = 0
+            End Select
+            Select Case recurrby
+                Case 0
+                    recurrdaily = True
+                    recurrweekly = False
+                    recurrmonthly = False
+                Case 1
+                    recurrdaily = False
+                    recurrweekly = True
+                    recurrmonthly = False
+                Case 2
+                    recurrdaily = False
+                    recurrweekly = False
+                    recurrmonthly = True
+            End Select
+            Dim currentTime As TimeSpan = Date.Now.TimeOfDay
+            Dim reminderTime As TimeSpan = CDate(row("time")).TimeOfDay
+            If reminderTime.Hours = currentTime.Hours AndAlso reminderTime.Minutes = currentTime.Minutes AndAlso reminderTime.Seconds = currentTime.Seconds Then
+                If recurr = True Then
+                    If Not active OrElse Not recurrdaily Then
                         Exit Sub
                     End If
-
-                    Me.TextBox1.Text += "Task:" + reader(1).ToString() + "Date:" + reminderTime.ToString + vbNewLine
-
-                    ReminderForm.PictureBox1.Image = Image.FromFile(reader(8).ToString)
-                    ReminderForm.lbltime.Text = reminderTime.ToString
-                    ReminderForm.Label1.Text = reader(1).ToString
-                    ReminderForm.Show()
-                    tmrrmd.Stop()
+                Else
+                    Exit Sub
                 End If
+                sb.AppendLine($"Task:{row(1)}Date:{reminderTime}")
+                ReminderForm.PictureBox1.Image = Image.FromFile(row(8).ToString)
+                ReminderForm.lbltime.Text = reminderTime.ToString
+                ReminderForm.Label1.Text = row(1).ToString
+                ReminderForm.Show()
+                tmrrmd.Stop()
+            End If
+        Next
+        TextBox1.Text = sb.ToString
+    End Sub
 
-
-
-
-            End While
-
-        End Using
-
-
-
+    Private Sub btnLM_Click(sender As Object, e As EventArgs) Handles btnLM.Click
+        MessageBox.Show(CStr("After 8 years of maintaining, this feature will be permanently removed beginning October 3, 2021, the date of when 
+when BreakTime will be released. You can still use this feature, but be wary of broken or outdated components. You can learn more on our GitHub issue."), CStr("Feature Discontinuation Notice"), MessageBoxButtons.OK, MessageBoxIcon.Warning)
 
     End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        MessageBox.Show(CStr("After 3 years of maintaining, this feature has required a script that no longer supports the latest Windows 11 release, scheduled for later this year, and will be permanently removed beginning October 3, 2021, the date of when 
+when BreakTime will be released. You can still use this feature, but PLEASE DO NOT USE THIS ON WINDOWS 10 20H1 OR LATER! YOUR COMPUTER WILL CRASH AND WILL NOT START UP! You can learn more on our GitHub issue."), CStr("Feature Discontinuation Notice"), MessageBoxButtons.OK, MessageBoxIcon.Warning)
+    End Sub
+
+    Private Sub ReminderTabPage_Click(sender As Object, e As EventArgs) Handles ReminderTabPage.Click
+        MessageBox.Show(CStr("Please note that this feature is currently being worked on and WILL NOT run any reminders at the moment. No need to worry, because we will have this fixed before the main release."), CStr("Feature Preview Notice"), MessageBoxButtons.OK, MessageBoxIcon.Warning)
+    End Sub
+
+    Private Sub tmrrmd_Tick(sender As Object, e As EventArgs) Handles tmrrmd.Tick
+        OPCode()
+
+    End Sub
+
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         Try
             If MessageBox.Show("You will need to add the data into an Access Database named rmd.mdb. We have created one for you. Click OK to open the file and edit", "Need Edits?", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation) = DialogResult.OK Then
-                Shell(My.Computer.FileSystem.SpecialDirectories.ProgramFiles & "\Microsoft Office\root\Office16\MSACCESS.exe")
-            ElseIf DialogResult.Cancel Then
+                Shell(Application.StartupPath + "\MDBPlus.exe")
+            ElseIf CBool(DialogResult.Cancel) Then
                 Exit Sub
             End If
         Catch ex As Exception
@@ -827,15 +825,6 @@ Public Class MainForm
             Exit Sub
         End Try
 
-    End Sub
-
-    Private Sub Button4_Click(sender As Object, e As EventArgs)
-
-
-    End Sub
-    Public Sub ReadData(connectionString As String,
-    queryString As String)
-       
     End Sub
     Private Sub ShutdownTimer_Tick(sender As Object, e As EventArgs) Handles ShutdownTimer.Tick
         If InRadioButtonSh.Checked = True Then
@@ -904,8 +893,8 @@ Public Class MainForm
                         ElseIf AudioRadioButtonSh.Checked = False AndAlso VisualRadioButtonSh.Checked = True Then
                             PlayNow()
                             BreakTimer.Stop()
-                            Dim mes As String = MessageBox.Show(ShutdownCbSh.SelectedItem & " will start in " & remain & " seconds. Click OK to start breaktime now. Otherwise, click Cancel to continue the timer.", "MinWarn Alert", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation)
-                            If mes = DialogResult.OK Then
+
+                            If MessageBox.Show(CStr(CDbl(ShutdownCbSh.SelectedItem) + CDbl(" will start in ") + remain + CDbl(" seconds. Click OK to start breaktime now. Otherwise, click Cancel to continue the timer.")), CStr("MinWarn Alert"), MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation) = DialogResult.OK Then
                                 Me.Show()
                                 ShutdownTimer.Stop()
                                 Select Case ShutdownCbSh.SelectedIndex
@@ -928,7 +917,7 @@ Public Class MainForm
                                         Me.Close()
                                         WindowsController.ExitWindows(RestartOptions.Hibernate, True)
                                 End Select
-                            ElseIf mes = DialogResult.Cancel Then
+                            ElseIf CBool(DialogResult.Cancel) Then
                                 ShutdownTimer.Start()
                                 Notify = True
                             End If
@@ -948,8 +937,8 @@ Public Class MainForm
                         ElseIf AudioRadioButtonSh.Checked = False AndAlso VisualRadioButtonSh.Checked = True Then
                             PlayNow()
                             BreakTimer.Stop()
-                            Dim mes As String = MessageBox.Show(ShutdownCbSh.SelectedItem & " will start in " & minsh & " minutes and " & remain & " seconds. Click OK to start breaktime now. Otherwise, click Cancel to continue the timer.", "MinWarn Alert", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation)
-                            If mes = DialogResult.OK Then
+                            Dim mes As String = CStr(MessageBox.Show(DirectCast(ShutdownCbSh.SelectedItem, Double) & " will start in " & minsh & " minutes and " & remain & " seconds. Click OK to start breaktime now. Otherwise, click Cancel to continue the timer.", "MinWarn Alert", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation))
+                            If CDbl(mes) = DialogResult.OK Then
                                 Me.Show()
                                 ShutdownTimer.Stop()
                                 Select Case ShutdownCbSh.SelectedIndex
@@ -972,7 +961,7 @@ Public Class MainForm
                                         Me.Close()
                                         WindowsController.ExitWindows(RestartOptions.Hibernate, True)
                                 End Select
-                            ElseIf mes = DialogResult.Cancel Then
+                            ElseIf CDbl(mes) = DialogResult.Cancel Then
                                 ShutdownTimer.Start()
                                 Notify = True
                             End If
@@ -989,8 +978,8 @@ Public Class MainForm
                         ElseIf AudioRadioButtonSh.Checked = False AndAlso VisualRadioButtonSh.Checked = True Then
                             PlayNow()
                             ShutdownTimer.Stop()
-                            Dim mes As String = MessageBox.Show(ShutdownCbSh.SelectedItem & " will start in " & minsh & " minutes and " & remain & " seconds. Click OK to start breaktime now. Otherwise, click Cancel to continue the timer.", "MinWarn Alert", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation)
-                            If mes = DialogResult.OK Then
+                            Dim mes As String = CStr(MessageBox.Show(DirectCast(ShutdownCbSh.SelectedItem, String) & " will start in " & minsh & " minutes and " & remain & " seconds. Click OK to start breaktime now. Otherwise, click Cancel to continue the timer.", "MinWarn Alert", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation))
+                            If CDbl(mes) = DialogResult.OK Then
                                 Me.Show()
                                 ShutdownTimer.Stop()
                                 Select Case ShutdownCbSh.SelectedIndex
@@ -1013,7 +1002,7 @@ Public Class MainForm
                                         Me.Close()
                                         WindowsController.ExitWindows(RestartOptions.Hibernate, True)
                                 End Select
-                            ElseIf mes = DialogResult.Cancel Then
+                            ElseIf CDbl(mes) = DialogResult.Cancel Then
                                 ShutdownTimer.Start()
                                 Notify = True
                             End If
@@ -1030,8 +1019,8 @@ Public Class MainForm
                         ElseIf AudioRadioButtonSh.Checked = False AndAlso VisualRadioButtonSh.Checked = True Then
                             PlayNow()
                             ShutdownTimer.Stop()
-                            Dim mes As String = MessageBox.Show(ShutdownCbSh.SelectedItem & " will start in " & minsh & " minutes and " & remain & " seconds. Click OK to start breaktime now. Otherwise, click Cancel to continue the timer.", "MinWarn Alert", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation)
-                            If mes = DialogResult.OK Then
+                            Dim mes As String = CStr(MessageBox.Show(DirectCast(ShutdownCbSh.SelectedItem, String) & " will start in " & minsh & " minutes and " & remain & " seconds. Click OK to start breaktime now. Otherwise, click Cancel to continue the timer.", "MinWarn Alert", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation))
+                            If CDbl(mes) = DialogResult.OK Then
                                 Me.Show()
                                 ShutdownTimer.Stop()
                                 Select Case ShutdownCbSh.SelectedIndex
@@ -1054,7 +1043,7 @@ Public Class MainForm
                                         Me.Close()
                                         WindowsController.ExitWindows(RestartOptions.Hibernate, True)
                                 End Select
-                            ElseIf mes = DialogResult.Cancel Then
+                            ElseIf CDbl(mes) = DialogResult.Cancel Then
                                 ShutdownTimer.Start()
                                 Notify = True
                             End If
@@ -1071,8 +1060,8 @@ Public Class MainForm
                         ElseIf AudioRadioButtonSh.Checked = False AndAlso VisualRadioButtonSh.Checked = True Then
                             PlayNow()
                             BreakTimer.Stop()
-                            Dim mes As String = MessageBox.Show(ShutdownCbSh.SelectedItem & " will start in " & minsh & " minutes and " & remain & " seconds. Click OK to start breaktime now. Otherwise, click Cancel to continue the timer.", "MinWarn Alert", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation)
-                            If mes = DialogResult.OK Then
+                            Dim mes As String = CStr(MessageBox.Show(DirectCast(ShutdownCbSh.SelectedItem, String) & " will start in " & minsh & " minutes and " & remain & " seconds. Click OK to start breaktime now. Otherwise, click Cancel to continue the timer.", "MinWarn Alert", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation))
+                            If CDbl(mes) = DialogResult.OK Then
                                 Me.Show()
                                 ShutdownTimer.Stop()
                                 Select Case ShutdownCbSh.SelectedIndex
@@ -1095,7 +1084,7 @@ Public Class MainForm
                                         Me.Close()
                                         WindowsController.ExitWindows(RestartOptions.Hibernate, True)
                                 End Select
-                            ElseIf mes = DialogResult.Cancel Then
+                            ElseIf CDbl(mes) = DialogResult.Cancel Then
                                 ShutdownTimer.Start()
                                 Notify = True
                             End If
@@ -1218,9 +1207,9 @@ Public Class MainForm
         HourLabelBT.Text = "--"
         lblminute.Text = "--"
         lblsec.Text = "--"
-        B1HourNudBT.Value = "0"
-        nudb1min.Value = "0"
-        nudb1sec.Value = "0"
+        B1HourNudBT.Value = CDec("0")
+        nudb1min.Value = CDec("0")
+        nudb1sec.Value = CDec("0")
 
     End Sub
 
@@ -1265,11 +1254,11 @@ Public Class MainForm
                 Case 1 Or 2
                     My.Computer.Audio.Play(My.Settings.Sound1Location)
             End Select
-            BreakForm.sethours = nudTimeBreakHour.Value
+            BreakForm.sethours = CInt(nudTimeBreakHour.Value)
             BreakForm.hours = BreakForm.sethours
-            BreakForm.setminutes = nudTimeBreakMin.Value
+            BreakForm.setminutes = CInt(nudTimeBreakMin.Value)
             BreakForm.minutes = BreakForm.setminutes
-            BreakForm.setsecs = nudTimeBreakSec.Value
+            BreakForm.setsecs = CInt(nudTimeBreakSec.Value)
             BreakForm.seconds = BreakForm.setsecs
             BreakForm.Show()
             Me.Hide()
@@ -1285,8 +1274,8 @@ Public Class MainForm
                         ElseIf AudioRbBt.Checked = False AndAlso VisualRbBt.Checked = True Then
                             PlayNow()
                             BreakTimer.Stop()
-                            Dim mes As String = MessageBox.Show("Breaktime will start in " & remain & " seconds. Click OK to start breaktime now. Otherwise, click Cancel to continue the timer.", "MinWarn Alert", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation)
-                            If mes = DialogResult.OK Then
+
+                            If MessageBox.Show("Breaktime will start in " & remain & " seconds. Click OK to start breaktime now. Otherwise, click Cancel to continue the timer.", "MinWarn Alert", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation) = DialogResult.OK Then
                                 BreakTimer.Stop()
                                 BreakTimer.Enabled = False
                                 Select Case My.Settings.Sound1
@@ -1295,15 +1284,15 @@ Public Class MainForm
                                     Case 1 Or 2
                                         My.Computer.Audio.Play(My.Settings.Sound1Location)
                                 End Select
-                                BreakForm.sethours = nudTimeBreakHour.Value
+                                BreakForm.sethours = CInt(nudTimeBreakHour.Value)
                                 BreakForm.hours = BreakForm.sethours
-                                BreakForm.setminutes = nudTimeBreakMin.Value
+                                BreakForm.setminutes = CInt(nudTimeBreakMin.Value)
                                 BreakForm.minutes = BreakForm.setminutes
-                                BreakForm.setsecs = nudTimeBreakSec.Value
+                                BreakForm.setsecs = CInt(nudTimeBreakSec.Value)
                                 BreakForm.seconds = BreakForm.setsecs
                                 BreakForm.Show()
                                 Me.Hide()
-                            ElseIf mes = DialogResult.Cancel Then
+                            ElseIf CBool(DialogResult.Cancel) Then
                                 BreakTimer.Start()
                             End If
                         End If
@@ -1322,8 +1311,8 @@ Public Class MainForm
                         ElseIf AudioRbBt.Checked = False AndAlso VisualRbBt.Checked = True Then
                             PlayNow()
                             BreakTimer.Stop()
-                            Dim mes As String = MessageBox.Show("Breaktime will start in " & min & " minutes and " & remain & " seconds. Click OK to start breaktime now. Otherwise, click Cancel to continue the timer.", "MinWarn Alert", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation)
-                            If mes = DialogResult.OK Then
+
+                            If MessageBox.Show("Breaktime will start in " & min & " minutes and " & remain & " seconds. Click OK to start breaktime now. Otherwise, click Cancel to continue the timer.", "MinWarn Alert", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation) = DialogResult.OK Then
                                 BreakTimer.Stop()
                                 BreakTimer.Enabled = False
                                 Select Case My.Settings.Sound1
@@ -1333,15 +1322,15 @@ Public Class MainForm
                                         My.Computer.Audio.Play(My.Settings.Sound1Location)
                                 End Select
 
-                                BreakForm.sethours = nudTimeBreakHour.Value
+                                BreakForm.sethours = CInt(nudTimeBreakHour.Value)
                                 BreakForm.hours = BreakForm.sethours
-                                BreakForm.setminutes = nudTimeBreakMin.Value
+                                BreakForm.setminutes = CInt(nudTimeBreakMin.Value)
                                 BreakForm.minutes = BreakForm.setminutes
-                                BreakForm.setsecs = nudTimeBreakSec.Value
+                                BreakForm.setsecs = CInt(nudTimeBreakSec.Value)
                                 BreakForm.seconds = BreakForm.setsecs
                                 BreakForm.Show()
                                 Me.Hide()
-                            ElseIf mes = DialogResult.Cancel Then
+                            ElseIf CBool(DialogResult.Cancel) Then
                                 BreakTimer.Start()
                                 Notify = True
                             End If
@@ -1358,8 +1347,8 @@ Public Class MainForm
                         ElseIf AudioRbBt.Checked = False AndAlso VisualRbBt.Checked = True Then
                             PlayNow()
                             BreakTimer.Stop()
-                            Dim mes As String = MessageBox.Show("Breaktime will start in " & min & " minutes and " & remain & " seconds. Click OK to start breaktime now. Otherwise, click Cancel to continue the timer.", "MinWarn Alert", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation)
-                            If mes = DialogResult.OK Then
+
+                            If MessageBox.Show("Breaktime will start in " & min & " minutes and " & remain & " seconds. Click OK to start breaktime now. Otherwise, click Cancel to continue the timer.", "MinWarn Alert", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation) = DialogResult.OK Then
                                 BreakTimer.Stop()
                                 BreakTimer.Enabled = False
                                 Select Case My.Settings.Sound1
@@ -1370,15 +1359,15 @@ Public Class MainForm
                                 End Select
 
 
-                                BreakForm.sethours = nudTimeBreakHour.Value
+                                BreakForm.sethours = CInt(nudTimeBreakHour.Value)
                                 BreakForm.hours = BreakForm.sethours
-                                BreakForm.setminutes = nudTimeBreakMin.Value
+                                BreakForm.setminutes = CInt(nudTimeBreakMin.Value)
                                 BreakForm.minutes = BreakForm.setminutes
-                                BreakForm.setsecs = nudTimeBreakSec.Value
+                                BreakForm.setsecs = CInt(nudTimeBreakSec.Value)
                                 BreakForm.seconds = BreakForm.setsecs
                                 BreakForm.Show()
                                 Me.Hide()
-                            ElseIf mes = DialogResult.Cancel Then
+                            ElseIf CBool(DialogResult.Cancel) Then
                                 BreakTimer.Start()
                                 Notify = True
                             End If
@@ -1395,8 +1384,8 @@ Public Class MainForm
                         ElseIf AudioRbBt.Checked = False AndAlso VisualRbBt.Checked = True Then
                             PlayNow()
                             BreakTimer.Stop()
-                            Dim mes As String = MessageBox.Show("Breaktime will start in " & min & " minutes and " & remain & " seconds. Click OK to start breaktime now. Otherwise, click Cancel to continue the timer.", "MinWarn Alert", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation)
-                            If mes = DialogResult.OK Then
+
+                            If MessageBox.Show("Breaktime will start in " & min & " minutes and " & remain & " seconds. Click OK to start breaktime now. Otherwise, click Cancel to continue the timer.", "MinWarn Alert", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation) = DialogResult.OK Then
                                 BreakTimer.Stop()
                                 BreakTimer.Enabled = False
                                 Select Case My.Settings.Sound1
@@ -1409,15 +1398,15 @@ Public Class MainForm
 
 
 
-                                BreakForm.sethours = nudTimeBreakHour.Value
+                                BreakForm.sethours = CInt(nudTimeBreakHour.Value)
                                 BreakForm.hours = BreakForm.sethours
-                                BreakForm.setminutes = nudTimeBreakMin.Value
+                                BreakForm.setminutes = CInt(nudTimeBreakMin.Value)
                                 BreakForm.minutes = BreakForm.setminutes
-                                BreakForm.setsecs = nudTimeBreakSec.Value
+                                BreakForm.setsecs = CInt(nudTimeBreakSec.Value)
                                 BreakForm.seconds = BreakForm.setsecs
                                 BreakForm.Show()
                                 Me.Hide()
-                            ElseIf mes = DialogResult.Cancel Then
+                            ElseIf CBool(DialogResult.Cancel) Then
                                 BreakTimer.Start()
                                 Notify = True
                             End If
@@ -1434,8 +1423,8 @@ Public Class MainForm
                         ElseIf AudioRbBt.Checked = False AndAlso VisualRbBt.Checked = True Then
                             PlayNow()
                             BreakTimer.Stop()
-                            Dim mes As String = MessageBox.Show("Breaktime will start in " & min & " minutes and " & remain & " seconds. Click OK to start breaktime now. Otherwise, click Cancel to continue the timer.", "MinWarn Alert", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation)
-                            If mes = DialogResult.OK Then
+
+                            If MessageBox.Show("Breaktime will start in " & min & " minutes and " & remain & " seconds. Click OK to start breaktime now. Otherwise, click Cancel to continue the timer.", "MinWarn Alert", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation) = DialogResult.OK Then
                                 BreakTimer.Stop()
                                 BreakTimer.Enabled = False
                                 Select Case My.Settings.Sound1
@@ -1446,15 +1435,15 @@ Public Class MainForm
                                 End Select
 
 
-                                BreakForm.sethours = nudTimeBreakHour.Value
+                                BreakForm.sethours = CInt(nudTimeBreakHour.Value)
                                 BreakForm.hours = BreakForm.sethours
-                                BreakForm.setminutes = nudTimeBreakMin.Value
+                                BreakForm.setminutes = CInt(nudTimeBreakMin.Value)
                                 BreakForm.minutes = BreakForm.setminutes
-                                BreakForm.setsecs = nudTimeBreakSec.Value
+                                BreakForm.setsecs = CInt(nudTimeBreakSec.Value)
                                 BreakForm.seconds = BreakForm.setsecs
                                 BreakForm.Show()
                                 Me.Hide()
-                            ElseIf mes = DialogResult.Cancel Then
+                            ElseIf CBool(DialogResult.Cancel) Then
                                 BreakTimer.Start()
                                 Notify = True
                             End If
@@ -1496,12 +1485,12 @@ Public Class MainForm
             Else
 
             End If
-            TSFHourIndicatorLabelBT.Text = nudTimeHour.Value
-            TSFMinIndicatorLabelBT.Text = nudTimeMin.Value
-            TSFSecondIndicatorLabelBT.Text = nudTimeSec.Value
-            BSTHourIndicatorLabelBT.Text = nudTimeBreakHour.Value
-            BSTMinIndicatorLabelBT.Text = nudTimeBreakMin.Value
-            BSTSecondIndicatorLabelBT.Text = nudTimeBreakSec.Value
+            TSFHourIndicatorLabelBT.Text = CStr(nudTimeHour.Value)
+            TSFMinIndicatorLabelBT.Text = CStr(nudTimeMin.Value)
+            TSFSecondIndicatorLabelBT.Text = CStr(nudTimeSec.Value)
+            BSTHourIndicatorLabelBT.Text = CStr(nudTimeBreakHour.Value)
+            BSTMinIndicatorLabelBT.Text = CStr(nudTimeBreakMin.Value)
+            BSTSecondIndicatorLabelBT.Text = CStr(nudTimeBreakSec.Value)
             TimerTab.Enabled = False
             StopWatchTab.Enabled = False
             ShutdownTabPage.Enabled = False
@@ -1514,9 +1503,9 @@ Public Class MainForm
             Me.WindowState = FormWindowState.Minimized
             BreakTimer.Enabled = True
             BreakTimer.Start()
-            sethours = nudTimeHour.Value
-            setmins = nudTimeMin.Value
-            setsecs = nudTimeSec.Value
+            sethours = CInt(nudTimeHour.Value)
+            setmins = CInt(nudTimeMin.Value)
+            setsecs = CInt(nudTimeSec.Value)
             hour = sethours
             min = setmins
             sec = setsecs
@@ -1533,11 +1522,11 @@ Public Class MainForm
 
             End If
 
-            BreakForm.sethours = B1HourNudBT.Value
+            BreakForm.sethours = CInt(B1HourNudBT.Value)
             BreakForm.hours = BreakForm.sethours
-            BreakForm.setminutes = nudb1min.Value
+            BreakForm.setminutes = CInt(nudb1min.Value)
             BreakForm.minutes = BreakForm.setminutes
-            BreakForm.setsecs = nudb1sec.Value
+            BreakForm.setsecs = CInt(nudb1sec.Value)
             BreakForm.seconds = BreakForm.setsecs
             BreakForm.Show()
             Me.Hide()

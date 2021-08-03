@@ -246,9 +246,9 @@ Partial Class SettingsForm
         Me.lblVersion.AutoSize = True
         Me.lblVersion.Location = New System.Drawing.Point(182, 35)
         Me.lblVersion.Name = "lblVersion"
-        Me.lblVersion.Size = New System.Drawing.Size(119, 26)
+        Me.lblVersion.Size = New System.Drawing.Size(128, 26)
         Me.lblVersion.TabIndex = 29
-        Me.lblVersion.Text = "v21H2 Preview Two " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Released July 25, 2021"
+        Me.lblVersion.Text = "v21H2 Preview Three " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Released August 2, 2021"
         Me.lblVersion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'lblName

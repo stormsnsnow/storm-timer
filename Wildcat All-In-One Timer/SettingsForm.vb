@@ -6,18 +6,18 @@ Imports System.Text
 Public Class SettingsForm
     Public Shared Downuri As String
     Private Sub Settings_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Me.BackColor = System.Drawing.ColorTranslator.FromHtml(My.Settings.BackColor.ToArgb)
-        Me.ForeColor = System.Drawing.ColorTranslator.FromHtml(My.Settings.ForeColor.ToArgb)
-        Personalization.BackColor = System.Drawing.ColorTranslator.FromHtml(My.Settings.BackColor.ToArgb)
-        Personalization.ForeColor = System.Drawing.ColorTranslator.FromHtml(My.Settings.ForeColor.ToArgb)
-        AutoTime.BackColor = System.Drawing.ColorTranslator.FromHtml(My.Settings.BackColor.ToArgb)
-        AutoTime.ForeColor = System.Drawing.ColorTranslator.FromHtml(My.Settings.ForeColor.ToArgb)
-        Sounds.BackColor = System.Drawing.ColorTranslator.FromHtml(My.Settings.BackColor.ToArgb)
-        Sounds.ForeColor = System.Drawing.ColorTranslator.FromHtml(My.Settings.ForeColor.ToArgb)
-        About.BackColor = System.Drawing.ColorTranslator.FromHtml(My.Settings.BackColor.ToArgb)
-        About.ForeColor = System.Drawing.ColorTranslator.FromHtml(My.Settings.ForeColor.ToArgb)
-        General.BackColor = System.Drawing.ColorTranslator.FromHtml(My.Settings.BackColor.ToArgb)
-        General.ForeColor = System.Drawing.ColorTranslator.FromHtml(My.Settings.ForeColor.ToArgb)
+        Me.BackColor = System.Drawing.ColorTranslator.FromHtml(CStr(My.Settings.BackColor.ToArgb))
+        Me.ForeColor = System.Drawing.ColorTranslator.FromHtml(CStr(My.Settings.ForeColor.ToArgb))
+        Personalization.BackColor = System.Drawing.ColorTranslator.FromHtml(CStr(My.Settings.BackColor.ToArgb))
+        Personalization.ForeColor = System.Drawing.ColorTranslator.FromHtml(CStr(My.Settings.ForeColor.ToArgb))
+        AutoTime.BackColor = System.Drawing.ColorTranslator.FromHtml(CStr(My.Settings.BackColor.ToArgb))
+        AutoTime.ForeColor = System.Drawing.ColorTranslator.FromHtml(CStr(My.Settings.ForeColor.ToArgb))
+        Sounds.BackColor = System.Drawing.ColorTranslator.FromHtml(CStr(My.Settings.BackColor.ToArgb))
+        Sounds.ForeColor = System.Drawing.ColorTranslator.FromHtml(CStr(My.Settings.ForeColor.ToArgb))
+        About.BackColor = System.Drawing.ColorTranslator.FromHtml(CStr(My.Settings.BackColor.ToArgb))
+        About.ForeColor = System.Drawing.ColorTranslator.FromHtml(CStr(My.Settings.ForeColor.ToArgb))
+        General.BackColor = System.Drawing.ColorTranslator.FromHtml(CStr(My.Settings.BackColor.ToArgb))
+        General.ForeColor = System.Drawing.ColorTranslator.FromHtml(CStr(My.Settings.ForeColor.ToArgb))
         WDLCTSUCbSUGen.SelectedIndex = My.Settings.Startup
 
         TDComboBoxS.SelectedIndex = My.Settings.Sound1
@@ -26,8 +26,8 @@ Public Class SettingsForm
         DateFormatCbDTGen.SelectedIndex = My.Settings.DateFormat
         TimeFormatCbDTGen.SelectedIndex = My.Settings.TimeFormat
         ComboBox1.SelectedIndex = My.Settings.DateFormat4Break
-        ColorWheel1.Color = System.Drawing.ColorTranslator.FromHtml(My.Settings.BackColor.ToArgb)
-        ColorWheel2.Color = System.Drawing.ColorTranslator.FromHtml(My.Settings.ForeColor.ToArgb)
+        ColorWheel1.Color = System.Drawing.ColorTranslator.FromHtml(CStr(My.Settings.BackColor.ToArgb))
+        ColorWheel2.Color = System.Drawing.ColorTranslator.FromHtml(CStr(My.Settings.ForeColor.ToArgb))
         If File.Exists(Application.StartupPath & "\sounds\") Then
             Sounds.Show()
         Else
@@ -41,16 +41,16 @@ Public Class SettingsForm
         My.Settings.DateFormat = DateFormatCbDTGen.SelectedIndex
         My.Settings.TimeFormat = TimeFormatCbDTGen.SelectedIndex
         My.Settings.Sound1 = TDComboBoxS.SelectedIndex
-        My.Settings.AutoTimeBTBHour = nudTimeBreakHour.Value
-        My.Settings.AutoTimeBTBMin = nudTimeBreakMin.Value
-        My.Settings.AutoTimeBTBSec = nudTimeBreakSec.Value
-        My.Settings.AutoTimeBTTHour = nudTimeHour.Value
-        My.Settings.AutoTimeBTTMin = nudTimeMin.Value
-        My.Settings.AutoTimeBTTSec = nudTimeSec.Value
-        My.Settings.AutoTimeBTB1Hour = nudb1hour.Value
-        My.Settings.AutoTimeBTB1Min = nudb1min.Value
-        My.Settings.AutoTimeBTB1Sec = nudb1sec.Value
-        My.Settings.MWAutoTime = MinWarnNudBt.Value
+        My.Settings.AutoTimeBTBHour = CStr(nudTimeBreakHour.Value)
+        My.Settings.AutoTimeBTBMin = CStr(nudTimeBreakMin.Value)
+        My.Settings.AutoTimeBTBSec = CStr(nudTimeBreakSec.Value)
+        My.Settings.AutoTimeBTTHour = CStr(nudTimeHour.Value)
+        My.Settings.AutoTimeBTTMin = CStr(nudTimeMin.Value)
+        My.Settings.AutoTimeBTTSec = CStr(nudTimeSec.Value)
+        My.Settings.AutoTimeBTB1Hour = CStr(nudb1hour.Value)
+        My.Settings.AutoTimeBTB1Min = CStr(nudb1min.Value)
+        My.Settings.AutoTimeBTB1Sec = CStr(nudb1sec.Value)
+        My.Settings.MWAutoTime = CStr(MinWarnNudBt.Value)
         If AudioRbBt.Checked = True AndAlso VisualRbBt.Checked = False Then
             My.Settings.AudioOrVisual = True
         ElseIf AudioRbBt.Checked = False AndAlso VisualRbBt.Checked = True Then
@@ -61,13 +61,13 @@ Public Class SettingsForm
         ElseIf TimeRBBt.Checked = False AndAlso BreakRBBt.Checked = True Then
             My.Settings.SetTimeOrBreak = False
         End If
-        My.Settings.AutoTimeTTHour = nudHour.Value
-        My.Settings.AutoTimeTTMin = nudMin.Value
-        My.Settings.AutoTimeTTSec = nudSec.Value
-        My.Settings.AutoTimeShHour = HourNudSh.Value
-        My.Settings.AutoTimeShMin = MinuteNudSh.Value
-        My.Settings.AutoTimeShSec = SecondNudSh.Value
-        My.Settings.AutoTimeSh = ShutdownCbSh.SelectedIndex
+        My.Settings.AutoTimeTTHour = CStr(nudHour.Value)
+        My.Settings.AutoTimeTTMin = CStr(nudMin.Value)
+        My.Settings.AutoTimeTTSec = CStr(nudSec.Value)
+        My.Settings.AutoTimeShHour = CStr(HourNudSh.Value)
+        My.Settings.AutoTimeShMin = CStr(MinuteNudSh.Value)
+        My.Settings.AutoTimeShSec = CStr(SecondNudSh.Value)
+        My.Settings.AutoTimeSh = CStr(ShutdownCbSh.SelectedIndex)
 
         If AudioRadioButtonSh.Checked = True AndAlso VisualRadioButtonSh.Checked = False Then
             My.Settings.AudOrVis = True
@@ -268,8 +268,8 @@ Public Class SettingsForm
     Private Sub TimeFormatCbDTGen_SelectedIndexChanged(sender As Object, e As EventArgs) Handles TimeFormatCbDTGen.SelectedIndexChanged
         Select Case TimeFormatCbDTGen.SelectedIndex
             Case 0
-                Dim hourtime As DateTime = Now.ToString("HH:mm:ss tt", CultureInfo.InvariantCulture)
-                DTLabelDTGen2.Text = hourtime
+                Dim hourtime As DateTime = CDate(Now.ToString("HH:mm:ss tt", CultureInfo.InvariantCulture))
+                DTLabelDTGen2.Text = CStr(hourtime)
             Case 1
                 DTLabelDTGen2.Text = Now.ToString("HH:mm:ss")
             Case 2
@@ -280,7 +280,7 @@ Public Class SettingsForm
             Case 4
                 Dim uTime As Double
                 uTime = (DateTime.UtcNow - New DateTime(1970, 1, 1, 0, 0, 0)).TotalSeconds
-                DTLabelDTGen2.Text = uTime
+                DTLabelDTGen2.Text = CStr(uTime)
             Case 5
                 DTLabelDTGen2.Text = DateTime.UtcNow.TimeOfDay.ToString
         End Select
@@ -303,19 +303,21 @@ Public Class SettingsForm
             Case 5
                 Dim uTime As Double
                 uTime = (DateTime.UtcNow - New DateTime(1970, 1, 1, 0, 0, 0)).TotalSeconds
-                Label1.Text = uTime
+                Label1.Text = CStr(uTime)
         End Select
     End Sub
 
     Private Sub ResetButtonReGen_Click(sender As Object, e As EventArgs) Handles ResetButtonReGen.Click
         Dim ms As String
-        ms = MessageBox.Show("Are you sure? This will RESET ALL SETTINGS! Use caution if you have personalized settings!", "Confirm Reset", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Exclamation)
-        If ms = DialogResult.Yes Then
+        ms = CStr(MessageBox.Show("Are you sure? This will RESET ALL SETTINGS! Use caution if you have personalized settings!", "Confirm Reset", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Exclamation))
+        If CDbl(ms) = DialogResult.Yes Then
             My.Settings.Reset()
             MsgBox("Reset successful. Program will now restart when you press OK.", MsgBoxStyle.Information, "Reset Success")
             Application.Restart()
-        ElseIf ms = DialogResult.No Then
-        ElseIf ms = DialogResult.Cancel Then
+        ElseIf CDbl(ms) = DialogResult.No Then
+            Exit Sub
+        ElseIf CDbl(ms) = DialogResult.Cancel Then
+            Exit Sub
         End If
     End Sub
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click

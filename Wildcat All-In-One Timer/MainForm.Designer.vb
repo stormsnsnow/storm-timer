@@ -181,7 +181,7 @@ Partial Class MainForm
         Me.TimeAtLabelSh = New System.Windows.Forms.Label()
         Me.AtRadioButtonSh = New System.Windows.Forms.RadioButton()
         Me.InRadioButtonSh = New System.Windows.Forms.RadioButton()
-        Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.ReminderTabPage = New System.Windows.Forms.TabPage()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.TimerTimer = New System.Windows.Forms.Timer(Me.components)
@@ -250,7 +250,7 @@ Partial Class MainForm
         Me.AtSettingsGBSH.SuspendLayout()
         CType(Me.HourAtNudSh, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MinuteAtNudSh, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TabPage1.SuspendLayout()
+        Me.ReminderTabPage.SuspendLayout()
         CType(Me.DTPErhAc, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TitlePanel.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -268,7 +268,7 @@ Partial Class MainForm
         Me.TimerControl.Controls.Add(Me.TimerTab)
         Me.TimerControl.Controls.Add(Me.StopWatchTab)
         Me.TimerControl.Controls.Add(Me.ShutdownTabPage)
-        Me.TimerControl.Controls.Add(Me.TabPage1)
+        Me.TimerControl.Controls.Add(Me.ReminderTabPage)
         Me.TimerControl.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.TimerControl.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TimerControl.ImageList = Me.IconsIL
@@ -281,7 +281,7 @@ Partial Class MainForm
         '
         'BreakTimerTab
         '
-        Me.BreakTimerTab.BackColor = System.Drawing.Color.Yellow
+        Me.BreakTimerTab.BackColor = System.Drawing.Color.GreenYellow
         Me.BreakTimerTab.Controls.Add(Me.BSTGroupBoxBT)
         Me.BreakTimerTab.Controls.Add(Me.TSFGroupBoxBT)
         Me.BreakTimerTab.Controls.Add(Me.ControlsGroupBoxBT)
@@ -291,7 +291,7 @@ Partial Class MainForm
         Me.BreakTimerTab.Controls.Add(Me.BreakRBBt)
         Me.BreakTimerTab.Controls.Add(Me.StatusGroupBoxBT)
         Me.BreakTimerTab.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BreakTimerTab.ForeColor = System.Drawing.Color.DarkRed
+        Me.BreakTimerTab.ForeColor = System.Drawing.Color.LimeGreen
         Me.BreakTimerTab.ImageKey = "1F512.png"
         Me.BreakTimerTab.Location = New System.Drawing.Point(4, 23)
         Me.BreakTimerTab.Name = "BreakTimerTab"
@@ -312,7 +312,7 @@ Partial Class MainForm
         Me.BSTGroupBoxBT.Controls.Add(Me.BSTHourAndLabelBT)
         Me.BSTGroupBoxBT.Controls.Add(Me.BSTHoursAndLabelBT)
         Me.BSTGroupBoxBT.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BSTGroupBoxBT.ForeColor = System.Drawing.Color.Black
+        Me.BSTGroupBoxBT.ForeColor = System.Drawing.Color.LimeGreen
         Me.BSTGroupBoxBT.Location = New System.Drawing.Point(152, 179)
         Me.BSTGroupBoxBT.Name = "BSTGroupBoxBT"
         Me.BSTGroupBoxBT.Size = New System.Drawing.Size(140, 67)
@@ -424,7 +424,7 @@ Partial Class MainForm
         Me.TSFGroupBoxBT.Controls.Add(Me.TSFHourAndLabelBT)
         Me.TSFGroupBoxBT.Controls.Add(Me.TSFHoursAndLabelBT)
         Me.TSFGroupBoxBT.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TSFGroupBoxBT.ForeColor = System.Drawing.Color.Black
+        Me.TSFGroupBoxBT.ForeColor = System.Drawing.Color.LimeGreen
         Me.TSFGroupBoxBT.Location = New System.Drawing.Point(40, 179)
         Me.TSFGroupBoxBT.Name = "TSFGroupBoxBT"
         Me.TSFGroupBoxBT.Size = New System.Drawing.Size(105, 66)
@@ -532,7 +532,7 @@ Partial Class MainForm
         Me.ControlsGroupBoxBT.Controls.Add(Me.btnStop)
         Me.ControlsGroupBoxBT.Controls.Add(Me.PauseButtonBT)
         Me.ControlsGroupBoxBT.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ControlsGroupBoxBT.ForeColor = System.Drawing.Color.Black
+        Me.ControlsGroupBoxBT.ForeColor = System.Drawing.Color.LimeGreen
         Me.ControlsGroupBoxBT.Location = New System.Drawing.Point(37, 99)
         Me.ControlsGroupBoxBT.Name = "ControlsGroupBoxBT"
         Me.ControlsGroupBoxBT.Size = New System.Drawing.Size(254, 73)
@@ -658,7 +658,7 @@ Partial Class MainForm
         Me.TimerGBBt.Controls.Add(Me.nudTimeBreakMin)
         Me.TimerGBBt.Controls.Add(Me.nudTimeBreakHour)
         Me.TimerGBBt.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TimerGBBt.ForeColor = System.Drawing.Color.Black
+        Me.TimerGBBt.ForeColor = System.Drawing.Color.LimeGreen
         Me.TimerGBBt.Location = New System.Drawing.Point(299, 17)
         Me.TimerGBBt.Name = "TimerGBBt"
         Me.TimerGBBt.Size = New System.Drawing.Size(260, 155)
@@ -844,7 +844,7 @@ Partial Class MainForm
         Me.BreakGBBt.Controls.Add(Me.nudb1sec)
         Me.BreakGBBt.Controls.Add(Me.nudb1min)
         Me.BreakGBBt.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BreakGBBt.ForeColor = System.Drawing.Color.Black
+        Me.BreakGBBt.ForeColor = System.Drawing.Color.LimeGreen
         Me.BreakGBBt.Location = New System.Drawing.Point(40, 27)
         Me.BreakGBBt.Name = "BreakGBBt"
         Me.BreakGBBt.Size = New System.Drawing.Size(254, 71)
@@ -856,7 +856,6 @@ Partial Class MainForm
         '
         Me.BreakTimeLabelBT.AutoSize = True
         Me.BreakTimeLabelBT.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BreakTimeLabelBT.ForeColor = System.Drawing.Color.Gold
         Me.BreakTimeLabelBT.Location = New System.Drawing.Point(92, 48)
         Me.BreakTimeLabelBT.Name = "BreakTimeLabelBT"
         Me.BreakTimeLabelBT.Size = New System.Drawing.Size(49, 14)
@@ -867,7 +866,6 @@ Partial Class MainForm
         '
         Me.BreakTimeSelectLabelBT.AutoSize = True
         Me.BreakTimeSelectLabelBT.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BreakTimeSelectLabelBT.ForeColor = System.Drawing.Color.Gold
         Me.BreakTimeSelectLabelBT.Location = New System.Drawing.Point(13, 48)
         Me.BreakTimeSelectLabelBT.Name = "BreakTimeSelectLabelBT"
         Me.BreakTimeSelectLabelBT.Size = New System.Drawing.Size(63, 14)
@@ -878,7 +876,6 @@ Partial Class MainForm
         '
         Me.BreakLabelBT.AutoSize = True
         Me.BreakLabelBT.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BreakLabelBT.ForeColor = System.Drawing.Color.Gold
         Me.BreakLabelBT.Location = New System.Drawing.Point(13, 17)
         Me.BreakLabelBT.Name = "BreakLabelBT"
         Me.BreakLabelBT.Size = New System.Drawing.Size(38, 14)
@@ -919,7 +916,7 @@ Partial Class MainForm
         Me.TimeRBBt.FlatAppearance.BorderSize = 0
         Me.TimeRBBt.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.TimeRBBt.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TimeRBBt.ForeColor = System.Drawing.Color.Black
+        Me.TimeRBBt.ForeColor = System.Drawing.Color.LimeGreen
         Me.TimeRBBt.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.TimeRBBt.ImageIndex = 1
         Me.TimeRBBt.ImageList = Me.IconsIL
@@ -937,7 +934,7 @@ Partial Class MainForm
         Me.BreakRBBt.AutoSize = True
         Me.BreakRBBt.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BreakRBBt.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BreakRBBt.ForeColor = System.Drawing.Color.Black
+        Me.BreakRBBt.ForeColor = System.Drawing.Color.LimeGreen
         Me.BreakRBBt.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.BreakRBBt.ImageIndex = 0
         Me.BreakRBBt.ImageList = Me.IconsIL
@@ -961,7 +958,7 @@ Partial Class MainForm
         Me.StatusGroupBoxBT.Controls.Add(Me.HourAndBreakLabelBT)
         Me.StatusGroupBoxBT.Controls.Add(Me.lblhoursandbreak)
         Me.StatusGroupBoxBT.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.StatusGroupBoxBT.ForeColor = System.Drawing.Color.Black
+        Me.StatusGroupBoxBT.ForeColor = System.Drawing.Color.LimeGreen
         Me.StatusGroupBoxBT.Location = New System.Drawing.Point(301, 179)
         Me.StatusGroupBoxBT.Name = "StatusGroupBoxBT"
         Me.StatusGroupBoxBT.Size = New System.Drawing.Size(131, 67)
@@ -1063,7 +1060,7 @@ Partial Class MainForm
         '
         'AlarmClockTab
         '
-        Me.AlarmClockTab.BackColor = System.Drawing.Color.Yellow
+        Me.AlarmClockTab.BackColor = System.Drawing.Color.GreenYellow
         Me.AlarmClockTab.Controls.Add(Me.panelalert)
         Me.AlarmClockTab.Controls.Add(Me.HourNudAC)
         Me.AlarmClockTab.Controls.Add(Me.MinNudAC)
@@ -1213,7 +1210,7 @@ Partial Class MainForm
         '
         'TimerTab
         '
-        Me.TimerTab.BackColor = System.Drawing.Color.Yellow
+        Me.TimerTab.BackColor = System.Drawing.Color.GreenYellow
         Me.TimerTab.Controls.Add(Me.TSFGroupBoxT)
         Me.TimerTab.Controls.Add(Me.StatusGroupBoxT)
         Me.TimerTab.Controls.Add(Me.StartTimeButton)
@@ -1537,7 +1534,7 @@ Partial Class MainForm
         '
         'StopWatchTab
         '
-        Me.StopWatchTab.BackColor = System.Drawing.Color.Yellow
+        Me.StopWatchTab.BackColor = System.Drawing.Color.GreenYellow
         Me.StopWatchTab.Controls.Add(Me.Panel1)
         Me.StopWatchTab.Controls.Add(Me.LapListBoxSw)
         Me.StopWatchTab.Controls.Add(Me.LapButtonSW)
@@ -1696,7 +1693,7 @@ Partial Class MainForm
         '
         'ShutdownTabPage
         '
-        Me.ShutdownTabPage.BackColor = System.Drawing.Color.Yellow
+        Me.ShutdownTabPage.BackColor = System.Drawing.Color.GreenYellow
         Me.ShutdownTabPage.Controls.Add(Me.Panel2)
         Me.ShutdownTabPage.Controls.Add(Me.StatusGroupBoxSH)
         Me.ShutdownTabPage.Controls.Add(Me.ShutdownCbSh)
@@ -2138,17 +2135,17 @@ Partial Class MainForm
         Me.InRadioButtonSh.Text = "In"
         Me.InRadioButtonSh.UseVisualStyleBackColor = False
         '
-        'TabPage1
+        'ReminderTabPage
         '
-        Me.TabPage1.BackColor = System.Drawing.Color.Yellow
-        Me.TabPage1.Controls.Add(Me.TextBox1)
-        Me.TabPage1.Controls.Add(Me.Button3)
-        Me.TabPage1.Location = New System.Drawing.Point(4, 23)
-        Me.TabPage1.Name = "TabPage1"
-        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(627, 277)
-        Me.TabPage1.TabIndex = 5
-        Me.TabPage1.Text = "Reminder"
+        Me.ReminderTabPage.BackColor = System.Drawing.Color.GreenYellow
+        Me.ReminderTabPage.Controls.Add(Me.TextBox1)
+        Me.ReminderTabPage.Controls.Add(Me.Button3)
+        Me.ReminderTabPage.Location = New System.Drawing.Point(4, 23)
+        Me.ReminderTabPage.Name = "ReminderTabPage"
+        Me.ReminderTabPage.Padding = New System.Windows.Forms.Padding(3)
+        Me.ReminderTabPage.Size = New System.Drawing.Size(627, 277)
+        Me.ReminderTabPage.TabIndex = 5
+        Me.ReminderTabPage.Text = "Reminders (BETA: VERY UNSTABLE!)"
         '
         'TextBox1
         '
@@ -2181,7 +2178,7 @@ Partial Class MainForm
         '
         'TitlePanel
         '
-        Me.TitlePanel.BackColor = System.Drawing.Color.Yellow
+        Me.TitlePanel.BackColor = System.Drawing.Color.GreenYellow
         Me.TitlePanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.TitlePanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TitlePanel.Controls.Add(Me.PictureBox1)
@@ -2193,7 +2190,7 @@ Partial Class MainForm
         Me.TitlePanel.Controls.Add(Me.lblName)
         Me.TitlePanel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TitlePanel.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TitlePanel.ForeColor = System.Drawing.Color.DarkRed
+        Me.TitlePanel.ForeColor = System.Drawing.Color.LimeGreen
         Me.TitlePanel.Location = New System.Drawing.Point(0, 0)
         Me.TitlePanel.Name = "TitlePanel"
         Me.TitlePanel.Size = New System.Drawing.Size(635, 124)
@@ -2212,8 +2209,9 @@ Partial Class MainForm
         'TimeLabelYD
         '
         Me.TimeLabelYD.AutoSize = True
+        Me.TimeLabelYD.BackColor = System.Drawing.Color.GreenYellow
         Me.TimeLabelYD.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TimeLabelYD.ForeColor = System.Drawing.Color.Gold
+        Me.TimeLabelYD.ForeColor = System.Drawing.Color.LimeGreen
         Me.TimeLabelYD.Location = New System.Drawing.Point(292, 104)
         Me.TimeLabelYD.Name = "TimeLabelYD"
         Me.TimeLabelYD.Size = New System.Drawing.Size(132, 14)
@@ -2222,10 +2220,10 @@ Partial Class MainForm
         '
         'SettingsButton
         '
-        Me.SettingsButton.BackColor = System.Drawing.Color.Yellow
+        Me.SettingsButton.BackColor = System.Drawing.Color.GreenYellow
         Me.SettingsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.SettingsButton.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.SettingsButton.ForeColor = System.Drawing.Color.Gold
+        Me.SettingsButton.ForeColor = System.Drawing.Color.LimeGreen
         Me.SettingsButton.Location = New System.Drawing.Point(556, 94)
         Me.SettingsButton.Name = "SettingsButton"
         Me.SettingsButton.Size = New System.Drawing.Size(72, 25)
@@ -2236,8 +2234,9 @@ Partial Class MainForm
         'DateLabelYD
         '
         Me.DateLabelYD.AutoSize = True
+        Me.DateLabelYD.BackColor = System.Drawing.Color.GreenYellow
         Me.DateLabelYD.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DateLabelYD.ForeColor = System.Drawing.Color.Gold
+        Me.DateLabelYD.ForeColor = System.Drawing.Color.LimeGreen
         Me.DateLabelYD.Location = New System.Drawing.Point(100, 104)
         Me.DateLabelYD.Name = "DateLabelYD"
         Me.DateLabelYD.Size = New System.Drawing.Size(147, 14)
@@ -2247,8 +2246,9 @@ Partial Class MainForm
         'lblwelcome
         '
         Me.lblwelcome.AutoSize = True
+        Me.lblwelcome.BackColor = System.Drawing.Color.GreenYellow
         Me.lblwelcome.Font = New System.Drawing.Font("Arial", 15.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblwelcome.ForeColor = System.Drawing.Color.Gold
+        Me.lblwelcome.ForeColor = System.Drawing.Color.LimeGreen
         Me.lblwelcome.Location = New System.Drawing.Point(150, 78)
         Me.lblwelcome.Name = "lblwelcome"
         Me.lblwelcome.Size = New System.Drawing.Size(158, 24)
@@ -2260,19 +2260,20 @@ Partial Class MainForm
         '
         Me.lblVersion.AutoSize = True
         Me.lblVersion.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblVersion.ForeColor = System.Drawing.Color.Gold
+        Me.lblVersion.ForeColor = System.Drawing.Color.LimeGreen
         Me.lblVersion.Location = New System.Drawing.Point(181, 36)
         Me.lblVersion.Name = "lblVersion"
-        Me.lblVersion.Size = New System.Drawing.Size(128, 42)
+        Me.lblVersion.Size = New System.Drawing.Size(140, 42)
         Me.lblVersion.TabIndex = 26
-        Me.lblVersion.Text = "v21H2" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Preview Release" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Released July 25, 2021"
+        Me.lblVersion.Text = "v21H2" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Preview Release" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Released August 2, 2021"
         Me.lblVersion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'lblName
         '
         Me.lblName.AutoSize = True
+        Me.lblName.BackColor = System.Drawing.Color.GreenYellow
         Me.lblName.Font = New System.Drawing.Font("Arial", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblName.ForeColor = System.Drawing.Color.Gold
+        Me.lblName.ForeColor = System.Drawing.Color.LimeGreen
         Me.lblName.Location = New System.Drawing.Point(196, 13)
         Me.lblName.Name = "lblName"
         Me.lblName.Size = New System.Drawing.Size(118, 24)
@@ -2338,19 +2339,19 @@ Partial Class MainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 14.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.Yellow
+        Me.BackColor = System.Drawing.Color.GreenYellow
         Me.ClientSize = New System.Drawing.Size(635, 428)
         Me.Controls.Add(Me.TitlePanel)
         Me.Controls.Add(Me.TimerControl)
         Me.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ForeColor = System.Drawing.Color.Gold
+        Me.ForeColor = System.Drawing.Color.LimeGreen
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.MaximizeBox = False
         Me.Name = "MainForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "BreakTime - v21H2P2- Released on July 25 2021"
+        Me.Text = "BreakTime - v21H2P3- Released on August 2, 2021"
         Me.TimerControl.ResumeLayout(False)
         Me.BreakTimerTab.ResumeLayout(False)
         Me.BreakTimerTab.PerformLayout()
@@ -2413,8 +2414,8 @@ Partial Class MainForm
         Me.AtSettingsGBSH.PerformLayout()
         CType(Me.HourAtNudSh, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MinuteAtNudSh, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.TabPage1.ResumeLayout(False)
-        Me.TabPage1.PerformLayout()
+        Me.ReminderTabPage.ResumeLayout(False)
+        Me.ReminderTabPage.PerformLayout()
         CType(Me.DTPErhAc, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TitlePanel.ResumeLayout(False)
         Me.TitlePanel.PerformLayout()
@@ -2601,7 +2602,7 @@ Partial Class MainForm
     Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents PictureBox4 As PictureBox
-    Friend WithEvents TabPage1 As TabPage
+    Friend WithEvents ReminderTabPage As TabPage
     Friend WithEvents Button3 As Button
     Friend WithEvents TextBox1 As TextBox
     Public WithEvents tmrrmd As Timer
