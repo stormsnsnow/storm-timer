@@ -103,7 +103,7 @@ Public Class MainForm
     Private Sub FrmLAG_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
 
-        tmrrmd.Start()
+
         TimeBomb.Start()
         TitlePanel.BackColor = System.Drawing.ColorTranslator.FromHtml(CStr(CStr(My.Settings.BackColor.ToArgb)))
         TitlePanel.ForeColor = System.Drawing.ColorTranslator.FromHtml(CStr(My.Settings.ForeColor.ToArgb))
@@ -194,6 +194,7 @@ Public Class MainForm
             My.Settings.AudOrVis = False
         End If
         lblwelcome.Text = "welcome, " & SystemInformation.UserName
+
     End Sub
 
     Private Sub StartButton_Click(sender As Object, e As EventArgs) Handles StartButtonSW.Click
@@ -566,7 +567,7 @@ Public Class MainForm
         Me.Close()
     End Sub
 
-    Private Sub BreakNowButtonBt_Click(sender As Object, e As EventArgs) Handles BreakNowButtonBt.Click
+    Private Sub BreakNowButtonBt_Click(sender As Object, e As EventArgs)
         If MessageBox.Show(CStr("After 2 years of maintaining, this feature has been less popular and also a duplicate, and will be permanently removed beginning October 3, 2021, the date of when 
 when BreakTime will be released. You can still use this feature, but be wary of broken or outdated components. You can learn more on our GitHub issue. Are You Sure you want to continue?! NOT RECOMMENDED!"), CStr("Do You Wish to Continue?"), MessageBoxButtons.YesNo, MessageBoxIcon.Warning) = DialogResult.Yes Then
             If Notify = True Then
@@ -622,17 +623,17 @@ when BreakTime will be released. You can still use this feature, but be wary of 
 
 
 
-    Private Sub Nudb1hour_ValueChanged(sender As Object, e As EventArgs) Handles B1HourNudBT.ValueChanged
+    Private Sub Nudb1hour_ValueChanged(sender As Object, e As EventArgs)
 
         BreakTimeLabelBT.Text = B1HourNudBT.Value.ToString("0#") & ":" & nudb1min.Value.ToString("0#") & ":" & nudb1sec.Value.ToString("0#")
     End Sub
 
-    Private Sub Nudb1min_ValueChanged(sender As Object, e As EventArgs) Handles nudb1min.ValueChanged
+    Private Sub Nudb1min_ValueChanged(sender As Object, e As EventArgs)
 
         BreakTimeLabelBT.Text = B1HourNudBT.Value.ToString("0#") & ":" & nudb1min.Value.ToString("0#") & ":" & nudb1sec.Value.ToString("0#")
     End Sub
 
-    Private Sub Nudb1sec_ValueChanged(sender As Object, e As EventArgs) Handles nudb1sec.ValueChanged
+    Private Sub Nudb1sec_ValueChanged(sender As Object, e As EventArgs)
 
 
         BreakTimeLabelBT.Text = B1HourNudBT.Value.ToString("0#") & ":" & nudb1min.Value.ToString("0#") & ":" & nudb1sec.Value.ToString("0#")
@@ -682,115 +683,7 @@ when BreakTime will be released. You can still use this feature, but be wary of 
 
         TimeSelectIndicatorLabelBT.Text = nudTimeHour.Value.ToString("0#") & ":" & nudTimeMin.Value.ToString("0#") & ":" & nudTimeSec.Value.ToString("0#")
     End Sub
-    Private Function GetData() As DataTable
-        Dim dt As New DataTable
-        Using connection As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & Application.StartupPath & "\rmd.mdb"),
-            command As New OleDbCommand("select * from rmd1", connection)
-            connection.Open()
-            Using reader = command.ExecuteReader()
-                dt.Load(reader)
-            End Using
-        End Using
-        Return dt
-    End Function
 
-    Private Sub OPCode()
-        Dim dt = GetData()
-        Dim recurr As Boolean
-        Dim recurrweek As Integer
-        Dim recurrdow As Integer
-        Dim recurrby As Integer
-        Dim reccurrmonth As Integer
-        Dim active As Boolean
-        Dim recurrmonthly As Boolean
-        Dim recurrweekly As Boolean
-        Dim recurrdaily As Boolean
-        Dim monthofday As Integer
-        Dim sb As New StringBuilder
-        For Each row As DataRow In dt.Rows
-            recurr = CBool(row(3))
-            reccurrmonth = CInt(row(2))
-            recurrby = CInt(row(4))
-            recurrweek = CInt(row(5))
-            active = CBool(row(6))
-            Select Case reccurrmonth
-                Case 0
-                    monthofday = 1
-                Case 1
-                    monthofday = 2
-                Case 2
-                    monthofday = 3
-                Case 3
-                    monthofday = 4
-                Case 4
-                    monthofday = 5
-                Case 5
-                    monthofday = 6
-                Case 6
-                    monthofday = 7
-                Case 7
-                    monthofday = 8
-                Case 8
-                    monthofday = 9
-                Case 9
-                    monthofday = 10
-                Case 10
-                    monthofday = 11
-                Case 11
-                    monthofday = 12
-            End Select
-            Select Case recurrweek
-                Case 0
-                    recurrdow = DayOfWeek.Sunday
-                Case 1
-                    recurrdow = DayOfWeek.Monday
-                Case 2
-                    recurrdow = DayOfWeek.Tuesday
-                Case 3
-                    recurrdow = DayOfWeek.Wednesday
-                Case 4
-                    recurrdow = DayOfWeek.Thursday
-                Case 5
-                    recurrdow = DayOfWeek.Friday
-                Case 6
-                    recurrdow = DayOfWeek.Saturday
-                Case 7
-                    recurrdow = 0
-            End Select
-            Select Case recurrby
-                Case 0
-                    recurrdaily = True
-                    recurrweekly = False
-                    recurrmonthly = False
-                Case 1
-                    recurrdaily = False
-                    recurrweekly = True
-                    recurrmonthly = False
-                Case 2
-                    recurrdaily = False
-                    recurrweekly = False
-                    recurrmonthly = True
-            End Select
-            Dim currentTime As TimeSpan = Date.Now.TimeOfDay
-            Dim reminderTime As TimeSpan = CDate(row("time")).TimeOfDay
-            If reminderTime.Hours = currentTime.Hours AndAlso reminderTime.Minutes = currentTime.Minutes AndAlso reminderTime.Seconds = currentTime.Seconds Then
-                If recurr = True Then
-                    If Not active OrElse Not recurrdaily Then
-                        Exit Sub
-                    End If
-                Else
-                    Exit Sub
-                End If
-                sb.AppendLine($"Task:{row(1)}Date:{reminderTime}")
-                ReminderForm.PictureBox1.Image = Image.FromFile(row(8).ToString)
-                ReminderForm.lbltime.Text = reminderTime.ToString
-                ReminderForm.Label1.Text = row(1).ToString
-                ReminderForm.Show()
-                tmrrmd.Stop()
-            End If
-        Next
-        TextBox1.Text = sb.ToString
-    End Sub
 
     Private Sub btnLM_Click(sender As Object, e As EventArgs) Handles btnLM.Click
         MessageBox.Show(CStr("After 8 years of maintaining, this feature will be permanently removed beginning October 3, 2021, the date of when 
@@ -803,27 +696,18 @@ when BreakTime will be released. You can still use this feature, but be wary of 
 when BreakTime will be released. You can still use this feature, but PLEASE DO NOT USE THIS ON WINDOWS 10 20H1 OR LATER! YOUR COMPUTER WILL CRASH AND WILL NOT START UP! You can learn more on our GitHub issue."), CStr("Feature Discontinuation Notice"), MessageBoxButtons.OK, MessageBoxIcon.Warning)
     End Sub
 
-    Private Sub ReminderTabPage_Click(sender As Object, e As EventArgs) Handles ReminderTabPage.Click
+    Private Sub ReminderTabPage_Click(sender As Object, e As EventArgs)
         MessageBox.Show(CStr("Please note that this feature is currently being worked on and WILL NOT run any reminders at the moment. No need to worry, because we will have this fixed before the main release."), CStr("Feature Preview Notice"), MessageBoxButtons.OK, MessageBoxIcon.Warning)
     End Sub
 
-    Private Sub tmrrmd_Tick(sender As Object, e As EventArgs) Handles tmrrmd.Tick
-        OPCode()
+    Private Sub StopWatchTab_Click(sender As Object, e As EventArgs) Handles StopWatchTab.Click
 
     End Sub
 
 
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        Try
-            If MessageBox.Show("You will need to add the data into an Access Database named rmd.mdb. We have created one for you. Click OK to open the file and edit", "Need Edits?", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation) = DialogResult.OK Then
-                Shell(Application.StartupPath + "\MDBPlus.exe")
-            ElseIf CBool(DialogResult.Cancel) Then
-                Exit Sub
-            End If
-        Catch ex As Exception
-            MessageBox.Show("Do you have Access installed? You NEED access in order to make this work!", "Error finding Access", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            Exit Sub
-        End Try
+
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs)
 
     End Sub
     Private Sub ShutdownTimer_Tick(sender As Object, e As EventArgs) Handles ShutdownTimer.Tick
