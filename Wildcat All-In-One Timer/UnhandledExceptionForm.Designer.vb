@@ -26,17 +26,17 @@ Partial Class UnhandledExceptionForm
         Me.StopWDLCTImage = New System.Windows.Forms.PictureBox()
         Me.ConciseErrorLabel = New System.Windows.Forms.Label()
         Me.DetailedErrorLabel = New System.Windows.Forms.Label()
-        Me.ExceptionLabel = New System.Windows.Forms.Label()
         Me.ExitButton = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.StopWDLCTImage, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'StopWDLCTImage
         '
         Me.StopWDLCTImage.Image = CType(resources.GetObject("StopWDLCTImage.Image"), System.Drawing.Image)
-        Me.StopWDLCTImage.Location = New System.Drawing.Point(12, 12)
+        Me.StopWDLCTImage.Location = New System.Drawing.Point(12, 11)
         Me.StopWDLCTImage.Name = "StopWDLCTImage"
-        Me.StopWDLCTImage.Size = New System.Drawing.Size(64, 64)
+        Me.StopWDLCTImage.Size = New System.Drawing.Size(64, 59)
         Me.StopWDLCTImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.StopWDLCTImage.TabIndex = 0
         Me.StopWDLCTImage.TabStop = False
@@ -45,8 +45,7 @@ Partial Class UnhandledExceptionForm
         '
         Me.ConciseErrorLabel.AutoSize = True
         Me.ConciseErrorLabel.Font = New System.Drawing.Font("Helvetica", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ConciseErrorLabel.ForeColor = System.Drawing.Color.LimeGreen
-        Me.ConciseErrorLabel.Location = New System.Drawing.Point(83, 13)
+        Me.ConciseErrorLabel.Location = New System.Drawing.Point(83, 12)
         Me.ConciseErrorLabel.Name = "ConciseErrorLabel"
         Me.ConciseErrorLabel.Size = New System.Drawing.Size(356, 19)
         Me.ConciseErrorLabel.TabIndex = 1
@@ -56,54 +55,56 @@ Partial Class UnhandledExceptionForm
         '
         Me.DetailedErrorLabel.AutoSize = True
         Me.DetailedErrorLabel.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DetailedErrorLabel.ForeColor = System.Drawing.Color.LimeGreen
-        Me.DetailedErrorLabel.Location = New System.Drawing.Point(82, 39)
+        Me.DetailedErrorLabel.Location = New System.Drawing.Point(85, 31)
         Me.DetailedErrorLabel.Name = "DetailedErrorLabel"
-        Me.DetailedErrorLabel.Size = New System.Drawing.Size(465, 24)
+        Me.DetailedErrorLabel.Size = New System.Drawing.Size(199, 36)
         Me.DetailedErrorLabel.TabIndex = 2
-        Me.DetailedErrorLabel.Text = "An unhandled exception has occured that causes the application to close. We are s" &
-    "orry for the " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "inconvience."
-        '
-        'ExceptionLabel
-        '
-        Me.ExceptionLabel.AutoSize = True
-        Me.ExceptionLabel.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ExceptionLabel.ForeColor = System.Drawing.Color.LimeGreen
-        Me.ExceptionLabel.Location = New System.Drawing.Point(81, 63)
-        Me.ExceptionLabel.Name = "ExceptionLabel"
-        Me.ExceptionLabel.Size = New System.Drawing.Size(183, 12)
-        Me.ExceptionLabel.TabIndex = 4
-        Me.ExceptionLabel.Text = "Please click to see exception details."
+        Me.DetailedErrorLabel.Text = "An unhandled exception has occured" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "that caused the application to " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "close. We ar" &
+    "e sorry for the inconvience."
         '
         'ExitButton
         '
         Me.ExitButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.ExitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ExitButton.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ExitButton.ForeColor = System.Drawing.Color.LimeGreen
-        Me.ExitButton.Location = New System.Drawing.Point(480, 70)
+        Me.ExitButton.Location = New System.Drawing.Point(370, 119)
         Me.ExitButton.Name = "ExitButton"
-        Me.ExitButton.Size = New System.Drawing.Size(75, 23)
+        Me.ExitButton.Size = New System.Drawing.Size(75, 21)
         Me.ExitButton.TabIndex = 5
         Me.ExitButton.Text = "Exit"
         Me.ExitButton.UseVisualStyleBackColor = True
         '
+        'Button1
+        '
+        Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Location = New System.Drawing.Point(289, 119)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 21)
+        Me.Button1.TabIndex = 6
+        Me.Button1.Text = "See Details"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'UnhandledExceptionForm
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.GreenYellow
-        Me.ClientSize = New System.Drawing.Size(567, 105)
+        Me.BackColor = System.Drawing.Color.Violet
+        Me.ClientSize = New System.Drawing.Size(457, 152)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.ExitButton)
-        Me.Controls.Add(Me.ExceptionLabel)
         Me.Controls.Add(Me.DetailedErrorLabel)
         Me.Controls.Add(Me.ConciseErrorLabel)
         Me.Controls.Add(Me.StopWDLCTImage)
-        Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ForeColor = System.Drawing.Color.Purple
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "UnhandledExceptionForm"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "An Error Ocurred"
         CType(Me.StopWDLCTImage, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -114,6 +115,6 @@ Partial Class UnhandledExceptionForm
     Friend WithEvents StopWDLCTImage As PictureBox
     Friend WithEvents ConciseErrorLabel As Label
     Friend WithEvents DetailedErrorLabel As Label
-    Friend WithEvents ExceptionLabel As Label
     Friend WithEvents ExitButton As Button
+    Friend WithEvents Button1 As Button
 End Class

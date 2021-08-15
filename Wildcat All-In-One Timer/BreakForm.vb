@@ -7,7 +7,7 @@ Public Class BreakForm
     Public setminutes, sethours, setsecs As Integer
 
     Private Sub FrmBreak_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        ' Me.BackgroundImage = Image.FromFile(GetCurrentWallpaper())
+        Me.BackgroundImage = Image.FromFile(GetCurrentWallpaper())
         Breaktime()
         BreakTimer.Start()
         Me.BackColor = System.Drawing.ColorTranslator.FromHtml(CStr(My.Settings.BackColor.ToArgb))
@@ -65,7 +65,7 @@ Public Class BreakForm
         BreakTimer.Stop()
         Dim speech As New SpeechLib.Synthesis.SpeechSynthesis
 
-        speech.Speak("Breaktime Paused. Click On the break dialog To Resume break.")
+        speech.Speak("Breaktime Paused. Click On the Ok button To Resume break.")
 
         BreakPausedForm.Show()
         Me.Hide()

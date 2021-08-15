@@ -33,9 +33,9 @@ Partial Class BreakPausedForm
         'PictureBox1
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(13, 13)
+        Me.PictureBox1.Location = New System.Drawing.Point(13, 12)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(74, 68)
+        Me.PictureBox1.Size = New System.Drawing.Size(74, 63)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
@@ -44,8 +44,7 @@ Partial Class BreakPausedForm
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Helvetica", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.LimeGreen
-        Me.Label1.Location = New System.Drawing.Point(94, 13)
+        Me.Label1.Location = New System.Drawing.Point(94, 12)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(293, 19)
         Me.Label1.TabIndex = 1
@@ -55,8 +54,7 @@ Partial Class BreakPausedForm
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.LimeGreen
-        Me.Label2.Location = New System.Drawing.Point(98, 41)
+        Me.Label2.Location = New System.Drawing.Point(98, 38)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(134, 12)
         Me.Label2.TabIndex = 2
@@ -66,25 +64,25 @@ Partial Class BreakPausedForm
         '
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.Color.LimeGreen
-        Me.Button1.Location = New System.Drawing.Point(343, 112)
+        Me.Button1.Location = New System.Drawing.Point(343, 103)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.Size = New System.Drawing.Size(75, 21)
         Me.Button1.TabIndex = 3
         Me.Button1.Text = "&OK"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'BreakPausedForm
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.GreenYellow
-        Me.ClientSize = New System.Drawing.Size(430, 147)
+        Me.BackColor = System.Drawing.Color.Violet
+        Me.ClientSize = New System.Drawing.Size(430, 136)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.PictureBox1)
-        Me.ForeColor = System.Drawing.Color.LimeGreen
+        Me.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ForeColor = System.Drawing.Color.Purple
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False

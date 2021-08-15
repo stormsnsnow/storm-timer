@@ -64,16 +64,9 @@ Public Class SettingsForm
         My.Settings.AutoTimeTTHour = CStr(nudHour.Value)
         My.Settings.AutoTimeTTMin = CStr(nudMin.Value)
         My.Settings.AutoTimeTTSec = CStr(nudSec.Value)
-        My.Settings.AutoTimeShHour = CStr(HourNudSh.Value)
-        My.Settings.AutoTimeShMin = CStr(MinuteNudSh.Value)
-        My.Settings.AutoTimeShSec = CStr(SecondNudSh.Value)
-        My.Settings.AutoTimeSh = CStr(ShutdownCbSh.SelectedIndex)
 
-        If AudioRadioButtonSh.Checked = True AndAlso VisualRadioButtonSh.Checked = False Then
-            My.Settings.AudOrVis = True
-        ElseIf AudioRadioButtonSh.Checked = False AndAlso VisualRadioButtonSh.Checked = True Then
-            My.Settings.AudOrVis = False
-        End If
+
+
         Select Case TDComboBoxS.SelectedIndex
             Case 0
                 My.Settings.Sound1Location = Application.StartupPath & "\timeup.wav"

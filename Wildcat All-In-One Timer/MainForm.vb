@@ -1094,6 +1094,9 @@ when BreakTime will be released. You can still use this feature, but PLEASE DO N
         B1HourNudBT.Value = CDec("0")
         nudb1min.Value = CDec("0")
         nudb1sec.Value = CDec("0")
+        sec = 0
+        min = 0
+
 
     End Sub
 
