@@ -6,9 +6,12 @@ Imports System.Text
 Imports System.Net
 
 Imports BreakTime.Org.Mentalis.Utilities
-Imports System.Data.OleDb
+
+Imports System.Media
+
 
 Public Class MainForm
+    Dim sound As New SoundPlayer
     Private WithEvents Tmras As New Timer With {.Interval = 30}
     Private ShowSize As Size
     Private wstep, hstep As Double
@@ -35,7 +38,7 @@ Public Class MainForm
     Private Sub PlayNow()
         Select Case My.Settings.Sound2
             Case 0
-                Dim fileName As String = String.Concat(Application.StartupPath + "\minwarn4.wav")
+                Dim fileName As String = String.Concat(My.Resources.minwarn4)
                 Const SND_FILENAME As Integer = &H20000
                 PlaySound(fileName, 0, SND_FILENAME)
             Case 1 Or 2 Or 3
@@ -53,52 +56,6 @@ Public Class MainForm
         PauseButtonBT.Hide()
         btnStop.Show()
         BreakNowButtonBt.Hide()
-    End Sub
-
-    Private Sub RbSet_CheckedChanged(sender As Object, e As EventArgs) Handles TimeRBBt.CheckedChanged
-        If TimeRBBt.Checked = True Then
-            BreakGBBt.Hide()
-            TimerGBBt.Show()
-            B1HourNudBT.Value = 0
-            nudb1min.Value = 0
-            nudb1sec.Value = 0
-
-        ElseIf BreakRBBt.Checked = True Then
-            BreakGBBt.Show()
-            TimerGBBt.Hide()
-            nudTimeBreakMin.Value = 0
-            nudTimeBreakHour.Value = 0
-            nudTimeBreakSec.Value = 0
-            nudTimeHour.Value = 0
-            nudTimeMin.Value = 0
-            nudTimeSec.Value = 0
-            MinWarnNudBt.Value = 1
-            AudioRbBt.Checked = False
-            VisualRbBt.Checked = False
-        End If
-    End Sub
-
-    Private Sub RbBreak_CheckedChanged(sender As Object, e As EventArgs) Handles BreakRBBt.CheckedChanged
-        If TimeRBBt.Checked = True Then
-            BreakGBBt.Hide()
-            TimerGBBt.Show()
-            B1HourNudBT.Value = 0
-            nudb1min.Value = 0
-            nudb1sec.Value = 0
-
-        ElseIf BreakRBBt.Checked = True Then
-            BreakGBBt.Show()
-            TimerGBBt.Hide()
-            nudTimeBreakMin.Value = 0
-            nudTimeBreakHour.Value = 0
-            nudTimeBreakSec.Value = 0
-            nudTimeHour.Value = 0
-            nudTimeMin.Value = 0
-            nudTimeSec.Value = 0
-            MinWarnNudBt.Value = 1
-            AudioRbBt.Checked = False
-            VisualRbBt.Checked = False
-        End If
     End Sub
     Private Sub FrmLAG_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
@@ -175,11 +132,23 @@ Public Class MainForm
             VisualRbBt.Checked = True
         End If
         If My.Settings.SetTimeOrBreak = True Then
-            TimeRBBt.Checked = True
-            BreakRBBt.Checked = False
+            BreakGBBt.Hide()
+            TimerGBBt.Show()
+            B1HourNudBT.Value = 0
+            nudb1min.Value = 0
+            nudb1sec.Value = 0
         ElseIf My.Settings.SetTimeOrBreak = False Then
-            TimeRBBt.Checked = False
-            BreakRBBt.Checked = True
+            BreakGBBt.Show()
+            TimerGBBt.Hide()
+            nudTimeBreakMin.Value = 0
+            nudTimeBreakHour.Value = 0
+            nudTimeBreakSec.Value = 0
+            nudTimeHour.Value = 0
+            nudTimeMin.Value = 0
+            nudTimeSec.Value = 0
+            MinWarnNudBt.Value = 1
+            AudioRbBt.Checked = False
+            VisualRbBt.Checked = False
         End If
         nudHour.Value = CDec(My.Settings.AutoTimeTTHour)
         nudMin.Value = CDec(My.Settings.AutoTimeTTMin)
@@ -327,7 +296,10 @@ Public Class MainForm
     End Sub
 
     Private Sub TBeep_Tick(sender As Object, e As EventArgs) Handles tBeep.Tick
-        My.Computer.Audio.Play(Application.StartupPath & "\timesup4.wav")
+
+        sound.Stream = My.Resources.timesup4
+        sound.Play()
+
         System.Threading.Thread.Sleep(3000)
     End Sub
 
@@ -567,28 +539,6 @@ Public Class MainForm
         Me.Close()
     End Sub
 
-    Private Sub BreakNowButtonBt_Click(sender As Object, e As EventArgs)
-        If MessageBox.Show(CStr("After 2 years of maintaining, this feature has been less popular and also a duplicate, and will be permanently removed beginning October 3, 2021, the date of when 
-when BreakTime will be released. You can still use this feature, but be wary of broken or outdated components. You can learn more on our GitHub issue. Are You Sure you want to continue?! NOT RECOMMENDED!"), CStr("Do You Wish to Continue?"), MessageBoxButtons.YesNo, MessageBoxIcon.Warning) = DialogResult.Yes Then
-            If Notify = True Then
-                MessageBox.Show("You cannot start a break with less than " & MinWarnNudBt.Value & " minutes left.", "Error 1244", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                Exit Sub
-            ElseIf Notify = False Then
-                BreakTimer.Stop()
-                BreakForm.sethours = CInt(nudTimeBreakHour.Value)
-                BreakForm.hours = BreakForm.sethours
-                BreakForm.setminutes = CInt(nudTimeBreakMin.Value)
-                BreakForm.minutes = BreakForm.setminutes
-                BreakForm.setsecs = CInt(nudTimeBreakSec.Value)
-                BreakForm.seconds = BreakForm.setsecs
-                BreakForm.Show()
-                Me.Hide()
-            End If
-        ElseIf CBool(DialogResult.No) Then
-            Exit Sub
-        End If
-
-    End Sub
 
     Private Sub AtRadioButtonSh_CheckedChanged(sender As Object, e As EventArgs) Handles AtRadioButtonSh.CheckedChanged
         If AtRadioButtonSh.Checked = True Then
@@ -684,9 +634,63 @@ when BreakTime will be released. You can still use this feature, but be wary of 
         TimeSelectIndicatorLabelBT.Text = nudTimeHour.Value.ToString("0#") & ":" & nudTimeMin.Value.ToString("0#") & ":" & nudTimeSec.Value.ToString("0#")
     End Sub
 
+    Private Sub BreakNowButtonBt_Click_1(sender As Object, e As EventArgs) Handles BreakNowButtonBt.Click
+        Dim s As DateTime = Date.Now
+
+        Dim a As TimeSpan = New TimeSpan(CInt(nudTimeBreakHour.Value), CInt(nudTimeBreakMin.Value), CInt(nudTimeBreakSec.Value))
+        Dim dt As DateTime = DateTime.Now + a
+
+
+
+        If s.Month = 11 AndAlso s.Day = 7 AndAlso s.Hour = 2 AndAlso s.Minute = 0 AndAlso s.Second = 0 Then
+            If dt.Day = 0 AndAlso dt.Minute = 0 AndAlso dt.Second = 0 AndAlso dt.Hour = 0 Then
+                Dim sas As String
+                sas = CStr(MessageBox.Show("The time zone is currently in Non DST. Are you sure you want an extra hour? WARNING! This will
+run into an exception if YOU DON'T PRESS YES!", "Time Change Acknowlegement", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning))
+                If CDbl(sas) = DialogResult.Yes Then
+                    If Notify = True Then
+                        MessageBox.Show("You cannot start a break with less than " & MinWarnNudBt.Value & " minutes left.", "Error 1244", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                        Exit Sub
+                    ElseIf Notify = False Then
+                        BreakTimer.Stop()
+                        BreakForm.sethours = CInt(nudTimeBreakHour.Value)
+                        BreakForm.hours = BreakForm.sethours + 1
+                        BreakForm.setminutes = CInt(nudTimeBreakMin.Value)
+                        BreakForm.minutes = BreakForm.setminutes
+                        BreakForm.setsecs = CInt(nudTimeBreakSec.Value)
+                        BreakForm.seconds = BreakForm.setsecs
+                        BreakForm.Show()
+                        Me.Hide()
+                    End If
+                ElseIf CDbl(sas) = DialogResult.No Then
+                    Throw New ArgumentOutOfRangeException
+                ElseIf CDbl(sas) = DialogResult.Cancel Then
+                    Exit Sub
+                End If
+
+            End If
+        Else
+            If Notify = True Then
+                MessageBox.Show("You cannot start a break With less than " & MinWarnNudBt.Value & " minutes left.", "Error 1244", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Exit Sub
+            ElseIf Notify = False Then
+                BreakTimer.Stop()
+                BreakForm.sethours = CInt(nudTimeBreakHour.Value)
+                BreakForm.hours = BreakForm.sethours
+                BreakForm.setminutes = CInt(nudTimeBreakMin.Value)
+                BreakForm.minutes = BreakForm.setminutes
+                BreakForm.setsecs = CInt(nudTimeBreakSec.Value)
+                BreakForm.seconds = BreakForm.setsecs
+                BreakForm.Show()
+                Me.Hide()
+            End If
+        End If
+
+    End Sub
+
 
     Private Sub btnLM_Click(sender As Object, e As EventArgs) Handles btnLM.Click
-        MessageBox.Show(CStr("After 8 years of maintaining, this feature will be permanently removed beginning October 3, 2021, the date of when 
+        MessageBox.Show(CStr("After 8 years Of maintaining, this feature will be permanently removed beginning October 3, 2021, the date of when 
 when BreakTime will be released. You can still use this feature, but be wary of broken or outdated components. You can learn more on our GitHub issue."), CStr("Feature Discontinuation Notice"), MessageBoxButtons.OK, MessageBoxIcon.Warning)
 
     End Sub
@@ -696,20 +700,7 @@ when BreakTime will be released. You can still use this feature, but be wary of 
 when BreakTime will be released. You can still use this feature, but PLEASE DO NOT USE THIS ON WINDOWS 10 20H1 OR LATER! YOUR COMPUTER WILL CRASH AND WILL NOT START UP! You can learn more on our GitHub issue."), CStr("Feature Discontinuation Notice"), MessageBoxButtons.OK, MessageBoxIcon.Warning)
     End Sub
 
-    Private Sub ReminderTabPage_Click(sender As Object, e As EventArgs)
-        MessageBox.Show(CStr("Please note that this feature is currently being worked on and WILL NOT run any reminders at the moment. No need to worry, because we will have this fixed before the main release."), CStr("Feature Preview Notice"), MessageBoxButtons.OK, MessageBoxIcon.Warning)
-    End Sub
 
-    Private Sub StopWatchTab_Click(sender As Object, e As EventArgs) Handles StopWatchTab.Click
-
-    End Sub
-
-
-
-
-    Private Sub Button3_Click(sender As Object, e As EventArgs)
-
-    End Sub
     Private Sub ShutdownTimer_Tick(sender As Object, e As EventArgs) Handles ShutdownTimer.Tick
         If InRadioButtonSh.Checked = True Then
             ShutdownIn()
@@ -1137,9 +1128,13 @@ when BreakTime will be released. You can still use this feature, but PLEASE DO N
             BreakTimer.Enabled = False
             Select Case My.Settings.Sound1
                 Case 0
-                    My.Computer.Audio.Play(Application.StartupPath & "\timesup4.wav")
+                    sound.Stream = My.Resources.timesup4
+                    sound.Play()
+
                 Case 1 Or 2
-                    My.Computer.Audio.Play(My.Settings.Sound1Location)
+                    sound.SoundLocation = My.Settings.Sound1Location
+                    sound.Play()
+
             End Select
             BreakForm.sethours = CInt(nudTimeBreakHour.Value)
             BreakForm.hours = BreakForm.sethours
@@ -1167,9 +1162,13 @@ when BreakTime will be released. You can still use this feature, but PLEASE DO N
                                 BreakTimer.Enabled = False
                                 Select Case My.Settings.Sound1
                                     Case 0
-                                        My.Computer.Audio.Play(Application.StartupPath & "\timesup4.wav")
+                                        sound.Stream = My.Resources.timesup4
+                                        sound.Play()
+
+
                                     Case 1 Or 2
-                                        My.Computer.Audio.Play(My.Settings.Sound1Location)
+                                        sound.SoundLocation = My.Settings.Sound1Location
+                                        sound.Play()
                                 End Select
                                 BreakForm.sethours = CInt(nudTimeBreakHour.Value)
                                 BreakForm.hours = BreakForm.sethours
@@ -1204,9 +1203,11 @@ when BreakTime will be released. You can still use this feature, but PLEASE DO N
                                 BreakTimer.Enabled = False
                                 Select Case My.Settings.Sound1
                                     Case 0
-                                        My.Computer.Audio.Play(Application.StartupPath & "\timesup4.wav")
+                                        sound.Stream = My.Resources.timesup4
+                                        sound.Play()
                                     Case 1 Or 2
-                                        My.Computer.Audio.Play(My.Settings.Sound1Location)
+                                        sound.SoundLocation = My.Settings.Sound1Location
+                                        sound.Play()
                                 End Select
 
                                 BreakForm.sethours = CInt(nudTimeBreakHour.Value)
@@ -1240,9 +1241,11 @@ when BreakTime will be released. You can still use this feature, but PLEASE DO N
                                 BreakTimer.Enabled = False
                                 Select Case My.Settings.Sound1
                                     Case 0
-                                        My.Computer.Audio.Play(Application.StartupPath & "\timesup4.wav")
+                                        sound.Stream = My.Resources.timesup4
+                                        sound.Play()
                                     Case 1 Or 2
-                                        My.Computer.Audio.Play(My.Settings.Sound1Location)
+                                        sound.SoundLocation = My.Settings.Sound1Location
+                                        sound.Play()
                                 End Select
 
 
@@ -1277,9 +1280,11 @@ when BreakTime will be released. You can still use this feature, but PLEASE DO N
                                 BreakTimer.Enabled = False
                                 Select Case My.Settings.Sound1
                                     Case 0
-                                        My.Computer.Audio.Play(Application.StartupPath & "\timesup4.wav")
+                                        sound.Stream = My.Resources.timesup4
+                                        sound.Play()
                                     Case 1 Or 2
-                                        My.Computer.Audio.Play(My.Settings.Sound1Location)
+                                        sound.SoundLocation = My.Settings.Sound1Location
+                                        sound.Play()
                                 End Select
 
 
@@ -1316,9 +1321,11 @@ when BreakTime will be released. You can still use this feature, but PLEASE DO N
                                 BreakTimer.Enabled = False
                                 Select Case My.Settings.Sound1
                                     Case 0
-                                        My.Computer.Audio.Play(Application.StartupPath & "\timesup4.wav")
+                                        sound.Stream = My.Resources.timesup4
+                                        sound.Play()
                                     Case 1 Or 2
-                                        My.Computer.Audio.Play(My.Settings.Sound1Location)
+                                        sound.SoundLocation = My.Settings.Sound1Location
+                                        sound.Play()
                                 End Select
 
 
@@ -1366,8 +1373,8 @@ when BreakTime will be released. You can still use this feature, but PLEASE DO N
     End Sub
 
     Private Sub Button1_Click_2(sender As Object, e As EventArgs) Handles StartButtonBT.Click
-        If TimeRBBt.Checked = True AndAlso BreakRBBt.Checked = False Then
-            If nudTimeHour.Value = 0 AndAlso nudTimeMin.Value = 0 AndAlso nudTimeSec.Value = 0 AndAlso nudTimeBreakHour.Value = 0 AndAlso nudTimeBreakMin.Value = 0 AndAlso nudTimeBreakSec.Value = 0 Then
+
+        If nudTimeHour.Value = 0 AndAlso nudTimeMin.Value = 0 AndAlso nudTimeSec.Value = 0 AndAlso nudTimeBreakHour.Value = 0 AndAlso nudTimeBreakMin.Value = 0 AndAlso nudTimeBreakSec.Value = 0 Then
                 Exit Sub
             Else
 
@@ -1384,9 +1391,8 @@ when BreakTime will be released. You can still use this feature, but PLEASE DO N
             AlarmClockTab.Enabled = False
             BreakGBBt.Hide()
             TimerGBBt.Hide()
-            TimeRBBt.Hide()
-            BreakRBBt.Hide()
-            BreakNowButtonBt.Show()
+
+
             Me.WindowState = FormWindowState.Minimized
             BreakTimer.Enabled = True
             BreakTimer.Start()
@@ -1402,25 +1408,6 @@ when BreakTime will be released. You can still use this feature, but PLEASE DO N
             btnStop.Show()
             Notify = False
 
-        ElseIf BreakRBBt.Checked = True AndAlso TimeRBBt.Checked = False Then
-            If nudb1min.Value = 0 AndAlso B1HourNudBT.Value = 0 AndAlso nudb1sec.Value = 0 Then
-                Exit Sub
-            Else
-
-            End If
-
-            BreakForm.sethours = CInt(B1HourNudBT.Value)
-            BreakForm.hours = BreakForm.sethours
-            BreakForm.setminutes = CInt(nudb1min.Value)
-            BreakForm.minutes = BreakForm.setminutes
-            BreakForm.setsecs = CInt(nudb1sec.Value)
-            BreakForm.seconds = BreakForm.setsecs
-            BreakForm.Show()
-            Me.Hide()
-        ElseIf TimeRBBt.Checked = False AndAlso BreakRBBt.Checked = False Then
-            MsgBox("You must select either to set a break or to set a time in order to start your time.", MsgBoxStyle.Critical, "Selection Error")
-            Exit Sub
-        End If
 
     End Sub
 

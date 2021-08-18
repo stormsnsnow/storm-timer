@@ -1,4 +1,6 @@
-﻿Public NotInheritable Class SplashScreenForm
+﻿Imports System.Media
+
+Public NotInheritable Class SplashScreenForm
 
     'TODO: This form can easily be set as the splash screen for the application by going to the "Application" tab
     '  of the Project Designer ("Properties" under the "Project" menu).
@@ -30,7 +32,9 @@
 
         'Copyright info
         Copyright.Text = My.Application.Info.Copyright
-        My.Computer.Audio.Play(Application.StartupPath & "\startup4.wav")
+        Dim sound As New SoundPlayer
+        sound.Stream = My.Resources.startup4
+        sound.Play()
     End Sub
 
     Private Sub MainLayoutPanel_Paint(sender As Object, e As PaintEventArgs) Handles MainLayoutPanel.Paint

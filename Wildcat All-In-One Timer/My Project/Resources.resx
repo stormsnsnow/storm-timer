@@ -117,4 +117,59 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="ab" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\x64\Debug\sounds\mw\ab.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="aquanear" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\x64\Debug\sounds\bt\aquanear.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="breakover4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\x64\Debug\breakover4.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="breaktimedone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\x64\Debug\breaktimedone.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="bub" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\x64\Debug\sounds\mw\bub.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="bub2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\x64\Debug\sounds\mw\bub2.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ff" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\x64\Debug\sounds\bt\ff.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="foghorn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\x64\Debug\sounds\bt\foghorn.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="minwarn4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\x64\Debug\minwarn4.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="mw211" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\x64\Debug\sounds\mw\mw211.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="pop" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\x64\Debug\sounds\mw\pop.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="shutdown" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\x64\Debug\shutdown.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="speedeam" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\x64\Debug\sounds\bt\speedeam.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="startup4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\x64\Debug\startup4.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="td211" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\x64\Debug\sounds\bt\td211.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="timesup4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\x64\Debug\timesup4.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="timeup" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\x64\Debug\timeup.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tw" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\x64\Debug\sounds\mw\tw.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

@@ -69,34 +69,34 @@ Public Class SettingsForm
 
         Select Case TDComboBoxS.SelectedIndex
             Case 0
-                My.Settings.Sound1Location = Application.StartupPath & "\timeup.wav"
+                My.Settings.Sound1Location = My.Resources.timeup.ToString
             Case 1
-                My.Settings.Sound1Location = Application.StartupPath & "\sounds\bt\aquanear.wav"
+                My.Settings.Sound1Location = My.Resources.aquanear.tostring
             Case 2
-                My.Settings.Sound1Location = Application.StartupPath & "\sounds\bt\ff.wav"
+                My.Settings.Sound1Location = my.resources.ff.tostring
             Case 3
-                My.Settings.Sound1Location = Application.StartupPath & "\sounds\bt\foghorn.wav"
+                My.Settings.Sound1Location = My.Resources.foghorn.tostring
             Case 4
-                My.Settings.Sound1Location = Application.StartupPath & "\sounds\bt\td211.wav"
+                My.Settings.Sound1Location = my.resources.td211.tostring
             Case 5
-                My.Settings.Sound1Location = Application.StartupPath & "\sounds\bt\speedeam.wav"
+                My.Settings.Sound1Location = My.Resources.speedeam.tostring
         End Select
         My.Settings.Sound2 = MWComboBoxS.SelectedIndex
         Select Case MWComboBoxS.SelectedIndex
             Case 0
-                My.Settings.Sound2Location = Application.StartupPath & "\shutdown.wav"
+                My.Settings.Sound2Location = my.resources.shutdown.tostring
             Case 1
-                My.Settings.Sound2Location = Application.StartupPath & "\sounds\mw\tw.wav"
+                My.Settings.Sound2Location = my.resources.tw.tostring
             Case 2
-                My.Settings.Sound2Location = Application.StartupPath & "\sounds\mw\bub.wav"
+                My.Settings.Sound2Location = my.resources.bub.tostring
             Case 3
-                My.Settings.Sound2Location = Application.StartupPath & "\sounds\mw\ab.wav"
+                My.Settings.Sound2Location = my.resources.ab.tostring
             Case 4
-                My.Settings.Sound2Location = Application.StartupPath & "\sounds\mw\bub2.wav"
+                My.Settings.Sound2Location = my.resources.bub2.tostring
             Case 5
-                My.Settings.Sound2Location = Application.StartupPath & "\sounds\mw\mw211.wav"
+                My.Settings.Sound2Location = my.resources.mw211.tostring
             Case 6
-                My.Settings.Sound2Location = Application.StartupPath & "\sounds\mw\pop.wav"
+                My.Settings.Sound2Location = my.resources.pop.tostring
         End Select
         My.Settings.ForeColor = ColorWheel2.Color
         My.Settings.BackColor = ColorWheel1.Color
@@ -115,99 +115,7 @@ Public Class SettingsForm
     End Sub
 
 
-    Private Sub TDPlayButtonS_Click(sender As Object, e As EventArgs) Handles TDPlayButtonS.Click
 
-
-        Select Case TDComboBoxS.SelectedIndex
-            Case 0
-                TDPlayButtonS.Hide()
-                TDStopButtonS.Show()
-                My.Computer.Audio.Play(Application.StartupPath & "\timesup4.wav", AudioPlayMode.BackgroundLoop)
-            Case 1
-                TDPlayButtonS.Hide()
-                TDStopButtonS.Show()
-                My.Computer.Audio.Play(Application.StartupPath & "\sounds\bt\aquanear.wav", AudioPlayMode.BackgroundLoop)
-            Case 2
-                TDPlayButtonS.Hide()
-                TDStopButtonS.Show()
-                My.Computer.Audio.Play(Application.StartupPath & "\sounds\bt\ff.wav", AudioPlayMode.BackgroundLoop)
-            Case 3
-                TDPlayButtonS.Hide()
-                TDStopButtonS.Show()
-                My.Computer.Audio.Play(Application.StartupPath & "\sounds\bt\foghorn.wav", AudioPlayMode.BackgroundLoop)
-            Case 4
-                TDPlayButtonS.Hide()
-                TDStopButtonS.Show()
-                My.Computer.Audio.Play(Application.StartupPath & "\sounds\bt\td211.wav", AudioPlayMode.BackgroundLoop)
-            Case 5
-                TDPlayButtonS.Hide()
-                TDStopButtonS.Show()
-                My.Computer.Audio.Play(Application.StartupPath & "\sounds\bt\speedeam.wav", AudioPlayMode.BackgroundLoop)
-            Case 6
-                TDPlayButtonS.Hide()
-                TDStopButtonS.Show()
-
-                My.Computer.Audio.Play(My.Settings.Sound1Location, AudioPlayMode.BackgroundLoop)
-
-        End Select
-
-    End Sub
-
-    Private Sub TDStopButtonS_Click(sender As Object, e As EventArgs) Handles TDStopButtonS.Click
-        TDPlayButtonS.Show()
-        TDStopButtonS.Hide()
-        My.Computer.Audio.Stop()
-    End Sub
-
-    Private Sub MWStopButtonS_Click(sender As Object, e As EventArgs) Handles MWStopButtonS.Click
-        MWPlayButtonS.Show()
-        MWStopButtonS.Hide()
-        My.Computer.Audio.Stop()
-    End Sub
-
-    Private Sub MWPlayButtonS_Click(sender As Object, e As EventArgs) Handles MWPlayButtonS.Click
-        Select Case MWComboBoxS.SelectedIndex
-            Case 0
-                MWPlayButtonS.Hide()
-                MWStopButtonS.Show()
-                My.Computer.Audio.Play(Application.StartupPath & "\minwarn4.wav", AudioPlayMode.BackgroundLoop)
-            Case 1
-                MWPlayButtonS.Hide()
-                MWStopButtonS.Show()
-                My.Computer.Audio.Play(Application.StartupPath & "\sounds\mw\tw.wav", AudioPlayMode.BackgroundLoop)
-            Case 2
-                MWPlayButtonS.Hide()
-                MWStopButtonS.Show()
-                My.Computer.Audio.Play(Application.StartupPath & "\sounds\mw\bub.wav", AudioPlayMode.BackgroundLoop)
-            Case 3
-                MWPlayButtonS.Hide()
-                MWStopButtonS.Show()
-                My.Computer.Audio.Play(Application.StartupPath & "\sounds\mw\ab.wav", AudioPlayMode.BackgroundLoop)
-            Case 4
-                MWPlayButtonS.Hide()
-                MWStopButtonS.Show()
-                My.Computer.Audio.Play(Application.StartupPath & "\sounds\mw\bub2.wav", AudioPlayMode.BackgroundLoop)
-            Case 5
-                MWPlayButtonS.Hide()
-                MWStopButtonS.Show()
-                My.Computer.Audio.Play(Application.StartupPath & "\sounds\mw\mw211.wav", AudioPlayMode.BackgroundLoop)
-            Case 6
-                MWPlayButtonS.Hide()
-                MWStopButtonS.Show()
-                My.Computer.Audio.Play(Application.StartupPath & "\sounds\mw\pop.wav", AudioPlayMode.BackgroundLoop)
-            Case 7
-                Try
-                    MWPlayButtonS.Hide()
-                    MWStopButtonS.Show()
-                    My.Computer.Audio.Play(My.Settings.Sound2Location, AudioPlayMode.BackgroundLoop)
-                Catch ex As Exception
-                    MessageBox.Show("Either you did not specify an audio file or the audio file is broken. Please go back and select a new audio file. Error 1602", "Error 1602 - No sound", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
-                End Try
-
-
-
-        End Select
-    End Sub
 
     Private Sub DateFormatCbDTGen_SelectedIndexChanged(sender As Object, e As EventArgs) Handles DateFormatCbDTGen.SelectedIndexChanged
         Select Case DateFormatCbDTGen.SelectedIndex
@@ -341,22 +249,7 @@ Public Class SettingsForm
     along with this program.  If not, see https://www.gnu.org/licenses/", "License Info", MessageBoxButtons.OK, MessageBoxIcon.Information)
     End Sub
 
-    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles BTPlay.Click
-        Select Case MWComboBoxS.SelectedIndex
-            Case 0
-                BTPlay.Hide()
-                BTStop.Show()
-                My.Computer.Audio.Play(Application.StartupPath & "\sounds\bd\breakover4.wav", AudioPlayMode.BackgroundLoop)
-            Case 1
-                BTPlay.Hide()
-                BTStop.Show()
-                If OFDS.ShowDialog = DialogResult.OK Then
-                    My.Computer.Audio.Play(My.Settings.BTSoundLocation, AudioPlayMode.BackgroundLoop)
-                End If
 
-
-        End Select
-    End Sub
 
     Private Sub BTBrowse_Click(sender As Object, e As EventArgs) Handles BTBrowse.Click
         If OFDS.ShowDialog = DialogResult.OK Then
@@ -370,11 +263,7 @@ Public Class SettingsForm
         End If
     End Sub
 
-    Private Sub BTStop_Click(sender As Object, e As EventArgs) Handles BTStop.Click
-        BTPlay.Show()
-        BTStop.Hide()
-        My.Computer.Audio.Stop()
-    End Sub
+
 
     Private Sub colorwheel2_ColorChanged(sender As Object, e As EventArgs) Handles ColorWheel2.ColorChanged
         Label2.ForeColor = ColorWheel2.Color
@@ -404,7 +293,4 @@ Public Class SettingsForm
         End If
     End Sub
 
-    Private Sub UpdatesTabPage_Click(sender As Object, e As EventArgs)
-
-    End Sub
 End Class

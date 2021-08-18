@@ -33,22 +33,16 @@ Partial Class SettingsForm
         Me.lblVersion = New System.Windows.Forms.Label()
         Me.lblName = New System.Windows.Forms.Label()
         Me.Sounds = New System.Windows.Forms.TabPage()
-        Me.BTStop = New System.Windows.Forms.Button()
         Me.BTBrowse = New System.Windows.Forms.Button()
-        Me.BTPlay = New System.Windows.Forms.Button()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.BTComboBoxSounds = New System.Windows.Forms.ComboBox()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.MWPlayButtonS = New System.Windows.Forms.Button()
-        Me.TDPlayButtonS = New System.Windows.Forms.Button()
         Me.MWComboBoxS = New System.Windows.Forms.ComboBox()
         Me.MWLabelS = New System.Windows.Forms.Label()
         Me.TDLabelS = New System.Windows.Forms.Label()
         Me.TDComboBoxS = New System.Windows.Forms.ComboBox()
         Me.SoundsPromptLabel = New System.Windows.Forms.Label()
-        Me.TDStopButtonS = New System.Windows.Forms.Button()
-        Me.MWStopButtonS = New System.Windows.Forms.Button()
         Me.AutoTime = New System.Windows.Forms.TabPage()
         Me.TimerControl = New System.Windows.Forms.TabControl()
         Me.BreakTimerTab = New System.Windows.Forms.TabPage()
@@ -190,12 +184,12 @@ Partial Class SettingsForm
         '
         'About
         '
-        Me.About.BackColor = System.Drawing.Color.Violet
+        Me.About.BackColor = System.Drawing.Color.DarkRed
         Me.About.Controls.Add(Me.PictureBox1)
         Me.About.Controls.Add(Me.BtnLicense)
         Me.About.Controls.Add(Me.lblVersion)
         Me.About.Controls.Add(Me.lblName)
-        Me.About.ForeColor = System.Drawing.Color.Black
+        Me.About.ForeColor = System.Drawing.Color.Red
         Me.About.ImageKey = "2139.png"
         Me.About.Location = New System.Drawing.Point(4, 23)
         Me.About.Name = "About"
@@ -217,7 +211,6 @@ Partial Class SettingsForm
         '
         Me.BtnLicense.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.BtnLicense.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnLicense.ForeColor = System.Drawing.Color.Purple
         Me.BtnLicense.Location = New System.Drawing.Point(184, 71)
         Me.BtnLicense.Name = "BtnLicense"
         Me.BtnLicense.Size = New System.Drawing.Size(75, 23)
@@ -228,19 +221,17 @@ Partial Class SettingsForm
         'lblVersion
         '
         Me.lblVersion.AutoSize = True
-        Me.lblVersion.ForeColor = System.Drawing.Color.Purple
         Me.lblVersion.Location = New System.Drawing.Point(182, 32)
         Me.lblVersion.Name = "lblVersion"
         Me.lblVersion.Size = New System.Drawing.Size(132, 36)
         Me.lblVersion.TabIndex = 29
-        Me.lblVersion.Text = "v21H2 " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Preview Five" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Released August 15, 2021"
+        Me.lblVersion.Text = "v21H2 " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Alpha One" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Released August 18, 2021"
         Me.lblVersion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'lblName
         '
         Me.lblName.AutoSize = True
         Me.lblName.Font = New System.Drawing.Font("Helvetica", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblName.ForeColor = System.Drawing.Color.Purple
         Me.lblName.Location = New System.Drawing.Point(181, 11)
         Me.lblName.Name = "lblName"
         Me.lblName.Size = New System.Drawing.Size(109, 19)
@@ -249,23 +240,17 @@ Partial Class SettingsForm
         '
         'Sounds
         '
-        Me.Sounds.BackColor = System.Drawing.Color.Violet
-        Me.Sounds.Controls.Add(Me.BTStop)
+        Me.Sounds.BackColor = System.Drawing.Color.Red
         Me.Sounds.Controls.Add(Me.BTBrowse)
-        Me.Sounds.Controls.Add(Me.BTPlay)
         Me.Sounds.Controls.Add(Me.Label10)
         Me.Sounds.Controls.Add(Me.BTComboBoxSounds)
         Me.Sounds.Controls.Add(Me.Button2)
         Me.Sounds.Controls.Add(Me.Button1)
-        Me.Sounds.Controls.Add(Me.MWPlayButtonS)
-        Me.Sounds.Controls.Add(Me.TDPlayButtonS)
         Me.Sounds.Controls.Add(Me.MWComboBoxS)
         Me.Sounds.Controls.Add(Me.MWLabelS)
         Me.Sounds.Controls.Add(Me.TDLabelS)
         Me.Sounds.Controls.Add(Me.TDComboBoxS)
         Me.Sounds.Controls.Add(Me.SoundsPromptLabel)
-        Me.Sounds.Controls.Add(Me.TDStopButtonS)
-        Me.Sounds.Controls.Add(Me.MWStopButtonS)
         Me.Sounds.ImageKey = "1F50A.png"
         Me.Sounds.Location = New System.Drawing.Point(4, 23)
         Me.Sounds.Name = "Sounds"
@@ -273,34 +258,15 @@ Partial Class SettingsForm
         Me.Sounds.TabIndex = 2
         Me.Sounds.Text = "Sounds"
         '
-        'BTStop
-        '
-        Me.BTStop.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BTStop.Location = New System.Drawing.Point(225, 141)
-        Me.BTStop.Name = "BTStop"
-        Me.BTStop.Size = New System.Drawing.Size(75, 23)
-        Me.BTStop.TabIndex = 16
-        Me.BTStop.Text = "Stop"
-        Me.BTStop.UseVisualStyleBackColor = True
-        '
         'BTBrowse
         '
         Me.BTBrowse.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BTBrowse.Location = New System.Drawing.Point(306, 141)
+        Me.BTBrowse.Location = New System.Drawing.Point(224, 144)
         Me.BTBrowse.Name = "BTBrowse"
         Me.BTBrowse.Size = New System.Drawing.Size(75, 23)
         Me.BTBrowse.TabIndex = 15
         Me.BTBrowse.Text = "Browse"
         Me.BTBrowse.UseVisualStyleBackColor = True
-        '
-        'BTPlay
-        '
-        Me.BTPlay.Location = New System.Drawing.Point(225, 141)
-        Me.BTPlay.Name = "BTPlay"
-        Me.BTPlay.Size = New System.Drawing.Size(75, 23)
-        Me.BTPlay.TabIndex = 14
-        Me.BTPlay.Text = "Play"
-        Me.BTPlay.UseVisualStyleBackColor = True
         '
         'Label10
         '
@@ -323,7 +289,7 @@ Partial Class SettingsForm
         'Button2
         '
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Location = New System.Drawing.Point(306, 116)
+        Me.Button2.Location = New System.Drawing.Point(224, 114)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 23)
         Me.Button2.TabIndex = 11
@@ -333,32 +299,12 @@ Partial Class SettingsForm
         'Button1
         '
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Location = New System.Drawing.Point(306, 85)
+        Me.Button1.Location = New System.Drawing.Point(224, 83)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 10
         Me.Button1.Text = "Browse"
         Me.Button1.UseVisualStyleBackColor = True
-        '
-        'MWPlayButtonS
-        '
-        Me.MWPlayButtonS.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.MWPlayButtonS.Location = New System.Drawing.Point(225, 116)
-        Me.MWPlayButtonS.Name = "MWPlayButtonS"
-        Me.MWPlayButtonS.Size = New System.Drawing.Size(75, 23)
-        Me.MWPlayButtonS.TabIndex = 7
-        Me.MWPlayButtonS.Text = "Play"
-        Me.MWPlayButtonS.UseVisualStyleBackColor = True
-        '
-        'TDPlayButtonS
-        '
-        Me.TDPlayButtonS.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.TDPlayButtonS.Location = New System.Drawing.Point(225, 85)
-        Me.TDPlayButtonS.Name = "TDPlayButtonS"
-        Me.TDPlayButtonS.Size = New System.Drawing.Size(75, 23)
-        Me.TDPlayButtonS.TabIndex = 6
-        Me.TDPlayButtonS.Text = "Play"
-        Me.TDPlayButtonS.UseVisualStyleBackColor = True
         '
         'MWComboBoxS
         '
@@ -406,27 +352,9 @@ Partial Class SettingsForm
         Me.SoundsPromptLabel.Text = "With sounds, the program can alert you of when " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "your timer is done, your timer h" &
     "as an exact" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "number of minutes left, or when your break is " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "over."
         '
-        'TDStopButtonS
-        '
-        Me.TDStopButtonS.Location = New System.Drawing.Point(225, 85)
-        Me.TDStopButtonS.Name = "TDStopButtonS"
-        Me.TDStopButtonS.Size = New System.Drawing.Size(75, 23)
-        Me.TDStopButtonS.TabIndex = 8
-        Me.TDStopButtonS.Text = "Stop"
-        Me.TDStopButtonS.UseVisualStyleBackColor = True
-        '
-        'MWStopButtonS
-        '
-        Me.MWStopButtonS.Location = New System.Drawing.Point(224, 116)
-        Me.MWStopButtonS.Name = "MWStopButtonS"
-        Me.MWStopButtonS.Size = New System.Drawing.Size(75, 23)
-        Me.MWStopButtonS.TabIndex = 9
-        Me.MWStopButtonS.Text = "Stop"
-        Me.MWStopButtonS.UseVisualStyleBackColor = True
-        '
         'AutoTime
         '
-        Me.AutoTime.BackColor = System.Drawing.Color.Violet
+        Me.AutoTime.BackColor = System.Drawing.Color.DarkRed
         Me.AutoTime.Controls.Add(Me.TimerControl)
         Me.AutoTime.Controls.Add(Me.AutoTimeInstructionsLabelAt)
         Me.AutoTime.ImageKey = "favicon (6).ico"
@@ -678,7 +606,7 @@ Partial Class SettingsForm
         Me.TimerTab.Location = New System.Drawing.Point(4, 23)
         Me.TimerTab.Name = "TimerTab"
         Me.TimerTab.Padding = New System.Windows.Forms.Padding(3)
-        Me.TimerTab.Size = New System.Drawing.Size(482, 184)
+        Me.TimerTab.Size = New System.Drawing.Size(482, 171)
         Me.TimerTab.TabIndex = 1
         Me.TimerTab.Text = "Timer"
         '
@@ -804,7 +732,7 @@ Partial Class SettingsForm
         'ComboBox1
         '
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"200101", "20200101", "01/01/20", "21/01/20", "01/01/2020", "1577836800"})
+        Me.ComboBox1.Items.AddRange(New Object() {"220101", "20220101", "01/01/22", "21/01/22", "01/01/2022", "1577836800"})
         Me.ComboBox1.Location = New System.Drawing.Point(250, 78)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(100, 20)
@@ -858,7 +786,7 @@ Partial Class SettingsForm
         'TimeFormatCbDTGen
         '
         Me.TimeFormatCbDTGen.FormattingEnabled = True
-        Me.TimeFormatCbDTGen.Items.AddRange(New Object() {"12:08:00 PM", "12:08:00", "12:08 PM", "12:08", "1577836800", "12:08 PM UTC"})
+        Me.TimeFormatCbDTGen.Items.AddRange(New Object() {"12:08:00 PM", "12:08:00", "12:08 PM", "12:08", "1577836800", "04:08 PM UTC"})
         Me.TimeFormatCbDTGen.Location = New System.Drawing.Point(200, 53)
         Me.TimeFormatCbDTGen.Name = "TimeFormatCbDTGen"
         Me.TimeFormatCbDTGen.Size = New System.Drawing.Size(150, 20)
@@ -867,7 +795,7 @@ Partial Class SettingsForm
         'DateFormatCbDTGen
         '
         Me.DateFormatCbDTGen.FormattingEnabled = True
-        Me.DateFormatCbDTGen.Items.AddRange(New Object() {"200101", "20200101", "Tuesday, January 1, 2020", "January 1, 2020", "Jan 1, 20", "Jan 1, 2020", "01/01/20", "21/01/20", "1577836800"})
+        Me.DateFormatCbDTGen.Items.AddRange(New Object() {"220101", "20220101", "Tuesday, January 1, 2022", "January 1, 2022", "Jan 1, 22", "Jan 1, 2022", "01/01/22", "21/01/22", "1577836800"})
         Me.DateFormatCbDTGen.Location = New System.Drawing.Point(201, 28)
         Me.DateFormatCbDTGen.Name = "DateFormatCbDTGen"
         Me.DateFormatCbDTGen.Size = New System.Drawing.Size(150, 20)
@@ -961,7 +889,7 @@ Partial Class SettingsForm
         '
         'Personalization
         '
-        Me.Personalization.BackColor = System.Drawing.Color.Violet
+        Me.Personalization.BackColor = System.Drawing.Color.DarkRed
         Me.Personalization.Controls.Add(Me.TabControl1)
         Me.Personalization.Controls.Add(Me.Label9)
         Me.Personalization.ImageIndex = 6
@@ -1218,14 +1146,14 @@ Partial Class SettingsForm
         Me.AcceptButton = Me.SaveButtonSettings
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.Violet
+        Me.BackColor = System.Drawing.Color.DarkRed
         Me.CancelButton = Me.CancelButtonSettings
         Me.ClientSize = New System.Drawing.Size(504, 350)
         Me.Controls.Add(Me.CancelButtonSettings)
         Me.Controls.Add(Me.SaveButtonSettings)
         Me.Controls.Add(Me.SettingsTC)
         Me.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ForeColor = System.Drawing.Color.Purple
+        Me.ForeColor = System.Drawing.Color.Red
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
@@ -1289,15 +1217,11 @@ Partial Class SettingsForm
     Friend WithEvents Sounds As TabPage
     Friend WithEvents Button2 As Button
     Friend WithEvents Button1 As Button
-    Friend WithEvents MWPlayButtonS As Button
-    Friend WithEvents TDPlayButtonS As Button
     Friend WithEvents MWComboBoxS As ComboBox
     Friend WithEvents MWLabelS As Label
     Friend WithEvents TDLabelS As Label
     Friend WithEvents TDComboBoxS As ComboBox
     Friend WithEvents SoundsPromptLabel As Label
-    Friend WithEvents TDStopButtonS As Button
-    Friend WithEvents MWStopButtonS As Button
     Friend WithEvents AutoTime As TabPage
     Friend WithEvents TimerControl As TabControl
     Friend WithEvents BreakTimerTab As TabPage
@@ -1354,10 +1278,8 @@ Partial Class SettingsForm
     Friend WithEvents Label9 As Label
     Friend WithEvents BtnLicense As Button
     Friend WithEvents BTBrowse As Button
-    Friend WithEvents BTPlay As Button
     Friend WithEvents Label10 As Label
     Friend WithEvents BTComboBoxSounds As ComboBox
-    Friend WithEvents BTStop As Button
     Friend WithEvents Label13 As Label
     Friend WithEvents BTextBox As TextBox
     Friend WithEvents Label12 As Label

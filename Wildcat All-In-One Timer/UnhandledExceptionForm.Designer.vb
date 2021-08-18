@@ -90,7 +90,7 @@ Partial Class UnhandledExceptionForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.Violet
+        Me.BackColor = System.Drawing.Color.DarkRed
         Me.ClientSize = New System.Drawing.Size(457, 152)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.ExitButton)
@@ -98,7 +98,7 @@ Partial Class UnhandledExceptionForm
         Me.Controls.Add(Me.ConciseErrorLabel)
         Me.Controls.Add(Me.StopWDLCTImage)
         Me.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ForeColor = System.Drawing.Color.Purple
+        Me.ForeColor = System.Drawing.Color.Red
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False

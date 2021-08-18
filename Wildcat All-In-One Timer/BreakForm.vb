@@ -2,9 +2,13 @@
 Imports System.Runtime.InteropServices
 Imports Microsoft.Win32
 Imports System.Globalization
+Imports System.Media
+
 Public Class BreakForm
     Public hours, minutes, seconds As Integer
     Public setminutes, sethours, setsecs As Integer
+    Dim sound As New SoundPlayer
+
 
     Private Sub FrmBreak_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.BackgroundImage = Image.FromFile(GetCurrentWallpaper())
@@ -53,8 +57,11 @@ Public Class BreakForm
     End Sub
 
     Private Sub UnlockButton_Click_1(sender As Object, e As EventArgs) Handles UnlockButton.Click
+        BreakTimer.Stop()
 
-        My.Computer.Audio.Play(Application.StartupPath & "\breakover4.wav")
+        sound.Stream = My.Resources.breakover4
+        sound.Play()
+        System.Threading.Thread.Sleep(5000)
         Application.Restart()
 
 
@@ -107,7 +114,11 @@ Public Class BreakForm
             lblhourandbreak.Hide()
         Else
             BreakTimer.Stop()
-            My.Computer.Audio.Play(Application.StartupPath & "\breakover4.wav")
+
+            sound.Stream = My.Resources.breakover4
+            sound.Play()
+
+                    My.Computer.Audio.Play(My.Resources.breakover4.ToString)
             Application.Restart()
         End If
 

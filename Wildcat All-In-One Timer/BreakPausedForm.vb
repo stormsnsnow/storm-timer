@@ -1,11 +1,16 @@
 ﻿Imports System.Globalization
+Imports System.Media
 
 Public Class BreakPausedForm
+    Dim sound As New SoundPlayer
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim sapi As New SpeechLib.Synthesis.SpeechSynthesis
 
         sapi.Speak("Breaktime Resumed.")
-        My.Computer.Audio.Play(Application.StartupPath & "\timesup4.wav")
+
+        sound.Stream = My.Resources.timesup4
+        sound.Play()
+
         BreakForm.Show()
         Dim myCulture As System.Globalization.CultureInfo = Globalization.CultureInfo.CurrentCulture
         Dim dayOfWeek As DayOfWeek = myCulture.Calendar.GetDayOfWeek(Date.Today)
