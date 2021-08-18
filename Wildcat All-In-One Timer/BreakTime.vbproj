@@ -40,8 +40,8 @@
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>index.html</WebPage>
     <AutorunEnabled>true</AutorunEnabled>
-    <ApplicationRevision>5</ApplicationRevision>
-    <ApplicationVersion>21.2.1.5</ApplicationVersion>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>21.2.2.1</ApplicationVersion>
     <UseApplicationTrust>true</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -86,7 +86,7 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>BTimeP5.ico</ApplicationIcon>
+    <ApplicationIcon>BTimeA1.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationManifest>app.manifest</ApplicationManifest>
@@ -291,6 +291,7 @@
     <None Include="bin\x64\Debug\startup4.wav" />
     <None Include="bin\x64\Debug\timesup4.wav" />
     <None Include="bin\x64\Debug\timeup.wav" />
+    <Content Include="BTimeA1.ico" />
     <Content Include="btimep3_zLE_icon.ico" />
     <Content Include="btimep4_Xib_icon.ico" />
     <Content Include="BTimeP5.ico" />
