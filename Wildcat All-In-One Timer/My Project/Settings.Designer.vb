@@ -80,42 +80,6 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("2")>  _
-        Public Property AutoTimeBTBHour() As String
-            Get
-                Return CType(Me("AutoTimeBTBHour"),String)
-            End Get
-            Set
-                Me("AutoTimeBTBHour") = value
-            End Set
-        End Property
-        
-        <Global.System.Configuration.UserScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("0")>  _
-        Public Property AutoTimeBTBMin() As String
-            Get
-                Return CType(Me("AutoTimeBTBMin"),String)
-            End Get
-            Set
-                Me("AutoTimeBTBMin") = value
-            End Set
-        End Property
-        
-        <Global.System.Configuration.UserScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("0")>  _
-        Public Property AutoTimeBTBSec() As String
-            Get
-                Return CType(Me("AutoTimeBTBSec"),String)
-            End Get
-            Set
-                Me("AutoTimeBTBSec") = value
-            End Set
-        End Property
-        
-        <Global.System.Configuration.UserScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("0")>  _
         Public Property AutoTimeBTTHour() As String
             Get
@@ -225,54 +189,6 @@ Namespace My
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("0")>  _
-        Public Property AutoTimeSh() As String
-            Get
-                Return CType(Me("AutoTimeSh"),String)
-            End Get
-            Set
-                Me("AutoTimeSh") = value
-            End Set
-        End Property
-        
-        <Global.System.Configuration.UserScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("0")>  _
-        Public Property AutoTimeShHour() As String
-            Get
-                Return CType(Me("AutoTimeShHour"),String)
-            End Get
-            Set
-                Me("AutoTimeShHour") = value
-            End Set
-        End Property
-        
-        <Global.System.Configuration.UserScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("0")>  _
-        Public Property AutoTimeShMin() As String
-            Get
-                Return CType(Me("AutoTimeShMin"),String)
-            End Get
-            Set
-                Me("AutoTimeShMin") = value
-            End Set
-        End Property
-        
-        <Global.System.Configuration.UserScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("0")>  _
-        Public Property AutoTimeShSec() As String
-            Get
-                Return CType(Me("AutoTimeShSec"),String)
-            End Get
-            Set
-                Me("AutoTimeShSec") = value
-            End Set
-        End Property
-        
-        <Global.System.Configuration.UserScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("0")>  _
         Public Property Sound1() As Integer
             Get
                 Return CType(Me("Sound1"),Integer)
@@ -368,42 +284,6 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("True")>  _
-        Public Property SetTimeOrBreak() As Boolean
-            Get
-                Return CType(Me("SetTimeOrBreak"),Boolean)
-            End Get
-            Set
-                Me("SetTimeOrBreak") = value
-            End Set
-        End Property
-        
-        <Global.System.Configuration.UserScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("1")>  _
-        Public Property MinWarnSh() As String
-            Get
-                Return CType(Me("MinWarnSh"),String)
-            End Get
-            Set
-                Me("MinWarnSh") = value
-            End Set
-        End Property
-        
-        <Global.System.Configuration.UserScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("True")>  _
-        Public Property AudOrVis() As Boolean
-            Get
-                Return CType(Me("AudOrVis"),Boolean)
-            End Get
-            Set
-                Me("AudOrVis") = value
-            End Set
-        End Property
-        
-        <Global.System.Configuration.UserScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("False")>  _
         Public Property BreaktimeUnlocked() As Boolean
             Get
@@ -423,66 +303,6 @@ Namespace My
             End Get
             Set
                 Me("BreaktimePaused") = value
-            End Set
-        End Property
-        
-        <Global.System.Configuration.UserScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("False")>  _
-        Public Property TimeChanged() As Boolean
-            Get
-                Return CType(Me("TimeChanged"),Boolean)
-            End Get
-            Set
-                Me("TimeChanged") = value
-            End Set
-        End Property
-        
-        <Global.System.Configuration.UserScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("False")>  _
-        Public Property ForShutdown() As Boolean
-            Get
-                Return CType(Me("ForShutdown"),Boolean)
-            End Get
-            Set
-                Me("ForShutdown") = value
-            End Set
-        End Property
-        
-        <Global.System.Configuration.UserScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("False")>  _
-        Public Property ForTimer() As Boolean
-            Get
-                Return CType(Me("ForTimer"),Boolean)
-            End Get
-            Set
-                Me("ForTimer") = value
-            End Set
-        End Property
-        
-        <Global.System.Configuration.UserScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("False")>  _
-        Public Property ForBTimer() As Boolean
-            Get
-                Return CType(Me("ForBTimer"),Boolean)
-            End Get
-            Set
-                Me("ForBTimer") = value
-            End Set
-        End Property
-        
-        <Global.System.Configuration.UserScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("False")>  _
-        Public Property ForAlarm() As Boolean
-            Get
-                Return CType(Me("ForAlarm"),Boolean)
-            End Get
-            Set
-                Me("ForAlarm") = value
             End Set
         End Property
         

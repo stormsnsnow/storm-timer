@@ -277,7 +277,6 @@ Partial Class MainForm
         '
         'BreakTimerTab
         '
-        Me.BreakTimerTab.BackColor = System.Drawing.Color.DarkRed
         Me.BreakTimerTab.Controls.Add(Me.BSTGroupBoxBT)
         Me.BreakTimerTab.Controls.Add(Me.TSFGroupBoxBT)
         Me.BreakTimerTab.Controls.Add(Me.ControlsGroupBoxBT)
@@ -537,10 +536,8 @@ Partial Class MainForm
         '
         'StartButtonBT
         '
-        Me.StartButtonBT.BackColor = System.Drawing.Color.DarkRed
-        Me.StartButtonBT.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.StartButtonBT.BackColor = System.Drawing.Color.Transparent
         Me.StartButtonBT.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.StartButtonBT.ForeColor = System.Drawing.Color.Red
         Me.StartButtonBT.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.StartButtonBT.ImageKey = "play.ico"
         Me.StartButtonBT.ImageList = Me.IconsIL
@@ -566,10 +563,8 @@ Partial Class MainForm
         '
         'btnResume
         '
-        Me.btnResume.BackColor = System.Drawing.Color.DarkRed
-        Me.btnResume.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnResume.BackColor = System.Drawing.Color.Transparent
         Me.btnResume.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnResume.ForeColor = System.Drawing.Color.Red
         Me.btnResume.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnResume.ImageIndex = 5
         Me.btnResume.ImageList = Me.IconsIL
@@ -585,10 +580,8 @@ Partial Class MainForm
         '
         'btnStop
         '
-        Me.btnStop.BackColor = System.Drawing.Color.DarkRed
-        Me.btnStop.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnStop.BackColor = System.Drawing.Color.Transparent
         Me.btnStop.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnStop.ForeColor = System.Drawing.Color.Red
         Me.btnStop.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnStop.ImageIndex = 3
         Me.btnStop.ImageList = Me.IconsIL
@@ -604,10 +597,8 @@ Partial Class MainForm
         '
         'PauseButtonBT
         '
-        Me.PauseButtonBT.BackColor = System.Drawing.Color.DarkRed
-        Me.PauseButtonBT.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.PauseButtonBT.BackColor = System.Drawing.Color.Transparent
         Me.PauseButtonBT.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.PauseButtonBT.ForeColor = System.Drawing.Color.Red
         Me.PauseButtonBT.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.PauseButtonBT.ImageIndex = 3
         Me.PauseButtonBT.ImageList = Me.IconsIL
@@ -640,7 +631,6 @@ Partial Class MainForm
         Me.TimerGBBt.Controls.Add(Me.nudTimeBreakMin)
         Me.TimerGBBt.Controls.Add(Me.nudTimeBreakHour)
         Me.TimerGBBt.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TimerGBBt.ForeColor = System.Drawing.Color.Red
         Me.TimerGBBt.Location = New System.Drawing.Point(299, 13)
         Me.TimerGBBt.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TimerGBBt.Name = "TimerGBBt"
@@ -683,10 +673,8 @@ Partial Class MainForm
         'VisualRbBt
         '
         Me.VisualRbBt.AutoSize = True
-        Me.VisualRbBt.BackColor = System.Drawing.Color.DarkRed
         Me.VisualRbBt.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.VisualRbBt.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.VisualRbBt.ForeColor = System.Drawing.Color.Red
         Me.VisualRbBt.Location = New System.Drawing.Point(192, 68)
         Me.VisualRbBt.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.VisualRbBt.Name = "VisualRbBt"
@@ -708,9 +696,7 @@ Partial Class MainForm
         '
         'nudTimeHour
         '
-        Me.nudTimeHour.BackColor = System.Drawing.Color.DarkRed
         Me.nudTimeHour.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.nudTimeHour.ForeColor = System.Drawing.Color.Red
         Me.nudTimeHour.Location = New System.Drawing.Point(84, 16)
         Me.nudTimeHour.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.nudTimeHour.Maximum = New Decimal(New Integer() {99, 0, 0, 0})
@@ -721,10 +707,8 @@ Partial Class MainForm
         'AudioRbBt
         '
         Me.AudioRbBt.AutoSize = True
-        Me.AudioRbBt.BackColor = System.Drawing.Color.DarkRed
         Me.AudioRbBt.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.AudioRbBt.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.AudioRbBt.ForeColor = System.Drawing.Color.Red
         Me.AudioRbBt.Location = New System.Drawing.Point(137, 68)
         Me.AudioRbBt.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.AudioRbBt.Name = "AudioRbBt"
@@ -737,9 +721,7 @@ Partial Class MainForm
         'TimeLabelBt
         '
         Me.TimeLabelBt.AutoSize = True
-        Me.TimeLabelBt.BackColor = System.Drawing.Color.DarkRed
         Me.TimeLabelBt.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TimeLabelBt.ForeColor = System.Drawing.Color.Red
         Me.TimeLabelBt.Location = New System.Drawing.Point(28, 16)
         Me.TimeLabelBt.Name = "TimeLabelBt"
         Me.TimeLabelBt.Size = New System.Drawing.Size(32, 14)
@@ -749,9 +731,7 @@ Partial Class MainForm
         'MWLabelBt
         '
         Me.MWLabelBt.AutoSize = True
-        Me.MWLabelBt.BackColor = System.Drawing.Color.DarkRed
         Me.MWLabelBt.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.MWLabelBt.ForeColor = System.Drawing.Color.Red
         Me.MWLabelBt.Location = New System.Drawing.Point(7, 64)
         Me.MWLabelBt.Name = "MWLabelBt"
         Me.MWLabelBt.Size = New System.Drawing.Size(52, 14)
@@ -760,9 +740,7 @@ Partial Class MainForm
         '
         'MinWarnNudBt
         '
-        Me.MinWarnNudBt.BackColor = System.Drawing.Color.DarkRed
         Me.MinWarnNudBt.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.MinWarnNudBt.ForeColor = System.Drawing.Color.Red
         Me.MinWarnNudBt.Location = New System.Drawing.Point(84, 64)
         Me.MinWarnNudBt.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.MinWarnNudBt.Maximum = New Decimal(New Integer() {5, 0, 0, 0})
@@ -775,9 +753,7 @@ Partial Class MainForm
         'BreakTimerALabelBT
         '
         Me.BreakTimerALabelBT.AutoSize = True
-        Me.BreakTimerALabelBT.BackColor = System.Drawing.Color.DarkRed
         Me.BreakTimerALabelBT.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BreakTimerALabelBT.ForeColor = System.Drawing.Color.Red
         Me.BreakTimerALabelBT.Location = New System.Drawing.Point(22, 42)
         Me.BreakTimerALabelBT.Name = "BreakTimerALabelBT"
         Me.BreakTimerALabelBT.Size = New System.Drawing.Size(38, 14)
@@ -786,9 +762,7 @@ Partial Class MainForm
         '
         'nudTimeMin
         '
-        Me.nudTimeMin.BackColor = System.Drawing.Color.DarkRed
         Me.nudTimeMin.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.nudTimeMin.ForeColor = System.Drawing.Color.Red
         Me.nudTimeMin.Location = New System.Drawing.Point(140, 16)
         Me.nudTimeMin.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.nudTimeMin.Maximum = New Decimal(New Integer() {59, 0, 0, 0})
@@ -798,9 +772,7 @@ Partial Class MainForm
         '
         'nudTimeBreakSec
         '
-        Me.nudTimeBreakSec.BackColor = System.Drawing.Color.DarkRed
         Me.nudTimeBreakSec.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.nudTimeBreakSec.ForeColor = System.Drawing.Color.Red
         Me.nudTimeBreakSec.Location = New System.Drawing.Point(195, 41)
         Me.nudTimeBreakSec.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.nudTimeBreakSec.Name = "nudTimeBreakSec"
@@ -809,9 +781,7 @@ Partial Class MainForm
         '
         'nudTimeSec
         '
-        Me.nudTimeSec.BackColor = System.Drawing.Color.DarkRed
         Me.nudTimeSec.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.nudTimeSec.ForeColor = System.Drawing.Color.Red
         Me.nudTimeSec.Location = New System.Drawing.Point(195, 16)
         Me.nudTimeSec.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.nudTimeSec.Maximum = New Decimal(New Integer() {59, 0, 0, 0})
@@ -821,9 +791,7 @@ Partial Class MainForm
         '
         'nudTimeBreakMin
         '
-        Me.nudTimeBreakMin.BackColor = System.Drawing.Color.DarkRed
         Me.nudTimeBreakMin.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.nudTimeBreakMin.ForeColor = System.Drawing.Color.Red
         Me.nudTimeBreakMin.Location = New System.Drawing.Point(140, 41)
         Me.nudTimeBreakMin.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.nudTimeBreakMin.Maximum = New Decimal(New Integer() {59, 0, 0, 0})
@@ -833,9 +801,7 @@ Partial Class MainForm
         '
         'nudTimeBreakHour
         '
-        Me.nudTimeBreakHour.BackColor = System.Drawing.Color.DarkRed
         Me.nudTimeBreakHour.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.nudTimeBreakHour.ForeColor = System.Drawing.Color.Red
         Me.nudTimeBreakHour.Location = New System.Drawing.Point(84, 41)
         Me.nudTimeBreakHour.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.nudTimeBreakHour.Maximum = New Decimal(New Integer() {99, 0, 0, 0})
@@ -958,7 +924,6 @@ Partial Class MainForm
         '
         'BTime
         '
-        Me.BTime.BackColor = System.Drawing.Color.DarkRed
         Me.BTime.Controls.Add(Me.BreakNowButtonBt)
         Me.BTime.Controls.Add(Me.BreakGBBt)
         Me.BTime.ImageIndex = 1
@@ -972,10 +937,8 @@ Partial Class MainForm
         '
         'BreakNowButtonBt
         '
-        Me.BreakNowButtonBt.BackColor = System.Drawing.Color.DarkRed
-        Me.BreakNowButtonBt.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BreakNowButtonBt.BackColor = System.Drawing.Color.Transparent
         Me.BreakNowButtonBt.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BreakNowButtonBt.ForeColor = System.Drawing.Color.Red
         Me.BreakNowButtonBt.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.BreakNowButtonBt.ImageKey = "play.ico"
         Me.BreakNowButtonBt.ImageList = Me.IconsIL
@@ -987,11 +950,9 @@ Partial Class MainForm
         Me.BreakNowButtonBt.Text = "Start"
         Me.BreakNowButtonBt.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.BreakNowButtonBt.UseVisualStyleBackColor = False
-        Me.BreakNowButtonBt.Visible = False
         '
         'BreakGBBt
         '
-        Me.BreakGBBt.BackColor = System.Drawing.Color.DarkRed
         Me.BreakGBBt.Controls.Add(Me.BreakTimeLabelBT)
         Me.BreakGBBt.Controls.Add(Me.BreakTimeSelectLabelBT)
         Me.BreakGBBt.Controls.Add(Me.BreakLabelBT)
@@ -999,7 +960,6 @@ Partial Class MainForm
         Me.BreakGBBt.Controls.Add(Me.nudb1sec)
         Me.BreakGBBt.Controls.Add(Me.nudb1min)
         Me.BreakGBBt.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BreakGBBt.ForeColor = System.Drawing.Color.Red
         Me.BreakGBBt.Location = New System.Drawing.Point(181, 16)
         Me.BreakGBBt.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.BreakGBBt.Name = "BreakGBBt"
@@ -1012,9 +972,7 @@ Partial Class MainForm
         'BreakTimeLabelBT
         '
         Me.BreakTimeLabelBT.AutoSize = True
-        Me.BreakTimeLabelBT.BackColor = System.Drawing.Color.DarkRed
         Me.BreakTimeLabelBT.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BreakTimeLabelBT.ForeColor = System.Drawing.Color.Red
         Me.BreakTimeLabelBT.Location = New System.Drawing.Point(92, 38)
         Me.BreakTimeLabelBT.Name = "BreakTimeLabelBT"
         Me.BreakTimeLabelBT.Size = New System.Drawing.Size(49, 14)
@@ -1024,9 +982,7 @@ Partial Class MainForm
         'BreakTimeSelectLabelBT
         '
         Me.BreakTimeSelectLabelBT.AutoSize = True
-        Me.BreakTimeSelectLabelBT.BackColor = System.Drawing.Color.DarkRed
         Me.BreakTimeSelectLabelBT.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BreakTimeSelectLabelBT.ForeColor = System.Drawing.Color.Red
         Me.BreakTimeSelectLabelBT.Location = New System.Drawing.Point(13, 38)
         Me.BreakTimeSelectLabelBT.Name = "BreakTimeSelectLabelBT"
         Me.BreakTimeSelectLabelBT.Size = New System.Drawing.Size(63, 14)
@@ -1036,9 +992,7 @@ Partial Class MainForm
         'BreakLabelBT
         '
         Me.BreakLabelBT.AutoSize = True
-        Me.BreakLabelBT.BackColor = System.Drawing.Color.DarkRed
         Me.BreakLabelBT.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BreakLabelBT.ForeColor = System.Drawing.Color.Red
         Me.BreakLabelBT.Location = New System.Drawing.Point(13, 13)
         Me.BreakLabelBT.Name = "BreakLabelBT"
         Me.BreakLabelBT.Size = New System.Drawing.Size(38, 14)
@@ -1047,10 +1001,8 @@ Partial Class MainForm
         '
         'B1HourNudBT
         '
-        Me.B1HourNudBT.BackColor = System.Drawing.Color.DarkRed
         Me.B1HourNudBT.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.B1HourNudBT.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.B1HourNudBT.ForeColor = System.Drawing.Color.Red
         Me.B1HourNudBT.Location = New System.Drawing.Point(71, 12)
         Me.B1HourNudBT.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.B1HourNudBT.Maximum = New Decimal(New Integer() {99, 0, 0, 0})
@@ -1060,10 +1012,8 @@ Partial Class MainForm
         '
         'nudb1sec
         '
-        Me.nudb1sec.BackColor = System.Drawing.Color.DarkRed
         Me.nudb1sec.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.nudb1sec.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.nudb1sec.ForeColor = System.Drawing.Color.Red
         Me.nudb1sec.Location = New System.Drawing.Point(174, 12)
         Me.nudb1sec.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.nudb1sec.Maximum = New Decimal(New Integer() {59, 0, 0, 0})
@@ -1073,10 +1023,8 @@ Partial Class MainForm
         '
         'nudb1min
         '
-        Me.nudb1min.BackColor = System.Drawing.Color.DarkRed
         Me.nudb1min.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.nudb1min.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.nudb1min.ForeColor = System.Drawing.Color.Red
         Me.nudb1min.Location = New System.Drawing.Point(121, 12)
         Me.nudb1min.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.nudb1min.Maximum = New Decimal(New Integer() {59, 0, 0, 0})
@@ -1086,7 +1034,6 @@ Partial Class MainForm
         '
         'TimerTab
         '
-        Me.TimerTab.BackColor = System.Drawing.Color.DarkRed
         Me.TimerTab.Controls.Add(Me.TSFGroupBoxT)
         Me.TimerTab.Controls.Add(Me.StatusGroupBoxT)
         Me.TimerTab.Controls.Add(Me.StartTimeButton)
@@ -1337,7 +1284,6 @@ Partial Class MainForm
         'StartTimeButton
         '
         Me.StartTimeButton.BackColor = System.Drawing.Color.Transparent
-        Me.StartTimeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.StartTimeButton.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.StartTimeButton.Location = New System.Drawing.Point(135, 64)
         Me.StartTimeButton.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
@@ -1350,7 +1296,6 @@ Partial Class MainForm
         'StopTimeButton
         '
         Me.StopTimeButton.BackColor = System.Drawing.Color.Transparent
-        Me.StopTimeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.StopTimeButton.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.StopTimeButton.Location = New System.Drawing.Point(210, 64)
         Me.StopTimeButton.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
@@ -1364,7 +1309,6 @@ Partial Class MainForm
         'PauseButtonT
         '
         Me.PauseButtonT.BackColor = System.Drawing.Color.Transparent
-        Me.PauseButtonT.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.PauseButtonT.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.PauseButtonT.Location = New System.Drawing.Point(372, 64)
         Me.PauseButtonT.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
@@ -1377,9 +1321,7 @@ Partial Class MainForm
         '
         'nudSec
         '
-        Me.nudSec.BackColor = System.Drawing.Color.DarkRed
         Me.nudSec.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.nudSec.ForeColor = System.Drawing.Color.Red
         Me.nudSec.Location = New System.Drawing.Point(328, 24)
         Me.nudSec.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.nudSec.Maximum = New Decimal(New Integer() {59, 0, 0, 0})
@@ -1389,9 +1331,7 @@ Partial Class MainForm
         '
         'nudMin
         '
-        Me.nudMin.BackColor = System.Drawing.Color.DarkRed
         Me.nudMin.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.nudMin.ForeColor = System.Drawing.Color.Red
         Me.nudMin.Location = New System.Drawing.Point(262, 24)
         Me.nudMin.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.nudMin.Maximum = New Decimal(New Integer() {59, 0, 0, 0})
@@ -1401,9 +1341,7 @@ Partial Class MainForm
         '
         'nudHour
         '
-        Me.nudHour.BackColor = System.Drawing.Color.DarkRed
         Me.nudHour.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.nudHour.ForeColor = System.Drawing.Color.Red
         Me.nudHour.Location = New System.Drawing.Point(197, 24)
         Me.nudHour.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.nudHour.Maximum = New Decimal(New Integer() {99, 0, 0, 0})
@@ -1414,7 +1352,6 @@ Partial Class MainForm
         'ResumeTimeButton
         '
         Me.ResumeTimeButton.BackColor = System.Drawing.Color.Transparent
-        Me.ResumeTimeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ResumeTimeButton.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ResumeTimeButton.Location = New System.Drawing.Point(289, 64)
         Me.ResumeTimeButton.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
@@ -1480,7 +1417,7 @@ Partial Class MainForm
         Me.Label2.ForeColor = System.Drawing.Color.Yellow
         Me.Label2.Location = New System.Drawing.Point(80, 24)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(228, 33)
+        Me.Label2.Size = New System.Drawing.Size(230, 42)
         Me.Label2.TabIndex = 87
         Me.Label2.Text = "This feature will be discontinued" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "in late 2021. Please click on the button for" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) &
     "more information."
@@ -1492,7 +1429,7 @@ Partial Class MainForm
         Me.Label1.ForeColor = System.Drawing.Color.Yellow
         Me.Label1.Location = New System.Drawing.Point(76, 3)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(175, 19)
+        Me.Label1.Size = New System.Drawing.Size(176, 22)
         Me.Label1.TabIndex = 86
         Me.Label1.Text = "Important Notice!"
         '
@@ -1502,7 +1439,7 @@ Partial Class MainForm
         Me.PictureBox2.Location = New System.Drawing.Point(10, 3)
         Me.PictureBox2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(58, 42)
+        Me.PictureBox2.Size = New System.Drawing.Size(45, 42)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox2.TabIndex = 0
         Me.PictureBox2.TabStop = False
@@ -1550,7 +1487,7 @@ Partial Class MainForm
         Me.AlarmStatusLabel.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.AlarmStatusLabel.Location = New System.Drawing.Point(211, 122)
         Me.AlarmStatusLabel.Name = "AlarmStatusLabel"
-        Me.AlarmStatusLabel.Size = New System.Drawing.Size(79, 11)
+        Me.AlarmStatusLabel.Size = New System.Drawing.Size(81, 14)
         Me.AlarmStatusLabel.TabIndex = 15
         Me.AlarmStatusLabel.Text = "Alarm Status:"
         '
@@ -1588,7 +1525,7 @@ Partial Class MainForm
         Me.SetOrNotSetLabel.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.SetOrNotSetLabel.Location = New System.Drawing.Point(310, 122)
         Me.SetOrNotSetLabel.Name = "SetOrNotSetLabel"
-        Me.SetOrNotSetLabel.Size = New System.Drawing.Size(97, 11)
+        Me.SetOrNotSetLabel.Size = New System.Drawing.Size(99, 14)
         Me.SetOrNotSetLabel.TabIndex = 10
         Me.SetOrNotSetLabel.Text = "Please set Alarm"
         '
@@ -1646,7 +1583,7 @@ Partial Class MainForm
         Me.Label3.ForeColor = System.Drawing.Color.Yellow
         Me.Label3.Location = New System.Drawing.Point(80, 24)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(228, 33)
+        Me.Label3.Size = New System.Drawing.Size(230, 42)
         Me.Label3.TabIndex = 87
         Me.Label3.Text = "This feature will be discontinued" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "in late 2021. Please click on the button for" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) &
     "more information."
@@ -1658,17 +1595,17 @@ Partial Class MainForm
         Me.Label4.ForeColor = System.Drawing.Color.Yellow
         Me.Label4.Location = New System.Drawing.Point(76, 3)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(175, 19)
+        Me.Label4.Size = New System.Drawing.Size(176, 22)
         Me.Label4.TabIndex = 86
         Me.Label4.Text = "Important Notice!"
         '
         'PictureBox3
         '
         Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
-        Me.PictureBox3.Location = New System.Drawing.Point(10, 3)
+        Me.PictureBox3.Location = New System.Drawing.Point(8, 15)
         Me.PictureBox3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(58, 42)
+        Me.PictureBox3.Size = New System.Drawing.Size(45, 42)
         Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox3.TabIndex = 0
         Me.PictureBox3.TabStop = False
@@ -1679,11 +1616,11 @@ Partial Class MainForm
         Me.LapListBoxSw.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LapListBoxSw.ForeColor = System.Drawing.Color.Red
         Me.LapListBoxSw.FormattingEnabled = True
-        Me.LapListBoxSw.ItemHeight = 11
+        Me.LapListBoxSw.ItemHeight = 14
         Me.LapListBoxSw.Location = New System.Drawing.Point(188, 115)
         Me.LapListBoxSw.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.LapListBoxSw.Name = "LapListBoxSw"
-        Me.LapListBoxSw.Size = New System.Drawing.Size(241, 59)
+        Me.LapListBoxSw.Size = New System.Drawing.Size(241, 46)
         Me.LapListBoxSw.TabIndex = 65
         Me.LapListBoxSw.Visible = False
         '
@@ -1725,7 +1662,7 @@ Partial Class MainForm
         Me.StopwatchLabelSW.Location = New System.Drawing.Point(282, 79)
         Me.StopwatchLabelSW.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.StopwatchLabelSW.Name = "StopwatchLabelSW"
-        Me.StopwatchLabelSW.Size = New System.Drawing.Size(37, 11)
+        Me.StopwatchLabelSW.Size = New System.Drawing.Size(39, 14)
         Me.StopwatchLabelSW.TabIndex = 59
         Me.StopwatchLabelSW.Text = "--:--:--"
         Me.StopwatchLabelSW.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1830,7 +1767,7 @@ Partial Class MainForm
         Me.Label5.ForeColor = System.Drawing.Color.Yellow
         Me.Label5.Location = New System.Drawing.Point(273, 14)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(228, 33)
+        Me.Label5.Size = New System.Drawing.Size(230, 42)
         Me.Label5.TabIndex = 87
         Me.Label5.Text = "This feature will be discontinued" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "in late 2021. Please click on the button for" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) &
     "more information."
@@ -2002,7 +1939,7 @@ Partial Class MainForm
         Me.ShutdownCbSh.Location = New System.Drawing.Point(15, 60)
         Me.ShutdownCbSh.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ShutdownCbSh.Name = "ShutdownCbSh"
-        Me.ShutdownCbSh.Size = New System.Drawing.Size(248, 19)
+        Me.ShutdownCbSh.Size = New System.Drawing.Size(248, 22)
         Me.ShutdownCbSh.TabIndex = 100
         '
         'PauseButtonSh
@@ -2246,7 +2183,7 @@ Partial Class MainForm
         Me.TimeAtLabelSh.ForeColor = System.Drawing.Color.Red
         Me.TimeAtLabelSh.Location = New System.Drawing.Point(9, 16)
         Me.TimeAtLabelSh.Name = "TimeAtLabelSh"
-        Me.TimeAtLabelSh.Size = New System.Drawing.Size(34, 11)
+        Me.TimeAtLabelSh.Size = New System.Drawing.Size(36, 14)
         Me.TimeAtLabelSh.TabIndex = 33
         Me.TimeAtLabelSh.Text = "Time:"
         '
@@ -2328,8 +2265,8 @@ Partial Class MainForm
         '
         'SettingsButton
         '
+        Me.SettingsButton.BackColor = System.Drawing.Color.Transparent
         Me.SettingsButton.Dock = System.Windows.Forms.DockStyle.Right
-        Me.SettingsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.SettingsButton.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.SettingsButton.Location = New System.Drawing.Point(503, 0)
         Me.SettingsButton.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
@@ -2368,7 +2305,7 @@ Partial Class MainForm
         Me.lblVersion.Name = "lblVersion"
         Me.lblVersion.Size = New System.Drawing.Size(146, 42)
         Me.lblVersion.TabIndex = 26
-        Me.lblVersion.Text = "v21H2" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Alpha Release" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Released August 18, 2021"
+        Me.lblVersion.Text = "v21H2" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Alpha Release" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Released August 24, 2021"
         Me.lblVersion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'lblName
@@ -2433,21 +2370,19 @@ Partial Class MainForm
         '
         'MainForm
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 11.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 14.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.DarkRed
         Me.ClientSize = New System.Drawing.Size(635, 388)
         Me.Controls.Add(Me.TitlePanel)
         Me.Controls.Add(Me.TimerControl)
         Me.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ForeColor = System.Drawing.Color.Red
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.MaximizeBox = False
         Me.Name = "MainForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "BreakTime - v21H2P5- Released on August 15, 2021"
+        Me.Text = "BreakTime - v21H2A3- Released on August 24, 2021"
         Me.TimerControl.ResumeLayout(False)
         Me.BreakTimerTab.ResumeLayout(False)
         Me.BSTGroupBoxBT.ResumeLayout(False)

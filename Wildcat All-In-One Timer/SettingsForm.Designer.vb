@@ -28,6 +28,7 @@ Partial Class SettingsForm
         Me.CancelButtonSettings = New System.Windows.Forms.Button()
         Me.OFDS = New System.Windows.Forms.OpenFileDialog()
         Me.About = New System.Windows.Forms.TabPage()
+        Me.Button3 = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.BtnLicense = New System.Windows.Forms.Button()
         Me.lblVersion = New System.Windows.Forms.Label()
@@ -59,13 +60,6 @@ Partial Class SettingsForm
         Me.nudTimeSec = New System.Windows.Forms.NumericUpDown()
         Me.nudTimeBreakMin = New System.Windows.Forms.NumericUpDown()
         Me.nudTimeBreakHour = New System.Windows.Forms.NumericUpDown()
-        Me.BreakGBBt = New System.Windows.Forms.GroupBox()
-        Me.lblbreak2 = New System.Windows.Forms.Label()
-        Me.nudb1hour = New System.Windows.Forms.NumericUpDown()
-        Me.nudb1sec = New System.Windows.Forms.NumericUpDown()
-        Me.nudb1min = New System.Windows.Forms.NumericUpDown()
-        Me.TimeRBBt = New System.Windows.Forms.RadioButton()
-        Me.BreakRBBt = New System.Windows.Forms.RadioButton()
         Me.TimerTab = New System.Windows.Forms.TabPage()
         Me.nudSec = New System.Windows.Forms.NumericUpDown()
         Me.nudMin = New System.Windows.Forms.NumericUpDown()
@@ -135,10 +129,6 @@ Partial Class SettingsForm
         CType(Me.nudTimeSec, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.nudTimeBreakMin, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.nudTimeBreakHour, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.BreakGBBt.SuspendLayout()
-        CType(Me.nudb1hour, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.nudb1sec, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.nudb1min, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TimerTab.SuspendLayout()
         CType(Me.nudSec, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.nudMin, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -184,18 +174,30 @@ Partial Class SettingsForm
         '
         'About
         '
-        Me.About.BackColor = System.Drawing.Color.DarkRed
+        Me.About.BackColor = System.Drawing.Color.Yellow
+        Me.About.Controls.Add(Me.Button3)
         Me.About.Controls.Add(Me.PictureBox1)
         Me.About.Controls.Add(Me.BtnLicense)
         Me.About.Controls.Add(Me.lblVersion)
         Me.About.Controls.Add(Me.lblName)
-        Me.About.ForeColor = System.Drawing.Color.Red
+        Me.About.ForeColor = System.Drawing.Color.Gold
         Me.About.ImageKey = "2139.png"
         Me.About.Location = New System.Drawing.Point(4, 23)
         Me.About.Name = "About"
         Me.About.Size = New System.Drawing.Size(496, 267)
         Me.About.TabIndex = 3
         Me.About.Text = "About"
+        '
+        'Button3
+        '
+        Me.Button3.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button3.Location = New System.Drawing.Point(184, 71)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(75, 40)
+        Me.Button3.TabIndex = 31
+        Me.Button3.Text = "&What's New?"
+        Me.Button3.UseVisualStyleBackColor = True
         '
         'PictureBox1
         '
@@ -211,9 +213,9 @@ Partial Class SettingsForm
         '
         Me.BtnLicense.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.BtnLicense.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnLicense.Location = New System.Drawing.Point(184, 71)
+        Me.BtnLicense.Location = New System.Drawing.Point(265, 71)
         Me.BtnLicense.Name = "BtnLicense"
-        Me.BtnLicense.Size = New System.Drawing.Size(75, 23)
+        Me.BtnLicense.Size = New System.Drawing.Size(75, 40)
         Me.BtnLicense.TabIndex = 3
         Me.BtnLicense.Text = "&License"
         Me.BtnLicense.UseVisualStyleBackColor = True
@@ -221,11 +223,12 @@ Partial Class SettingsForm
         'lblVersion
         '
         Me.lblVersion.AutoSize = True
+        Me.lblVersion.ForeColor = System.Drawing.Color.Gold
         Me.lblVersion.Location = New System.Drawing.Point(182, 32)
         Me.lblVersion.Name = "lblVersion"
         Me.lblVersion.Size = New System.Drawing.Size(132, 36)
         Me.lblVersion.TabIndex = 29
-        Me.lblVersion.Text = "v21H2 " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Alpha One" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Released August 18, 2021"
+        Me.lblVersion.Text = "v21H2 " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Alpha Two" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Released August 22, 2021"
         Me.lblVersion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'lblName
@@ -234,13 +237,13 @@ Partial Class SettingsForm
         Me.lblName.Font = New System.Drawing.Font("Helvetica", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblName.Location = New System.Drawing.Point(181, 11)
         Me.lblName.Name = "lblName"
-        Me.lblName.Size = New System.Drawing.Size(109, 19)
+        Me.lblName.Size = New System.Drawing.Size(110, 22)
         Me.lblName.TabIndex = 28
         Me.lblName.Text = "BreakTime"
         '
         'Sounds
         '
-        Me.Sounds.BackColor = System.Drawing.Color.Red
+        Me.Sounds.BackColor = System.Drawing.Color.Yellow
         Me.Sounds.Controls.Add(Me.BTBrowse)
         Me.Sounds.Controls.Add(Me.Label10)
         Me.Sounds.Controls.Add(Me.BTComboBoxSounds)
@@ -354,7 +357,7 @@ Partial Class SettingsForm
         '
         'AutoTime
         '
-        Me.AutoTime.BackColor = System.Drawing.Color.DarkRed
+        Me.AutoTime.BackColor = System.Drawing.Color.Yellow
         Me.AutoTime.Controls.Add(Me.TimerControl)
         Me.AutoTime.Controls.Add(Me.AutoTimeInstructionsLabelAt)
         Me.AutoTime.ImageKey = "favicon (6).ico"
@@ -382,9 +385,6 @@ Partial Class SettingsForm
         '
         Me.BreakTimerTab.BackColor = System.Drawing.Color.White
         Me.BreakTimerTab.Controls.Add(Me.TimerGBBt)
-        Me.BreakTimerTab.Controls.Add(Me.BreakGBBt)
-        Me.BreakTimerTab.Controls.Add(Me.TimeRBBt)
-        Me.BreakTimerTab.Controls.Add(Me.BreakRBBt)
         Me.BreakTimerTab.ImageKey = "favicon (5).ico"
         Me.BreakTimerTab.Location = New System.Drawing.Point(4, 23)
         Me.BreakTimerTab.Name = "BreakTimerTab"
@@ -407,7 +407,7 @@ Partial Class SettingsForm
         Me.TimerGBBt.Controls.Add(Me.nudTimeSec)
         Me.TimerGBBt.Controls.Add(Me.nudTimeBreakMin)
         Me.TimerGBBt.Controls.Add(Me.nudTimeBreakHour)
-        Me.TimerGBBt.Location = New System.Drawing.Point(256, 6)
+        Me.TimerGBBt.Location = New System.Drawing.Point(6, 6)
         Me.TimerGBBt.Name = "TimerGBBt"
         Me.TimerGBBt.Size = New System.Drawing.Size(218, 106)
         Me.TimerGBBt.TabIndex = 49
@@ -525,76 +525,6 @@ Partial Class SettingsForm
         Me.nudTimeBreakHour.Name = "nudTimeBreakHour"
         Me.nudTimeBreakHour.Size = New System.Drawing.Size(42, 20)
         Me.nudTimeBreakHour.TabIndex = 37
-        '
-        'BreakGBBt
-        '
-        Me.BreakGBBt.Controls.Add(Me.lblbreak2)
-        Me.BreakGBBt.Controls.Add(Me.nudb1hour)
-        Me.BreakGBBt.Controls.Add(Me.nudb1sec)
-        Me.BreakGBBt.Controls.Add(Me.nudb1min)
-        Me.BreakGBBt.Location = New System.Drawing.Point(32, 43)
-        Me.BreakGBBt.Name = "BreakGBBt"
-        Me.BreakGBBt.Size = New System.Drawing.Size(218, 50)
-        Me.BreakGBBt.TabIndex = 52
-        Me.BreakGBBt.TabStop = False
-        Me.BreakGBBt.Text = "Break Settings"
-        '
-        'lblbreak2
-        '
-        Me.lblbreak2.AutoSize = True
-        Me.lblbreak2.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.lblbreak2.Location = New System.Drawing.Point(11, 16)
-        Me.lblbreak2.Name = "lblbreak2"
-        Me.lblbreak2.Size = New System.Drawing.Size(37, 12)
-        Me.lblbreak2.TabIndex = 33
-        Me.lblbreak2.Text = "Break:"
-        '
-        'nudb1hour
-        '
-        Me.nudb1hour.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.nudb1hour.Location = New System.Drawing.Point(61, 14)
-        Me.nudb1hour.Maximum = New Decimal(New Integer() {99, 0, 0, 0})
-        Me.nudb1hour.Name = "nudb1hour"
-        Me.nudb1hour.Size = New System.Drawing.Size(37, 20)
-        Me.nudb1hour.TabIndex = 40
-        '
-        'nudb1sec
-        '
-        Me.nudb1sec.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.nudb1sec.Location = New System.Drawing.Point(149, 14)
-        Me.nudb1sec.Maximum = New Decimal(New Integer() {59, 0, 0, 0})
-        Me.nudb1sec.Name = "nudb1sec"
-        Me.nudb1sec.Size = New System.Drawing.Size(42, 20)
-        Me.nudb1sec.TabIndex = 42
-        '
-        'nudb1min
-        '
-        Me.nudb1min.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.nudb1min.Location = New System.Drawing.Point(104, 14)
-        Me.nudb1min.Maximum = New Decimal(New Integer() {59, 0, 0, 0})
-        Me.nudb1min.Name = "nudb1min"
-        Me.nudb1min.Size = New System.Drawing.Size(39, 20)
-        Me.nudb1min.TabIndex = 41
-        '
-        'TimeRBBt
-        '
-        Me.TimeRBBt.AutoSize = True
-        Me.TimeRBBt.Location = New System.Drawing.Point(46, 21)
-        Me.TimeRBBt.Name = "TimeRBBt"
-        Me.TimeRBBt.Size = New System.Drawing.Size(66, 16)
-        Me.TimeRBBt.TabIndex = 45
-        Me.TimeRBBt.Text = "Set Time"
-        Me.TimeRBBt.UseVisualStyleBackColor = False
-        '
-        'BreakRBBt
-        '
-        Me.BreakRBBt.AutoSize = True
-        Me.BreakRBBt.Location = New System.Drawing.Point(140, 21)
-        Me.BreakRBBt.Name = "BreakRBBt"
-        Me.BreakRBBt.Size = New System.Drawing.Size(71, 16)
-        Me.BreakRBBt.TabIndex = 48
-        Me.BreakRBBt.Text = "Set Break"
-        Me.BreakRBBt.UseVisualStyleBackColor = False
         '
         'TimerTab
         '
@@ -889,7 +819,7 @@ Partial Class SettingsForm
         '
         'Personalization
         '
-        Me.Personalization.BackColor = System.Drawing.Color.DarkRed
+        Me.Personalization.BackColor = System.Drawing.Color.Yellow
         Me.Personalization.Controls.Add(Me.TabControl1)
         Me.Personalization.Controls.Add(Me.Label9)
         Me.Personalization.ImageIndex = 6
@@ -1146,14 +1076,14 @@ Partial Class SettingsForm
         Me.AcceptButton = Me.SaveButtonSettings
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.DarkRed
+        Me.BackColor = System.Drawing.Color.Yellow
         Me.CancelButton = Me.CancelButtonSettings
         Me.ClientSize = New System.Drawing.Size(504, 350)
         Me.Controls.Add(Me.CancelButtonSettings)
         Me.Controls.Add(Me.SaveButtonSettings)
         Me.Controls.Add(Me.SettingsTC)
         Me.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ForeColor = System.Drawing.Color.Red
+        Me.ForeColor = System.Drawing.Color.Gold
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
@@ -1170,7 +1100,6 @@ Partial Class SettingsForm
         Me.AutoTime.PerformLayout()
         Me.TimerControl.ResumeLayout(False)
         Me.BreakTimerTab.ResumeLayout(False)
-        Me.BreakTimerTab.PerformLayout()
         Me.TimerGBBt.ResumeLayout(False)
         Me.TimerGBBt.PerformLayout()
         CType(Me.nudTimeHour, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1180,11 +1109,6 @@ Partial Class SettingsForm
         CType(Me.nudTimeSec, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.nudTimeBreakMin, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.nudTimeBreakHour, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.BreakGBBt.ResumeLayout(False)
-        Me.BreakGBBt.PerformLayout()
-        CType(Me.nudb1hour, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.nudb1sec, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.nudb1min, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TimerTab.ResumeLayout(False)
         CType(Me.nudSec, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.nudMin, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1239,13 +1163,6 @@ Partial Class SettingsForm
     Friend WithEvents nudTimeBreakMin As NumericUpDown
     Friend WithEvents nudTimeBreakHour As NumericUpDown
     Friend WithEvents AutoTimeInstructionsLabelAt As Label
-    Friend WithEvents BreakGBBt As GroupBox
-    Friend WithEvents lblbreak2 As Label
-    Friend WithEvents nudb1hour As NumericUpDown
-    Friend WithEvents nudb1sec As NumericUpDown
-    Friend WithEvents nudb1min As NumericUpDown
-    Friend WithEvents TimeRBBt As RadioButton
-    Friend WithEvents BreakRBBt As RadioButton
     Friend WithEvents TimerTab As TabPage
     Friend WithEvents nudSec As NumericUpDown
     Friend WithEvents nudMin As NumericUpDown
@@ -1306,4 +1223,5 @@ Partial Class SettingsForm
     Friend WithEvents RTextBoxFC As TextBox
     Friend WithEvents Label17 As Label
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents Button3 As Button
 End Class

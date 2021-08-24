@@ -4,7 +4,7 @@ Imports System.Net
 Imports System.Text
 
 Public Class SettingsForm
-    Public Shared Downuri As String
+
     Private Sub Settings_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.BackColor = System.Drawing.ColorTranslator.FromHtml(CStr(My.Settings.BackColor.ToArgb))
         Me.ForeColor = System.Drawing.ColorTranslator.FromHtml(CStr(My.Settings.ForeColor.ToArgb))
@@ -41,26 +41,18 @@ Public Class SettingsForm
         My.Settings.DateFormat = DateFormatCbDTGen.SelectedIndex
         My.Settings.TimeFormat = TimeFormatCbDTGen.SelectedIndex
         My.Settings.Sound1 = TDComboBoxS.SelectedIndex
-        My.Settings.AutoTimeBTBHour = CStr(nudTimeBreakHour.Value)
-        My.Settings.AutoTimeBTBMin = CStr(nudTimeBreakMin.Value)
-        My.Settings.AutoTimeBTBSec = CStr(nudTimeBreakSec.Value)
+
         My.Settings.AutoTimeBTTHour = CStr(nudTimeHour.Value)
         My.Settings.AutoTimeBTTMin = CStr(nudTimeMin.Value)
         My.Settings.AutoTimeBTTSec = CStr(nudTimeSec.Value)
-        My.Settings.AutoTimeBTB1Hour = CStr(nudb1hour.Value)
-        My.Settings.AutoTimeBTB1Min = CStr(nudb1min.Value)
-        My.Settings.AutoTimeBTB1Sec = CStr(nudb1sec.Value)
+
         My.Settings.MWAutoTime = CStr(MinWarnNudBt.Value)
         If AudioRbBt.Checked = True AndAlso VisualRbBt.Checked = False Then
             My.Settings.AudioOrVisual = True
         ElseIf AudioRbBt.Checked = False AndAlso VisualRbBt.Checked = True Then
             My.Settings.AudioOrVisual = False
         End If
-        If TimeRBBt.Checked = True AndAlso BreakRBBt.Checked = False Then
-            My.Settings.SetTimeOrBreak = True
-        ElseIf TimeRBBt.Checked = False AndAlso BreakRBBt.Checked = True Then
-            My.Settings.SetTimeOrBreak = False
-        End If
+
         My.Settings.AutoTimeTTHour = CStr(nudHour.Value)
         My.Settings.AutoTimeTTMin = CStr(nudMin.Value)
         My.Settings.AutoTimeTTSec = CStr(nudSec.Value)
@@ -293,4 +285,8 @@ Public Class SettingsForm
         End If
     End Sub
 
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Throw New NotImplementedException
+
+    End Sub
 End Class

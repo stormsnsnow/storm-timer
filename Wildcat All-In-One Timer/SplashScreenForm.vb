@@ -35,6 +35,7 @@ Public NotInheritable Class SplashScreenForm
         Dim sound As New SoundPlayer
         sound.Stream = My.Resources.startup4
         sound.Play()
+
     End Sub
 
     Private Sub MainLayoutPanel_Paint(sender As Object, e As PaintEventArgs) Handles MainLayoutPanel.Paint

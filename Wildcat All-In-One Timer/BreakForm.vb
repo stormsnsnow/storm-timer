@@ -9,6 +9,9 @@ Public Class BreakForm
     Public setminutes, sethours, setsecs As Integer
     Dim sound As New SoundPlayer
 
+    <DllImport("user32.dll", EntryPoint:="BlockInput")>
+    Private Shared Function BlockInput(<MarshalAs(UnmanagedType.Bool)> ByVal fBlockIt As Boolean) As <MarshalAs(UnmanagedType.Bool)> Boolean
+    End Function
 
     Private Sub FrmBreak_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.BackgroundImage = Image.FromFile(GetCurrentWallpaper())
@@ -21,6 +24,7 @@ Public Class BreakForm
         BreakPanel.BackColor = System.Drawing.ColorTranslator.FromHtml(CStr(My.Settings.BackColor.ToArgb))
         BreakPanel.ForeColor = System.Drawing.ColorTranslator.FromHtml(CStr(My.Settings.ForeColor.ToArgb))
         'Label1.Text = SystemInformation.UserName + ", it's time to take a break."
+        BlockInput(True)
     End Sub
     Public Sub Breaktime()
         Select Case My.Settings.TimeFormat
@@ -118,7 +122,8 @@ Public Class BreakForm
             sound.Stream = My.Resources.breakover4
             sound.Play()
 
-                    My.Computer.Audio.Play(My.Resources.breakover4.ToString)
+            System.Threading.Thread.Sleep(3000)
+            BlockInput(False)
             Application.Restart()
         End If
 
@@ -154,7 +159,4 @@ Public Class BreakForm
 
 
     End Sub
-
-
-
 End Class

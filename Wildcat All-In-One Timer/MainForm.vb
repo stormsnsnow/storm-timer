@@ -32,20 +32,16 @@ Public Class MainForm
     Private ReadOnly SW As New Stopwatch
     Private WithEvents Tmr As New System.Windows.Forms.Timer
     Private ReadOnly timeList As New List(Of Integer)
-    Private Declare Auto Function PlaySound Lib "winmm.dll" (ByVal SoundName As String,
-            ByVal hModule As Integer, ByVal dwFlags As Integer) As Integer
+
 
     Private Sub PlayNow()
         Select Case My.Settings.Sound2
             Case 0
-                Dim fileName As String = String.Concat(My.Resources.minwarn4)
-                Const SND_FILENAME As Integer = &H20000
-                PlaySound(fileName, 0, SND_FILENAME)
+                sound.Stream = My.Resources.minwarn4
+                sound.Play()
             Case 1 Or 2 Or 3
-                Dim fileName As String = String.Concat(My.Settings.Sound2Location)
-                Const SND_FILENAME As Integer = &H20000
-                PlaySound(fileName, 0, SND_FILENAME)
-
+                sound.SoundLocation = My.Settings.Sound2Location
+                sound.Play()
         End Select
 
     End Sub
@@ -58,9 +54,6 @@ Public Class MainForm
         BreakNowButtonBt.Hide()
     End Sub
     Private Sub FrmLAG_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-
-
         TimeBomb.Start()
         TitlePanel.BackColor = System.Drawing.ColorTranslator.FromHtml(CStr(CStr(My.Settings.BackColor.ToArgb)))
         TitlePanel.ForeColor = System.Drawing.ColorTranslator.FromHtml(CStr(My.Settings.ForeColor.ToArgb))
@@ -108,15 +101,12 @@ Public Class MainForm
                 ShutdownTabPage.Show()
 
         End Select
-        ShutdownCbSh.SelectedIndex = CInt(My.Settings.AutoTimeSh)
+
         Tmr.Interval = 100
-        BreakGBBt.Hide()
-        TimerGBBt.Hide()
+
         LapListBoxSw.Items.Clear()
         YDTimer.Start()
-        nudTimeBreakHour.Value = CDec(My.Settings.AutoTimeBTBHour)
-        nudTimeBreakMin.Value = CDec(My.Settings.AutoTimeBTBMin)
-        nudTimeBreakSec.Value = CDec(My.Settings.AutoTimeBTBSec)
+
         nudTimeHour.Value = CDec(My.Settings.AutoTimeBTTHour)
         nudTimeMin.Value = CDec(My.Settings.AutoTimeBTTMin)
         nudTimeSec.Value = CDec(My.Settings.AutoTimeBTTSec)
@@ -131,16 +121,14 @@ Public Class MainForm
             AudioRbBt.Checked = False
             VisualRbBt.Checked = True
         End If
-        If My.Settings.SetTimeOrBreak = True Then
-            BreakGBBt.Hide()
-            TimerGBBt.Show()
-            B1HourNudBT.Value = 0
+
+
+        B1HourNudBT.Value = 0
             nudb1min.Value = 0
             nudb1sec.Value = 0
-        ElseIf My.Settings.SetTimeOrBreak = False Then
-            BreakGBBt.Show()
-            TimerGBBt.Hide()
-            nudTimeBreakMin.Value = 0
+
+
+        nudTimeBreakMin.Value = 0
             nudTimeBreakHour.Value = 0
             nudTimeBreakSec.Value = 0
             nudTimeHour.Value = 0
@@ -149,19 +137,10 @@ Public Class MainForm
             MinWarnNudBt.Value = 1
             AudioRbBt.Checked = False
             VisualRbBt.Checked = False
-        End If
+
         nudHour.Value = CDec(My.Settings.AutoTimeTTHour)
         nudMin.Value = CDec(My.Settings.AutoTimeTTMin)
         nudSec.Value = CDec(My.Settings.AutoTimeTTSec)
-        HourNudSh.Value = CDec(My.Settings.AutoTimeShHour)
-        MinuteNudSh.Value = CDec(My.Settings.AutoTimeShMin)
-        SecondNudSh.Value = CDec(My.Settings.AutoTimeShSec)
-        ShutdownCbSh.SelectedIndex = CInt(My.Settings.AutoTimeSh)
-        If AudioRadioButtonSh.Checked = True AndAlso VisualRadioButtonSh.Checked = False Then
-            My.Settings.AudOrVis = True
-        ElseIf AudioRadioButtonSh.Checked = False AndAlso VisualRadioButtonSh.Checked = True Then
-            My.Settings.AudOrVis = False
-        End If
         lblwelcome.Text = "welcome, " & SystemInformation.UserName
 
     End Sub
@@ -653,11 +632,11 @@ run into an exception if YOU DON'T PRESS YES!", "Time Change Acknowlegement", Me
                         Exit Sub
                     ElseIf Notify = False Then
                         BreakTimer.Stop()
-                        BreakForm.sethours = CInt(nudTimeBreakHour.Value)
-                        BreakForm.hours = BreakForm.sethours + 1
-                        BreakForm.setminutes = CInt(nudTimeBreakMin.Value)
+                        BreakForm.sethours = CInt(B1HourNudBT.Value)
+                        BreakForm.hours = BreakForm.sethours
+                        BreakForm.setminutes = CInt(nudb1min.Value)
                         BreakForm.minutes = BreakForm.setminutes
-                        BreakForm.setsecs = CInt(nudTimeBreakSec.Value)
+                        BreakForm.setsecs = CInt(nudb1sec.Value)
                         BreakForm.seconds = BreakForm.setsecs
                         BreakForm.Show()
                         Me.Hide()
@@ -675,11 +654,11 @@ run into an exception if YOU DON'T PRESS YES!", "Time Change Acknowlegement", Me
                 Exit Sub
             ElseIf Notify = False Then
                 BreakTimer.Stop()
-                BreakForm.sethours = CInt(nudTimeBreakHour.Value)
+                BreakForm.sethours = CInt(B1HourNudBT.Value)
                 BreakForm.hours = BreakForm.sethours
-                BreakForm.setminutes = CInt(nudTimeBreakMin.Value)
+                BreakForm.setminutes = CInt(nudb1min.Value)
                 BreakForm.minutes = BreakForm.setminutes
-                BreakForm.setsecs = CInt(nudTimeBreakSec.Value)
+                BreakForm.setsecs = CInt(nudb1sec.Value)
                 BreakForm.seconds = BreakForm.setsecs
                 BreakForm.Show()
                 Me.Hide()
@@ -688,6 +667,9 @@ run into an exception if YOU DON'T PRESS YES!", "Time Change Acknowlegement", Me
 
     End Sub
 
+    Private Sub BreakGBBt_Enter(sender As Object, e As EventArgs) Handles BreakGBBt.Enter
+
+    End Sub
 
     Private Sub btnLM_Click(sender As Object, e As EventArgs) Handles btnLM.Click
         MessageBox.Show(CStr("After 8 years Of maintaining, this feature will be permanently removed beginning October 3, 2021, the date of when 
