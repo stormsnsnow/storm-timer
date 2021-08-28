@@ -1417,7 +1417,7 @@ Partial Class MainForm
         Me.Label2.ForeColor = System.Drawing.Color.Yellow
         Me.Label2.Location = New System.Drawing.Point(80, 24)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(230, 42)
+        Me.Label2.Size = New System.Drawing.Size(228, 33)
         Me.Label2.TabIndex = 87
         Me.Label2.Text = "This feature will be discontinued" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "in late 2021. Please click on the button for" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) &
     "more information."
@@ -1429,7 +1429,7 @@ Partial Class MainForm
         Me.Label1.ForeColor = System.Drawing.Color.Yellow
         Me.Label1.Location = New System.Drawing.Point(76, 3)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(176, 22)
+        Me.Label1.Size = New System.Drawing.Size(175, 19)
         Me.Label1.TabIndex = 86
         Me.Label1.Text = "Important Notice!"
         '
@@ -1487,7 +1487,7 @@ Partial Class MainForm
         Me.AlarmStatusLabel.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.AlarmStatusLabel.Location = New System.Drawing.Point(211, 122)
         Me.AlarmStatusLabel.Name = "AlarmStatusLabel"
-        Me.AlarmStatusLabel.Size = New System.Drawing.Size(81, 14)
+        Me.AlarmStatusLabel.Size = New System.Drawing.Size(79, 11)
         Me.AlarmStatusLabel.TabIndex = 15
         Me.AlarmStatusLabel.Text = "Alarm Status:"
         '
@@ -1525,7 +1525,7 @@ Partial Class MainForm
         Me.SetOrNotSetLabel.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.SetOrNotSetLabel.Location = New System.Drawing.Point(310, 122)
         Me.SetOrNotSetLabel.Name = "SetOrNotSetLabel"
-        Me.SetOrNotSetLabel.Size = New System.Drawing.Size(99, 14)
+        Me.SetOrNotSetLabel.Size = New System.Drawing.Size(97, 11)
         Me.SetOrNotSetLabel.TabIndex = 10
         Me.SetOrNotSetLabel.Text = "Please set Alarm"
         '
@@ -1583,7 +1583,7 @@ Partial Class MainForm
         Me.Label3.ForeColor = System.Drawing.Color.Yellow
         Me.Label3.Location = New System.Drawing.Point(80, 24)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(230, 42)
+        Me.Label3.Size = New System.Drawing.Size(228, 33)
         Me.Label3.TabIndex = 87
         Me.Label3.Text = "This feature will be discontinued" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "in late 2021. Please click on the button for" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) &
     "more information."
@@ -1595,7 +1595,7 @@ Partial Class MainForm
         Me.Label4.ForeColor = System.Drawing.Color.Yellow
         Me.Label4.Location = New System.Drawing.Point(76, 3)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(176, 22)
+        Me.Label4.Size = New System.Drawing.Size(175, 19)
         Me.Label4.TabIndex = 86
         Me.Label4.Text = "Important Notice!"
         '
@@ -1616,11 +1616,11 @@ Partial Class MainForm
         Me.LapListBoxSw.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LapListBoxSw.ForeColor = System.Drawing.Color.Red
         Me.LapListBoxSw.FormattingEnabled = True
-        Me.LapListBoxSw.ItemHeight = 14
+        Me.LapListBoxSw.ItemHeight = 11
         Me.LapListBoxSw.Location = New System.Drawing.Point(188, 115)
         Me.LapListBoxSw.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.LapListBoxSw.Name = "LapListBoxSw"
-        Me.LapListBoxSw.Size = New System.Drawing.Size(241, 46)
+        Me.LapListBoxSw.Size = New System.Drawing.Size(241, 37)
         Me.LapListBoxSw.TabIndex = 65
         Me.LapListBoxSw.Visible = False
         '
@@ -1662,7 +1662,7 @@ Partial Class MainForm
         Me.StopwatchLabelSW.Location = New System.Drawing.Point(282, 79)
         Me.StopwatchLabelSW.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.StopwatchLabelSW.Name = "StopwatchLabelSW"
-        Me.StopwatchLabelSW.Size = New System.Drawing.Size(39, 14)
+        Me.StopwatchLabelSW.Size = New System.Drawing.Size(37, 11)
         Me.StopwatchLabelSW.TabIndex = 59
         Me.StopwatchLabelSW.Text = "--:--:--"
         Me.StopwatchLabelSW.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1767,7 +1767,7 @@ Partial Class MainForm
         Me.Label5.ForeColor = System.Drawing.Color.Yellow
         Me.Label5.Location = New System.Drawing.Point(273, 14)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(230, 42)
+        Me.Label5.Size = New System.Drawing.Size(228, 33)
         Me.Label5.TabIndex = 87
         Me.Label5.Text = "This feature will be discontinued" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "in late 2021. Please click on the button for" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) &
     "more information."
@@ -1939,7 +1939,7 @@ Partial Class MainForm
         Me.ShutdownCbSh.Location = New System.Drawing.Point(15, 60)
         Me.ShutdownCbSh.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ShutdownCbSh.Name = "ShutdownCbSh"
-        Me.ShutdownCbSh.Size = New System.Drawing.Size(248, 22)
+        Me.ShutdownCbSh.Size = New System.Drawing.Size(248, 19)
         Me.ShutdownCbSh.TabIndex = 100
         '
         'PauseButtonSh
@@ -2183,7 +2183,7 @@ Partial Class MainForm
         Me.TimeAtLabelSh.ForeColor = System.Drawing.Color.Red
         Me.TimeAtLabelSh.Location = New System.Drawing.Point(9, 16)
         Me.TimeAtLabelSh.Name = "TimeAtLabelSh"
-        Me.TimeAtLabelSh.Size = New System.Drawing.Size(36, 14)
+        Me.TimeAtLabelSh.Size = New System.Drawing.Size(34, 11)
         Me.TimeAtLabelSh.TabIndex = 33
         Me.TimeAtLabelSh.Text = "Time:"
         '
@@ -2370,7 +2370,7 @@ Partial Class MainForm
         '
         'MainForm
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 14.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 11.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(635, 388)
         Me.Controls.Add(Me.TitlePanel)
@@ -2382,7 +2382,7 @@ Partial Class MainForm
         Me.MaximizeBox = False
         Me.Name = "MainForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "BreakTime - v21H2A3- Released on August 24, 2021"
+        Me.Text = "BreakTime - v21H2A3- Released on August 28, 2021"
         Me.TimerControl.ResumeLayout(False)
         Me.BreakTimerTab.ResumeLayout(False)
         Me.BSTGroupBoxBT.ResumeLayout(False)

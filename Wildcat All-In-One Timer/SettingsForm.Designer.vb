@@ -115,6 +115,10 @@ Partial Class SettingsForm
         Me.RTextBoxFC = New System.Windows.Forms.TextBox()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
+        Me.Security = New System.Windows.Forms.TabPage()
+        Me.OffRB = New System.Windows.Forms.RadioButton()
+        Me.HardcoreLabel = New System.Windows.Forms.Label()
+        Me.HardCoreRadioButton = New System.Windows.Forms.RadioButton()
         Me.About.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Sounds.SuspendLayout()
@@ -143,6 +147,7 @@ Partial Class SettingsForm
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
+        Me.Security.SuspendLayout()
         Me.SuspendLayout()
         '
         'SaveButtonSettings
@@ -174,13 +179,11 @@ Partial Class SettingsForm
         '
         'About
         '
-        Me.About.BackColor = System.Drawing.Color.Yellow
         Me.About.Controls.Add(Me.Button3)
         Me.About.Controls.Add(Me.PictureBox1)
         Me.About.Controls.Add(Me.BtnLicense)
         Me.About.Controls.Add(Me.lblVersion)
         Me.About.Controls.Add(Me.lblName)
-        Me.About.ForeColor = System.Drawing.Color.Gold
         Me.About.ImageKey = "2139.png"
         Me.About.Location = New System.Drawing.Point(4, 23)
         Me.About.Name = "About"
@@ -191,7 +194,6 @@ Partial Class SettingsForm
         'Button3
         '
         Me.Button3.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button3.Location = New System.Drawing.Point(184, 71)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(75, 40)
@@ -212,7 +214,6 @@ Partial Class SettingsForm
         'BtnLicense
         '
         Me.BtnLicense.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnLicense.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnLicense.Location = New System.Drawing.Point(265, 71)
         Me.BtnLicense.Name = "BtnLicense"
         Me.BtnLicense.Size = New System.Drawing.Size(75, 40)
@@ -223,12 +224,11 @@ Partial Class SettingsForm
         'lblVersion
         '
         Me.lblVersion.AutoSize = True
-        Me.lblVersion.ForeColor = System.Drawing.Color.Gold
         Me.lblVersion.Location = New System.Drawing.Point(182, 32)
         Me.lblVersion.Name = "lblVersion"
         Me.lblVersion.Size = New System.Drawing.Size(132, 36)
         Me.lblVersion.TabIndex = 29
-        Me.lblVersion.Text = "v21H2 " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Alpha Two" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Released August 22, 2021"
+        Me.lblVersion.Text = "v21H2 " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Alpha Three" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Released August 28, 2021"
         Me.lblVersion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'lblName
@@ -237,13 +237,12 @@ Partial Class SettingsForm
         Me.lblName.Font = New System.Drawing.Font("Helvetica", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblName.Location = New System.Drawing.Point(181, 11)
         Me.lblName.Name = "lblName"
-        Me.lblName.Size = New System.Drawing.Size(110, 22)
+        Me.lblName.Size = New System.Drawing.Size(109, 19)
         Me.lblName.TabIndex = 28
         Me.lblName.Text = "BreakTime"
         '
         'Sounds
         '
-        Me.Sounds.BackColor = System.Drawing.Color.Yellow
         Me.Sounds.Controls.Add(Me.BTBrowse)
         Me.Sounds.Controls.Add(Me.Label10)
         Me.Sounds.Controls.Add(Me.BTComboBoxSounds)
@@ -263,7 +262,6 @@ Partial Class SettingsForm
         '
         'BTBrowse
         '
-        Me.BTBrowse.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BTBrowse.Location = New System.Drawing.Point(224, 144)
         Me.BTBrowse.Name = "BTBrowse"
         Me.BTBrowse.Size = New System.Drawing.Size(75, 23)
@@ -291,7 +289,6 @@ Partial Class SettingsForm
         '
         'Button2
         '
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button2.Location = New System.Drawing.Point(224, 114)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 23)
@@ -301,7 +298,6 @@ Partial Class SettingsForm
         '
         'Button1
         '
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Location = New System.Drawing.Point(224, 83)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
@@ -357,7 +353,6 @@ Partial Class SettingsForm
         '
         'AutoTime
         '
-        Me.AutoTime.BackColor = System.Drawing.Color.Yellow
         Me.AutoTime.Controls.Add(Me.TimerControl)
         Me.AutoTime.Controls.Add(Me.AutoTimeInstructionsLabelAt)
         Me.AutoTime.ImageKey = "favicon (6).ico"
@@ -570,11 +565,11 @@ Partial Class SettingsForm
         '
         Me.ImageList1.ImageStream = CType(resources.GetObject("ImageList1.ImageStream"), System.Windows.Forms.ImageListStreamer)
         Me.ImageList1.TransparentColor = System.Drawing.Color.Transparent
-        Me.ImageList1.Images.SetKeyName(0, "favicon (5).ico")
-        Me.ImageList1.Images.SetKeyName(1, "1F50A.png")
+        Me.ImageList1.Images.SetKeyName(0, "break.ico")
+        Me.ImageList1.Images.SetKeyName(1, "soundplay.ico")
         Me.ImageList1.Images.SetKeyName(2, "2139.png")
         Me.ImageList1.Images.SetKeyName(3, "2699.png")
-        Me.ImageList1.Images.SetKeyName(4, "favicon (6).ico")
+        Me.ImageList1.Images.SetKeyName(4, "time.ico")
         Me.ImageList1.Images.SetKeyName(5, "1F50C.png")
         Me.ImageList1.Images.SetKeyName(6, "favicon (4).ico")
         '
@@ -777,10 +772,10 @@ Partial Class SettingsForm
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Tahoma", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Font = New System.Drawing.Font("Helvetica", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(13, 13)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(117, 23)
+        Me.Label3.Size = New System.Drawing.Size(113, 19)
         Me.Label3.TabIndex = 15
         Me.Label3.Text = "WARNING!"
         '
@@ -809,6 +804,7 @@ Partial Class SettingsForm
         Me.SettingsTC.Controls.Add(Me.Personalization)
         Me.SettingsTC.Controls.Add(Me.Sounds)
         Me.SettingsTC.Controls.Add(Me.About)
+        Me.SettingsTC.Controls.Add(Me.Security)
         Me.SettingsTC.Dock = System.Windows.Forms.DockStyle.Top
         Me.SettingsTC.ImageList = Me.ImageList1
         Me.SettingsTC.Location = New System.Drawing.Point(0, 0)
@@ -819,7 +815,6 @@ Partial Class SettingsForm
         '
         'Personalization
         '
-        Me.Personalization.BackColor = System.Drawing.Color.Yellow
         Me.Personalization.Controls.Add(Me.TabControl1)
         Me.Personalization.Controls.Add(Me.Label9)
         Me.Personalization.ImageIndex = 6
@@ -1071,19 +1066,63 @@ Partial Class SettingsForm
         Me.Label9.TabIndex = 3
         Me.Label9.Text = "Pick your colors!"
         '
+        'Security
+        '
+        Me.Security.Controls.Add(Me.OffRB)
+        Me.Security.Controls.Add(Me.HardcoreLabel)
+        Me.Security.Controls.Add(Me.HardCoreRadioButton)
+        Me.Security.Location = New System.Drawing.Point(4, 23)
+        Me.Security.Name = "Security"
+        Me.Security.Padding = New System.Windows.Forms.Padding(3)
+        Me.Security.Size = New System.Drawing.Size(496, 267)
+        Me.Security.TabIndex = 8
+        Me.Security.Text = "Security"
+        Me.Security.UseVisualStyleBackColor = True
+        '
+        'OffRB
+        '
+        Me.OffRB.AutoSize = True
+        Me.OffRB.Location = New System.Drawing.Point(52, 79)
+        Me.OffRB.Name = "OffRB"
+        Me.OffRB.Size = New System.Drawing.Size(38, 16)
+        Me.OffRB.TabIndex = 2
+        Me.OffRB.TabStop = True
+        Me.OffRB.Text = "Off"
+        Me.OffRB.UseVisualStyleBackColor = True
+        '
+        'HardcoreLabel
+        '
+        Me.HardcoreLabel.AutoSize = True
+        Me.HardcoreLabel.Location = New System.Drawing.Point(4, 4)
+        Me.HardcoreLabel.Name = "HardcoreLabel"
+        Me.HardcoreLabel.Size = New System.Drawing.Size(205, 72)
+        Me.HardcoreLabel.TabIndex = 1
+        Me.HardcoreLabel.Text = "Hardcore Mode" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Hardcore Mode turns the application" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "into a lockdown browser disab" &
+    "ling ALL" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "key input and preventing unlock or pause" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "functions." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "You can also pro" &
+    "vide a captcha to solve!"
+        '
+        'HardCoreRadioButton
+        '
+        Me.HardCoreRadioButton.AutoSize = True
+        Me.HardCoreRadioButton.Location = New System.Drawing.Point(8, 79)
+        Me.HardCoreRadioButton.Name = "HardCoreRadioButton"
+        Me.HardCoreRadioButton.Size = New System.Drawing.Size(38, 16)
+        Me.HardCoreRadioButton.TabIndex = 0
+        Me.HardCoreRadioButton.TabStop = True
+        Me.HardCoreRadioButton.Text = "On"
+        Me.HardCoreRadioButton.UseVisualStyleBackColor = True
+        '
         'SettingsForm
         '
         Me.AcceptButton = Me.SaveButtonSettings
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.Yellow
         Me.CancelButton = Me.CancelButtonSettings
         Me.ClientSize = New System.Drawing.Size(504, 350)
         Me.Controls.Add(Me.CancelButtonSettings)
         Me.Controls.Add(Me.SaveButtonSettings)
         Me.Controls.Add(Me.SettingsTC)
         Me.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ForeColor = System.Drawing.Color.Gold
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
@@ -1129,6 +1168,8 @@ Partial Class SettingsForm
         Me.TabPage1.PerformLayout()
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
+        Me.Security.ResumeLayout(False)
+        Me.Security.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1224,4 +1265,8 @@ Partial Class SettingsForm
     Friend WithEvents Label17 As Label
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Button3 As Button
+    Friend WithEvents Security As TabPage
+    Friend WithEvents OffRB As RadioButton
+    Friend WithEvents HardcoreLabel As Label
+    Friend WithEvents HardCoreRadioButton As RadioButton
 End Class

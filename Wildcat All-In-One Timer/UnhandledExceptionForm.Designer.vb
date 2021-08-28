@@ -47,7 +47,7 @@ Partial Class UnhandledExceptionForm
         Me.ConciseErrorLabel.Font = New System.Drawing.Font("Helvetica", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ConciseErrorLabel.Location = New System.Drawing.Point(83, 12)
         Me.ConciseErrorLabel.Name = "ConciseErrorLabel"
-        Me.ConciseErrorLabel.Size = New System.Drawing.Size(356, 19)
+        Me.ConciseErrorLabel.Size = New System.Drawing.Size(356, 22)
         Me.ConciseErrorLabel.TabIndex = 1
         Me.ConciseErrorLabel.Text = "Unfortunately, BreakTime must close"
         '
@@ -90,7 +90,6 @@ Partial Class UnhandledExceptionForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.Yellow
         Me.ClientSize = New System.Drawing.Size(457, 152)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.ExitButton)
@@ -98,7 +97,6 @@ Partial Class UnhandledExceptionForm
         Me.Controls.Add(Me.ConciseErrorLabel)
         Me.Controls.Add(Me.StopWDLCTImage)
         Me.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ForeColor = System.Drawing.Color.Gold
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False

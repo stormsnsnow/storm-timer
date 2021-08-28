@@ -1,7 +1,7 @@
 ﻿Imports System.Globalization
 Imports Microsoft.VisualBasic.ApplicationServices
 Imports Microsoft.VisualBasic.Devices
-Imports System.Security.Cryptography.X509Certificates
+
 
 Namespace My
     ' The following events are available for MyApplication:
