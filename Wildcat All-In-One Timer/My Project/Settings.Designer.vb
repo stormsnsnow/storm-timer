@@ -365,6 +365,18 @@ Namespace My
                 Me("BTSound") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property HardCoreMode() As String
+            Get
+                Return CType(Me("HardCoreMode"),String)
+            End Get
+            Set
+                Me("HardCoreMode") = value
+            End Set
+        End Property
     End Class
 End Namespace
 

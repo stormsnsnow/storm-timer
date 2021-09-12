@@ -1,10 +1,15 @@
 ﻿Imports System.Globalization
 Imports System.IO
 Imports System.Net
+Imports System.Drawing
+Imports System.Drawing.Printing
+Imports System.Windows.Forms
 Imports System.Text
 
 Public Class SettingsForm
-
+    Private WithEvents printButton As System.Windows.Forms.Button
+    Private printFont As Font
+    Private streamToPrint As StreamReader
     Private Sub Settings_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.BackColor = System.Drawing.ColorTranslator.FromHtml(CStr(My.Settings.BackColor.ToArgb))
         Me.ForeColor = System.Drawing.ColorTranslator.FromHtml(CStr(My.Settings.ForeColor.ToArgb))
@@ -288,5 +293,65 @@ Public Class SettingsForm
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         Throw New NotImplementedException
 
+    End Sub
+
+    Private Sub HardCoreRadioButton_CheckedChanged(sender As Object, e As EventArgs) Handles HardCoreRadioButton.CheckedChanged
+
+        Dim stp As New StreamWriter(Application.StartupPath & "\code.txt")
+        Dim stpa As String
+        stpa = Rnd(5).ToString("######")
+        stp.WriteLine("BreakTime Security Code: " & vbCrLf & "Please enter the following code into the dialog box: " & stpa)
+        stp.Close()
+
+        Try
+            streamToPrint = New StreamReader(Application.StartupPath & "\code.txt")
+            Try
+                printFont = New Font("Cooper Black", 10)
+                Dim pd As New PrintDocument()
+                AddHandler pd.PrintPage, AddressOf Me.pd_PrintPage
+                pd.Print()
+            Finally
+                streamToPrint.Close()
+            End Try
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+        If InputBox("Please input the code that was sent to your default printer. Press OK to continue.") = stpa Then
+            My.Settings.HardCoreMode = True
+            My.Settings.Save()
+            HardCoreRadioButton.Checked = True
+
+        End If
+    End Sub
+
+    Private Sub pd_PrintPage(sender As Object, ev As PrintPageEventArgs) Handles PrintDocument1.PrintPage
+        Dim linesPerPage As Single = 0
+        Dim yPos As Single = 0
+        Dim count As Integer = 0
+        Dim leftMargin As Single = ev.MarginBounds.Left
+        Dim topMargin As Single = ev.MarginBounds.Top
+        Dim line As String = Nothing
+
+        ' Calculate the number of lines per page.
+        linesPerPage = ev.MarginBounds.Height / printFont.GetHeight(ev.Graphics)
+
+        ' Print each line of the file.
+        While count < linesPerPage
+            line = streamToPrint.ReadLine()
+            If line Is Nothing Then
+                Exit While
+            End If
+            yPos = topMargin + count * printFont.GetHeight(ev.Graphics)
+            ev.Graphics.DrawString(line, printFont, Brushes.Black, leftMargin, yPos, New StringFormat())
+            count += 1
+        End While
+
+        ' If more lines exist, print another page.
+        If (line IsNot Nothing) Then
+
+            ev.HasMorePages = True
+        Else
+            ev.HasMorePages = False
+        End If
     End Sub
 End Class

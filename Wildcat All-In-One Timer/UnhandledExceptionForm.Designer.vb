@@ -44,20 +44,20 @@ Partial Class UnhandledExceptionForm
         'ConciseErrorLabel
         '
         Me.ConciseErrorLabel.AutoSize = True
-        Me.ConciseErrorLabel.Font = New System.Drawing.Font("Helvetica", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ConciseErrorLabel.Font = New System.Drawing.Font("Cooper Black", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ConciseErrorLabel.Location = New System.Drawing.Point(83, 12)
         Me.ConciseErrorLabel.Name = "ConciseErrorLabel"
-        Me.ConciseErrorLabel.Size = New System.Drawing.Size(356, 22)
+        Me.ConciseErrorLabel.Size = New System.Drawing.Size(376, 21)
         Me.ConciseErrorLabel.TabIndex = 1
         Me.ConciseErrorLabel.Text = "Unfortunately, BreakTime must close"
         '
         'DetailedErrorLabel
         '
         Me.DetailedErrorLabel.AutoSize = True
-        Me.DetailedErrorLabel.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DetailedErrorLabel.Font = New System.Drawing.Font("Cooper Black", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DetailedErrorLabel.Location = New System.Drawing.Point(85, 31)
         Me.DetailedErrorLabel.Name = "DetailedErrorLabel"
-        Me.DetailedErrorLabel.Size = New System.Drawing.Size(199, 36)
+        Me.DetailedErrorLabel.Size = New System.Drawing.Size(231, 39)
         Me.DetailedErrorLabel.TabIndex = 2
         Me.DetailedErrorLabel.Text = "An unhandled exception has occured" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "that caused the application to " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "close. We ar" &
     "e sorry for the inconvience."
@@ -65,11 +65,10 @@ Partial Class UnhandledExceptionForm
         'ExitButton
         '
         Me.ExitButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.ExitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ExitButton.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ExitButton.Location = New System.Drawing.Point(370, 119)
+        Me.ExitButton.Font = New System.Drawing.Font("Cooper Black", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ExitButton.Location = New System.Drawing.Point(412, 39)
         Me.ExitButton.Name = "ExitButton"
-        Me.ExitButton.Size = New System.Drawing.Size(75, 21)
+        Me.ExitButton.Size = New System.Drawing.Size(75, 49)
         Me.ExitButton.TabIndex = 5
         Me.ExitButton.Text = "Exit"
         Me.ExitButton.UseVisualStyleBackColor = True
@@ -77,11 +76,10 @@ Partial Class UnhandledExceptionForm
         'Button1
         '
         Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(289, 119)
+        Me.Button1.Font = New System.Drawing.Font("Cooper Black", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Location = New System.Drawing.Point(331, 39)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 21)
+        Me.Button1.Size = New System.Drawing.Size(75, 49)
         Me.Button1.TabIndex = 6
         Me.Button1.Text = "See Details"
         Me.Button1.UseVisualStyleBackColor = True
@@ -90,7 +88,7 @@ Partial Class UnhandledExceptionForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(457, 152)
+        Me.ClientSize = New System.Drawing.Size(499, 100)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.ExitButton)
         Me.Controls.Add(Me.DetailedErrorLabel)

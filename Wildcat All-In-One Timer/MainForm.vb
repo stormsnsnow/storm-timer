@@ -1,5 +1,4 @@
-﻿Option Strict On
-Imports System.Globalization
+﻿Imports System.Globalization
 Imports System
 Imports System.IO
 Imports System.Text
@@ -73,20 +72,10 @@ Public Class MainForm
         TimerControl.ForeColor = System.Drawing.ColorTranslator.FromHtml(CStr(My.Settings.ForeColor.ToArgb))
         TimerControl.BackColor = System.Drawing.ColorTranslator.FromHtml(CStr(My.Settings.BackColor.ToArgb))
 
-        If ShutdownCbSh.SelectedItem Is Nothing Then
-            AtRadioButtonSh.Hide()
-            InRadioButtonSh.Hide()
-            InSettingsGBSH.Hide()
-            AtSettingsGBSH.Hide()
-        ElseIf Not ShutdownCbSh.SelectedItem Is Nothing Then
-            AtRadioButtonSh.Show()
-            InRadioButtonSh.Show()
-            InSettingsGBSH.Show()
-            AtSettingsGBSH.Show()
-        End If
+
         DateTimeTillShutdownLabelSh.Hide()
         InSettingsGBSH.Hide()
-        AtSettingsGBSH.Hide()
+
 
         Select Case My.Settings.Startup
             Case 0
@@ -312,30 +301,19 @@ Public Class MainForm
     End Sub
 
     Private Sub StartButtonSh_Click(sender As Object, e As EventArgs) Handles StartButtonSh.Click
-        If HourNudSh.Value = 0 AndAlso MinuteNudSh.Value = 0 AndAlso SecondNudSh.Value = 0 AndAlso HourAtNudSh.Value = 0 AndAlso MinuteAtNudSh.Value = 0 Then
+        If HourNudSh.Value = 0 AndAlso MinuteNudSh.Value = 0 AndAlso SecondNudSh.Value = 0 Then
             Exit Sub
         Else
 
         End If
 
-        If String.Compare(Now.ToString("HH"), CStr(HourAtNudSh.Value)) > 0 Then
-            If String.Compare(Now.ToString("mm"), CStr(HourAtNudSh.Value)) > 0 Then
-
-                MessageBox.Show("The time right now is past the time you have selected.", "Past Time", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                ShutdownTimer.Stop()
-                Exit Sub
-            End If
-        End If
 
         TimerTab.Enabled = False
         StopWatchTab.Enabled = False
         AlarmClockTab.Enabled = False
         BreakTimerTab.Enabled = False
         InSettingsGBSH.Hide()
-        AtSettingsGBSH.Hide()
-        InRadioButtonSh.Hide()
-        AtRadioButtonSh.Hide()
-        ShutdownCbSh.Hide()
+
         Me.WindowState = FormWindowState.Minimized
         ShutdownTimer.Enabled = True
         ShutdownTimer.Start()
@@ -376,96 +354,7 @@ Public Class MainForm
         End If
     End Function
 
-    Private Sub ShutdownAt()
-        DateTimeTillShutdownLabelSh.Show()
-        DateTimeTillShutdownLabelSh.Text = FormatTo2Digits(CInt(HourAtNudSh.Value)) + ":" + FormatTo2Digits(CInt(MinuteAtNudSh.Value)) + ":" + FormatTo2Digits(0)
-        'special case of set min = 0 and one less is 59
-        Dim warningTime As Integer
-        If MinuteAtNudSh.Value = 0 Then
-            warningTime = 59
-        Else
-            warningTime = CInt(MinuteAtNudSh.Value - 1)
-        End If
 
-
-        If String.Compare(Now.Hour.ToString, HourAtNudSh.Value.ToString) = 0 Then
-            If String.Compare(Now.Minute.ToString, warningTime.ToString) = 0 Then
-
-                If Notify = False Then
-                    Dim remain As Integer = 60 - Now.Second
-
-                    If PopHide = False Then
-                        ShutdownTimer.Stop()
-
-                        If MessageBox.Show(CStr(CDbl(ShutdownCbSh.SelectedItem) + CDbl(" in ") + remain + CDbl(" seconds. Do you want to ") + CDbl(ShutdownCbSh.SelectedItem) + CDbl(" now?")), CStr("Minwarn"), MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) = DialogResult.Yes Then
-                            Me.Show()
-                            ShutdownTimer.Stop()
-
-                            Select Case ShutdownCbSh.SelectedIndex
-                                Case 0
-                                    Me.Close()
-                                    WindowsController.ExitWindows(RestartOptions.LogOff, True)
-                                Case 1
-                                    Me.Close()
-                                    WindowsController.ExitWindows(RestartOptions.PowerOff, True)
-                                Case 2
-                                    Me.Close()
-                                    WindowsController.ExitWindows(RestartOptions.Reboot, True)
-                                Case 3
-                                    Me.Close()
-                                    WindowsController.ExitWindows(RestartOptions.ShutDown, True)
-                                Case 4
-                                    Me.Close()
-                                    WindowsController.ExitWindows(RestartOptions.Suspend, True)
-                                Case 5
-                                    Me.Close()
-                                    WindowsController.ExitWindows(RestartOptions.Hibernate, True)
-                            End Select
-                        ElseIf CBool(DialogResult.No) Then
-                            ShutdownTimer.Start()
-                        End If
-                        If Notify = False Then
-
-                            PlayNow()
-                            Notify = True
-                        End If
-                    End If
-
-                End If
-
-            End If
-        End If
-
-        If String.Compare(Now.Hour.ToString, HourAtNudSh.Value.ToString) = 0 Then
-
-            If String.Compare(Now.Minute.ToString, MinuteAtNudSh.Value.ToString) = 0 Then
-
-                Me.Show()
-                ShutdownTimer.Stop()
-
-                Select Case ShutdownCbSh.SelectedIndex
-                    Case 0
-                        Me.Close()
-                        WindowsController.ExitWindows(RestartOptions.LogOff, True)
-                    Case 1
-                        Me.Close()
-                        WindowsController.ExitWindows(RestartOptions.PowerOff, True)
-                    Case 2
-                        Me.Close()
-                        WindowsController.ExitWindows(RestartOptions.Reboot, True)
-                    Case 3
-                        Me.Close()
-                        WindowsController.ExitWindows(RestartOptions.ShutDown, True)
-                    Case 4
-                        Me.Close()
-                        WindowsController.ExitWindows(RestartOptions.Suspend, True)
-                    Case 5
-                        Me.Close()
-                        WindowsController.ExitWindows(RestartOptions.Hibernate, True)
-                End Select
-            End If
-        End If
-    End Sub
 
     Private Sub YDTimer_Tick(sender As Object, e As EventArgs) Handles YDTimer.Tick
         Select Case My.Settings.TimeFormat
@@ -519,52 +408,20 @@ Public Class MainForm
     End Sub
 
 
-    Private Sub AtRadioButtonSh_CheckedChanged(sender As Object, e As EventArgs) Handles AtRadioButtonSh.CheckedChanged
-        If AtRadioButtonSh.Checked = True Then
-            AtSettingsGBSH.Show()
-            InSettingsGBSH.Hide()
-        ElseIf InRadioButtonSh.Checked = True Then
-            AtSettingsGBSH.Hide()
-            InSettingsGBSH.Show()
-        End If
-    End Sub
-
-    Private Sub InRadioButtonSh_CheckedChanged(sender As Object, e As EventArgs) Handles InRadioButtonSh.CheckedChanged
-        If AtRadioButtonSh.Checked = True Then
-            AtSettingsGBSH.Show()
-            InSettingsGBSH.Hide()
-        ElseIf InRadioButtonSh.Checked = True Then
-            AtSettingsGBSH.Hide()
-            InSettingsGBSH.Show()
-        End If
-    End Sub
-
-    Private Sub ShutdownCbSh_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ShutdownCbSh.SelectedIndexChanged
-        If ShutdownCbSh.SelectedItem Is Nothing Then
-            AtRadioButtonSh.Hide()
-            InRadioButtonSh.Hide()
-        ElseIf Not ShutdownCbSh.SelectedItem Is Nothing Then
-            AtRadioButtonSh.Show()
-            InRadioButtonSh.Show()
-
-        End If
-    End Sub
 
 
-
-    Private Sub Nudb1hour_ValueChanged(sender As Object, e As EventArgs)
+    Private Sub Nudb1hour_ValueChanged(sender As Object, e As EventArgs) Handles B1HourNudBT.ValueChanged
 
         BreakTimeLabelBT.Text = B1HourNudBT.Value.ToString("0#") & ":" & nudb1min.Value.ToString("0#") & ":" & nudb1sec.Value.ToString("0#")
     End Sub
 
-    Private Sub Nudb1min_ValueChanged(sender As Object, e As EventArgs)
+    Private Sub Nudb1min_ValueChanged(sender As Object, e As EventArgs) Handles nudb1min.ValueChanged
+
 
         BreakTimeLabelBT.Text = B1HourNudBT.Value.ToString("0#") & ":" & nudb1min.Value.ToString("0#") & ":" & nudb1sec.Value.ToString("0#")
     End Sub
 
-    Private Sub Nudb1sec_ValueChanged(sender As Object, e As EventArgs)
-
-
+    Private Sub Nudb1sec_ValueChanged(sender As Object, e As EventArgs) Handles nudb1sec.ValueChanged
         BreakTimeLabelBT.Text = B1HourNudBT.Value.ToString("0#") & ":" & nudb1min.Value.ToString("0#") & ":" & nudb1sec.Value.ToString("0#")
     End Sub
 
@@ -684,14 +541,9 @@ when BreakTime will be released. You can still use this feature, but PLEASE DO N
 
 
     Private Sub ShutdownTimer_Tick(sender As Object, e As EventArgs) Handles ShutdownTimer.Tick
-        If InRadioButtonSh.Checked = True Then
-            ShutdownIn()
-        ElseIf AtRadioButtonSh.Checked = True Then
-            ShutdownAt()
-        Else
-            MsgBox("You must select either to shutdown at a specified time or in a number of minutes in order to start your time.", MsgBoxStyle.Critical, "Selection Error")
-            Exit Sub
-        End If
+
+        ShutdownIn()
+
     End Sub
     Private Sub ShutdownIn()
         If secsh > 0 Then
@@ -718,26 +570,10 @@ when BreakTime will be released. You can still use this feature, but PLEASE DO N
         Else
             Me.Show()
             ShutdownTimer.Stop()
-            Select Case ShutdownCbSh.SelectedIndex
-                Case 0
-                    Me.Close()
-                    WindowsController.ExitWindows(RestartOptions.LogOff, True)
-                Case 1
-                    Me.Close()
-                    WindowsController.ExitWindows(RestartOptions.PowerOff, True)
-                Case 2
-                    Me.Close()
-                    WindowsController.ExitWindows(RestartOptions.Reboot, True)
-                Case 3
-                    Me.Close()
-                    WindowsController.ExitWindows(RestartOptions.ShutDown, True)
-                Case 4
-                    Me.Close()
-                    WindowsController.ExitWindows(RestartOptions.Suspend, True)
-                Case 5
-                    Me.Close()
-                    WindowsController.ExitWindows(RestartOptions.Hibernate, True)
-            End Select
+
+            Me.Close()
+                WindowsController.ExitWindows(RestartOptions.ShutDown, True)
+
         End If
         Select Case MinWarnNudBt.Value
             Case 1
@@ -751,29 +587,14 @@ when BreakTime will be released. You can still use this feature, but PLEASE DO N
                             PlayNow()
                             BreakTimer.Stop()
 
-                            If MessageBox.Show(CStr(CDbl(ShutdownCbSh.SelectedItem) + CDbl(" will start in ") + remain + CDbl(" seconds. Click OK to start breaktime now. Otherwise, click Cancel to continue the timer.")), CStr("MinWarn Alert"), MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation) = DialogResult.OK Then
+                            If MessageBox.Show(CStr(CDbl("Shutdown") + CDbl(" will start in ") + remain + CDbl(" seconds. Click OK to start breaktime now. Otherwise, click Cancel to continue the timer.")), CStr("MinWarn Alert"), MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation) = DialogResult.OK Then
                                 Me.Show()
                                 ShutdownTimer.Stop()
-                                Select Case ShutdownCbSh.SelectedIndex
-                                    Case 0
-                                        Me.Close()
-                                        WindowsController.ExitWindows(RestartOptions.LogOff, True)
-                                    Case 1
-                                        Me.Close()
-                                        WindowsController.ExitWindows(RestartOptions.PowerOff, True)
-                                    Case 2
-                                        Me.Close()
-                                        WindowsController.ExitWindows(RestartOptions.Reboot, True)
-                                    Case 3
-                                        Me.Close()
+
+                                Me.Close()
                                         WindowsController.ExitWindows(RestartOptions.ShutDown, True)
-                                    Case 4
-                                        Me.Close()
-                                        WindowsController.ExitWindows(RestartOptions.Suspend, True)
-                                    Case 5
-                                        Me.Close()
-                                        WindowsController.ExitWindows(RestartOptions.Hibernate, True)
-                                End Select
+
+
                             ElseIf CBool(DialogResult.Cancel) Then
                                 ShutdownTimer.Start()
                                 Notify = True
@@ -794,30 +615,14 @@ when BreakTime will be released. You can still use this feature, but PLEASE DO N
                         ElseIf AudioRadioButtonSh.Checked = False AndAlso VisualRadioButtonSh.Checked = True Then
                             PlayNow()
                             BreakTimer.Stop()
-                            Dim mes As String = CStr(MessageBox.Show(DirectCast(ShutdownCbSh.SelectedItem, Double) & " will start in " & minsh & " minutes and " & remain & " seconds. Click OK to start breaktime now. Otherwise, click Cancel to continue the timer.", "MinWarn Alert", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation))
+                            Dim mes As String = CStr(MessageBox.Show("The computer WILL Shut down in " & minsh & " minutes and " & remain & " seconds. Click OK to start breaktime now. Otherwise, click Cancel to continue the timer.", "MinWarn Alert", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation))
                             If CDbl(mes) = DialogResult.OK Then
                                 Me.Show()
                                 ShutdownTimer.Stop()
-                                Select Case ShutdownCbSh.SelectedIndex
-                                    Case 0
-                                        Me.Close()
-                                        WindowsController.ExitWindows(RestartOptions.LogOff, True)
-                                    Case 1
-                                        Me.Close()
-                                        WindowsController.ExitWindows(RestartOptions.PowerOff, True)
-                                    Case 2
-                                        Me.Close()
-                                        WindowsController.ExitWindows(RestartOptions.Reboot, True)
-                                    Case 3
-                                        Me.Close()
+
+                                Me.Close()
                                         WindowsController.ExitWindows(RestartOptions.ShutDown, True)
-                                    Case 4
-                                        Me.Close()
-                                        WindowsController.ExitWindows(RestartOptions.Suspend, True)
-                                    Case 5
-                                        Me.Close()
-                                        WindowsController.ExitWindows(RestartOptions.Hibernate, True)
-                                End Select
+
                             ElseIf CDbl(mes) = DialogResult.Cancel Then
                                 ShutdownTimer.Start()
                                 Notify = True
@@ -835,30 +640,14 @@ when BreakTime will be released. You can still use this feature, but PLEASE DO N
                         ElseIf AudioRadioButtonSh.Checked = False AndAlso VisualRadioButtonSh.Checked = True Then
                             PlayNow()
                             ShutdownTimer.Stop()
-                            Dim mes As String = CStr(MessageBox.Show(DirectCast(ShutdownCbSh.SelectedItem, String) & " will start in " & minsh & " minutes and " & remain & " seconds. Click OK to start breaktime now. Otherwise, click Cancel to continue the timer.", "MinWarn Alert", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation))
+                            Dim mes As String = CStr(MessageBox.Show("The computer WILL shut down In " & minsh & " minutes And " & remain & " seconds. Click OK To start breaktime now. Otherwise, Click Cancel To Continue the timer.", "MinWarn Alert", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation))
                             If CDbl(mes) = DialogResult.OK Then
                                 Me.Show()
                                 ShutdownTimer.Stop()
-                                Select Case ShutdownCbSh.SelectedIndex
-                                    Case 0
-                                        Me.Close()
-                                        WindowsController.ExitWindows(RestartOptions.LogOff, True)
-                                    Case 1
-                                        Me.Close()
-                                        WindowsController.ExitWindows(RestartOptions.PowerOff, True)
-                                    Case 2
-                                        Me.Close()
-                                        WindowsController.ExitWindows(RestartOptions.Reboot, True)
-                                    Case 3
-                                        Me.Close()
+
+                                Me.Close()
                                         WindowsController.ExitWindows(RestartOptions.ShutDown, True)
-                                    Case 4
-                                        Me.Close()
-                                        WindowsController.ExitWindows(RestartOptions.Suspend, True)
-                                    Case 5
-                                        Me.Close()
-                                        WindowsController.ExitWindows(RestartOptions.Hibernate, True)
-                                End Select
+
                             ElseIf CDbl(mes) = DialogResult.Cancel Then
                                 ShutdownTimer.Start()
                                 Notify = True
@@ -876,30 +665,15 @@ when BreakTime will be released. You can still use this feature, but PLEASE DO N
                         ElseIf AudioRadioButtonSh.Checked = False AndAlso VisualRadioButtonSh.Checked = True Then
                             PlayNow()
                             ShutdownTimer.Stop()
-                            Dim mes As String = CStr(MessageBox.Show(DirectCast(ShutdownCbSh.SelectedItem, String) & " will start in " & minsh & " minutes and " & remain & " seconds. Click OK to start breaktime now. Otherwise, click Cancel to continue the timer.", "MinWarn Alert", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation))
+                            Dim mes As String = CStr(MessageBox.Show("The computer WILL shutdown in " & minsh & " minutes And " & remain & " seconds. Click OK To start breaktime now. Otherwise, Click Cancel To Continue the timer.", "MinWarn Alert", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation))
                             If CDbl(mes) = DialogResult.OK Then
                                 Me.Show()
                                 ShutdownTimer.Stop()
-                                Select Case ShutdownCbSh.SelectedIndex
-                                    Case 0
-                                        Me.Close()
-                                        WindowsController.ExitWindows(RestartOptions.LogOff, True)
-                                    Case 1
-                                        Me.Close()
-                                        WindowsController.ExitWindows(RestartOptions.PowerOff, True)
-                                    Case 2
-                                        Me.Close()
-                                        WindowsController.ExitWindows(RestartOptions.Reboot, True)
-                                    Case 3
-                                        Me.Close()
+
+
+                                Me.Close()
                                         WindowsController.ExitWindows(RestartOptions.ShutDown, True)
-                                    Case 4
-                                        Me.Close()
-                                        WindowsController.ExitWindows(RestartOptions.Suspend, True)
-                                    Case 5
-                                        Me.Close()
-                                        WindowsController.ExitWindows(RestartOptions.Hibernate, True)
-                                End Select
+
                             ElseIf CDbl(mes) = DialogResult.Cancel Then
                                 ShutdownTimer.Start()
                                 Notify = True
@@ -917,30 +691,14 @@ when BreakTime will be released. You can still use this feature, but PLEASE DO N
                         ElseIf AudioRadioButtonSh.Checked = False AndAlso VisualRadioButtonSh.Checked = True Then
                             PlayNow()
                             BreakTimer.Stop()
-                            Dim mes As String = CStr(MessageBox.Show(DirectCast(ShutdownCbSh.SelectedItem, String) & " will start in " & minsh & " minutes and " & remain & " seconds. Click OK to start breaktime now. Otherwise, click Cancel to continue the timer.", "MinWarn Alert", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation))
+                            Dim mes As String = CStr(MessageBox.Show("The computer WILL shutdown in " & minsh & " minutes And " & remain & " seconds. Click OK To start breaktime now. Otherwise, Click Cancel To Continue the timer.", "MinWarn Alert", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation))
                             If CDbl(mes) = DialogResult.OK Then
                                 Me.Show()
                                 ShutdownTimer.Stop()
-                                Select Case ShutdownCbSh.SelectedIndex
-                                    Case 0
-                                        Me.Close()
-                                        WindowsController.ExitWindows(RestartOptions.LogOff, True)
-                                    Case 1
-                                        Me.Close()
-                                        WindowsController.ExitWindows(RestartOptions.PowerOff, True)
-                                    Case 2
-                                        Me.Close()
-                                        WindowsController.ExitWindows(RestartOptions.Reboot, True)
-                                    Case 3
-                                        Me.Close()
+
+                                Me.Close()
                                         WindowsController.ExitWindows(RestartOptions.ShutDown, True)
-                                    Case 4
-                                        Me.Close()
-                                        WindowsController.ExitWindows(RestartOptions.Suspend, True)
-                                    Case 5
-                                        Me.Close()
-                                        WindowsController.ExitWindows(RestartOptions.Hibernate, True)
-                                End Select
+
                             ElseIf CDbl(mes) = DialogResult.Cancel Then
                                 ShutdownTimer.Start()
                                 Notify = True
@@ -1006,7 +764,7 @@ when BreakTime will be released. You can still use this feature, but PLEASE DO N
         Else
             TimerTimer.Enabled = False
             tBeep.Enabled = True
-            If MsgBox("Times up!", MsgBoxStyle.Information, "Time is up") = System.Windows.Forms.DialogResult.OK Then
+            If MsgBox("Times up!", MsgBoxStyle.Information, "Time Is up") = System.Windows.Forms.DialogResult.OK Then
                 tBeep.Stop()
                 PauseButtonT.Hide()
                 ResumeTimeButton.Hide()
@@ -1139,7 +897,7 @@ when BreakTime will be released. You can still use this feature, but PLEASE DO N
                             PlayNow()
                             BreakTimer.Stop()
 
-                            If MessageBox.Show("Breaktime will start in " & remain & " seconds. Click OK to start breaktime now. Otherwise, click Cancel to continue the timer.", "MinWarn Alert", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation) = DialogResult.OK Then
+                            If MessageBox.Show("Breaktime will start In " & remain & " seconds. Click OK To start breaktime now. Otherwise, Click Cancel To Continue the timer.", "MinWarn Alert", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation) = DialogResult.OK Then
                                 BreakTimer.Stop()
                                 BreakTimer.Enabled = False
                                 Select Case My.Settings.Sound1
@@ -1180,7 +938,7 @@ when BreakTime will be released. You can still use this feature, but PLEASE DO N
                             PlayNow()
                             BreakTimer.Stop()
 
-                            If MessageBox.Show("Breaktime will start in " & min & " minutes and " & remain & " seconds. Click OK to start breaktime now. Otherwise, click Cancel to continue the timer.", "MinWarn Alert", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation) = DialogResult.OK Then
+                            If MessageBox.Show("Breaktime will start In " & min & " minutes And " & remain & " seconds. Click OK To start breaktime now. Otherwise, Click Cancel To Continue the timer.", "MinWarn Alert", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation) = DialogResult.OK Then
                                 BreakTimer.Stop()
                                 BreakTimer.Enabled = False
                                 Select Case My.Settings.Sound1
@@ -1218,7 +976,7 @@ when BreakTime will be released. You can still use this feature, but PLEASE DO N
                             PlayNow()
                             BreakTimer.Stop()
 
-                            If MessageBox.Show("Breaktime will start in " & min & " minutes and " & remain & " seconds. Click OK to start breaktime now. Otherwise, click Cancel to continue the timer.", "MinWarn Alert", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation) = DialogResult.OK Then
+                            If MessageBox.Show("Breaktime will start In " & min & " minutes And " & remain & " seconds. Click OK To start breaktime now. Otherwise, Click Cancel To Continue the timer.", "MinWarn Alert", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation) = DialogResult.OK Then
                                 BreakTimer.Stop()
                                 BreakTimer.Enabled = False
                                 Select Case My.Settings.Sound1
@@ -1257,7 +1015,7 @@ when BreakTime will be released. You can still use this feature, but PLEASE DO N
                             PlayNow()
                             BreakTimer.Stop()
 
-                            If MessageBox.Show("Breaktime will start in " & min & " minutes and " & remain & " seconds. Click OK to start breaktime now. Otherwise, click Cancel to continue the timer.", "MinWarn Alert", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation) = DialogResult.OK Then
+                            If MessageBox.Show("Breaktime will start In " & min & " minutes And " & remain & " seconds. Click OK To start breaktime now. Otherwise, Click Cancel To Continue the timer.", "MinWarn Alert", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation) = DialogResult.OK Then
                                 BreakTimer.Stop()
                                 BreakTimer.Enabled = False
                                 Select Case My.Settings.Sound1
@@ -1298,7 +1056,7 @@ when BreakTime will be released. You can still use this feature, but PLEASE DO N
                             PlayNow()
                             BreakTimer.Stop()
 
-                            If MessageBox.Show("Breaktime will start in " & min & " minutes and " & remain & " seconds. Click OK to start breaktime now. Otherwise, click Cancel to continue the timer.", "MinWarn Alert", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation) = DialogResult.OK Then
+                            If MessageBox.Show("Breaktime will start In " & min & " minutes And " & remain & " seconds. Click OK To start breaktime now. Otherwise, Click Cancel to continue the timer.", "MinWarn Alert", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation) = DialogResult.OK Then
                                 BreakTimer.Stop()
                                 BreakTimer.Enabled = False
                                 Select Case My.Settings.Sound1
@@ -1413,7 +1171,7 @@ when BreakTime will be released. You can still use this feature, but PLEASE DO N
         BreakTimerTab.Enabled = True
         TimerTab.Enabled = True
         AlarmClockTab.Enabled = True
-        StopwatchLabelSW.Text = "--:--:--"
+        StopwatchLabelSW.Text = "--: --:--"
         LapListBoxSw.Items.Clear()
         LapListBoxSw.Hide()
         TimerControl.Enabled = True
