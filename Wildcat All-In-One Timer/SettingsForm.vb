@@ -296,32 +296,40 @@ Public Class SettingsForm
     End Sub
 
     Private Sub HardCoreRadioButton_CheckedChanged(sender As Object, e As EventArgs) Handles HardCoreRadioButton.CheckedChanged
+        If HardCoreRadioButton.Checked = True Then
+            Dim stp As New StreamWriter(Application.StartupPath & "\code.txt")
 
-        Dim stp As New StreamWriter(Application.StartupPath & "\code.txt")
-        Dim stpa As String
-        stpa = Rnd(5).ToString("######")
-        stp.WriteLine("BreakTime Security Code: " & vbCrLf & "Please enter the following code into the dialog box: " & stpa)
-        stp.Close()
+            Dim stpa As Integer
+            Randomize()
+            stpa = (CInt(Int(9999999 * Rnd())))
+            stp.WriteLine("BreakTime Security Code: " & vbCrLf & "Please enter the following code into the dialog box: " & stpa)
+            stp.Close()
 
-        Try
-            streamToPrint = New StreamReader(Application.StartupPath & "\code.txt")
             Try
-                printFont = New Font("Cooper Black", 10)
-                Dim pd As New PrintDocument()
-                AddHandler pd.PrintPage, AddressOf Me.pd_PrintPage
-                pd.Print()
-            Finally
-                streamToPrint.Close()
+                streamToPrint = New StreamReader(Application.StartupPath & "\code.txt")
+                Try
+                    printFont = New Font("Cooper Black", 12)
+                    Dim pd As New PrintDocument()
+                    AddHandler pd.PrintPage, AddressOf Me.pd_PrintPage
+                    pd.Print()
+                Finally
+                    streamToPrint.Close()
+                End Try
+            Catch ex As Exception
+                MessageBox.Show(ex.Message)
             End Try
-        Catch ex As Exception
-            MessageBox.Show(ex.Message)
-        End Try
-        If InputBox("Please input the code that was sent to your default printer. Press OK to continue.") = stpa Then
-            My.Settings.HardCoreMode = True
-            My.Settings.Save()
-            HardCoreRadioButton.Checked = True
+            If InputBox("Please input the code that was sent to your default printer. Press OK to continue.") = stpa Then
+                My.Settings.HardCoreMode = True
+                My.Settings.Save()
+                HardCoreRadioButton.Checked = True
 
+            End If
+        ElseIf OffRB.Checked = True AndAlso HardCoreRadioButton.Checked = False Then
+            My.Settings.HardCoreMode = False
+            My.Settings.Save()
+            HardCoreRadioButton.Checked = False
         End If
+
     End Sub
 
     Private Sub pd_PrintPage(sender As Object, ev As PrintPageEventArgs) Handles PrintDocument1.PrintPage
@@ -353,5 +361,11 @@ Public Class SettingsForm
         Else
             ev.HasMorePages = False
         End If
+    End Sub
+
+    Private Sub OffRB_CheckedChanged(sender As Object, e As EventArgs) Handles OffRB.CheckedChanged
+        My.Settings.HardCoreMode = False
+        My.Settings.Save()
+
     End Sub
 End Class

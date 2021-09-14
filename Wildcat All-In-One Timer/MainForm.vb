@@ -73,9 +73,6 @@ Public Class MainForm
         TimerControl.BackColor = System.Drawing.ColorTranslator.FromHtml(CStr(My.Settings.BackColor.ToArgb))
 
 
-        DateTimeTillShutdownLabelSh.Hide()
-        InSettingsGBSH.Hide()
-
 
         Select Case My.Settings.Startup
             Case 0
@@ -200,7 +197,7 @@ Public Class MainForm
     End Sub
     Private Sub CancelAlarmButton_Click(sender As Object, e As EventArgs) Handles CancelAlarmButton.Click
         AlarmTimer.Enabled = False
-        SetOrNotSetLabel.Text = "Not Set"
+        SetOrNotSetLabel.Text = "Please set alarm."
         HourNudAC.Enabled = True
         MinNudAC.Enabled = True
         SecNudAC.Enabled = True

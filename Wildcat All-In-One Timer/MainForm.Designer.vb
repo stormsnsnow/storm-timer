@@ -824,7 +824,7 @@ Partial Class MainForm
         '
         Me.lblsecondsbreak.AutoSize = True
         Me.lblsecondsbreak.Font = New System.Drawing.Font("Cooper Black", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblsecondsbreak.Location = New System.Drawing.Point(41, 33)
+        Me.lblsecondsbreak.Location = New System.Drawing.Point(41, 32)
         Me.lblsecondsbreak.Name = "lblsecondsbreak"
         Me.lblsecondsbreak.Size = New System.Drawing.Size(50, 13)
         Me.lblsecondsbreak.TabIndex = 91
@@ -833,10 +833,9 @@ Partial Class MainForm
         'lblsecondbreak
         '
         Me.lblsecondbreak.AutoSize = True
-        Me.lblsecondbreak.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblsecondbreak.Location = New System.Drawing.Point(54, 33)
         Me.lblsecondbreak.Name = "lblsecondbreak"
-        Me.lblsecondbreak.Size = New System.Drawing.Size(43, 14)
+        Me.lblsecondbreak.Size = New System.Drawing.Size(45, 13)
         Me.lblsecondbreak.TabIndex = 90
         Me.lblsecondbreak.Text = "second"
         '
@@ -844,7 +843,7 @@ Partial Class MainForm
         '
         Me.lblminuteandbreak.AutoSize = True
         Me.lblminuteandbreak.Font = New System.Drawing.Font("Cooper Black", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblminuteandbreak.Location = New System.Drawing.Point(41, 22)
+        Me.lblminuteandbreak.Location = New System.Drawing.Point(40, 22)
         Me.lblminuteandbreak.Name = "lblminuteandbreak"
         Me.lblminuteandbreak.Size = New System.Drawing.Size(71, 13)
         Me.lblminuteandbreak.TabIndex = 89
@@ -895,7 +894,7 @@ Partial Class MainForm
         '
         Me.HourAndBreakLabelBT.AutoSize = True
         Me.HourAndBreakLabelBT.Font = New System.Drawing.Font("Cooper Black", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.HourAndBreakLabelBT.Location = New System.Drawing.Point(41, 12)
+        Me.HourAndBreakLabelBT.Location = New System.Drawing.Point(41, 9)
         Me.HourAndBreakLabelBT.Name = "HourAndBreakLabelBT"
         Me.HourAndBreakLabelBT.Size = New System.Drawing.Size(57, 13)
         Me.HourAndBreakLabelBT.TabIndex = 87
@@ -905,10 +904,9 @@ Partial Class MainForm
         'lblhoursandbreak
         '
         Me.lblhoursandbreak.AutoSize = True
-        Me.lblhoursandbreak.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblhoursandbreak.Location = New System.Drawing.Point(41, 12)
         Me.lblhoursandbreak.Name = "lblhoursandbreak"
-        Me.lblhoursandbreak.Size = New System.Drawing.Size(53, 12)
+        Me.lblhoursandbreak.Size = New System.Drawing.Size(62, 13)
         Me.lblhoursandbreak.TabIndex = 86
         Me.lblhoursandbreak.Text = "hours and"
         '
@@ -1405,23 +1403,23 @@ Partial Class MainForm
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.Yellow
-        Me.Label2.Location = New System.Drawing.Point(91, 22)
+        Me.Label2.Location = New System.Drawing.Point(256, 3)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(231, 42)
+        Me.Label2.Size = New System.Drawing.Size(290, 42)
         Me.Label2.TabIndex = 87
-        Me.Label2.Text = "This feature will be discontinued" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "in late 2021. Please click on the button for" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) &
-    "more information."
+        Me.Label2.Text = "This feature will be discontinued" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "on September 15 2021. Please click on the butt" &
+    "on for" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "more information."
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Helvetica", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Yellow
-        Me.Label1.Location = New System.Drawing.Point(87, 3)
+        Me.Label1.Location = New System.Drawing.Point(83, 16)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(173, 22)
+        Me.Label1.Size = New System.Drawing.Size(137, 22)
         Me.Label1.TabIndex = 86
-        Me.Label1.Text = "Important Notice!"
+        Me.Label1.Text = "Last Warning!"
         '
         'PictureBox2
         '
@@ -1571,23 +1569,22 @@ Partial Class MainForm
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.Yellow
-        Me.Label3.Location = New System.Drawing.Point(91, 22)
+        Me.Label3.Location = New System.Drawing.Point(253, 14)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(231, 42)
+        Me.Label3.Size = New System.Drawing.Size(180, 28)
         Me.Label3.TabIndex = 87
-        Me.Label3.Text = "This feature will be discontinued" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "in late 2021. Please click on the button for" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) &
-    "more information."
+        Me.Label3.Text = "This feature will be discontinued" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "on September 15, 2021."
         '
         'Label4
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Helvetica", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.Yellow
-        Me.Label4.Location = New System.Drawing.Point(87, 3)
+        Me.Label4.Location = New System.Drawing.Point(90, 14)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(173, 22)
+        Me.Label4.Size = New System.Drawing.Size(137, 22)
         Me.Label4.TabIndex = 86
-        Me.Label4.Text = "Important Notice!"
+        Me.Label4.Text = "Last Warning!"
         '
         'PictureBox3
         '
@@ -1751,23 +1748,23 @@ Partial Class MainForm
         '
         Me.Label5.AutoSize = True
         Me.Label5.ForeColor = System.Drawing.Color.Yellow
-        Me.Label5.Location = New System.Drawing.Point(312, 13)
+        Me.Label5.Location = New System.Drawing.Point(245, 3)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(231, 42)
+        Me.Label5.Size = New System.Drawing.Size(294, 42)
         Me.Label5.TabIndex = 87
-        Me.Label5.Text = "This feature will be discontinued" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "in late 2021. Please click on the button for" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) &
-    "more information."
+        Me.Label5.Text = "This feature will be discontinued" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "on September 15, 2021. Please click on the but" &
+    "ton for" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "more information."
         '
         'Label6
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Arial", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.Yellow
-        Me.Label6.Location = New System.Drawing.Point(103, 13)
+        Me.Label6.Location = New System.Drawing.Point(70, 11)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(183, 24)
+        Me.Label6.Size = New System.Drawing.Size(151, 24)
         Me.Label6.TabIndex = 86
-        Me.Label6.Text = "Important Notice!"
+        Me.Label6.Text = "Last Warning!"
         '
         'PictureBox4
         '
@@ -1775,7 +1772,7 @@ Partial Class MainForm
         Me.PictureBox4.Location = New System.Drawing.Point(11, 3)
         Me.PictureBox4.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(66, 39)
+        Me.PictureBox4.Size = New System.Drawing.Size(40, 39)
         Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox4.TabIndex = 0
         Me.PictureBox4.TabStop = False
@@ -2011,7 +2008,7 @@ Partial Class MainForm
         Me.VisualRadioButtonSh.Location = New System.Drawing.Point(209, 40)
         Me.VisualRadioButtonSh.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.VisualRadioButtonSh.Name = "VisualRadioButtonSh"
-        Me.VisualRadioButtonSh.Size = New System.Drawing.Size(67, 17)
+        Me.VisualRadioButtonSh.Size = New System.Drawing.Size(59, 18)
         Me.VisualRadioButtonSh.TabIndex = 62
         Me.VisualRadioButtonSh.TabStop = True
         Me.VisualRadioButtonSh.Text = "Visual"
@@ -2038,7 +2035,7 @@ Partial Class MainForm
         Me.AudioRadioButtonSh.Location = New System.Drawing.Point(147, 42)
         Me.AudioRadioButtonSh.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.AudioRadioButtonSh.Name = "AudioRadioButtonSh"
-        Me.AudioRadioButtonSh.Size = New System.Drawing.Size(65, 17)
+        Me.AudioRadioButtonSh.Size = New System.Drawing.Size(57, 18)
         Me.AudioRadioButtonSh.TabIndex = 61
         Me.AudioRadioButtonSh.TabStop = True
         Me.AudioRadioButtonSh.Text = "Audio"
@@ -2199,7 +2196,7 @@ Partial Class MainForm
         Me.lblVersion.Name = "lblVersion"
         Me.lblVersion.Size = New System.Drawing.Size(172, 39)
         Me.lblVersion.TabIndex = 26
-        Me.lblVersion.Text = "v21H2" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Alpha Release" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Released September 12, 2021"
+        Me.lblVersion.Text = "v21H2" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Alpha Release" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Released September 14, 2021"
         Me.lblVersion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'lblName
@@ -2276,7 +2273,7 @@ Partial Class MainForm
         Me.MaximizeBox = False
         Me.Name = "MainForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "BreakTime - v21H2A4- Released on September 12, 2021"
+        Me.Text = "BreakTime - v21H2A5- Released on September 14, 2021"
         Me.TimerControl.ResumeLayout(False)
         Me.BreakTimerTab.ResumeLayout(False)
         Me.BSTGroupBoxBT.ResumeLayout(False)
