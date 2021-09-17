@@ -209,9 +209,33 @@ Public Class SettingsForm
         Dim ms As String
         ms = CStr(MessageBox.Show("Are you sure? This will RESET ALL SETTINGS! Use caution if you have personalized settings!", "Confirm Reset", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Exclamation))
         If CDbl(ms) = DialogResult.Yes Then
-            My.Settings.Reset()
-            MsgBox("Reset successful. Program will now restart when you press OK.", MsgBoxStyle.Information, "Reset Success")
-            Application.Restart()
+            Dim stp As New StreamWriter(Application.StartupPath & "\code.txt")
+
+            Dim stpa As Integer
+            Randomize()
+            stpa = (CInt(Int(9999999 * Rnd(5))))
+            stp.WriteLine("BreakTime Security Code: " & vbCrLf & "Please enter the following code into the dialog box: " & stpa)
+            stp.Close()
+
+            Try
+                streamToPrint = New StreamReader(Application.StartupPath & "\code.txt")
+                Try
+                    printFont = New Font("Cooper Black", 12)
+                    Dim pd As New PrintDocument()
+                    AddHandler pd.PrintPage, AddressOf Me.pd_PrintPage
+                    pd.Print()
+                Finally
+                    streamToPrint.Close()
+                End Try
+            Catch ex As Exception
+                MessageBox.Show(ex.Message)
+            End Try
+            If InputBox("Please input the code that was sent to your default printer. Press OK to continue.") = stpa Then
+                My.Settings.Reset()
+                MsgBox("Reset successful. Program will now restart when you press OK.", MsgBoxStyle.Information, "Reset Success")
+                Application.Restart()
+            End If
+
         ElseIf CDbl(ms) = DialogResult.No Then
             Exit Sub
         ElseIf CDbl(ms) = DialogResult.Cancel Then
@@ -291,7 +315,8 @@ Public Class SettingsForm
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        Throw New NotImplementedException
+        WhatsNew.Show()
+
 
     End Sub
 
@@ -301,7 +326,7 @@ Public Class SettingsForm
 
             Dim stpa As Integer
             Randomize()
-            stpa = (CInt(Int(9999999 * Rnd())))
+            stpa = (CInt(Int(9999999 * Rnd(5))))
             stp.WriteLine("BreakTime Security Code: " & vbCrLf & "Please enter the following code into the dialog box: " & stpa)
             stp.Close()
 

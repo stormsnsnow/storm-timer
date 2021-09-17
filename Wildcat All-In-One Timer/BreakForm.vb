@@ -24,7 +24,13 @@ Public Class BreakForm
         BreakPanel.BackColor = System.Drawing.ColorTranslator.FromHtml(CStr(My.Settings.BackColor.ToArgb))
         BreakPanel.ForeColor = System.Drawing.ColorTranslator.FromHtml(CStr(My.Settings.ForeColor.ToArgb))
         'Label1.Text = SystemInformation.UserName + ", it's time to take a break."
-        BlockInput(True)
+        If My.Settings.HardCoreMode = True Then
+            BlockInput(True)
+            Panel1.Hide()
+        ElseIf My.Settings.HardCoreMode = False Then
+            Panel1.Show()
+        End If
+
     End Sub
     Public Sub Breaktime()
         Select Case My.Settings.TimeFormat
@@ -78,7 +84,7 @@ Public Class BreakForm
 
         speech.Speak("Breaktime Paused. Click On the Ok button To Resume break.")
 
-        BreakPausedForm.Show()
+        MessageForm.Show()
         Me.Hide()
 
 

@@ -227,18 +227,18 @@ Partial Class SettingsForm
         Me.lblVersion.AutoSize = True
         Me.lblVersion.Location = New System.Drawing.Point(182, 32)
         Me.lblVersion.Name = "lblVersion"
-        Me.lblVersion.Size = New System.Drawing.Size(172, 39)
+        Me.lblVersion.Size = New System.Drawing.Size(169, 42)
         Me.lblVersion.TabIndex = 29
-        Me.lblVersion.Text = "v21H2 " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Alpha Four" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Released September 12, 2021"
+        Me.lblVersion.Text = "v21H2 " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Beta One" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Released September 17, 2021"
         Me.lblVersion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'lblName
         '
         Me.lblName.AutoSize = True
-        Me.lblName.Font = New System.Drawing.Font("Cooper Black", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblName.Font = New System.Drawing.Font("Helvetica", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblName.Location = New System.Drawing.Point(181, 11)
         Me.lblName.Name = "lblName"
-        Me.lblName.Size = New System.Drawing.Size(117, 21)
+        Me.lblName.Size = New System.Drawing.Size(108, 22)
         Me.lblName.TabIndex = 28
         Me.lblName.Text = "BreakTime"
         '
@@ -275,7 +275,7 @@ Partial Class SettingsForm
         Me.Label10.AutoSize = True
         Me.Label10.Location = New System.Drawing.Point(16, 141)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(75, 13)
+        Me.Label10.Size = New System.Drawing.Size(72, 14)
         Me.Label10.TabIndex = 13
         Me.Label10.Text = "Break Over:"
         '
@@ -285,7 +285,7 @@ Partial Class SettingsForm
         Me.BTComboBoxSounds.Items.AddRange(New Object() {"Default Sound", "Browse for sound file..."})
         Me.BTComboBoxSounds.Location = New System.Drawing.Point(97, 141)
         Me.BTComboBoxSounds.Name = "BTComboBoxSounds"
-        Me.BTComboBoxSounds.Size = New System.Drawing.Size(121, 21)
+        Me.BTComboBoxSounds.Size = New System.Drawing.Size(121, 22)
         Me.BTComboBoxSounds.TabIndex = 12
         '
         'Button2
@@ -312,7 +312,7 @@ Partial Class SettingsForm
         Me.MWComboBoxS.Items.AddRange(New Object() {"Default Sound", "Twinkle", "Bubbles 1", "Airbus", "Bubbles 2", "211 Default", "Pop", "Browse For sound"})
         Me.MWComboBoxS.Location = New System.Drawing.Point(97, 116)
         Me.MWComboBoxS.Name = "MWComboBoxS"
-        Me.MWComboBoxS.Size = New System.Drawing.Size(121, 21)
+        Me.MWComboBoxS.Size = New System.Drawing.Size(121, 22)
         Me.MWComboBoxS.TabIndex = 5
         '
         'MWLabelS
@@ -320,7 +320,7 @@ Partial Class SettingsForm
         Me.MWLabelS.AutoSize = True
         Me.MWLabelS.Location = New System.Drawing.Point(38, 119)
         Me.MWLabelS.Name = "MWLabelS"
-        Me.MWLabelS.Size = New System.Drawing.Size(62, 13)
+        Me.MWLabelS.Size = New System.Drawing.Size(55, 14)
         Me.MWLabelS.TabIndex = 4
         Me.MWLabelS.Text = "MinWarn:"
         '
@@ -329,7 +329,7 @@ Partial Class SettingsForm
         Me.TDLabelS.AutoSize = True
         Me.TDLabelS.Location = New System.Drawing.Point(13, 85)
         Me.TDLabelS.Name = "TDLabelS"
-        Me.TDLabelS.Size = New System.Drawing.Size(78, 13)
+        Me.TDLabelS.Size = New System.Drawing.Size(72, 14)
         Me.TDLabelS.TabIndex = 3
         Me.TDLabelS.Text = "Timer Done:"
         '
@@ -339,7 +339,7 @@ Partial Class SettingsForm
         Me.TDComboBoxS.Items.AddRange(New Object() {"Default Sound", "Aquatics Nearby", "Fast and Furious", "Foghorn Leghorn", "211 Default", "Speed Demon", "Browse for sound"})
         Me.TDComboBoxS.Location = New System.Drawing.Point(97, 85)
         Me.TDComboBoxS.Name = "TDComboBoxS"
-        Me.TDComboBoxS.Size = New System.Drawing.Size(121, 21)
+        Me.TDComboBoxS.Size = New System.Drawing.Size(121, 22)
         Me.TDComboBoxS.TabIndex = 2
         '
         'SoundsPromptLabel
@@ -347,7 +347,7 @@ Partial Class SettingsForm
         Me.SoundsPromptLabel.AutoSize = True
         Me.SoundsPromptLabel.Location = New System.Drawing.Point(8, 10)
         Me.SoundsPromptLabel.Name = "SoundsPromptLabel"
-        Me.SoundsPromptLabel.Size = New System.Drawing.Size(281, 52)
+        Me.SoundsPromptLabel.Size = New System.Drawing.Size(263, 56)
         Me.SoundsPromptLabel.TabIndex = 1
         Me.SoundsPromptLabel.Text = "With sounds, the program can alert you of when " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "your timer is done, your timer h" &
     "as an exact" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "number of minutes left, or when your break is " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "over."
@@ -370,11 +370,11 @@ Partial Class SettingsForm
         Me.TimerControl.Controls.Add(Me.TimerTab)
         Me.TimerControl.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.TimerControl.ImageList = Me.ImageList1
-        Me.TimerControl.Location = New System.Drawing.Point(3, 66)
+        Me.TimerControl.Location = New System.Drawing.Point(3, 48)
         Me.TimerControl.Multiline = True
         Me.TimerControl.Name = "TimerControl"
         Me.TimerControl.SelectedIndex = 0
-        Me.TimerControl.Size = New System.Drawing.Size(490, 198)
+        Me.TimerControl.Size = New System.Drawing.Size(490, 216)
         Me.TimerControl.TabIndex = 25
         '
         'BreakTimerTab
@@ -385,7 +385,7 @@ Partial Class SettingsForm
         Me.BreakTimerTab.Location = New System.Drawing.Point(4, 23)
         Me.BreakTimerTab.Name = "BreakTimerTab"
         Me.BreakTimerTab.Padding = New System.Windows.Forms.Padding(3)
-        Me.BreakTimerTab.Size = New System.Drawing.Size(482, 171)
+        Me.BreakTimerTab.Size = New System.Drawing.Size(482, 189)
         Me.BreakTimerTab.TabIndex = 0
         Me.BreakTimerTab.Text = "Break Timer"
         '
@@ -415,7 +415,7 @@ Partial Class SettingsForm
         Me.VisualRbBt.AutoSize = True
         Me.VisualRbBt.Location = New System.Drawing.Point(118, 86)
         Me.VisualRbBt.Name = "VisualRbBt"
-        Me.VisualRbBt.Size = New System.Drawing.Size(62, 17)
+        Me.VisualRbBt.Size = New System.Drawing.Size(55, 18)
         Me.VisualRbBt.TabIndex = 62
         Me.VisualRbBt.TabStop = True
         Me.VisualRbBt.Text = "Visual"
@@ -427,7 +427,7 @@ Partial Class SettingsForm
         Me.nudTimeHour.Location = New System.Drawing.Point(72, 18)
         Me.nudTimeHour.Maximum = New Decimal(New Integer() {99, 0, 0, 0})
         Me.nudTimeHour.Name = "nudTimeHour"
-        Me.nudTimeHour.Size = New System.Drawing.Size(42, 20)
+        Me.nudTimeHour.Size = New System.Drawing.Size(42, 21)
         Me.nudTimeHour.TabIndex = 34
         '
         'AudioRbBt
@@ -435,7 +435,7 @@ Partial Class SettingsForm
         Me.AudioRbBt.AutoSize = True
         Me.AudioRbBt.Location = New System.Drawing.Point(118, 70)
         Me.AudioRbBt.Name = "AudioRbBt"
-        Me.AudioRbBt.Size = New System.Drawing.Size(60, 17)
+        Me.AudioRbBt.Size = New System.Drawing.Size(56, 18)
         Me.AudioRbBt.TabIndex = 61
         Me.AudioRbBt.TabStop = True
         Me.AudioRbBt.Text = "Audio"
@@ -446,7 +446,7 @@ Partial Class SettingsForm
         Me.TimeLabelBt.AutoSize = True
         Me.TimeLabelBt.Location = New System.Drawing.Point(24, 18)
         Me.TimeLabelBt.Name = "TimeLabelBt"
-        Me.TimeLabelBt.Size = New System.Drawing.Size(40, 13)
+        Me.TimeLabelBt.Size = New System.Drawing.Size(36, 14)
         Me.TimeLabelBt.TabIndex = 29
         Me.TimeLabelBt.Text = "Time:"
         '
@@ -455,7 +455,7 @@ Partial Class SettingsForm
         Me.MWLabelBt.AutoSize = True
         Me.MWLabelBt.Location = New System.Drawing.Point(6, 78)
         Me.MWLabelBt.Name = "MWLabelBt"
-        Me.MWLabelBt.Size = New System.Drawing.Size(62, 13)
+        Me.MWLabelBt.Size = New System.Drawing.Size(55, 14)
         Me.MWLabelBt.TabIndex = 43
         Me.MWLabelBt.Text = "MinWarn:"
         '
@@ -465,7 +465,7 @@ Partial Class SettingsForm
         Me.MinWarnNudBt.Maximum = New Decimal(New Integer() {5, 0, 0, 0})
         Me.MinWarnNudBt.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.MinWarnNudBt.Name = "MinWarnNudBt"
-        Me.MinWarnNudBt.Size = New System.Drawing.Size(40, 20)
+        Me.MinWarnNudBt.Size = New System.Drawing.Size(40, 21)
         Me.MinWarnNudBt.TabIndex = 60
         Me.MinWarnNudBt.Value = New Decimal(New Integer() {1, 0, 0, 0})
         '
@@ -474,7 +474,7 @@ Partial Class SettingsForm
         Me.BreakTimerLabelBt.AutoSize = True
         Me.BreakTimerLabelBt.Location = New System.Drawing.Point(19, 50)
         Me.BreakTimerLabelBt.Name = "BreakTimerLabelBt"
-        Me.BreakTimerLabelBt.Size = New System.Drawing.Size(44, 13)
+        Me.BreakTimerLabelBt.Size = New System.Drawing.Size(42, 14)
         Me.BreakTimerLabelBt.TabIndex = 31
         Me.BreakTimerLabelBt.Text = "Break:"
         '
@@ -484,7 +484,7 @@ Partial Class SettingsForm
         Me.nudTimeMin.Location = New System.Drawing.Point(120, 18)
         Me.nudTimeMin.Maximum = New Decimal(New Integer() {59, 0, 0, 0})
         Me.nudTimeMin.Name = "nudTimeMin"
-        Me.nudTimeMin.Size = New System.Drawing.Size(41, 20)
+        Me.nudTimeMin.Size = New System.Drawing.Size(41, 21)
         Me.nudTimeMin.TabIndex = 35
         '
         'nudTimeBreakSec
@@ -492,7 +492,7 @@ Partial Class SettingsForm
         Me.nudTimeBreakSec.ForeColor = System.Drawing.SystemColors.ControlText
         Me.nudTimeBreakSec.Location = New System.Drawing.Point(167, 48)
         Me.nudTimeBreakSec.Name = "nudTimeBreakSec"
-        Me.nudTimeBreakSec.Size = New System.Drawing.Size(40, 20)
+        Me.nudTimeBreakSec.Size = New System.Drawing.Size(40, 21)
         Me.nudTimeBreakSec.TabIndex = 39
         '
         'nudTimeSec
@@ -501,7 +501,7 @@ Partial Class SettingsForm
         Me.nudTimeSec.Location = New System.Drawing.Point(167, 18)
         Me.nudTimeSec.Maximum = New Decimal(New Integer() {59, 0, 0, 0})
         Me.nudTimeSec.Name = "nudTimeSec"
-        Me.nudTimeSec.Size = New System.Drawing.Size(40, 20)
+        Me.nudTimeSec.Size = New System.Drawing.Size(40, 21)
         Me.nudTimeSec.TabIndex = 36
         '
         'nudTimeBreakMin
@@ -510,7 +510,7 @@ Partial Class SettingsForm
         Me.nudTimeBreakMin.Location = New System.Drawing.Point(120, 48)
         Me.nudTimeBreakMin.Maximum = New Decimal(New Integer() {59, 0, 0, 0})
         Me.nudTimeBreakMin.Name = "nudTimeBreakMin"
-        Me.nudTimeBreakMin.Size = New System.Drawing.Size(41, 20)
+        Me.nudTimeBreakMin.Size = New System.Drawing.Size(41, 21)
         Me.nudTimeBreakMin.TabIndex = 38
         '
         'nudTimeBreakHour
@@ -519,7 +519,7 @@ Partial Class SettingsForm
         Me.nudTimeBreakHour.Location = New System.Drawing.Point(72, 48)
         Me.nudTimeBreakHour.Maximum = New Decimal(New Integer() {99, 0, 0, 0})
         Me.nudTimeBreakHour.Name = "nudTimeBreakHour"
-        Me.nudTimeBreakHour.Size = New System.Drawing.Size(42, 20)
+        Me.nudTimeBreakHour.Size = New System.Drawing.Size(42, 21)
         Me.nudTimeBreakHour.TabIndex = 37
         '
         'TimerTab
@@ -532,7 +532,7 @@ Partial Class SettingsForm
         Me.TimerTab.Location = New System.Drawing.Point(4, 23)
         Me.TimerTab.Name = "TimerTab"
         Me.TimerTab.Padding = New System.Windows.Forms.Padding(3)
-        Me.TimerTab.Size = New System.Drawing.Size(482, 171)
+        Me.TimerTab.Size = New System.Drawing.Size(482, 189)
         Me.TimerTab.TabIndex = 1
         Me.TimerTab.Text = "Timer"
         '
@@ -542,7 +542,7 @@ Partial Class SettingsForm
         Me.nudSec.Maximum = New Decimal(New Integer() {59, 0, 0, 0})
         Me.nudSec.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.nudSec.Name = "nudSec"
-        Me.nudSec.Size = New System.Drawing.Size(50, 20)
+        Me.nudSec.Size = New System.Drawing.Size(50, 21)
         Me.nudSec.TabIndex = 10
         Me.nudSec.Value = New Decimal(New Integer() {1, 0, 0, 0})
         '
@@ -551,7 +551,7 @@ Partial Class SettingsForm
         Me.nudMin.Location = New System.Drawing.Point(197, 28)
         Me.nudMin.Maximum = New Decimal(New Integer() {59, 0, 0, 0})
         Me.nudMin.Name = "nudMin"
-        Me.nudMin.Size = New System.Drawing.Size(50, 20)
+        Me.nudMin.Size = New System.Drawing.Size(50, 21)
         Me.nudMin.TabIndex = 9
         '
         'nudHour
@@ -559,7 +559,7 @@ Partial Class SettingsForm
         Me.nudHour.Location = New System.Drawing.Point(141, 28)
         Me.nudHour.Maximum = New Decimal(New Integer() {99, 0, 0, 0})
         Me.nudHour.Name = "nudHour"
-        Me.nudHour.Size = New System.Drawing.Size(50, 20)
+        Me.nudHour.Size = New System.Drawing.Size(50, 21)
         Me.nudHour.TabIndex = 8
         '
         'ImageList1
@@ -579,9 +579,10 @@ Partial Class SettingsForm
         Me.AutoTimeInstructionsLabelAt.AutoSize = True
         Me.AutoTimeInstructionsLabelAt.Location = New System.Drawing.Point(4, 3)
         Me.AutoTimeInstructionsLabelAt.Name = "AutoTimeInstructionsLabelAt"
-        Me.AutoTimeInstructionsLabelAt.Size = New System.Drawing.Size(302, 65)
+        Me.AutoTimeInstructionsLabelAt.Size = New System.Drawing.Size(290, 42)
         Me.AutoTimeInstructionsLabelAt.TabIndex = 0
-        Me.AutoTimeInstructionsLabelAt.Text = resources.GetString("AutoTimeInstructionsLabelAt.Text")
+        Me.AutoTimeInstructionsLabelAt.Text = "AutoTime enables you to set your time more faster!" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "With this feature, the progra" &
+    "m starts as is, but starts" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "the timer you want automatically."
         '
         'General
         '
@@ -620,10 +621,11 @@ Partial Class SettingsForm
         Me.DateTimeTabPage.Controls.Add(Me.DateFormatLabelDTGen)
         Me.DateTimeTabPage.Controls.Add(Me.TimeFormatCbDTGen)
         Me.DateTimeTabPage.Controls.Add(Me.DateFormatCbDTGen)
-        Me.DateTimeTabPage.Location = New System.Drawing.Point(4, 22)
+        Me.DateTimeTabPage.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DateTimeTabPage.Location = New System.Drawing.Point(4, 23)
         Me.DateTimeTabPage.Name = "DateTimeTabPage"
         Me.DateTimeTabPage.Padding = New System.Windows.Forms.Padding(3)
-        Me.DateTimeTabPage.Size = New System.Drawing.Size(482, 235)
+        Me.DateTimeTabPage.Size = New System.Drawing.Size(482, 234)
         Me.DateTimeTabPage.TabIndex = 0
         Me.DateTimeTabPage.Text = "Date/Time"
         Me.DateTimeTabPage.UseVisualStyleBackColor = True
@@ -631,27 +633,30 @@ Partial Class SettingsForm
         'Label8
         '
         Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.Location = New System.Drawing.Point(209, 130)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(116, 13)
+        Me.Label8.Size = New System.Drawing.Size(106, 14)
         Me.Label8.TabIndex = 31
         Me.Label8.Text = "Date/Time Format:"
         '
         'Label7
         '
         Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.Location = New System.Drawing.Point(188, 176)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(139, 13)
+        Me.Label7.Size = New System.Drawing.Size(131, 14)
         Me.Label7.TabIndex = 30
         Me.Label7.Text = "Date Format for Break:"
         '
         'Label6
         '
         Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.Location = New System.Drawing.Point(105, 81)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(139, 13)
+        Me.Label6.Size = New System.Drawing.Size(131, 14)
         Me.Label6.TabIndex = 29
         Me.Label6.Text = "Date Format for Break:"
         '
@@ -661,51 +666,56 @@ Partial Class SettingsForm
         Me.ComboBox1.Items.AddRange(New Object() {"220101", "20220101", "01/01/22", "21/01/22", "01/01/2022", "1577836800"})
         Me.ComboBox1.Location = New System.Drawing.Point(250, 78)
         Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(100, 21)
+        Me.ComboBox1.Size = New System.Drawing.Size(100, 22)
         Me.ComboBox1.TabIndex = 27
         '
         'Label1
         '
         Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(179, 188)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(165, 13)
+        Me.Label1.Size = New System.Drawing.Size(155, 14)
         Me.Label1.TabIndex = 28
         Me.Label1.Text = "Wednesday, January 1, 2022"
         '
         'DTLabelDTGen2
         '
         Me.DTLabelDTGen2.AutoSize = True
+        Me.DTLabelDTGen2.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DTLabelDTGen2.Location = New System.Drawing.Point(215, 154)
         Me.DTLabelDTGen2.Name = "DTLabelDTGen2"
-        Me.DTLabelDTGen2.Size = New System.Drawing.Size(76, 13)
+        Me.DTLabelDTGen2.Size = New System.Drawing.Size(71, 14)
         Me.DTLabelDTGen2.TabIndex = 26
         Me.DTLabelDTGen2.Text = "12:08:00 PM"
         '
         'DTLabelDTGen
         '
         Me.DTLabelDTGen.AutoSize = True
+        Me.DTLabelDTGen.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DTLabelDTGen.Location = New System.Drawing.Point(182, 142)
         Me.DTLabelDTGen.Name = "DTLabelDTGen"
-        Me.DTLabelDTGen.Size = New System.Drawing.Size(165, 13)
+        Me.DTLabelDTGen.Size = New System.Drawing.Size(155, 14)
         Me.DTLabelDTGen.TabIndex = 25
         Me.DTLabelDTGen.Text = "Wednesday, January 1, 2022"
         '
         'TimeFormatLabelDTGen
         '
         Me.TimeFormatLabelDTGen.AutoSize = True
+        Me.TimeFormatLabelDTGen.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TimeFormatLabelDTGen.Location = New System.Drawing.Point(114, 56)
         Me.TimeFormatLabelDTGen.Name = "TimeFormatLabelDTGen"
-        Me.TimeFormatLabelDTGen.Size = New System.Drawing.Size(85, 13)
+        Me.TimeFormatLabelDTGen.Size = New System.Drawing.Size(77, 14)
         Me.TimeFormatLabelDTGen.TabIndex = 24
         Me.TimeFormatLabelDTGen.Text = "Time Format:"
         '
         'DateFormatLabelDTGen
         '
         Me.DateFormatLabelDTGen.AutoSize = True
+        Me.DateFormatLabelDTGen.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DateFormatLabelDTGen.Location = New System.Drawing.Point(114, 31)
         Me.DateFormatLabelDTGen.Name = "DateFormatLabelDTGen"
-        Me.DateFormatLabelDTGen.Size = New System.Drawing.Size(81, 13)
+        Me.DateFormatLabelDTGen.Size = New System.Drawing.Size(79, 14)
         Me.DateFormatLabelDTGen.TabIndex = 23
         Me.DateFormatLabelDTGen.Text = "Date Format:"
         '
@@ -715,7 +725,7 @@ Partial Class SettingsForm
         Me.TimeFormatCbDTGen.Items.AddRange(New Object() {"12:08:00 PM", "12:08:00", "12:08 PM", "12:08", "1577836800", "04:08 PM UTC"})
         Me.TimeFormatCbDTGen.Location = New System.Drawing.Point(200, 53)
         Me.TimeFormatCbDTGen.Name = "TimeFormatCbDTGen"
-        Me.TimeFormatCbDTGen.Size = New System.Drawing.Size(150, 21)
+        Me.TimeFormatCbDTGen.Size = New System.Drawing.Size(150, 22)
         Me.TimeFormatCbDTGen.TabIndex = 22
         '
         'DateFormatCbDTGen
@@ -724,17 +734,18 @@ Partial Class SettingsForm
         Me.DateFormatCbDTGen.Items.AddRange(New Object() {"220101", "20220101", "Tuesday, January 1, 2022", "January 1, 2022", "Jan 1, 22", "Jan 1, 2022", "01/01/22", "21/01/22", "1577836800"})
         Me.DateFormatCbDTGen.Location = New System.Drawing.Point(201, 28)
         Me.DateFormatCbDTGen.Name = "DateFormatCbDTGen"
-        Me.DateFormatCbDTGen.Size = New System.Drawing.Size(150, 21)
+        Me.DateFormatCbDTGen.Size = New System.Drawing.Size(150, 22)
         Me.DateFormatCbDTGen.TabIndex = 21
         '
         'StartupTabPage
         '
         Me.StartupTabPage.Controls.Add(Me.WDLCTSUCbSUGen)
         Me.StartupTabPage.Controls.Add(Me.WhenIStartupLabelSUGen)
-        Me.StartupTabPage.Location = New System.Drawing.Point(4, 22)
+        Me.StartupTabPage.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.StartupTabPage.Location = New System.Drawing.Point(4, 23)
         Me.StartupTabPage.Name = "StartupTabPage"
         Me.StartupTabPage.Padding = New System.Windows.Forms.Padding(3)
-        Me.StartupTabPage.Size = New System.Drawing.Size(482, 235)
+        Me.StartupTabPage.Size = New System.Drawing.Size(482, 234)
         Me.StartupTabPage.TabIndex = 3
         Me.StartupTabPage.Text = "Startup"
         Me.StartupTabPage.UseVisualStyleBackColor = True
@@ -745,7 +756,7 @@ Partial Class SettingsForm
         Me.WDLCTSUCbSUGen.Items.AddRange(New Object() {"Go to the break timer tab", "Go to the timer tab"})
         Me.WDLCTSUCbSUGen.Location = New System.Drawing.Point(9, 19)
         Me.WDLCTSUCbSUGen.Name = "WDLCTSUCbSUGen"
-        Me.WDLCTSUCbSUGen.Size = New System.Drawing.Size(227, 21)
+        Me.WDLCTSUCbSUGen.Size = New System.Drawing.Size(227, 22)
         Me.WDLCTSUCbSUGen.TabIndex = 8
         '
         'WhenIStartupLabelSUGen
@@ -753,7 +764,7 @@ Partial Class SettingsForm
         Me.WhenIStartupLabelSUGen.AutoSize = True
         Me.WhenIStartupLabelSUGen.Location = New System.Drawing.Point(6, 3)
         Me.WhenIStartupLabelSUGen.Name = "WhenIStartupLabelSUGen"
-        Me.WhenIStartupLabelSUGen.Size = New System.Drawing.Size(152, 13)
+        Me.WhenIStartupLabelSUGen.Size = New System.Drawing.Size(143, 14)
         Me.WhenIStartupLabelSUGen.TabIndex = 7
         Me.WhenIStartupLabelSUGen.Text = "When I start BreakTime..."
         '
@@ -763,20 +774,21 @@ Partial Class SettingsForm
         Me.ResetTabPage.Controls.Add(Me.Label3)
         Me.ResetTabPage.Controls.Add(Me.ResetButtonReGen)
         Me.ResetTabPage.Controls.Add(Me.ResetPromptLabelReGen)
+        Me.ResetTabPage.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ResetTabPage.ForeColor = System.Drawing.Color.Red
-        Me.ResetTabPage.Location = New System.Drawing.Point(4, 22)
+        Me.ResetTabPage.Location = New System.Drawing.Point(4, 23)
         Me.ResetTabPage.Name = "ResetTabPage"
-        Me.ResetTabPage.Size = New System.Drawing.Size(482, 235)
+        Me.ResetTabPage.Size = New System.Drawing.Size(482, 234)
         Me.ResetTabPage.TabIndex = 2
         Me.ResetTabPage.Text = "Danger Zone!"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Cooper Black", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Font = New System.Drawing.Font("Helvetica", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(13, 13)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(122, 21)
+        Me.Label3.Size = New System.Drawing.Size(104, 22)
         Me.Label3.TabIndex = 15
         Me.Label3.Text = "WARNING!"
         '
@@ -784,7 +796,7 @@ Partial Class SettingsForm
         '
         Me.ResetButtonReGen.Location = New System.Drawing.Point(17, 61)
         Me.ResetButtonReGen.Name = "ResetButtonReGen"
-        Me.ResetButtonReGen.Size = New System.Drawing.Size(186, 48)
+        Me.ResetButtonReGen.Size = New System.Drawing.Size(186, 66)
         Me.ResetButtonReGen.TabIndex = 14
         Me.ResetButtonReGen.Text = "Reset BreakTime " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "DO NOT PRESS UNLESS DOING ON PURPOSE!!"
         Me.ResetButtonReGen.UseVisualStyleBackColor = True
@@ -794,7 +806,7 @@ Partial Class SettingsForm
         Me.ResetPromptLabelReGen.AutoSize = True
         Me.ResetPromptLabelReGen.Location = New System.Drawing.Point(14, 34)
         Me.ResetPromptLabelReGen.Name = "ResetPromptLabelReGen"
-        Me.ResetPromptLabelReGen.Size = New System.Drawing.Size(245, 26)
+        Me.ResetPromptLabelReGen.Size = New System.Drawing.Size(232, 28)
         Me.ResetPromptLabelReGen.TabIndex = 13
         Me.ResetPromptLabelReGen.Text = "Any actions that you do on this page are " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "IRREVERSABLE AND IRRECOVERABLE!" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         '
@@ -804,10 +816,10 @@ Partial Class SettingsForm
         Me.SettingsTC.Controls.Add(Me.AutoTime)
         Me.SettingsTC.Controls.Add(Me.Personalization)
         Me.SettingsTC.Controls.Add(Me.Sounds)
-        Me.SettingsTC.Controls.Add(Me.About)
         Me.SettingsTC.Controls.Add(Me.Security)
+        Me.SettingsTC.Controls.Add(Me.About)
         Me.SettingsTC.Dock = System.Windows.Forms.DockStyle.Top
-        Me.SettingsTC.Font = New System.Drawing.Font("Cooper Black", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SettingsTC.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.SettingsTC.ImageList = Me.ImageList1
         Me.SettingsTC.Location = New System.Drawing.Point(0, 0)
         Me.SettingsTC.Name = "SettingsTC"
@@ -850,10 +862,10 @@ Partial Class SettingsForm
         Me.TabPage1.Controls.Add(Me.GTextBox)
         Me.TabPage1.Controls.Add(Me.RTextBox)
         Me.TabPage1.Controls.Add(Me.Label11)
-        Me.TabPage1.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage1.Location = New System.Drawing.Point(4, 23)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(479, 208)
+        Me.TabPage1.Size = New System.Drawing.Size(479, 207)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Fore Color"
         Me.TabPage1.UseVisualStyleBackColor = True
@@ -870,7 +882,7 @@ Partial Class SettingsForm
         '
         Me.HexTextBox.Location = New System.Drawing.Point(255, 65)
         Me.HexTextBox.Name = "HexTextBox"
-        Me.HexTextBox.Size = New System.Drawing.Size(56, 20)
+        Me.HexTextBox.Size = New System.Drawing.Size(56, 21)
         Me.HexTextBox.TabIndex = 6
         '
         'Label13
@@ -878,7 +890,7 @@ Partial Class SettingsForm
         Me.Label13.AutoSize = True
         Me.Label13.Location = New System.Drawing.Point(324, 117)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(18, 13)
+        Me.Label13.Size = New System.Drawing.Size(20, 14)
         Me.Label13.TabIndex = 13
         Me.Label13.Text = "B:"
         '
@@ -887,7 +899,7 @@ Partial Class SettingsForm
         Me.Label2.AutoSize = True
         Me.Label2.Location = New System.Drawing.Point(258, 87)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(40, 13)
+        Me.Label2.Size = New System.Drawing.Size(36, 14)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Color"
         '
@@ -895,7 +907,7 @@ Partial Class SettingsForm
         '
         Me.BTextBox.Location = New System.Drawing.Point(360, 114)
         Me.BTextBox.Name = "BTextBox"
-        Me.BTextBox.Size = New System.Drawing.Size(56, 20)
+        Me.BTextBox.Size = New System.Drawing.Size(56, 21)
         Me.BTextBox.TabIndex = 12
         '
         'ColorLabel
@@ -903,7 +915,7 @@ Partial Class SettingsForm
         Me.ColorLabel.AutoSize = True
         Me.ColorLabel.Location = New System.Drawing.Point(216, 87)
         Me.ColorLabel.Name = "ColorLabel"
-        Me.ColorLabel.Size = New System.Drawing.Size(43, 13)
+        Me.ColorLabel.Size = New System.Drawing.Size(40, 14)
         Me.ColorLabel.TabIndex = 5
         Me.ColorLabel.Text = "Color:"
         '
@@ -912,7 +924,7 @@ Partial Class SettingsForm
         Me.Label12.AutoSize = True
         Me.Label12.Location = New System.Drawing.Point(324, 92)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(19, 13)
+        Me.Label12.Size = New System.Drawing.Size(19, 14)
         Me.Label12.TabIndex = 11
         Me.Label12.Text = "G:"
         '
@@ -921,7 +933,7 @@ Partial Class SettingsForm
         Me.HexLabel.AutoSize = True
         Me.HexLabel.Location = New System.Drawing.Point(219, 67)
         Me.HexLabel.Name = "HexLabel"
-        Me.HexLabel.Size = New System.Drawing.Size(32, 13)
+        Me.HexLabel.Size = New System.Drawing.Size(32, 14)
         Me.HexLabel.TabIndex = 7
         Me.HexLabel.Text = "Hex:"
         '
@@ -929,14 +941,14 @@ Partial Class SettingsForm
         '
         Me.GTextBox.Location = New System.Drawing.Point(360, 90)
         Me.GTextBox.Name = "GTextBox"
-        Me.GTextBox.Size = New System.Drawing.Size(56, 20)
+        Me.GTextBox.Size = New System.Drawing.Size(56, 21)
         Me.GTextBox.TabIndex = 10
         '
         'RTextBox
         '
         Me.RTextBox.Location = New System.Drawing.Point(360, 65)
         Me.RTextBox.Name = "RTextBox"
-        Me.RTextBox.Size = New System.Drawing.Size(56, 20)
+        Me.RTextBox.Size = New System.Drawing.Size(56, 21)
         Me.RTextBox.TabIndex = 8
         '
         'Label11
@@ -944,7 +956,7 @@ Partial Class SettingsForm
         Me.Label11.AutoSize = True
         Me.Label11.Location = New System.Drawing.Point(324, 67)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(19, 13)
+        Me.Label11.Size = New System.Drawing.Size(20, 14)
         Me.Label11.TabIndex = 9
         Me.Label11.Text = "R:"
         '
@@ -981,7 +993,7 @@ Partial Class SettingsForm
         '
         Me.HexTextBoxFC.Location = New System.Drawing.Point(282, 66)
         Me.HexTextBoxFC.Name = "HexTextBoxFC"
-        Me.HexTextBoxFC.Size = New System.Drawing.Size(56, 20)
+        Me.HexTextBoxFC.Size = New System.Drawing.Size(56, 21)
         Me.HexTextBoxFC.TabIndex = 17
         '
         'Label4
@@ -989,7 +1001,7 @@ Partial Class SettingsForm
         Me.Label4.AutoSize = True
         Me.Label4.Location = New System.Drawing.Point(351, 119)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(18, 13)
+        Me.Label4.Size = New System.Drawing.Size(20, 14)
         Me.Label4.TabIndex = 24
         Me.Label4.Text = "B:"
         '
@@ -998,7 +1010,7 @@ Partial Class SettingsForm
         Me.KnownColorLabel.AutoSize = True
         Me.KnownColorLabel.Location = New System.Drawing.Point(285, 89)
         Me.KnownColorLabel.Name = "KnownColorLabel"
-        Me.KnownColorLabel.Size = New System.Drawing.Size(40, 13)
+        Me.KnownColorLabel.Size = New System.Drawing.Size(36, 14)
         Me.KnownColorLabel.TabIndex = 15
         Me.KnownColorLabel.Text = "Color"
         '
@@ -1006,7 +1018,7 @@ Partial Class SettingsForm
         '
         Me.BTextBoxFC.Location = New System.Drawing.Point(387, 116)
         Me.BTextBoxFC.Name = "BTextBoxFC"
-        Me.BTextBoxFC.Size = New System.Drawing.Size(56, 20)
+        Me.BTextBoxFC.Size = New System.Drawing.Size(56, 21)
         Me.BTextBoxFC.TabIndex = 23
         '
         'Label14
@@ -1014,7 +1026,7 @@ Partial Class SettingsForm
         Me.Label14.AutoSize = True
         Me.Label14.Location = New System.Drawing.Point(243, 89)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(43, 13)
+        Me.Label14.Size = New System.Drawing.Size(40, 14)
         Me.Label14.TabIndex = 16
         Me.Label14.Text = "Color:"
         '
@@ -1023,7 +1035,7 @@ Partial Class SettingsForm
         Me.Label15.AutoSize = True
         Me.Label15.Location = New System.Drawing.Point(351, 94)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(19, 13)
+        Me.Label15.Size = New System.Drawing.Size(19, 14)
         Me.Label15.TabIndex = 22
         Me.Label15.Text = "G:"
         '
@@ -1032,7 +1044,7 @@ Partial Class SettingsForm
         Me.Label16.AutoSize = True
         Me.Label16.Location = New System.Drawing.Point(246, 69)
         Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(32, 13)
+        Me.Label16.Size = New System.Drawing.Size(32, 14)
         Me.Label16.TabIndex = 18
         Me.Label16.Text = "Hex:"
         '
@@ -1040,14 +1052,14 @@ Partial Class SettingsForm
         '
         Me.GTextBoxFC.Location = New System.Drawing.Point(387, 91)
         Me.GTextBoxFC.Name = "GTextBoxFC"
-        Me.GTextBoxFC.Size = New System.Drawing.Size(56, 20)
+        Me.GTextBoxFC.Size = New System.Drawing.Size(56, 21)
         Me.GTextBoxFC.TabIndex = 21
         '
         'RTextBoxFC
         '
         Me.RTextBoxFC.Location = New System.Drawing.Point(387, 66)
         Me.RTextBoxFC.Name = "RTextBoxFC"
-        Me.RTextBoxFC.Size = New System.Drawing.Size(56, 20)
+        Me.RTextBoxFC.Size = New System.Drawing.Size(56, 21)
         Me.RTextBoxFC.TabIndex = 19
         '
         'Label17
@@ -1055,7 +1067,7 @@ Partial Class SettingsForm
         Me.Label17.AutoSize = True
         Me.Label17.Location = New System.Drawing.Point(351, 69)
         Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(19, 13)
+        Me.Label17.Size = New System.Drawing.Size(20, 14)
         Me.Label17.TabIndex = 20
         Me.Label17.Text = "R:"
         '
@@ -1064,7 +1076,7 @@ Partial Class SettingsForm
         Me.Label9.AutoSize = True
         Me.Label9.Location = New System.Drawing.Point(8, 11)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(106, 13)
+        Me.Label9.Size = New System.Drawing.Size(95, 14)
         Me.Label9.TabIndex = 3
         Me.Label9.Text = "Pick your colors!"
         '
@@ -1084,9 +1096,9 @@ Partial Class SettingsForm
         'OffRB
         '
         Me.OffRB.AutoSize = True
-        Me.OffRB.Location = New System.Drawing.Point(52, 79)
+        Me.OffRB.Location = New System.Drawing.Point(57, 100)
         Me.OffRB.Name = "OffRB"
-        Me.OffRB.Size = New System.Drawing.Size(44, 17)
+        Me.OffRB.Size = New System.Drawing.Size(43, 18)
         Me.OffRB.TabIndex = 2
         Me.OffRB.TabStop = True
         Me.OffRB.Text = "Off"
@@ -1097,7 +1109,7 @@ Partial Class SettingsForm
         Me.HardcoreLabel.AutoSize = True
         Me.HardcoreLabel.Location = New System.Drawing.Point(4, 4)
         Me.HardcoreLabel.Name = "HardcoreLabel"
-        Me.HardcoreLabel.Size = New System.Drawing.Size(243, 78)
+        Me.HardcoreLabel.Size = New System.Drawing.Size(223, 84)
         Me.HardcoreLabel.TabIndex = 1
         Me.HardcoreLabel.Text = "Hardcore Mode" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Hardcore Mode turns the application" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "into a lockdown browser disab" &
     "ling ALL" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "key input and preventing unlock or pause" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "functions." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "You can also pro" &
@@ -1106,9 +1118,9 @@ Partial Class SettingsForm
         'HardCoreRadioButton
         '
         Me.HardCoreRadioButton.AutoSize = True
-        Me.HardCoreRadioButton.Location = New System.Drawing.Point(8, 79)
+        Me.HardCoreRadioButton.Location = New System.Drawing.Point(8, 100)
         Me.HardCoreRadioButton.Name = "HardCoreRadioButton"
-        Me.HardCoreRadioButton.Size = New System.Drawing.Size(41, 17)
+        Me.HardCoreRadioButton.Size = New System.Drawing.Size(41, 18)
         Me.HardCoreRadioButton.TabIndex = 0
         Me.HardCoreRadioButton.TabStop = True
         Me.HardCoreRadioButton.Text = "On"

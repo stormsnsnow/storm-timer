@@ -74,7 +74,7 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>btimelogoa5.ico</ApplicationIcon>
+    <ApplicationIcon>btimelogob1.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationManifest>app.manifest</ApplicationManifest>
@@ -161,10 +161,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationEvents.vb" />
-    <Compile Include="BreakPausedForm.Designer.vb">
-      <DependentUpon>BreakPausedForm.vb</DependentUpon>
+    <Compile Include="MessageForm.Designer.vb">
+      <DependentUpon>MessageForm.vb</DependentUpon>
     </Compile>
-    <Compile Include="BreakPausedForm.vb">
+    <Compile Include="MessageForm.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SplashScreenForm.Designer.vb">
@@ -207,17 +207,22 @@
     <Compile Include="SettingsForm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UnhandledExceptionForm.Designer.vb">
-      <DependentUpon>UnhandledExceptionForm.vb</DependentUpon>
+    <Compile Include="ErrorMessageForm.Designer.vb">
+      <DependentUpon>ErrorMessageForm.vb</DependentUpon>
     </Compile>
-    <Compile Include="UnhandledExceptionForm.vb">
+    <Compile Include="ErrorMessageForm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="WindowsController.vb" />
+    <Compile Include="WhatsNew.Designer.vb">
+      <DependentUpon>WhatsNew.vb</DependentUpon>
+    </Compile>
+    <Compile Include="WhatsNew.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="BreakPausedForm.resx">
-      <DependentUpon>BreakPausedForm.vb</DependentUpon>
+    <EmbeddedResource Include="MessageForm.resx">
+      <DependentUpon>MessageForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SplashScreenForm.resx">
       <DependentUpon>SplashScreenForm.vb</DependentUpon>
@@ -237,8 +242,11 @@
     <EmbeddedResource Include="SettingsForm.resx">
       <DependentUpon>SettingsForm.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UnhandledExceptionForm.resx">
-      <DependentUpon>UnhandledExceptionForm.vb</DependentUpon>
+    <EmbeddedResource Include="ErrorMessageForm.resx">
+      <DependentUpon>ErrorMessageForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WhatsNew.resx">
+      <DependentUpon>WhatsNew.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -260,10 +268,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="BTimeA2.ico" />
-    <Content Include="btimelogoa3.ico" />
-    <Content Include="btimelogoa4.ico" />
-    <Content Include="btimelogoa5.ico" />
+    <Content Include="btimelogob1.ico" />
     <None Include="bin\x64\Debug\sounds\bt\aquanear.wav" />
     <None Include="bin\x64\Debug\sounds\bt\ff.wav" />
     <None Include="bin\x64\Debug\sounds\bt\foghorn.wav" />
@@ -282,7 +287,6 @@
     <None Include="bin\x64\Debug\startup4.wav" />
     <None Include="bin\x64\Debug\timesup4.wav" />
     <None Include="bin\x64\Debug\timeup.wav" />
-    <Content Include="BTimeA1.ico" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.8">

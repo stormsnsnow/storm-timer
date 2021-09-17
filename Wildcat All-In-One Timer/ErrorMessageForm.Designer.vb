@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class UnhandledExceptionForm
+Partial Class ErrorMessageForm
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,7 +22,7 @@ Partial Class UnhandledExceptionForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(UnhandledExceptionForm))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ErrorMessageForm))
         Me.StopWDLCTImage = New System.Windows.Forms.PictureBox()
         Me.ConciseErrorLabel = New System.Windows.Forms.Label()
         Me.DetailedErrorLabel = New System.Windows.Forms.Label()
@@ -44,28 +44,27 @@ Partial Class UnhandledExceptionForm
         'ConciseErrorLabel
         '
         Me.ConciseErrorLabel.AutoSize = True
-        Me.ConciseErrorLabel.Font = New System.Drawing.Font("Cooper Black", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ConciseErrorLabel.Font = New System.Drawing.Font("Helvetica", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ConciseErrorLabel.Location = New System.Drawing.Point(83, 12)
         Me.ConciseErrorLabel.Name = "ConciseErrorLabel"
-        Me.ConciseErrorLabel.Size = New System.Drawing.Size(376, 21)
+        Me.ConciseErrorLabel.Size = New System.Drawing.Size(388, 22)
         Me.ConciseErrorLabel.TabIndex = 1
-        Me.ConciseErrorLabel.Text = "Unfortunately, BreakTime must close"
+        Me.ConciseErrorLabel.Text = "Breaktime error message title goes here"
         '
         'DetailedErrorLabel
         '
         Me.DetailedErrorLabel.AutoSize = True
-        Me.DetailedErrorLabel.Font = New System.Drawing.Font("Cooper Black", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DetailedErrorLabel.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DetailedErrorLabel.Location = New System.Drawing.Point(85, 31)
         Me.DetailedErrorLabel.Name = "DetailedErrorLabel"
-        Me.DetailedErrorLabel.Size = New System.Drawing.Size(231, 39)
+        Me.DetailedErrorLabel.Size = New System.Drawing.Size(190, 28)
         Me.DetailedErrorLabel.TabIndex = 2
-        Me.DetailedErrorLabel.Text = "An unhandled exception has occured" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "that caused the application to " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "close. We ar" &
-    "e sorry for the inconvience."
+        Me.DetailedErrorLabel.Text = "Text will be added in B3." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "For now click Exit to exit program."
         '
         'ExitButton
         '
         Me.ExitButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.ExitButton.Font = New System.Drawing.Font("Cooper Black", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ExitButton.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ExitButton.Location = New System.Drawing.Point(412, 39)
         Me.ExitButton.Name = "ExitButton"
         Me.ExitButton.Size = New System.Drawing.Size(75, 49)
@@ -76,7 +75,7 @@ Partial Class UnhandledExceptionForm
         'Button1
         '
         Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button1.Font = New System.Drawing.Font("Cooper Black", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.Location = New System.Drawing.Point(331, 39)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 49)
@@ -101,7 +100,7 @@ Partial Class UnhandledExceptionForm
         Me.MinimizeBox = False
         Me.Name = "UnhandledExceptionForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "An Error Ocurred"
+        Me.Text = "BreakTime - Error Message"
         CType(Me.StopWDLCTImage, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

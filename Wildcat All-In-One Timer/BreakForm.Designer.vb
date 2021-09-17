@@ -58,10 +58,10 @@ Partial Class BreakForm
         Me.lbldate.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.lbldate.AutoSize = True
         Me.lbldate.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.lbldate.Font = New System.Drawing.Font("Cooper Black", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbldate.Font = New System.Drawing.Font("Helvetica", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbldate.Location = New System.Drawing.Point(34, 67)
         Me.lbldate.Name = "lbldate"
-        Me.lbldate.Size = New System.Drawing.Size(238, 21)
+        Me.lbldate.Size = New System.Drawing.Size(217, 22)
         Me.lbldate.TabIndex = 58
         Me.lbldate.Text = "Monday January 1 2022"
         Me.lbldate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -71,10 +71,10 @@ Partial Class BreakForm
         Me.lblbackon.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.lblbackon.AutoSize = True
         Me.lblbackon.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.lblbackon.Font = New System.Drawing.Font("Cooper Black", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblbackon.Font = New System.Drawing.Font("Helvetica", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblbackon.Location = New System.Drawing.Point(218, 46)
         Me.lblbackon.Name = "lblbackon"
-        Me.lblbackon.Size = New System.Drawing.Size(59, 21)
+        Me.lblbackon.Size = New System.Drawing.Size(50, 22)
         Me.lblbackon.TabIndex = 57
         Me.lblbackon.Text = "until"
         '
@@ -83,10 +83,10 @@ Partial Class BreakForm
         Me.lblhour.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.lblhour.AutoSize = True
         Me.lblhour.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.lblhour.Font = New System.Drawing.Font("Cooper Black", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblhour.Font = New System.Drawing.Font("Helvetica", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblhour.Location = New System.Drawing.Point(75, 25)
         Me.lblhour.Name = "lblhour"
-        Me.lblhour.Size = New System.Drawing.Size(20, 21)
+        Me.lblhour.Size = New System.Drawing.Size(22, 22)
         Me.lblhour.TabIndex = 56
         Me.lblhour.Text = "--"
         '
@@ -95,10 +95,10 @@ Partial Class BreakForm
         Me.lblwait.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.lblwait.AutoSize = True
         Me.lblwait.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.lblwait.Font = New System.Drawing.Font("Cooper Black", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblwait.Font = New System.Drawing.Font("Helvetica", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblwait.Location = New System.Drawing.Point(14, 25)
         Me.lblwait.Name = "lblwait"
-        Me.lblwait.Size = New System.Drawing.Size(57, 21)
+        Me.lblwait.Size = New System.Drawing.Size(51, 22)
         Me.lblwait.TabIndex = 55
         Me.lblwait.Text = "Wait"
         '
@@ -106,8 +106,8 @@ Partial Class BreakForm
         '
         Me.ImageList1.ImageStream = CType(resources.GetObject("ImageList1.ImageStream"), System.Windows.Forms.ImageListStreamer)
         Me.ImageList1.TransparentColor = System.Drawing.Color.Transparent
-        Me.ImageList1.Images.SetKeyName(0, "23F8.png")
-        Me.ImageList1.Images.SetKeyName(1, "23F9.png")
+        Me.ImageList1.Images.SetKeyName(0, "pause.ico")
+        Me.ImageList1.Images.SetKeyName(1, "stop.ico")
         '
         'BreakPanel
         '
@@ -127,7 +127,7 @@ Partial Class BreakForm
         Me.BreakPanel.Controls.Add(Me.lbldate)
         Me.BreakPanel.Controls.Add(Me.lblhourandbreak)
         Me.BreakPanel.Controls.Add(Me.lblminuteandbreak)
-        Me.BreakPanel.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BreakPanel.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BreakPanel.Location = New System.Drawing.Point(177, 220)
         Me.BreakPanel.Name = "BreakPanel"
         Me.BreakPanel.Size = New System.Drawing.Size(524, 93)
@@ -138,22 +138,22 @@ Partial Class BreakForm
         Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label1.AutoSize = True
         Me.Label1.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.Label1.Font = New System.Drawing.Font("Cooper Black", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(156, 3)
+        Me.Label1.Font = New System.Drawing.Font("Helvetica", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(176, 4)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(197, 21)
+        Me.Label1.Size = New System.Drawing.Size(132, 22)
         Me.Label1.TabIndex = 76
-        Me.Label1.Text = "Please take a break"
+        Me.Label1.Text = "Take a break!"
         '
         'lbltime
         '
         Me.lbltime.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.lbltime.AutoSize = True
         Me.lbltime.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.lbltime.Font = New System.Drawing.Font("Cooper Black", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbltime.Font = New System.Drawing.Font("Helvetica", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbltime.Location = New System.Drawing.Point(278, 67)
         Me.lbltime.Name = "lbltime"
-        Me.lbltime.Size = New System.Drawing.Size(151, 21)
+        Me.lbltime.Size = New System.Drawing.Size(137, 22)
         Me.lbltime.TabIndex = 75
         Me.lbltime.Text = "at 12:00:00 AM"
         Me.lbltime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -163,10 +163,10 @@ Partial Class BreakForm
         Me.lblsecondsbreak.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.lblsecondsbreak.AutoSize = True
         Me.lblsecondsbreak.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.lblsecondsbreak.Font = New System.Drawing.Font("Cooper Black", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblsecondsbreak.Font = New System.Drawing.Font("Helvetica", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblsecondsbreak.Location = New System.Drawing.Point(415, 25)
         Me.lblsecondsbreak.Name = "lblsecondsbreak"
-        Me.lblsecondsbreak.Size = New System.Drawing.Size(84, 21)
+        Me.lblsecondsbreak.Size = New System.Drawing.Size(90, 22)
         Me.lblsecondsbreak.TabIndex = 73
         Me.lblsecondsbreak.Text = "seconds"
         '
@@ -187,10 +187,10 @@ Partial Class BreakForm
         Me.lblminutesandbreak.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.lblminutesandbreak.AutoSize = True
         Me.lblminutesandbreak.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.lblminutesandbreak.Font = New System.Drawing.Font("Cooper Black", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblminutesandbreak.Font = New System.Drawing.Font("Helvetica", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblminutesandbreak.Location = New System.Drawing.Point(250, 25)
         Me.lblminutesandbreak.Name = "lblminutesandbreak"
-        Me.lblminutesandbreak.Size = New System.Drawing.Size(130, 21)
+        Me.lblminutesandbreak.Size = New System.Drawing.Size(124, 22)
         Me.lblminutesandbreak.TabIndex = 70
         Me.lblminutesandbreak.Text = "minutes and"
         '
@@ -199,10 +199,10 @@ Partial Class BreakForm
         Me.lblhoursandbreak.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.lblhoursandbreak.AutoSize = True
         Me.lblhoursandbreak.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.lblhoursandbreak.Font = New System.Drawing.Font("Cooper Black", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblhoursandbreak.Font = New System.Drawing.Font("Helvetica", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblhoursandbreak.Location = New System.Drawing.Point(107, 25)
         Me.lblhoursandbreak.Name = "lblhoursandbreak"
-        Me.lblhoursandbreak.Size = New System.Drawing.Size(107, 21)
+        Me.lblhoursandbreak.Size = New System.Drawing.Size(101, 22)
         Me.lblhoursandbreak.TabIndex = 68
         Me.lblhoursandbreak.Text = "hours and"
         '
@@ -211,10 +211,10 @@ Partial Class BreakForm
         Me.lblsec.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.lblsec.AutoSize = True
         Me.lblsec.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.lblsec.Font = New System.Drawing.Font("Cooper Black", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblsec.Font = New System.Drawing.Font("Helvetica", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblsec.Location = New System.Drawing.Point(384, 25)
         Me.lblsec.Name = "lblsec"
-        Me.lblsec.Size = New System.Drawing.Size(20, 21)
+        Me.lblsec.Size = New System.Drawing.Size(22, 22)
         Me.lblsec.TabIndex = 67
         Me.lblsec.Text = "--"
         '
@@ -223,10 +223,10 @@ Partial Class BreakForm
         Me.lblminute.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.lblminute.AutoSize = True
         Me.lblminute.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.lblminute.Font = New System.Drawing.Font("Cooper Black", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblminute.Font = New System.Drawing.Font("Helvetica", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblminute.Location = New System.Drawing.Point(218, 25)
         Me.lblminute.Name = "lblminute"
-        Me.lblminute.Size = New System.Drawing.Size(20, 21)
+        Me.lblminute.Size = New System.Drawing.Size(22, 22)
         Me.lblminute.TabIndex = 66
         Me.lblminute.Text = "--"
         '
@@ -272,24 +272,23 @@ Partial Class BreakForm
         Me.Label2.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label2.AutoSize = True
         Me.Label2.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.Label2.Font = New System.Drawing.Font("Cooper Black", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Font = New System.Drawing.Font("Helvetica", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(176, 5)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(151, 21)
+        Me.Label2.Size = New System.Drawing.Size(142, 22)
         Me.Label2.TabIndex = 77
         Me.Label2.Text = "Break Options"
         '
         'UnlockButton
         '
         Me.UnlockButton.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.UnlockButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.UnlockButton.Font = New System.Drawing.Font("Cooper Black", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.UnlockButton.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.UnlockButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.UnlockButton.ImageKey = "23F9.png"
+        Me.UnlockButton.ImageKey = "stop.ico"
         Me.UnlockButton.ImageList = Me.ImageList1
-        Me.UnlockButton.Location = New System.Drawing.Point(261, 29)
+        Me.UnlockButton.Location = New System.Drawing.Point(246, 29)
         Me.UnlockButton.Name = "UnlockButton"
-        Me.UnlockButton.Size = New System.Drawing.Size(241, 30)
+        Me.UnlockButton.Size = New System.Drawing.Size(102, 30)
         Me.UnlockButton.TabIndex = 76
         Me.UnlockButton.Text = "Unlock Break"
         Me.UnlockButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -299,14 +298,13 @@ Partial Class BreakForm
         'PauseButton
         '
         Me.PauseButton.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.PauseButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.PauseButton.Font = New System.Drawing.Font("Cooper Black", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PauseButton.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.PauseButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.PauseButton.ImageKey = "23F8.png"
+        Me.PauseButton.ImageKey = "pause.ico"
         Me.PauseButton.ImageList = Me.ImageList1
-        Me.PauseButton.Location = New System.Drawing.Point(18, 29)
+        Me.PauseButton.Location = New System.Drawing.Point(135, 29)
         Me.PauseButton.Name = "PauseButton"
-        Me.PauseButton.Size = New System.Drawing.Size(216, 30)
+        Me.PauseButton.Size = New System.Drawing.Size(105, 30)
         Me.PauseButton.TabIndex = 75
         Me.PauseButton.Text = "Pause Break"
         Me.PauseButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight

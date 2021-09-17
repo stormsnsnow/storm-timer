@@ -14,8 +14,8 @@ Namespace My
 
 
         Private Sub MyApplication_UnhandledException(sender As Object, e As UnhandledExceptionEventArgs) Handles Me.UnhandledException
-            UnhandledExceptionForm.exce = e.Exception
-            UnhandledExceptionForm.Show()
+            ErrorMessageForm.exce = e.Exception
+            ErrorMessageForm.Show()
             e.ExitApplication = False
         End Sub
 
