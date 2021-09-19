@@ -36,7 +36,6 @@ Partial Class MainForm
         Me.lblwelcome = New System.Windows.Forms.Label()
         Me.lblVersion = New System.Windows.Forms.Label()
         Me.lblName = New System.Windows.Forms.Label()
-        Me.ShutdownTimer = New System.Windows.Forms.Timer(Me.components)
         Me.YDTimer = New System.Windows.Forms.Timer(Me.components)
         Me.NotifyIconWDLCT = New System.Windows.Forms.NotifyIcon(Me.components)
         Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
@@ -169,6 +168,7 @@ Partial Class MainForm
         Me.IconsIL.Images.SetKeyName(3, "stop.ico")
         Me.IconsIL.Images.SetKeyName(4, "pause.ico")
         Me.IconsIL.Images.SetKeyName(5, "play.ico")
+        Me.IconsIL.Images.SetKeyName(6, "settings.ico")
         '
         'TimerTimer
         '
@@ -223,6 +223,9 @@ Partial Class MainForm
         Me.SettingsButton.BackColor = System.Drawing.Color.Transparent
         Me.SettingsButton.Dock = System.Windows.Forms.DockStyle.Right
         Me.SettingsButton.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SettingsButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.SettingsButton.ImageKey = "settings.ico"
+        Me.SettingsButton.ImageList = Me.IconsIL
         Me.SettingsButton.Location = New System.Drawing.Point(505, 0)
         Me.SettingsButton.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.SettingsButton.Name = "SettingsButton"
@@ -272,10 +275,6 @@ Partial Class MainForm
         Me.lblName.Size = New System.Drawing.Size(121, 25)
         Me.lblName.TabIndex = 25
         Me.lblName.Text = "BreakTime"
-        '
-        'ShutdownTimer
-        '
-        Me.ShutdownTimer.Interval = 1000
         '
         'YDTimer
         '
@@ -1353,7 +1352,7 @@ Partial Class MainForm
         Me.MaximizeBox = False
         Me.Name = "MainForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "BreakTime - v21H2B1- Released on September 17, 2021"
+        Me.Text = "BreakTime - v21H2B2- Released on September 19, 2021"
         Me.TitlePanel.ResumeLayout(False)
         Me.TitlePanel.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1397,7 +1396,6 @@ Partial Class MainForm
     Friend WithEvents TitlePanel As Panel
     Friend WithEvents lblVersion As Label
     Friend WithEvents lblName As Label
-    Friend WithEvents ShutdownTimer As Timer
     Friend WithEvents DateLabelYD As Label
     Friend WithEvents lblwelcome As Label
     Friend WithEvents YDTimer As Timer

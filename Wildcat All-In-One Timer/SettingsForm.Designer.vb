@@ -195,7 +195,7 @@ Partial Class SettingsForm
         'Button3
         '
         Me.Button3.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button3.Location = New System.Drawing.Point(184, 71)
+        Me.Button3.Location = New System.Drawing.Point(184, 77)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(75, 40)
         Me.Button3.TabIndex = 31
@@ -215,7 +215,7 @@ Partial Class SettingsForm
         'BtnLicense
         '
         Me.BtnLicense.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnLicense.Location = New System.Drawing.Point(265, 71)
+        Me.BtnLicense.Location = New System.Drawing.Point(265, 77)
         Me.BtnLicense.Name = "BtnLicense"
         Me.BtnLicense.Size = New System.Drawing.Size(75, 40)
         Me.BtnLicense.TabIndex = 3
@@ -229,7 +229,7 @@ Partial Class SettingsForm
         Me.lblVersion.Name = "lblVersion"
         Me.lblVersion.Size = New System.Drawing.Size(169, 42)
         Me.lblVersion.TabIndex = 29
-        Me.lblVersion.Text = "v21H2 " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Beta One" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Released September 17, 2021"
+        Me.lblVersion.Text = "v21H2 " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Beta Two" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Released September 19, 2021"
         Me.lblVersion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'lblName
@@ -254,7 +254,7 @@ Partial Class SettingsForm
         Me.Sounds.Controls.Add(Me.TDLabelS)
         Me.Sounds.Controls.Add(Me.TDComboBoxS)
         Me.Sounds.Controls.Add(Me.SoundsPromptLabel)
-        Me.Sounds.ImageKey = "1F50A.png"
+        Me.Sounds.ImageKey = "soundplay.ico"
         Me.Sounds.Location = New System.Drawing.Point(4, 23)
         Me.Sounds.Name = "Sounds"
         Me.Sounds.Size = New System.Drawing.Size(496, 267)
@@ -356,7 +356,7 @@ Partial Class SettingsForm
         '
         Me.AutoTime.Controls.Add(Me.TimerControl)
         Me.AutoTime.Controls.Add(Me.AutoTimeInstructionsLabelAt)
-        Me.AutoTime.ImageKey = "favicon (6).ico"
+        Me.AutoTime.ImageKey = "time.ico"
         Me.AutoTime.Location = New System.Drawing.Point(4, 23)
         Me.AutoTime.Name = "AutoTime"
         Me.AutoTime.Padding = New System.Windows.Forms.Padding(3)
@@ -568,11 +568,11 @@ Partial Class SettingsForm
         Me.ImageList1.TransparentColor = System.Drawing.Color.Transparent
         Me.ImageList1.Images.SetKeyName(0, "break.ico")
         Me.ImageList1.Images.SetKeyName(1, "soundplay.ico")
-        Me.ImageList1.Images.SetKeyName(2, "2139.png")
-        Me.ImageList1.Images.SetKeyName(3, "2699.png")
+        Me.ImageList1.Images.SetKeyName(2, "info.ico")
+        Me.ImageList1.Images.SetKeyName(3, "settings.ico")
         Me.ImageList1.Images.SetKeyName(4, "time.ico")
-        Me.ImageList1.Images.SetKeyName(5, "1F50C.png")
-        Me.ImageList1.Images.SetKeyName(6, "favicon (4).ico")
+        Me.ImageList1.Images.SetKeyName(5, "1f50c.ico")
+        Me.ImageList1.Images.SetKeyName(6, "pbrush.ico")
         '
         'AutoTimeInstructionsLabelAt
         '
@@ -973,10 +973,10 @@ Partial Class SettingsForm
         Me.TabPage2.Controls.Add(Me.GTextBoxFC)
         Me.TabPage2.Controls.Add(Me.RTextBoxFC)
         Me.TabPage2.Controls.Add(Me.Label17)
-        Me.TabPage2.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage2.Location = New System.Drawing.Point(4, 23)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(479, 208)
+        Me.TabPage2.Size = New System.Drawing.Size(479, 207)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Back Color"
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -1085,6 +1085,7 @@ Partial Class SettingsForm
         Me.Security.Controls.Add(Me.OffRB)
         Me.Security.Controls.Add(Me.HardcoreLabel)
         Me.Security.Controls.Add(Me.HardCoreRadioButton)
+        Me.Security.ImageKey = "break.ico"
         Me.Security.Location = New System.Drawing.Point(4, 23)
         Me.Security.Name = "Security"
         Me.Security.Padding = New System.Windows.Forms.Padding(3)

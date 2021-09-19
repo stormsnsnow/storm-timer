@@ -74,7 +74,7 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>btimelogob1.ico</ApplicationIcon>
+    <ApplicationIcon>btimelogob2.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationManifest>app.manifest</ApplicationManifest>
@@ -268,7 +268,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="btimelogob1.ico" />
+    <Content Include="btimelogob2.ico" />
     <None Include="bin\x64\Debug\sounds\bt\aquanear.wav" />
     <None Include="bin\x64\Debug\sounds\bt\ff.wav" />
     <None Include="bin\x64\Debug\sounds\bt\foghorn.wav" />
