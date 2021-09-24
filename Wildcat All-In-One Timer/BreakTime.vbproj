@@ -74,7 +74,7 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>btimelogob2.ico</ApplicationIcon>
+    <ApplicationIcon>btimelogob3.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationManifest>app.manifest</ApplicationManifest>
@@ -253,8 +253,6 @@
     <None Include="app.manifest" />
     <None Include="bin\x64\Debug\files.pfx" />
     <None Include="bin\x64\Debug\key.pfx" />
-    <None Include="BreakTime_TemporaryKey.pfx" />
-    <None Include="files.pfx" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -268,7 +266,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="btimelogob2.ico" />
+    <Content Include="btimelogob3.ico" />
     <None Include="bin\x64\Debug\sounds\bt\aquanear.wav" />
     <None Include="bin\x64\Debug\sounds\bt\ff.wav" />
     <None Include="bin\x64\Debug\sounds\bt\foghorn.wav" />

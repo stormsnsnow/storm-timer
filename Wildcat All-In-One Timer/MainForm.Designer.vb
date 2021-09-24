@@ -73,9 +73,7 @@ Partial Class MainForm
         Me.ResumeTimeButton = New System.Windows.Forms.Button()
         Me.BTime = New System.Windows.Forms.TabPage()
         Me.nudb1sec = New System.Windows.Forms.NumericUpDown()
-        Me.BreakTimeLabelBT = New System.Windows.Forms.Label()
         Me.BreakNowButtonBt = New System.Windows.Forms.Button()
-        Me.BreakTimeSelectLabelBT = New System.Windows.Forms.Label()
         Me.BreakLabelBT = New System.Windows.Forms.Label()
         Me.B1HourNudBT = New System.Windows.Forms.NumericUpDown()
         Me.nudb1min = New System.Windows.Forms.NumericUpDown()
@@ -180,7 +178,9 @@ Partial Class MainForm
         '
         'TitlePanel
         '
-        Me.TitlePanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.TitlePanel.BackColor = System.Drawing.Color.Transparent
+        Me.TitlePanel.BackgroundImage = CType(resources.GetObject("TitlePanel.BackgroundImage"), System.Drawing.Image)
+        Me.TitlePanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.TitlePanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TitlePanel.Controls.Add(Me.PictureBox1)
         Me.TitlePanel.Controls.Add(Me.TimeLabelYD)
@@ -194,13 +194,13 @@ Partial Class MainForm
         Me.TitlePanel.Location = New System.Drawing.Point(0, 0)
         Me.TitlePanel.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TitlePanel.Name = "TitlePanel"
-        Me.TitlePanel.Size = New System.Drawing.Size(637, 77)
+        Me.TitlePanel.Size = New System.Drawing.Size(637, 99)
         Me.TitlePanel.TabIndex = 25
         '
         'PictureBox1
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(6, 8)
+        Me.PictureBox1.Location = New System.Drawing.Point(11, 22)
         Me.PictureBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(64, 62)
@@ -229,7 +229,7 @@ Partial Class MainForm
         Me.SettingsButton.Location = New System.Drawing.Point(505, 0)
         Me.SettingsButton.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.SettingsButton.Name = "SettingsButton"
-        Me.SettingsButton.Size = New System.Drawing.Size(130, 75)
+        Me.SettingsButton.Size = New System.Drawing.Size(130, 97)
         Me.SettingsButton.TabIndex = 83
         Me.SettingsButton.Text = "Settings"
         Me.SettingsButton.UseVisualStyleBackColor = False
@@ -263,7 +263,7 @@ Partial Class MainForm
         Me.lblVersion.Name = "lblVersion"
         Me.lblVersion.Size = New System.Drawing.Size(169, 42)
         Me.lblVersion.TabIndex = 26
-        Me.lblVersion.Text = "v21H2" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Beta 1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Released September 17, 2021"
+        Me.lblVersion.Text = "v21H2" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Beta 3" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Released September 24, 2021"
         Me.lblVersion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'lblName
@@ -335,7 +335,7 @@ Partial Class MainForm
         Me.TimerTab.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TimerTab.Name = "TimerTab"
         Me.TimerTab.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.TimerTab.Size = New System.Drawing.Size(629, 284)
+        Me.TimerTab.Size = New System.Drawing.Size(629, 259)
         Me.TimerTab.TabIndex = 1
         Me.TimerTab.Text = "Timer"
         '
@@ -663,9 +663,7 @@ Partial Class MainForm
         'BTime
         '
         Me.BTime.Controls.Add(Me.nudb1sec)
-        Me.BTime.Controls.Add(Me.BreakTimeLabelBT)
         Me.BTime.Controls.Add(Me.BreakNowButtonBt)
-        Me.BTime.Controls.Add(Me.BreakTimeSelectLabelBT)
         Me.BTime.Controls.Add(Me.BreakLabelBT)
         Me.BTime.Controls.Add(Me.B1HourNudBT)
         Me.BTime.Controls.Add(Me.nudb1min)
@@ -675,7 +673,7 @@ Partial Class MainForm
         Me.BTime.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.BTime.Name = "BTime"
         Me.BTime.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.BTime.Size = New System.Drawing.Size(629, 284)
+        Me.BTime.Size = New System.Drawing.Size(629, 259)
         Me.BTime.TabIndex = 5
         Me.BTime.Text = "Break"
         '
@@ -690,16 +688,6 @@ Partial Class MainForm
         Me.nudb1sec.Size = New System.Drawing.Size(49, 21)
         Me.nudb1sec.TabIndex = 42
         '
-        'BreakTimeLabelBT
-        '
-        Me.BreakTimeLabelBT.AutoSize = True
-        Me.BreakTimeLabelBT.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BreakTimeLabelBT.Location = New System.Drawing.Point(290, 67)
-        Me.BreakTimeLabelBT.Name = "BreakTimeLabelBT"
-        Me.BreakTimeLabelBT.Size = New System.Drawing.Size(51, 14)
-        Me.BreakTimeLabelBT.TabIndex = 44
-        Me.BreakTimeLabelBT.Text = "00:00:00"
-        '
         'BreakNowButtonBt
         '
         Me.BreakNowButtonBt.BackColor = System.Drawing.Color.Transparent
@@ -707,7 +695,7 @@ Partial Class MainForm
         Me.BreakNowButtonBt.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.BreakNowButtonBt.ImageKey = "play.ico"
         Me.BreakNowButtonBt.ImageList = Me.IconsIL
-        Me.BreakNowButtonBt.Location = New System.Drawing.Point(252, 93)
+        Me.BreakNowButtonBt.Location = New System.Drawing.Point(261, 66)
         Me.BreakNowButtonBt.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.BreakNowButtonBt.Name = "BreakNowButtonBt"
         Me.BreakNowButtonBt.Size = New System.Drawing.Size(95, 27)
@@ -715,16 +703,6 @@ Partial Class MainForm
         Me.BreakNowButtonBt.Text = "Start"
         Me.BreakNowButtonBt.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.BreakNowButtonBt.UseVisualStyleBackColor = False
-        '
-        'BreakTimeSelectLabelBT
-        '
-        Me.BreakTimeSelectLabelBT.AutoSize = True
-        Me.BreakTimeSelectLabelBT.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BreakTimeSelectLabelBT.Location = New System.Drawing.Point(211, 67)
-        Me.BreakTimeSelectLabelBT.Name = "BreakTimeSelectLabelBT"
-        Me.BreakTimeSelectLabelBT.Size = New System.Drawing.Size(70, 14)
-        Me.BreakTimeSelectLabelBT.TabIndex = 43
-        Me.BreakTimeSelectLabelBT.Text = "Break Time:"
         '
         'BreakLabelBT
         '
@@ -785,7 +763,7 @@ Partial Class MainForm
         Me.BreakTimerTab.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.BreakTimerTab.Name = "BreakTimerTab"
         Me.BreakTimerTab.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.BreakTimerTab.Size = New System.Drawing.Size(629, 284)
+        Me.BreakTimerTab.Size = New System.Drawing.Size(629, 259)
         Me.BreakTimerTab.TabIndex = 0
         Me.BreakTimerTab.Text = "Break Timer"
         '
@@ -796,7 +774,7 @@ Partial Class MainForm
         Me.StartButtonBT.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.StartButtonBT.ImageKey = "play.ico"
         Me.StartButtonBT.ImageList = Me.IconsIL
-        Me.StartButtonBT.Location = New System.Drawing.Point(38, 175)
+        Me.StartButtonBT.Location = New System.Drawing.Point(40, 116)
         Me.StartButtonBT.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.StartButtonBT.Name = "StartButtonBT"
         Me.StartButtonBT.Size = New System.Drawing.Size(108, 45)
@@ -812,7 +790,7 @@ Partial Class MainForm
         Me.btnResume.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnResume.ImageIndex = 5
         Me.btnResume.ImageList = Me.IconsIL
-        Me.btnResume.Location = New System.Drawing.Point(294, 176)
+        Me.btnResume.Location = New System.Drawing.Point(296, 117)
         Me.btnResume.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnResume.Name = "btnResume"
         Me.btnResume.Size = New System.Drawing.Size(127, 44)
@@ -829,7 +807,7 @@ Partial Class MainForm
         Me.btnStop.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnStop.ImageIndex = 3
         Me.btnStop.ImageList = Me.IconsIL
-        Me.btnStop.Location = New System.Drawing.Point(152, 175)
+        Me.btnStop.Location = New System.Drawing.Point(154, 116)
         Me.btnStop.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnStop.Name = "btnStop"
         Me.btnStop.Size = New System.Drawing.Size(127, 45)
@@ -846,7 +824,7 @@ Partial Class MainForm
         Me.PauseButtonBT.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.PauseButtonBT.ImageIndex = 4
         Me.PauseButtonBT.ImageList = Me.IconsIL
-        Me.PauseButtonBT.Location = New System.Drawing.Point(427, 177)
+        Me.PauseButtonBT.Location = New System.Drawing.Point(429, 118)
         Me.PauseButtonBT.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.PauseButtonBT.Name = "PauseButtonBT"
         Me.PauseButtonBT.Size = New System.Drawing.Size(108, 43)
@@ -868,7 +846,7 @@ Partial Class MainForm
         Me.BSTGroupBoxBT.Controls.Add(Me.BSTHourAndLabelBT)
         Me.BSTGroupBoxBT.Controls.Add(Me.BSTHoursAndLabelBT)
         Me.BSTGroupBoxBT.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BSTGroupBoxBT.Location = New System.Drawing.Point(144, 224)
+        Me.BSTGroupBoxBT.Location = New System.Drawing.Point(146, 165)
         Me.BSTGroupBoxBT.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.BSTGroupBoxBT.Name = "BSTGroupBoxBT"
         Me.BSTGroupBoxBT.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
@@ -981,7 +959,7 @@ Partial Class MainForm
         Me.TSFGroupBoxBT.Controls.Add(Me.TSFHourAndLabelBT)
         Me.TSFGroupBoxBT.Controls.Add(Me.TSFHoursAndLabelBT)
         Me.TSFGroupBoxBT.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TSFGroupBoxBT.Location = New System.Drawing.Point(33, 225)
+        Me.TSFGroupBoxBT.Location = New System.Drawing.Point(35, 166)
         Me.TSFGroupBoxBT.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TSFGroupBoxBT.Name = "TSFGroupBoxBT"
         Me.TSFGroupBoxBT.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
@@ -1085,12 +1063,11 @@ Partial Class MainForm
         'VisualRbBt
         '
         Me.VisualRbBt.AutoSize = True
-        Me.VisualRbBt.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.VisualRbBt.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.VisualRbBt.Location = New System.Drawing.Point(203, 81)
         Me.VisualRbBt.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.VisualRbBt.Name = "VisualRbBt"
-        Me.VisualRbBt.Size = New System.Drawing.Size(54, 18)
+        Me.VisualRbBt.Size = New System.Drawing.Size(55, 18)
         Me.VisualRbBt.TabIndex = 62
         Me.VisualRbBt.TabStop = True
         Me.VisualRbBt.Text = "Visual"
@@ -1118,7 +1095,7 @@ Partial Class MainForm
         Me.StatusGroupBoxBT.Controls.Add(Me.HourAndBreakLabelBT)
         Me.StatusGroupBoxBT.Controls.Add(Me.lblhoursandbreak)
         Me.StatusGroupBoxBT.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.StatusGroupBoxBT.Location = New System.Drawing.Point(290, 224)
+        Me.StatusGroupBoxBT.Location = New System.Drawing.Point(292, 165)
         Me.StatusGroupBoxBT.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.StatusGroupBoxBT.Name = "StatusGroupBoxBT"
         Me.StatusGroupBoxBT.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
@@ -1220,12 +1197,11 @@ Partial Class MainForm
         'AudioRbBt
         '
         Me.AudioRbBt.AutoSize = True
-        Me.AudioRbBt.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.AudioRbBt.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.AudioRbBt.Location = New System.Drawing.Point(148, 81)
         Me.AudioRbBt.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.AudioRbBt.Name = "AudioRbBt"
-        Me.AudioRbBt.Size = New System.Drawing.Size(55, 18)
+        Me.AudioRbBt.Size = New System.Drawing.Size(56, 18)
         Me.AudioRbBt.TabIndex = 61
         Me.AudioRbBt.TabStop = True
         Me.AudioRbBt.Text = "Audio"
@@ -1330,12 +1306,12 @@ Partial Class MainForm
         Me.TimerControl.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.TimerControl.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TimerControl.ImageList = Me.IconsIL
-        Me.TimerControl.Location = New System.Drawing.Point(0, 77)
+        Me.TimerControl.Location = New System.Drawing.Point(0, 102)
         Me.TimerControl.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TimerControl.Multiline = True
         Me.TimerControl.Name = "TimerControl"
         Me.TimerControl.SelectedIndex = 0
-        Me.TimerControl.Size = New System.Drawing.Size(637, 311)
+        Me.TimerControl.Size = New System.Drawing.Size(637, 286)
         Me.TimerControl.TabIndex = 24
         '
         'MainForm
@@ -1352,7 +1328,7 @@ Partial Class MainForm
         Me.MaximizeBox = False
         Me.Name = "MainForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "BreakTime - v21H2B2- Released on September 19, 2021"
+        Me.Text = "BreakTime - v21H2B3- Released on September 24, 2021"
         Me.TitlePanel.ResumeLayout(False)
         Me.TitlePanel.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1455,8 +1431,6 @@ Partial Class MainForm
     Friend WithEvents lblhoursandbreak As Label
     Friend WithEvents BTime As TabPage
     Public WithEvents BreakNowButtonBt As Button
-    Friend WithEvents BreakTimeLabelBT As Label
-    Friend WithEvents BreakTimeSelectLabelBT As Label
     Friend WithEvents BreakLabelBT As Label
     Friend WithEvents B1HourNudBT As NumericUpDown
     Friend WithEvents nudb1sec As NumericUpDown

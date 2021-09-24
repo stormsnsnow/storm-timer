@@ -1,24 +1,12 @@
 ﻿Imports System.Globalization
-
-
-
 Imports System.Media
-
-
 Public Class MainForm
     Dim sound As New SoundPlayer
-
-    Private ReadOnly PopHide As Boolean = False
     Dim Notify As Boolean = False
     Public sethours, setmins, setsecs As Integer
     Public hour, min, sec As Integer
     Public hours, min1, sec1 As Integer
     Public sethours1, setmins1, setsecs1 As Integer
-    Public hoursh, minsh, secsh As Integer
-    Public sethoursh, setminsh, setsecsh As Integer
-
-
-
     Private Sub PlayNow()
         Select Case My.Settings.Sound2
             Case 0
@@ -28,18 +16,9 @@ Public Class MainForm
                 sound.SoundLocation = My.Settings.Sound2Location
                 sound.Play()
         End Select
-
-    End Sub
-    Private Sub Pausebutton_Click(sender As Object, e As EventArgs)
-        BreakTimer.Stop()
-        BreakTimer.Enabled = False
-        btnResume.Show()
-        PauseButtonBT.Hide()
-        btnStop.Show()
-        BreakNowButtonBt.Hide()
     End Sub
     Private Sub FrmLAG_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        TimeBomb.Start()
+
         TitlePanel.BackColor = System.Drawing.ColorTranslator.FromHtml(CStr(CStr(My.Settings.BackColor.ToArgb)))
         TitlePanel.ForeColor = System.Drawing.ColorTranslator.FromHtml(CStr(My.Settings.ForeColor.ToArgb))
 
@@ -107,9 +86,6 @@ Public Class MainForm
         lblwelcome.Text = "welcome, " & SystemInformation.UserName
 
     End Sub
-
-
-
     Private Sub StopTimeButton_Click(sender As Object, e As EventArgs) Handles StopTimeButton.Click
         TimerTimer.Stop()
         PauseButtonT.Hide()
@@ -125,11 +101,6 @@ Public Class MainForm
         BreakTimerTab.Enabled = True
 
     End Sub
-
-
-
-
-
     Private Sub PauseTimeButton_Click(sender As Object, e As EventArgs) Handles PauseButtonT.Click
         TimerTimer.Stop()
         PauseButtonT.Hide()
@@ -139,7 +110,6 @@ Public Class MainForm
     End Sub
 
     Private Sub TBeep_Tick(sender As Object, e As EventArgs) Handles tBeep.Tick
-
         sound.Stream = My.Resources.timesup4
         sound.Play()
 
@@ -225,25 +195,6 @@ Public Class MainForm
         SettingsForm.Show()
         Me.Close()
     End Sub
-
-
-
-
-    Private Sub Nudb1hour_ValueChanged(sender As Object, e As EventArgs) Handles B1HourNudBT.ValueChanged
-
-        BreakTimeLabelBT.Text = B1HourNudBT.Value.ToString("0#") & ":" & nudb1min.Value.ToString("0#") & ":" & nudb1sec.Value.ToString("0#")
-    End Sub
-
-    Private Sub Nudb1min_ValueChanged(sender As Object, e As EventArgs) Handles nudb1min.ValueChanged
-
-
-        BreakTimeLabelBT.Text = B1HourNudBT.Value.ToString("0#") & ":" & nudb1min.Value.ToString("0#") & ":" & nudb1sec.Value.ToString("0#")
-    End Sub
-
-    Private Sub Nudb1sec_ValueChanged(sender As Object, e As EventArgs) Handles nudb1sec.ValueChanged
-        BreakTimeLabelBT.Text = B1HourNudBT.Value.ToString("0#") & ":" & nudb1min.Value.ToString("0#") & ":" & nudb1sec.Value.ToString("0#")
-    End Sub
-
     Private Sub OpenToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OpenToolStripMenuItem.Click
         Me.Show()
     End Sub
@@ -345,24 +296,23 @@ run into an exception if YOU DON'T PRESS YES!", "Time Change Acknowlegement", Me
         Else
             TimerTimer.Enabled = False
             tBeep.Enabled = True
-            If MsgBox("Times up!", MsgBoxStyle.Information, "Time Is up") = System.Windows.Forms.DialogResult.OK Then
-                tBeep.Stop()
-                PauseButtonT.Hide()
-                ResumeTimeButton.Hide()
-                StopTimeButton.Hide()
-                StartTimeButton.Show()
-                sec1 = 0
-                min1 = 0
-                hours = 0
 
-                nudHour.Show()
-                nudMin.Show()
-                nudSec.Show()
+            tBeep.Stop()
+            PauseButtonT.Hide()
+            ResumeTimeButton.Hide()
+            StopTimeButton.Hide()
+            StartTimeButton.Show()
+            sec1 = 0
+            min1 = 0
+            hours = 0
 
-                BreakTimerTab.Enabled = True
+            nudHour.Show()
+            nudMin.Show()
+            nudSec.Show()
+
+            BreakTimerTab.Enabled = True
 
 
-            End If
         End If
         lblhourtime.Text = Format(hours, "0#")
         lblmintime.Text = Format(min1, "0#")
@@ -477,30 +427,13 @@ run into an exception if YOU DON'T PRESS YES!", "Time Change Acknowlegement", Me
                             PlayNow()
                             BreakTimer.Stop()
 
-                            If MessageBox.Show("Breaktime will start In " & remain & " seconds. Click OK To start breaktime now. Otherwise, Click Cancel To Continue the timer.", "MinWarn Alert", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation) = DialogResult.OK Then
-                                BreakTimer.Stop()
-                                BreakTimer.Enabled = False
-                                Select Case My.Settings.Sound1
-                                    Case 0
-                                        sound.Stream = My.Resources.timesup4
-                                        sound.Play()
+                            MessageForm.Show()
+                            MessageForm.Label1.Text = "Breaktime Alert!"
+                            MessageForm.Label2.Text = "Breaktime will start In " & remain & " seconds."
 
 
-                                    Case 1 Or 2
-                                        sound.SoundLocation = My.Settings.Sound1Location
-                                        sound.Play()
-                                End Select
-                                BreakForm.sethours = CInt(nudTimeBreakHour.Value)
-                                BreakForm.hours = BreakForm.sethours
-                                BreakForm.setminutes = CInt(nudTimeBreakMin.Value)
-                                BreakForm.minutes = BreakForm.setminutes
-                                BreakForm.setsecs = CInt(nudTimeBreakSec.Value)
-                                BreakForm.seconds = BreakForm.setsecs
-                                BreakForm.Show()
-                                Me.Hide()
-                            ElseIf CBool(DialogResult.Cancel) Then
-                                BreakTimer.Start()
-                            End If
+                            BreakTimer.Start()
+
                         End If
 
                         Notify = True
@@ -518,33 +451,18 @@ run into an exception if YOU DON'T PRESS YES!", "Time Change Acknowlegement", Me
                             PlayNow()
                             BreakTimer.Stop()
 
-                            If MessageBox.Show("Breaktime will start In " & min & " minutes And " & remain & " seconds. Click OK To start breaktime now. Otherwise, Click Cancel To Continue the timer.", "MinWarn Alert", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation) = DialogResult.OK Then
-                                BreakTimer.Stop()
-                                BreakTimer.Enabled = False
-                                Select Case My.Settings.Sound1
-                                    Case 0
-                                        sound.Stream = My.Resources.timesup4
-                                        sound.Play()
-                                    Case 1 Or 2
-                                        sound.SoundLocation = My.Settings.Sound1Location
-                                        sound.Play()
-                                End Select
 
-                                BreakForm.sethours = CInt(nudTimeBreakHour.Value)
-                                BreakForm.hours = BreakForm.sethours
-                                BreakForm.setminutes = CInt(nudTimeBreakMin.Value)
-                                BreakForm.minutes = BreakForm.setminutes
-                                BreakForm.setsecs = CInt(nudTimeBreakSec.Value)
-                                BreakForm.seconds = BreakForm.setsecs
-                                BreakForm.Show()
-                                Me.Hide()
-                            ElseIf CBool(DialogResult.Cancel) Then
-                                BreakTimer.Start()
-                                Notify = True
-                            End If
+                            MessageForm.Show()
+                            MessageForm.Label1.Text = "Breaktime Alert!"
+                            MessageForm.Label2.Text = "Breaktime will start In " & min & " minutes And " & remain & " seconds."
+
+
+                            BreakTimer.Start()
+                            Notify = True
                         End If
                     End If
                 End If
+
             Case 3
                 If hour = 0 AndAlso min = 2 AndAlso sec < 60 Then
                     Dim remain As Integer = sec
@@ -556,31 +474,14 @@ run into an exception if YOU DON'T PRESS YES!", "Time Change Acknowlegement", Me
                             PlayNow()
                             BreakTimer.Stop()
 
-                            If MessageBox.Show("Breaktime will start In " & min & " minutes And " & remain & " seconds. Click OK To start breaktime now. Otherwise, Click Cancel To Continue the timer.", "MinWarn Alert", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation) = DialogResult.OK Then
-                                BreakTimer.Stop()
-                                BreakTimer.Enabled = False
-                                Select Case My.Settings.Sound1
-                                    Case 0
-                                        sound.Stream = My.Resources.timesup4
-                                        sound.Play()
-                                    Case 1 Or 2
-                                        sound.SoundLocation = My.Settings.Sound1Location
-                                        sound.Play()
-                                End Select
+
+                            MessageForm.Show()
+                            MessageForm.Label1.Text = "Breaktime Alert!"
+                            MessageForm.Label2.Text = "Breaktime will start In " & min & " minutes And " & remain & " seconds."
 
 
-                                BreakForm.sethours = CInt(nudTimeBreakHour.Value)
-                                BreakForm.hours = BreakForm.sethours
-                                BreakForm.setminutes = CInt(nudTimeBreakMin.Value)
-                                BreakForm.minutes = BreakForm.setminutes
-                                BreakForm.setsecs = CInt(nudTimeBreakSec.Value)
-                                BreakForm.seconds = BreakForm.setsecs
-                                BreakForm.Show()
-                                Me.Hide()
-                            ElseIf CBool(DialogResult.Cancel) Then
-                                BreakTimer.Start()
-                                Notify = True
-                            End If
+                            BreakTimer.Start()
+                            Notify = True
                         End If
                     End If
                 End If
@@ -595,33 +496,14 @@ run into an exception if YOU DON'T PRESS YES!", "Time Change Acknowlegement", Me
                             PlayNow()
                             BreakTimer.Stop()
 
-                            If MessageBox.Show("Breaktime will start In " & min & " minutes And " & remain & " seconds. Click OK To start breaktime now. Otherwise, Click Cancel To Continue the timer.", "MinWarn Alert", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation) = DialogResult.OK Then
-                                BreakTimer.Stop()
-                                BreakTimer.Enabled = False
-                                Select Case My.Settings.Sound1
-                                    Case 0
-                                        sound.Stream = My.Resources.timesup4
-                                        sound.Play()
-                                    Case 1 Or 2
-                                        sound.SoundLocation = My.Settings.Sound1Location
-                                        sound.Play()
-                                End Select
+
+                            MessageForm.Show()
+                            MessageForm.Label1.Text = "Breaktime Alert!"
+                            MessageForm.Label2.Text = "Breaktime will start In " & min & " minutes And " & remain & " seconds."
 
 
-
-
-                                BreakForm.sethours = CInt(nudTimeBreakHour.Value)
-                                BreakForm.hours = BreakForm.sethours
-                                BreakForm.setminutes = CInt(nudTimeBreakMin.Value)
-                                BreakForm.minutes = BreakForm.setminutes
-                                BreakForm.setsecs = CInt(nudTimeBreakSec.Value)
-                                BreakForm.seconds = BreakForm.setsecs
-                                BreakForm.Show()
-                                Me.Hide()
-                            ElseIf CBool(DialogResult.Cancel) Then
-                                BreakTimer.Start()
-                                Notify = True
-                            End If
+                            BreakTimer.Start()
+                            Notify = True
                         End If
                     End If
                 End If
@@ -636,31 +518,14 @@ run into an exception if YOU DON'T PRESS YES!", "Time Change Acknowlegement", Me
                             PlayNow()
                             BreakTimer.Stop()
 
-                            If MessageBox.Show("Breaktime will start In " & min & " minutes And " & remain & " seconds. Click OK To start breaktime now. Otherwise, Click Cancel to continue the timer.", "MinWarn Alert", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation) = DialogResult.OK Then
-                                BreakTimer.Stop()
-                                BreakTimer.Enabled = False
-                                Select Case My.Settings.Sound1
-                                    Case 0
-                                        sound.Stream = My.Resources.timesup4
-                                        sound.Play()
-                                    Case 1 Or 2
-                                        sound.SoundLocation = My.Settings.Sound1Location
-                                        sound.Play()
-                                End Select
+
+                            MessageForm.Show()
+                            MessageForm.Label1.Text = "Breaktime Alert!"
+                            MessageForm.Label2.Text = "Breaktime will start In " & min & " minutes And " & remain & " seconds."
 
 
-                                BreakForm.sethours = CInt(nudTimeBreakHour.Value)
-                                BreakForm.hours = BreakForm.sethours
-                                BreakForm.setminutes = CInt(nudTimeBreakMin.Value)
-                                BreakForm.minutes = BreakForm.setminutes
-                                BreakForm.setsecs = CInt(nudTimeBreakSec.Value)
-                                BreakForm.seconds = BreakForm.setsecs
-                                BreakForm.Show()
-                                Me.Hide()
-                            ElseIf CBool(DialogResult.Cancel) Then
-                                BreakTimer.Start()
-                                Notify = True
-                            End If
+                            BreakTimer.Start()
+                            Notify = True
                         End If
                     End If
                 End If

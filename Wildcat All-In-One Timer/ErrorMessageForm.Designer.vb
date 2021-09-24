@@ -47,9 +47,9 @@ Partial Class ErrorMessageForm
         Me.ConciseErrorLabel.Font = New System.Drawing.Font("Helvetica", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ConciseErrorLabel.Location = New System.Drawing.Point(83, 12)
         Me.ConciseErrorLabel.Name = "ConciseErrorLabel"
-        Me.ConciseErrorLabel.Size = New System.Drawing.Size(388, 22)
+        Me.ConciseErrorLabel.Size = New System.Drawing.Size(174, 22)
         Me.ConciseErrorLabel.TabIndex = 1
-        Me.ConciseErrorLabel.Text = "Breaktime error message title goes here"
+        Me.ConciseErrorLabel.Text = "An Error Occured!"
         '
         'DetailedErrorLabel
         '
@@ -59,7 +59,7 @@ Partial Class ErrorMessageForm
         Me.DetailedErrorLabel.Name = "DetailedErrorLabel"
         Me.DetailedErrorLabel.Size = New System.Drawing.Size(190, 28)
         Me.DetailedErrorLabel.TabIndex = 2
-        Me.DetailedErrorLabel.Text = "Text will be added in B3." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "For now click Exit to exit program."
+        Me.DetailedErrorLabel.Text = "Text exception" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "For now click Exit to exit program."
         '
         'ExitButton
         '
@@ -83,7 +83,7 @@ Partial Class ErrorMessageForm
         Me.Button1.Text = "See Details"
         Me.Button1.UseVisualStyleBackColor = True
         '
-        'UnhandledExceptionForm
+        'ErrorMessageForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -98,7 +98,7 @@ Partial Class ErrorMessageForm
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
-        Me.Name = "UnhandledExceptionForm"
+        Me.Name = "ErrorMessageForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "BreakTime - Error Message"
         CType(Me.StopWDLCTImage, System.ComponentModel.ISupportInitialize).EndInit()

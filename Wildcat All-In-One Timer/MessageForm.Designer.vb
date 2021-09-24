@@ -46,9 +46,9 @@ Partial Class MessageForm
         Me.Label1.Font = New System.Drawing.Font("Helvetica", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(94, 12)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(298, 22)
+        Me.Label1.Size = New System.Drawing.Size(115, 22)
         Me.Label1.TabIndex = 1
-        Me.Label1.Text = "BreakTime message goes here"
+        Me.Label1.Text = "Information"
         '
         'Label2
         '
@@ -58,7 +58,7 @@ Partial Class MessageForm
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(157, 28)
         Me.Label2.TabIndex = 2
-        Me.Label2.Text = "Text will be added in B3" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "For break resume, press OK"
+        Me.Label2.Text = "Text varies per program" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "For break resume, press OK"
         '
         'Button1
         '

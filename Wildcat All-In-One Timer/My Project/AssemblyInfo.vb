@@ -10,8 +10,8 @@ Imports System.Runtime.InteropServices
 ' Review the values of the assembly attributes
 
 <Assembly: AssemblyTitle("BreakTime")>
-<Assembly: AssemblyDescription("Now you can set even more with the new BreakTime!")>
-<Assembly: AssemblyCompany("EPT")>
+<Assembly: AssemblyDescription("Set it, and forget it! With the new BreakTime!")>
+<Assembly: AssemblyCompany("EPT Software")>
 <Assembly: AssemblyProduct("BreakTime")>
 <Assembly: AssemblyCopyright("Copyright © 2021 EPT")>
 <Assembly: AssemblyTrademark("")>
@@ -32,6 +32,6 @@ Imports System.Runtime.InteropServices
 ' by using the '*' as shown below:
 ' <Assembly: AssemblyVersion("1.0.*")>
 
-<Assembly: AssemblyVersion("21.2.3.2")>
-<Assembly: AssemblyFileVersion("21.2.3.2")>
+<Assembly: AssemblyFileVersion("21.2.3.3")>
 <Assembly: NeutralResourcesLanguage("en-US")>
+<Assembly: AssemblyVersion("21.2.3.3")>

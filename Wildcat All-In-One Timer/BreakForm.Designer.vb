@@ -262,9 +262,9 @@ Partial Class BreakForm
         Me.Panel1.Controls.Add(Me.UnlockButton)
         Me.Panel1.Controls.Add(Me.PauseButton)
         Me.Panel1.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Panel1.Location = New System.Drawing.Point(177, 318)
+        Me.Panel1.Location = New System.Drawing.Point(283, 319)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(524, 64)
+        Me.Panel1.Size = New System.Drawing.Size(269, 64)
         Me.Panel1.TabIndex = 77
         '
         'Label2
@@ -273,7 +273,7 @@ Partial Class BreakForm
         Me.Label2.AutoSize = True
         Me.Label2.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.Label2.Font = New System.Drawing.Font("Helvetica", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(176, 5)
+        Me.Label2.Location = New System.Drawing.Point(66, 4)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(142, 22)
         Me.Label2.TabIndex = 77
@@ -286,7 +286,7 @@ Partial Class BreakForm
         Me.UnlockButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.UnlockButton.ImageKey = "stop.ico"
         Me.UnlockButton.ImageList = Me.ImageList1
-        Me.UnlockButton.Location = New System.Drawing.Point(246, 29)
+        Me.UnlockButton.Location = New System.Drawing.Point(162, 29)
         Me.UnlockButton.Name = "UnlockButton"
         Me.UnlockButton.Size = New System.Drawing.Size(102, 30)
         Me.UnlockButton.TabIndex = 76
@@ -302,7 +302,7 @@ Partial Class BreakForm
         Me.PauseButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.PauseButton.ImageKey = "pause.ico"
         Me.PauseButton.ImageList = Me.ImageList1
-        Me.PauseButton.Location = New System.Drawing.Point(135, 29)
+        Me.PauseButton.Location = New System.Drawing.Point(3, 29)
         Me.PauseButton.Name = "PauseButton"
         Me.PauseButton.Size = New System.Drawing.Size(105, 30)
         Me.PauseButton.TabIndex = 75
@@ -329,7 +329,7 @@ Partial Class BreakForm
         Me.ShowIcon = False
         Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "BreakTime - Breaktime in Progress"
+        Me.Text = "Breaktime in Progress"
         Me.TopMost = True
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.BreakPanel.ResumeLayout(False)
