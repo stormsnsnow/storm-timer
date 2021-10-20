@@ -261,9 +261,9 @@ Partial Class MainForm
         Me.lblVersion.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblVersion.Location = New System.Drawing.Point(76, 32)
         Me.lblVersion.Name = "lblVersion"
-        Me.lblVersion.Size = New System.Drawing.Size(169, 42)
+        Me.lblVersion.Size = New System.Drawing.Size(154, 42)
         Me.lblVersion.TabIndex = 26
-        Me.lblVersion.Text = "v21H2" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Beta 3" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Released September 24, 2021"
+        Me.lblVersion.Text = "v21H2" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Beta 4" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Released October 19, 2021"
         Me.lblVersion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'lblName
@@ -1099,7 +1099,7 @@ Partial Class MainForm
         Me.StatusGroupBoxBT.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.StatusGroupBoxBT.Name = "StatusGroupBoxBT"
         Me.StatusGroupBoxBT.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.StatusGroupBoxBT.Size = New System.Drawing.Size(131, 53)
+        Me.StatusGroupBoxBT.Size = New System.Drawing.Size(137, 66)
         Me.StatusGroupBoxBT.TabIndex = 84
         Me.StatusGroupBoxBT.TabStop = False
         Me.StatusGroupBoxBT.Text = "Time Left"
@@ -1108,7 +1108,7 @@ Partial Class MainForm
         '
         Me.lblsecondsbreak.AutoSize = True
         Me.lblsecondsbreak.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblsecondsbreak.Location = New System.Drawing.Point(36, 34)
+        Me.lblsecondsbreak.Location = New System.Drawing.Point(36, 48)
         Me.lblsecondsbreak.Name = "lblsecondsbreak"
         Me.lblsecondsbreak.Size = New System.Drawing.Size(52, 14)
         Me.lblsecondsbreak.TabIndex = 91
@@ -1117,7 +1117,7 @@ Partial Class MainForm
         'lblsecondbreak
         '
         Me.lblsecondbreak.AutoSize = True
-        Me.lblsecondbreak.Location = New System.Drawing.Point(47, 36)
+        Me.lblsecondbreak.Location = New System.Drawing.Point(42, 50)
         Me.lblsecondbreak.Name = "lblsecondbreak"
         Me.lblsecondbreak.Size = New System.Drawing.Size(46, 14)
         Me.lblsecondbreak.TabIndex = 90
@@ -1127,7 +1127,7 @@ Partial Class MainForm
         '
         Me.lblminuteandbreak.AutoSize = True
         Me.lblminuteandbreak.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblminuteandbreak.Location = New System.Drawing.Point(35, 24)
+        Me.lblminuteandbreak.Location = New System.Drawing.Point(36, 34)
         Me.lblminuteandbreak.Name = "lblminuteandbreak"
         Me.lblminuteandbreak.Size = New System.Drawing.Size(65, 14)
         Me.lblminuteandbreak.TabIndex = 89
@@ -1138,7 +1138,7 @@ Partial Class MainForm
         '
         Me.lblminutesandbreak.AutoSize = True
         Me.lblminutesandbreak.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblminutesandbreak.Location = New System.Drawing.Point(36, 24)
+        Me.lblminutesandbreak.Location = New System.Drawing.Point(36, 34)
         Me.lblminutesandbreak.Name = "lblminutesandbreak"
         Me.lblminutesandbreak.Size = New System.Drawing.Size(71, 14)
         Me.lblminutesandbreak.TabIndex = 88
@@ -1178,7 +1178,7 @@ Partial Class MainForm
         '
         Me.HourAndBreakLabelBT.AutoSize = True
         Me.HourAndBreakLabelBT.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.HourAndBreakLabelBT.Location = New System.Drawing.Point(36, 10)
+        Me.HourAndBreakLabelBT.Location = New System.Drawing.Point(36, 20)
         Me.HourAndBreakLabelBT.Name = "HourAndBreakLabelBT"
         Me.HourAndBreakLabelBT.Size = New System.Drawing.Size(52, 14)
         Me.HourAndBreakLabelBT.TabIndex = 87
@@ -1188,7 +1188,7 @@ Partial Class MainForm
         'lblhoursandbreak
         '
         Me.lblhoursandbreak.AutoSize = True
-        Me.lblhoursandbreak.Location = New System.Drawing.Point(36, 13)
+        Me.lblhoursandbreak.Location = New System.Drawing.Point(36, 20)
         Me.lblhoursandbreak.Name = "lblhoursandbreak"
         Me.lblhoursandbreak.Size = New System.Drawing.Size(58, 14)
         Me.lblhoursandbreak.TabIndex = 86
@@ -1328,7 +1328,8 @@ Partial Class MainForm
         Me.MaximizeBox = False
         Me.Name = "MainForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "BreakTime - v21H2B3- Released on September 24, 2021"
+        Me.Text = "BreakTime - v21H2B4- Released on October 19, 2021"
+        Me.TopMost = True
         Me.TitlePanel.ResumeLayout(False)
         Me.TitlePanel.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()

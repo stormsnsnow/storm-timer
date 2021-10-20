@@ -69,7 +69,7 @@ Public Class BreakForm
     Private Sub UnlockButton_Click_1(sender As Object, e As EventArgs) Handles UnlockButton.Click
         BreakTimer.Stop()
 
-        sound.Stream = My.Resources.breakover4
+        sound.Stream = My.Resources.breaktimedone
         sound.Play()
         System.Threading.Thread.Sleep(5000)
         Application.Restart()
@@ -125,7 +125,7 @@ Public Class BreakForm
         Else
             BreakTimer.Stop()
 
-            sound.Stream = My.Resources.breakover4
+            sound.Stream = My.Resources.breaktimedone
             sound.Play()
 
             System.Threading.Thread.Sleep(3000)

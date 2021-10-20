@@ -1,7 +1,7 @@
 ﻿Imports System.Globalization
 Imports System.Media
 
-Public Class MessageForm
+Public Class PauseBreakForm
     Dim sound As New SoundPlayer
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim sapi As New SpeechLib.Synthesis.SpeechSynthesis

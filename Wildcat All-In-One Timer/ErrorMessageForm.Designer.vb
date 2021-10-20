@@ -57,9 +57,9 @@ Partial Class ErrorMessageForm
         Me.DetailedErrorLabel.Font = New System.Drawing.Font("Helvetica", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DetailedErrorLabel.Location = New System.Drawing.Point(85, 31)
         Me.DetailedErrorLabel.Name = "DetailedErrorLabel"
-        Me.DetailedErrorLabel.Size = New System.Drawing.Size(190, 28)
+        Me.DetailedErrorLabel.Size = New System.Drawing.Size(205, 28)
         Me.DetailedErrorLabel.TabIndex = 2
-        Me.DetailedErrorLabel.Text = "Text exception" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "For now click Exit to exit program."
+        Me.DetailedErrorLabel.Text = "Text exception" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Please click Exit to exit the program."
         '
         'ExitButton
         '

@@ -81,9 +81,18 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         '''</summary>
-        Friend ReadOnly Property breakover4() As System.IO.UnmanagedMemoryStream
+        Friend ReadOnly Property breakpause() As System.IO.UnmanagedMemoryStream
             Get
-                Return ResourceManager.GetStream("breakover4", resourceCulture)
+                Return ResourceManager.GetStream("breakpause", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        '''</summary>
+        Friend ReadOnly Property breakstart() As System.IO.UnmanagedMemoryStream
+            Get
+                Return ResourceManager.GetStream("breakstart", resourceCulture)
             End Get
         End Property
         
@@ -135,9 +144,18 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         '''</summary>
-        Friend ReadOnly Property minwarn4() As System.IO.UnmanagedMemoryStream
+        Friend ReadOnly Property minwarn() As System.IO.UnmanagedMemoryStream
             Get
-                Return ResourceManager.GetStream("minwarn4", resourceCulture)
+                Return ResourceManager.GetStream("minwarn", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        '''</summary>
+        Friend ReadOnly Property minwarn2() As System.IO.UnmanagedMemoryStream
+            Get
+                Return ResourceManager.GetStream("minwarn2", resourceCulture)
             End Get
         End Property
         
@@ -192,15 +210,6 @@ Namespace My.Resources
         Friend ReadOnly Property td211() As System.IO.UnmanagedMemoryStream
             Get
                 Return ResourceManager.GetStream("td211", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        '''</summary>
-        Friend ReadOnly Property timesup4() As System.IO.UnmanagedMemoryStream
-            Get
-                Return ResourceManager.GetStream("timesup4", resourceCulture)
             End Get
         End Property
         

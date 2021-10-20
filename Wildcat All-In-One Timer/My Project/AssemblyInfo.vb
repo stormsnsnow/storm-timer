@@ -13,7 +13,7 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyDescription("Set it, and forget it! With the new BreakTime!")>
 <Assembly: AssemblyCompany("EPT Software")>
 <Assembly: AssemblyProduct("BreakTime")>
-<Assembly: AssemblyCopyright("Copyright © 2021 EPT")>
+<Assembly: AssemblyCopyright("Copyright © 2021 EPT Software")>
 <Assembly: AssemblyTrademark("")>
 
 <Assembly: ComVisible(False)>
@@ -32,6 +32,6 @@ Imports System.Runtime.InteropServices
 ' by using the '*' as shown below:
 ' <Assembly: AssemblyVersion("1.0.*")>
 
-<Assembly: AssemblyFileVersion("21.2.3.3")>
+<Assembly: AssemblyFileVersion("21.2.3.4")>
 <Assembly: NeutralResourcesLanguage("en-US")>
-<Assembly: AssemblyVersion("21.2.3.3")>
+<Assembly: AssemblyVersion("21.2.3.4")>

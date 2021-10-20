@@ -74,7 +74,7 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>btimelogob3.ico</ApplicationIcon>
+    <ApplicationIcon>btimelogob4.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationManifest>app.manifest</ApplicationManifest>
@@ -161,6 +161,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="PauseBreakForm.Designer.vb">
+      <DependentUpon>PauseBreakForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PauseBreakForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="MessageForm.Designer.vb">
       <DependentUpon>MessageForm.vb</DependentUpon>
     </Compile>
@@ -221,6 +227,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="PauseBreakForm.resx">
+      <DependentUpon>PauseBreakForm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MessageForm.resx">
       <DependentUpon>MessageForm.vb</DependentUpon>
     </EmbeddedResource>
@@ -266,7 +275,13 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="bin\Debug\breakstart.wav" />
+    <None Include="bin\Debug\breaktimedone.wav" />
+    <None Include="bin\Debug\breakpause.wav" />
+    <None Include="bin\Debug\minwarn.wav" />
+    <None Include="bin\Debug\minwarn2.wav" />
     <Content Include="btimelogob3.ico" />
+    <Content Include="btimelogob4.ico" />
     <None Include="bin\x64\Debug\sounds\bt\aquanear.wav" />
     <None Include="bin\x64\Debug\sounds\bt\ff.wav" />
     <None Include="bin\x64\Debug\sounds\bt\foghorn.wav" />
@@ -298,8 +313,6 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="bin\Debug\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

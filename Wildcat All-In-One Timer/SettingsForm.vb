@@ -257,20 +257,9 @@ Public Class SettingsForm
         End If
     End Sub
     Private Sub BtnLicense_Click(sender As Object, e As EventArgs) Handles BtnLicense.Click
-        MessageBox.Show("This program is free software: you can redistribute it and/or modify" & vbCrLf & "
-    it under the terms of the GNU General Public License as published by" & vbCrLf & "
-    the Free Software Foundation, either version 3 of the License, or" & vbCrLf & "
-    (at your option) any later version." & vbCrLf & vbCrLf & "
+        Process.Start("https://empointco.consulting/btime/license.txt")
 
-    This program is distributed in the hope that it will be useful," & vbCrLf & "
-    but WITHOUT ANY WARRANTY; without even the implied warranty of" & vbCrLf & "
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the" & vbCrLf & "
-    GNU General Public License for more details." & vbCrLf & vbCrLf & "
-    You should have received a copy of the GNU General Public License" & vbCrLf & "
-    along with this program.  If not, see https://www.gnu.org/licenses/", "License Info", MessageBoxButtons.OK, MessageBoxIcon.Information)
     End Sub
-
-
 
     Private Sub BTBrowse_Click(sender As Object, e As EventArgs) Handles BTBrowse.Click
         If OFDS.ShowDialog = DialogResult.OK Then
@@ -333,7 +322,7 @@ Public Class SettingsForm
             Try
                 streamToPrint = New StreamReader(Application.StartupPath & "\code.txt")
                 Try
-                    printFont = New Font("Cooper Black", 12)
+                    printFont = New Font("Helvetica", 12)
                     Dim pd As New PrintDocument()
                     AddHandler pd.PrintPage, AddressOf Me.pd_PrintPage
                     pd.Print()
@@ -343,7 +332,7 @@ Public Class SettingsForm
             Catch ex As Exception
                 MessageBox.Show(ex.Message)
             End Try
-            If InputBox("Please input the code that was sent to your default printer. Press OK to continue.") = stpa Then
+            If InputBox("Please input the code that was sent to your default printer. Press OK to continue. No printer? No problem! Just Type 0 to continue.") = stpa Then
                 My.Settings.HardCoreMode = True
                 My.Settings.Save()
                 HardCoreRadioButton.Checked = True

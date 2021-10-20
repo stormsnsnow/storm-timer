@@ -10,7 +10,7 @@ Public Class MainForm
     Private Sub PlayNow()
         Select Case My.Settings.Sound2
             Case 0
-                sound.Stream = My.Resources.minwarn4
+                sound.Stream = My.Resources.minwarn
                 sound.Play()
             Case 1 Or 2 Or 3
                 sound.SoundLocation = My.Settings.Sound2Location
@@ -110,7 +110,7 @@ Public Class MainForm
     End Sub
 
     Private Sub TBeep_Tick(sender As Object, e As EventArgs) Handles tBeep.Tick
-        sound.Stream = My.Resources.timesup4
+        sound.Stream = My.Resources.breakstart
         sound.Play()
 
         System.Threading.Thread.Sleep(3000)
@@ -398,7 +398,7 @@ run into an exception if YOU DON'T PRESS YES!", "Time Change Acknowlegement", Me
             BreakTimer.Enabled = False
             Select Case My.Settings.Sound1
                 Case 0
-                    sound.Stream = My.Resources.timesup4
+                    sound.Stream = My.Resources.breakstart
                     sound.Play()
 
                 Case 1 Or 2

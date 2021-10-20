@@ -227,9 +227,9 @@ Partial Class SettingsForm
         Me.lblVersion.AutoSize = True
         Me.lblVersion.Location = New System.Drawing.Point(182, 32)
         Me.lblVersion.Name = "lblVersion"
-        Me.lblVersion.Size = New System.Drawing.Size(169, 42)
+        Me.lblVersion.Size = New System.Drawing.Size(154, 42)
         Me.lblVersion.TabIndex = 29
-        Me.lblVersion.Text = "v21H2 " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Beta Three" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Released September 24, 2021"
+        Me.lblVersion.Text = "v21H2 " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Beta Four" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Released October 19, 2021"
         Me.lblVersion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'lblName
@@ -273,7 +273,7 @@ Partial Class SettingsForm
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(16, 141)
+        Me.Label10.Location = New System.Drawing.Point(19, 148)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(72, 14)
         Me.Label10.TabIndex = 13
@@ -283,7 +283,7 @@ Partial Class SettingsForm
         '
         Me.BTComboBoxSounds.FormattingEnabled = True
         Me.BTComboBoxSounds.Items.AddRange(New Object() {"Default Sound", "Browse for sound file..."})
-        Me.BTComboBoxSounds.Location = New System.Drawing.Point(97, 141)
+        Me.BTComboBoxSounds.Location = New System.Drawing.Point(97, 145)
         Me.BTComboBoxSounds.Name = "BTComboBoxSounds"
         Me.BTComboBoxSounds.Size = New System.Drawing.Size(121, 22)
         Me.BTComboBoxSounds.TabIndex = 12
@@ -318,7 +318,7 @@ Partial Class SettingsForm
         'MWLabelS
         '
         Me.MWLabelS.AutoSize = True
-        Me.MWLabelS.Location = New System.Drawing.Point(38, 119)
+        Me.MWLabelS.Location = New System.Drawing.Point(33, 119)
         Me.MWLabelS.Name = "MWLabelS"
         Me.MWLabelS.Size = New System.Drawing.Size(55, 14)
         Me.MWLabelS.TabIndex = 4
@@ -327,7 +327,7 @@ Partial Class SettingsForm
         'TDLabelS
         '
         Me.TDLabelS.AutoSize = True
-        Me.TDLabelS.Location = New System.Drawing.Point(13, 85)
+        Me.TDLabelS.Location = New System.Drawing.Point(19, 88)
         Me.TDLabelS.Name = "TDLabelS"
         Me.TDLabelS.Size = New System.Drawing.Size(72, 14)
         Me.TDLabelS.TabIndex = 3
@@ -540,11 +540,9 @@ Partial Class SettingsForm
         '
         Me.nudSec.Location = New System.Drawing.Point(253, 28)
         Me.nudSec.Maximum = New Decimal(New Integer() {59, 0, 0, 0})
-        Me.nudSec.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.nudSec.Name = "nudSec"
         Me.nudSec.Size = New System.Drawing.Size(50, 21)
         Me.nudSec.TabIndex = 10
-        Me.nudSec.Value = New Decimal(New Integer() {1, 0, 0, 0})
         '
         'nudMin
         '
@@ -677,7 +675,7 @@ Partial Class SettingsForm
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(155, 14)
         Me.Label1.TabIndex = 28
-        Me.Label1.Text = "Wednesday, January 1, 2022"
+        Me.Label1.Text = "Wednesday, January 1, 2023"
         '
         'DTLabelDTGen2
         '
@@ -697,7 +695,7 @@ Partial Class SettingsForm
         Me.DTLabelDTGen.Name = "DTLabelDTGen"
         Me.DTLabelDTGen.Size = New System.Drawing.Size(155, 14)
         Me.DTLabelDTGen.TabIndex = 25
-        Me.DTLabelDTGen.Text = "Wednesday, January 1, 2022"
+        Me.DTLabelDTGen.Text = "Wednesday, January 1, 2023"
         '
         'TimeFormatLabelDTGen
         '
@@ -1082,6 +1080,7 @@ Partial Class SettingsForm
         '
         'Security
         '
+        Me.Security.BackColor = System.Drawing.SystemColors.Control
         Me.Security.Controls.Add(Me.OffRB)
         Me.Security.Controls.Add(Me.HardcoreLabel)
         Me.Security.Controls.Add(Me.HardCoreRadioButton)
@@ -1092,7 +1091,6 @@ Partial Class SettingsForm
         Me.Security.Size = New System.Drawing.Size(496, 267)
         Me.Security.TabIndex = 8
         Me.Security.Text = "Security"
-        Me.Security.UseVisualStyleBackColor = True
         '
         'OffRB
         '
