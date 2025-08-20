@@ -67,7 +67,7 @@ Partial Class BreakForm
         Me.lbldate.Name = "lbldate"
         Me.lbldate.Size = New System.Drawing.Size(138, 44)
         Me.lbldate.TabIndex = 58
-        Me.lbldate.Text = "Monday Jan 1 " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "2023"
+        Me.lbldate.Text = "Monday Jan 1 " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "2024"
         Me.lbldate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'lblhour

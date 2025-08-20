@@ -199,6 +199,7 @@ Public Class MainForm
         Me.Show()
     End Sub
 
+
     Private Sub ChangeSettingsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ChangeSettingsToolStripMenuItem.Click
         SettingsForm.Show()
     End Sub
@@ -341,7 +342,7 @@ run into an exception if YOU DON'T PRESS YES!", "Time Change Acknowlegement", Me
         End If
     End Sub
 
-    Private Sub Stopbutton_Click(sender As Object, e As EventArgs)
+    Private Sub Stopbutton_Click(sender As Object, e As EventArgs) Handles StopTimeButton.Click
         BreakTimer.Stop()
         TSFHourIndicatorLabelBT.Text = "--"
         TSFMinIndicatorLabelBT.Text = "--"
