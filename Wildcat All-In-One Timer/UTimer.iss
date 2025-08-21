@@ -73,8 +73,7 @@ Name: "japanese"; MessagesFile: "compiler:Languages\Japanese.isl"
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
 
 [Files]
-Source: "\bin\x64\Release\net8.0-windows10.0.26100.0\Cyotek.Windows.Forms.ColorPicker.dll"; DestDir: "{app}"; Flags: 64bit; MinVersion: 0,10.0.26100
-Source: "\bin\x64\Release\net8.0-windows10.0.26100.0\BreakTime.exe"; DestDir: "{app}"; Flags: 64bit; MinVersion: 0,10.0.26100
+Source: "\Program\win-x64\*"; DestDir: "{app}"; Flags: 64bit; MinVersion: 0,10.0.26100
 
 [Icons]
 Name: "{group}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"
