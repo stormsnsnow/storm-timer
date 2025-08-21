@@ -73,7 +73,7 @@ Name: "japanese"; MessagesFile: "compiler:Languages\Japanese.isl"
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
 
 [Files]
-Source: "\Program\win-x64\*"; DestDir: "{app}"; Flags: 64bit; MinVersion: 0,10.0.26100
+Source: "\Program\win-x64\*"; DestDir: "{app}"; Flags: 64bit recursesubdirs; MinVersion: 0,10.0.26100
 
 [Icons]
 Name: "{group}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"
