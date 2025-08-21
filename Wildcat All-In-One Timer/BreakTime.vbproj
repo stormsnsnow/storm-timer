@@ -114,30 +114,30 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\Debug\breakstart.wav" />
-    <None Include="bin\Debug\breaktimedone.wav" />
-    <None Include="bin\Debug\breakpause.wav" />
-    <None Include="bin\Debug\minwarn.wav" />
-    <None Include="bin\Debug\minwarn2.wav" />
+    <None Include="Resources\breakstart.wav" />
+    <None Include="Resources\breaktimedone.wav" />
+    <None Include="Resources\breakpause.wav" />
+    <None Include="resources\minwarn.wav" />
+    <None Include="resources\minwarn2.wav" />
     <Content Include="btimelogob3.ico" />
     <Content Include="Resources\btimelogob4.ico" />
-    <None Include="bin\x64\Debug\sounds\bt\aquanear.wav" />
-    <None Include="bin\x64\Debug\sounds\bt\ff.wav" />
-    <None Include="bin\x64\Debug\sounds\bt\foghorn.wav" />
-    <None Include="bin\x64\Debug\sounds\bt\speedeam.wav" />
-    <None Include="bin\x64\Debug\sounds\bt\td211.wav" />
-    <None Include="bin\x64\Debug\sounds\mw\ab.wav" />
-    <None Include="bin\x64\Debug\sounds\mw\bub.wav" />
-    <None Include="bin\x64\Debug\sounds\mw\bub2.wav" />
-    <None Include="bin\x64\Debug\sounds\mw\mw211.wav" />
-    <None Include="bin\x64\Debug\sounds\mw\pop.wav" />
-    <None Include="bin\x64\Debug\sounds\mw\tw.wav" />
-    <None Include="bin\x64\Debug\breakover4.wav" />
-    <None Include="bin\x64\Debug\breaktimedone.wav" />
-    <None Include="bin\x64\Debug\minwarn4.wav" />
-    <None Include="bin\x64\Debug\shutdown.wav" />
-    <None Include="bin\x64\Debug\startup4.wav" />
-    <None Include="bin\x64\Debug\timesup4.wav" />
-    <None Include="bin\x64\Debug\timeup.wav" />
+    <None Include="Resources\sounds\bt\aquanear.wav" />
+    <None Include="Resources\sounds\bt\ff.wav" />
+    <None Include="Resources\sounds\bt\foghorn.wav" />
+    <None Include="Resources\sounds\bt\speedeam.wav" />
+    <None Include="Resources\sounds\bt\td211.wav" />
+    <None Include="Resources\sounds\mw\ab.wav" />
+    <None Include="Resources\sounds\mw\bub.wav" />
+    <None Include="Resources\sounds\mw\bub2.wav" />
+    <None Include="Resources\sounds\mw\mw211.wav" />
+    <None Include="Resources\sounds\mw\pop.wav" />
+    <None Include="Resources\sounds\mw\tw.wav" />
+    <None Include="Resources\breakover4.wav" />
+    <None Include="Resources\breaktimedone.wav" />
+    <None Include="Resources\minwarn4.wav" />
+    <None Include="Resources\shutdown.wav" />
+    <None Include="Resources\startup4.wav" />
+    <None Include="Resources\timesup4.wav" />
+    <None Include="Resources\timeup.wav" />
   </ItemGroup>
 </Project>
