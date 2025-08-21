@@ -31,7 +31,7 @@ EnableDirDoesntExistWarning=True
 DirExistsWarning=yes
 MinVersion=0,10.0.26100
 AppCopyright=Copyright   2021 EPT Software
-SetupIconFile=.\Resources\btimelogob4.ico
+SetupIconFile=Resources\btimelogob4.ico
 AppContact=EPT
 AppSupportPhone=9108081465
 UninstallDisplayName=BreakTime 21H2 Beta 4
@@ -44,8 +44,8 @@ VersionInfoCopyright=Copyright   2021 EPT Software
 VersionInfoProductName=BreakTime
 VersionInfoProductVersion=21.2.3.4
 VersionInfoProductTextVersion=21.2.3.4
-WizardImageFile=.\Resources\UTimerSetup.bmp
-WizardSmallImageFile=.\Resources\UTimerLogo.bmp
+WizardImageFile=\Resources\UTimerSetup.bmp
+WizardSmallImageFile=\Resources\UTimerLogo.bmp
 UsePreviousAppDir=False
 DisableDirPage=no
 ArchitecturesInstallIn64BitMode=x64
@@ -73,8 +73,8 @@ Name: "japanese"; MessagesFile: "compiler:Languages\Japanese.isl"
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
 
 [Files]
-Source: ".\bin\x64\Release\net8.0-windows10.0.26100.0\Cyotek.Windows.Forms.ColorPicker.dll"; DestDir: "{app}"; Flags: 64bit; MinVersion: 0,10.0.26100
-Source: ".\bin\x64\Release\net8.0-windows10.0.26100.0\BreakTime.exe"; DestDir: "{app}"; Flags: 64bit; MinVersion: 0,10.0.26100
+Source: "\bin\x64\Release\net8.0-windows10.0.26100.0\Cyotek.Windows.Forms.ColorPicker.dll"; DestDir: "{app}"; Flags: 64bit; MinVersion: 0,10.0.26100
+Source: "\bin\x64\Release\net8.0-windows10.0.26100.0\BreakTime.exe"; DestDir: "{app}"; Flags: 64bit; MinVersion: 0,10.0.26100
 
 [Icons]
 Name: "{group}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"
