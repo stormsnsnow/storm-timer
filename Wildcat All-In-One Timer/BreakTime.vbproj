@@ -22,7 +22,7 @@
     <BootstrapperEnabled>true</BootstrapperEnabled>
     <UseWindowsForms>true</UseWindowsForms>
     <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
-    <ApplicationIcon>btimelogob4.ico</ApplicationIcon>
+    <ApplicationIcon>Resources\btimelogob4.ico</ApplicationIcon>
     <ApplicationManifest>app.manifest</ApplicationManifest>
     <ManifestCertificateThumbprint>A3D1574DCAD3D1AC60046CB23605DEDF71FFA76B</ManifestCertificateThumbprint>
     <ManifestKeyFile />
@@ -120,7 +120,7 @@
     <None Include="bin\Debug\minwarn.wav" />
     <None Include="bin\Debug\minwarn2.wav" />
     <Content Include="btimelogob3.ico" />
-    <Content Include="btimelogob4.ico" />
+    <Content Include="Resources\btimelogob4.ico" />
     <None Include="bin\x64\Debug\sounds\bt\aquanear.wav" />
     <None Include="bin\x64\Debug\sounds\bt\ff.wav" />
     <None Include="bin\x64\Debug\sounds\bt\foghorn.wav" />
