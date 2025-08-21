@@ -275,7 +275,7 @@ Public Class SettingsForm
 
 
 
-    Private Sub colorwheel2_ColorChanged(sender As Object, e As EventArgs) Handles ColorWheel2.ColorChanged
+    Private Sub colorwheel2_ColorChanged(sender As Object, e As EventArgs) Handles ColorWheel2.BackColorChanged
         Label2.ForeColor = ColorWheel2.Color
         RTextBox.Text = ColorWheel2.Color.R.ToString
         GTextBox.Text = ColorWheel2.Color.G.ToString
@@ -284,7 +284,7 @@ Public Class SettingsForm
         Label2.Text = "Color"
     End Sub
 
-    Private Sub ColorWheel1_ColorChanged(sender As Object, e As EventArgs) Handles ColorWheel1.ColorChanged
+    Private Sub ColorWheel1_ColorChanged(sender As Object, e As EventArgs) Handles ColorWheel1.ForeColorChanged
         KnownColorLabel.ForeColor = ColorWheel1.Color
         RTextBoxFC.Text = ColorWheel1.Color.R.ToString
         GTextBoxFC.Text = ColorWheel1.Color.G.ToString

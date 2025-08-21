@@ -57,7 +57,8 @@ jobs:
 
     env:
       Solution_Name: Breaktime.sln                        # Replace with your solution name, i.e. MyWpfApp.sln.
-      
+      Wap_Project_Directory: snowc-timer-setup    # Replace with the Wap project directory relative to the solution, i.e. MyWpfApp.Package.
+      Wap_Project_Path: snowc-timer-setup\snowc-timer-setup.wapproj
     steps:
     - name: Checkout
       uses: actions/checkout@v4
@@ -96,7 +97,7 @@ jobs:
       run: msbuild $env:Wap_Project_Path /p:Configuration=$env:Configuration /p:UapAppxPackageBuildMode=$env:Appx_Package_Build_Mode /p:AppxBundle=$env:Appx_Bundle /p:PackageCertificateKeyFile=GitHubActionsWorkflow.pfx /p:PackageCertificatePassword=${{ secrets.Pfx_Key }}
       env:
         Appx_Bundle: Always
-        Appx_Bundle_Platforms: x86|x64
+        Appx_Bundle_Platforms: x64
         Appx_Package_Build_Mode: StoreUpload
         Configuration: ${{ matrix.configuration }}
 

@@ -1,25 +1,11 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
+    <TargetFramework>net8.0-windows10.0.26100.0</TargetFramework>
     <ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>true</ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{CF0B1F88-09A1-4D58-882F-9F678F36D77B}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <StartupObject>BreakTime.My.MyApplication</StartupObject>
-    <RootNamespace>BreakTime</RootNamespace>
-    <AssemblyName>BreakTime</AssemblyName>
-    <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-    <Deterministic>true</Deterministic>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <TargetFrameworkProfile>
-    </TargetFrameworkProfile>
-    <NuGetPackageImportStamp>
-    </NuGetPackageImportStamp>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -34,245 +20,98 @@
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>x64</PlatformTarget>
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <DefineDebug>true</DefineDebug>
-    <DefineTrace>true</DefineTrace>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>BreakTime.xml</DocumentationFile>
-    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
-    <Prefer32Bit>false</Prefer32Bit>
-    <WarningsAsErrors>
-    </WarningsAsErrors>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <DebugType>pdbonly</DebugType>
-    <DefineDebug>false</DefineDebug>
-    <DefineTrace>true</DefineTrace>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>BreakTime.xml</DocumentationFile>
-    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
-    <Prefer32Bit>false</Prefer32Bit>
-    <WarningsAsErrors>
-    </WarningsAsErrors>
-  </PropertyGroup>
-  <PropertyGroup>
-    <OptionExplicit>On</OptionExplicit>
-  </PropertyGroup>
-  <PropertyGroup>
-    <OptionCompare>Binary</OptionCompare>
-  </PropertyGroup>
-  <PropertyGroup>
-    <OptionStrict>Off</OptionStrict>
-  </PropertyGroup>
-  <PropertyGroup>
-    <OptionInfer>On</OptionInfer>
-  </PropertyGroup>
-  <PropertyGroup>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
     <ApplicationIcon>btimelogob4.ico</ApplicationIcon>
-  </PropertyGroup>
-  <PropertyGroup>
     <ApplicationManifest>app.manifest</ApplicationManifest>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
-    <DebugSymbols>true</DebugSymbols>
-    <DefineDebug>true</DefineDebug>
-    <DefineTrace>true</DefineTrace>
-    <OutputPath>bin\x64\Debug\</OutputPath>
-    <DocumentationFile>BreakTime.xml</DocumentationFile>
-    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
-    <DebugType>full</DebugType>
-    <PlatformTarget>x64</PlatformTarget>
-    <CodeAnalysisRuleSet>BasicCorrectnessRules.ruleset</CodeAnalysisRuleSet>
-    <Prefer32Bit>false</Prefer32Bit>
-    <WarningsAsErrors>
-    </WarningsAsErrors>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
-    <DefineTrace>true</DefineTrace>
-    <OutputPath>bin\x64\Release\</OutputPath>
-    <DocumentationFile>BreakTime.xml</DocumentationFile>
-    <Optimize>true</Optimize>
-    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
-    <DebugType>pdbonly</DebugType>
-    <PlatformTarget>x64</PlatformTarget>
-    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-    <Prefer32Bit>false</Prefer32Bit>
-    <WarningsAsErrors>
-    </WarningsAsErrors>
-  </PropertyGroup>
-  <PropertyGroup>
     <ManifestCertificateThumbprint>A3D1574DCAD3D1AC60046CB23605DEDF71FFA76B</ManifestCertificateThumbprint>
-  </PropertyGroup>
-  <PropertyGroup>
-    <ManifestKeyFile>
-    </ManifestKeyFile>
-  </PropertyGroup>
-  <PropertyGroup>
+    <ManifestKeyFile />
     <GenerateManifests>false</GenerateManifests>
-  </PropertyGroup>
-  <PropertyGroup>
     <SignManifests>false</SignManifests>
-  </PropertyGroup>
-  <PropertyGroup>
-    <SignAssembly>false</SignAssembly>
-  </PropertyGroup>
-  <ItemGroup>
-    <Reference Include="Cyotek.Windows.Forms.ColorPicker">
-      <HintPath>E:\Other Files\Folders\cyo\Cyotek.Windows.Forms.ColorPicker\bin\Debug\Cyotek.Windows.Forms.ColorPicker.dll</HintPath>
-    </Reference>
-    <Reference Include="SpeechLib.Models, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\SpeechLib.Models.1.6.0\lib\net40\SpeechLib.Models.dll</HintPath>
-    </Reference>
-    <Reference Include="SpeechLib.Recognition, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\SpeechLib.Recognition.1.6.0\lib\net40\SpeechLib.Recognition.dll</HintPath>
-    </Reference>
-    <Reference Include="SpeechLib.Synthesis, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\SpeechLib.Synthesis.1.6.0\lib\net40\SpeechLib.Synthesis.dll</HintPath>
-    </Reference>
-    <Reference Include="System" />
-    <Reference Include="System.Configuration" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Deployment" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Runtime.WindowsRuntime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETCore\v4.5\System.Runtime.WindowsRuntime.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.Extensions" />
-    <Reference Include="System.Windows.Forms" />
-    <Reference Include="System.Xml" />
+    <AssemblyTitle>BreakTime</AssemblyTitle>
+    <Description>Set it, and forget it! With the new BreakTime!</Description>
+    <Company>EPT Software</Company>
+    <Product>BreakTime</Product>
+    <Copyright>Copyright © 2021 EPT Software</Copyright>
+    <FileVersion>21.2.3.4</FileVersion>
+    <NeutralLanguage>en-US</NeutralLanguage>
+    <AssemblyVersion>21.2.3.4</AssemblyVersion>
+	<Platforms>x64</Platforms>
+   </PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'NoVariablesDefault|x64'">
+		<DefineTrace>true</DefineTrace>
+		<OutputPath>bin\x64\Release\</OutputPath>
+		<DocumentationFile>BreakTime.xml</DocumentationFile>
+		<Optimize>true</Optimize>
+		<NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
+		<DebugType>pdbonly</DebugType>
+		<PlatformTarget>x64</PlatformTarget>
+		<CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+		<Prefer32Bit>false</Prefer32Bit>
+		<WarningsAsErrors>
+		</WarningsAsErrors>
+		<ProjectConfigurations>
+			<Configuration>NoVariablesDefault</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfigurations>
+	</PropertyGroup>
+	<ItemGroup>
+    <PackageReference Include="Cyotek.Windows.Forms.ColorPicker" Version="2.0.0-beta.7" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="10.0.0-preview.7.25380.108" />
+    <PackageReference Include="System.Speech" Version="10.0.0-preview.7.25380.108" />
   </ItemGroup>
   <ItemGroup>
-    <Import Include="Microsoft.VisualBasic" />
-    <Import Include="System" />
-    <Import Include="System.Collections" />
-    <Import Include="System.Collections.Generic" />
-    <Import Include="System.Data" />
     <Import Include="System.Drawing" />
-    <Import Include="System.Diagnostics" />
     <Import Include="System.Windows.Forms" />
-    <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ApplicationEvents.vb" />
-    <Compile Include="PauseBreakForm.Designer.vb">
+    <Compile Update="PauseBreakForm.Designer.vb">
       <DependentUpon>PauseBreakForm.vb</DependentUpon>
     </Compile>
-    <Compile Include="PauseBreakForm.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MessageForm.Designer.vb">
+    <Compile Update="MessageForm.Designer.vb">
       <DependentUpon>MessageForm.vb</DependentUpon>
     </Compile>
-    <Compile Include="MessageForm.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SplashScreenForm.Designer.vb">
+    <Compile Update="SplashScreenForm.Designer.vb">
       <DependentUpon>SplashScreenForm.vb</DependentUpon>
     </Compile>
-    <Compile Include="SplashScreenForm.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BreakForm.Designer.vb">
+    <Compile Update="BreakForm.Designer.vb">
       <DependentUpon>BreakForm.vb</DependentUpon>
     </Compile>
-    <Compile Include="BreakForm.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MainForm.Designer.vb">
+    <Compile Update="MainForm.Designer.vb">
       <DependentUpon>MainForm.vb</DependentUpon>
     </Compile>
-    <Compile Include="MainForm.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="My Project\AssemblyInfo.vb" />
-    <Compile Include="My Project\Application.Designer.vb">
+    <Compile Update="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="My Project\Resources.Designer.vb">
+    <Compile Update="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="My Project\Settings.Designer.vb">
+    <Compile Update="My Project\Settings.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="SettingsForm.Designer.vb">
+    <Compile Update="SettingsForm.Designer.vb">
       <DependentUpon>SettingsForm.vb</DependentUpon>
     </Compile>
-    <Compile Include="SettingsForm.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ErrorMessageForm.Designer.vb">
+    <Compile Update="ErrorMessageForm.Designer.vb">
       <DependentUpon>ErrorMessageForm.vb</DependentUpon>
     </Compile>
-    <Compile Include="ErrorMessageForm.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="WhatsNew.Designer.vb">
+    <Compile Update="WhatsNew.Designer.vb">
       <DependentUpon>WhatsNew.vb</DependentUpon>
-    </Compile>
-    <Compile Include="WhatsNew.vb">
-      <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="PauseBreakForm.resx">
-      <DependentUpon>PauseBreakForm.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MessageForm.resx">
-      <DependentUpon>MessageForm.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SplashScreenForm.resx">
-      <DependentUpon>SplashScreenForm.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BreakForm.resx">
-      <DependentUpon>BreakForm.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MainForm.resx">
-      <DependentUpon>MainForm.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="My Project\Resources.resx">
-      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
-      <CustomToolNamespace>My.Resources</CustomToolNamespace>
-      <SubType>Designer</SubType>
-      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SettingsForm.resx">
-      <DependentUpon>SettingsForm.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ErrorMessageForm.resx">
-      <DependentUpon>ErrorMessageForm.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="WhatsNew.resx">
-      <DependentUpon>WhatsNew.vb</DependentUpon>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="app.manifest" />
     <None Include="bin\x64\Debug\files.pfx" />
     <None Include="bin\x64\Debug\key.pfx" />
-    <None Include="My Project\Application.myapp">
+    <None Update="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
     </None>
-    <None Include="My Project\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <CustomToolNamespace>My</CustomToolNamespace>
-      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
-    </None>
-    <None Include="App.config" />
-    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <None Include="bin\Debug\breakstart.wav" />
@@ -301,18 +140,4 @@
     <None Include="bin\x64\Debug\timesup4.wav" />
     <None Include="bin\x64\Debug\timeup.wav" />
   </ItemGroup>
-  <ItemGroup>
-    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
-      <Visible>False</Visible>
-      <ProductName>Microsoft .NET Framework 4.8 %28x86 and x64%29</ProductName>
-      <Install>true</Install>
-    </BootstrapperPackage>
-    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
-      <Visible>False</Visible>
-      <ProductName>.NET Framework 3.5 SP1</ProductName>
-      <Install>false</Install>
-    </BootstrapperPackage>
-  </ItemGroup>
-  <ItemGroup />
-  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

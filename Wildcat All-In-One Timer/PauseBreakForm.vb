@@ -4,7 +4,7 @@ Imports System.Media
 Public Class PauseBreakForm
     Dim sound As New SoundPlayer
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Dim sapi As New SpeechLib.Synthesis.SpeechSynthesis
+        Dim sapi As New System.Speech.Synthesis.SpeechSynthesizer
 
         sapi.Speak("Breaktime Resumed.")
 

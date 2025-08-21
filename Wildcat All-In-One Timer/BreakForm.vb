@@ -80,8 +80,7 @@ Public Class BreakForm
 
     Private Sub UnlockButton_Click(sender As Object, e As EventArgs) Handles PauseButton.Click
         BreakTimer.Stop()
-        Dim speech As New SpeechLib.Synthesis.SpeechSynthesis
-
+        Dim speech As New System.Speech.Synthesis.SpeechSynthesizer
         speech.Speak("Breaktime Paused. Click On the Ok button To Resume break.")
 
         MessageForm.Show()

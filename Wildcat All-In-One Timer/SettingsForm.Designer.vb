@@ -91,7 +91,7 @@ Partial Class SettingsForm
         Me.Personalization = New System.Windows.Forms.TabPage()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
-        Me.ColorWheel2 = New Cyotek.Windows.Forms.ColorWheel()
+        Me.ColorWheel2 = New Cyotek.Windows.Forms.ColorPickerDialog
         Me.HexTextBox = New System.Windows.Forms.TextBox()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -103,7 +103,7 @@ Partial Class SettingsForm
         Me.RTextBox = New System.Windows.Forms.TextBox()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.ColorWheel1 = New Cyotek.Windows.Forms.ColorWheel()
+        Me.ColorWheel1 = New Cyotek.Windows.Forms.ColorPickerDialog
         Me.HexTextBoxFC = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.KnownColorLabel = New System.Windows.Forms.Label()
@@ -1243,12 +1243,12 @@ Partial Class SettingsForm
     Friend WithEvents HexLabel As Label
     Friend WithEvents HexTextBox As TextBox
     Friend WithEvents ColorLabel As Label
-    Friend WithEvents Panel1 As Cyotek.Windows.Forms.ColorWheel
+    Friend WithEvents Panel1 As Cyotek.Windows.Forms.ColorPickerDialog
     Friend WithEvents TabControl1 As TabControl
     Friend WithEvents TabPage1 As TabPage
     Friend WithEvents TabPage2 As TabPage
-    Friend WithEvents ColorWheel2 As Cyotek.Windows.Forms.ColorWheel
-    Friend WithEvents ColorWheel1 As Cyotek.Windows.Forms.ColorWheel
+    Friend WithEvents ColorWheel2 As Cyotek.Windows.Forms.ColorPickerDialog
+    Friend WithEvents ColorWheel1 As Cyotek.Windows.Forms.ColorPickerDialog
     Friend WithEvents HexTextBoxFC As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents KnownColorLabel As Label
