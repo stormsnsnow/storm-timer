@@ -18,9 +18,9 @@ AppPublisher={#MyAppPublisher}
 DefaultDirName={pf}\EPT\Timer
 DefaultGroupName={#MyAppName}
 AllowNoIcons=yes
-LicenseFile=C:\Users\snowc\OneDrive\My Files\Other Files\Projects\UTimer\WDLCT 3.5\Wildcat All-In-One Timer\bin\Debug\gpl-3.0.txt
-OutputDir=C:\Users\snowc\OneDrive\Desktop
-OutputBaseFilename=timersetup-v21H2B4
+LicenseFile=.\gpl-3.0.txt
+OutputDir=.\bin\x64\Release\net8.0-windows10.0.26100.0\
+OutputBaseFilename=timersetup
 Compression=lzma
 SolidCompression=yes
 DisableWelcomePage=False
@@ -29,9 +29,9 @@ AlwaysShowGroupOnReadyPage=True
 AlwaysShowDirOnReadyPage=True
 EnableDirDoesntExistWarning=True
 DirExistsWarning=yes
-MinVersion=0,10.0.19042
-AppCopyright=Copyright © 2021 EPT Software
-SetupIconFile=C:\Users\snowc\OneDrive\My Files\Digital Media\Photos\Miscellaneous\LaGuardia\ICO\btimelogob4.ico
+MinVersion=0,10.0.26100
+AppCopyright=Copyright   2021 EPT Software
+SetupIconFile=.\Resources\btimelogob4.ico
 AppContact=EPT
 AppSupportPhone=9108081465
 UninstallDisplayName=BreakTime 21H2 Beta 4
@@ -40,12 +40,12 @@ VersionInfoVersion=21.2.3.4
 VersionInfoCompany=EPT Software
 VersionInfoDescription=Set it, and forget it! With the New Breaktime!
 VersionInfoTextVersion=21.2.3.4
-VersionInfoCopyright=Copyright © 2021 EPT Software
+VersionInfoCopyright=Copyright   2021 EPT Software
 VersionInfoProductName=BreakTime
 VersionInfoProductVersion=21.2.3.4
 VersionInfoProductTextVersion=21.2.3.4
-WizardImageFile=C:\Users\snowc\OneDrive\My Files\Digital Media\Photos\Miscellaneous\LaGuardia\BMP\btimelogob4sp.bmp
-WizardSmallImageFile=C:\Users\snowc\OneDrive\My Files\Digital Media\Photos\Miscellaneous\LaGuardia\BMP\btimelogob4.bmp
+WizardImageFile=.\Resources\UTimerSetup.bmp
+WizardSmallImageFile=.\Resources\UTimerLogo.bmp
 UsePreviousAppDir=False
 DisableDirPage=no
 ArchitecturesInstallIn64BitMode=x64
@@ -73,8 +73,8 @@ Name: "japanese"; MessagesFile: "compiler:Languages\Japanese.isl"
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
 
 [Files]
-Source: "C:\Users\snowc\OneDrive\My Files\Other Files\Projects\UTimer\WDLCT 3.5\Wildcat All-In-One Timer\bin\x64\Debug\Cyotek.Windows.Forms.ColorPicker.dll"; DestDir: "{app}"; Flags: 64bit; MinVersion: 0,10.0.19041
-Source: "C:\Users\snowc\OneDrive\My Files\Other Files\Projects\UTimer\WDLCT 3.5\Wildcat All-In-One Timer\bin\x64\Debug\BreakTime.exe"; DestDir: "{app}"; Flags: 64bit; MinVersion: 0,10.0.19041
+Source: ".\bin\x64\Release\net8.0-windows10.0.26100.0\Cyotek.Windows.Forms.ColorPicker.dll"; DestDir: "{app}"; Flags: 64bit; MinVersion: 0,10.0.26100
+Source: ".\bin\x64\Release\net8.0-windows10.0.26100.0\BreakTime.exe"; DestDir: "{app}"; Flags: 64bit; MinVersion: 0,10.0.26100
 
 [Icons]
 Name: "{group}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"
